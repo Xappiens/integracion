@@ -1,0 +1,41 @@
+frappe.ui.form.on('Form', {
+    refresh: function(frm) {
+        if (frm.doc.attachments && frm.doc.attachments.length > 0) {
+            var parent = $('.form-attachments');
+            parent.prepend('<ul class="list-unstyled sidebar-menu"><li class="h6 tags-label">SharePoint</li><div id="zonasp"><img src="/assets/frappe/images/loading.gif"/></div></ul>');
+
+            if (!frm.is_new()) {
+                frappe.call({
+                    method: "integracion.upload_files_to_sharepoint.get_sharepoint_structure",
+                    args: {
+                        doctype: frm.doctype,
+                        docname: frm.doc.name
+                    },
+                    callback: function(r) {
+                        var html = "<ul>";
+                        if (r.message && r.message.length > 1) {
+                            try {
+                                var obj = JSON.parse(r.message);
+                                for (var i = 0; i < obj.length; i++) {
+                                    var item = obj[i];
+                                    if (item.tipo === "C") {
+                                        html += "<li><i class='fa fa-folder'></i>&nbsp;<a target='_blank' href='" + item.url + "'>" + item.nombre + "</a></li>";
+                                    } else {
+                                        html += "<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fa fa-file'></i>&nbsp;<a target='_blank' href='" + item.url + "'>" + item.nombre + "</a></li>";
+                                    }
+                                }
+                            } catch (e) {
+                                console.log("Error al parsear el JSON: " + e);
+                            }
+                        }
+                        html += "</ul><br><br>";
+                        $("#zonasp").html(html);
+                    },
+                    error: function(r) {
+                        console.log("Error: " + r.message);
+                    }
+                });
+            }
+        }
+    }
+});

@@ -1,0 +1,54 @@
+2024-08-01 16:00:58,902 - integracion.integracion.sii.method.facturas_emitidas - INFO - Iniciando el proceso de envío de facturas emitidas
+2024-08-01 16:00:58,903 - integracion.integracion.sii.method.facturas_emitidas - INFO - Obteniendo la factura de venta: TBC/V/2400018-1
+2024-08-01 16:00:58,947 - integracion.integracion.sii.method.facturas_emitidas - INFO - Construyendo el XML de las facturas emitidas
+2024-08-01 16:00:58,951 - integracion.integracion.sii.method.facturas_emitidas - INFO - NIF del titular: B09543836
+2024-08-01 16:00:58,951 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML construido con éxito
+2024-08-01 16:00:58,951 - integracion.integracion.sii.method.facturas_emitidas - INFO - Validando el XML contra el esquema XSD
+2024-08-01 16:00:58,955 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML válido según el esquema XSD
+2024-08-01 16:00:58,956 - integracion.integracion.sii.method.facturas_emitidas - INFO - Empresa detectada: TAKIN Business Consulting SL
+2024-08-01 16:00:58,956 - integracion.integracion.sii.method.facturas_emitidas - ERROR - No se encontró un certificado para la empresa TAKIN Business Consulting SL
+2024-08-01 16:01:18,945 - integracion.integracion.sii.method.facturas_emitidas - INFO - Iniciando el proceso de envío de facturas emitidas
+2024-08-01 16:01:18,945 - integracion.integracion.sii.method.facturas_emitidas - INFO - Obteniendo la factura de venta: ATUSL/L/2400001-2
+2024-08-01 16:01:18,970 - integracion.integracion.sii.method.facturas_emitidas - INFO - Construyendo el XML de las facturas emitidas
+2024-08-01 16:01:18,974 - integracion.integracion.sii.method.facturas_emitidas - INFO - NIF del titular: B09318916
+2024-08-01 16:01:18,974 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML construido con éxito
+2024-08-01 16:01:18,974 - integracion.integracion.sii.method.facturas_emitidas - INFO - Validando el XML contra el esquema XSD
+2024-08-01 16:01:18,979 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML válido según el esquema XSD
+2024-08-01 16:01:18,980 - integracion.integracion.sii.method.facturas_emitidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-08-01 16:01:18,980 - integracion.integracion.sii.method.facturas_emitidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-08-01 16:01:19,034 - integracion.integracion.sii.method.facturas_emitidas - INFO - Certificado cargado con éxito
+2024-08-01 16:01:19,034 - integracion.integracion.sii.method.facturas_emitidas - INFO - Firmando el XML
+2024-08-01 16:01:19,084 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML firmado con éxito
+2024-08-01 16:01:19,085 - integracion.integracion.sii.method.facturas_emitidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/method/facturas_emitidas_firmadas_Academia Técnica Universitaria SL_20240801160118.xml
+2024-08-01 16:01:19,085 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML guardado con éxito
+2024-08-01 16:01:19,085 - integracion.integracion.sii.method.facturas_emitidas - INFO - Proceso de envío de facturas emitidas finalizado
+2024-08-01 16:04:56,013 - integracion.integracion.sii.method.facturas_emitidas - INFO - Iniciando el proceso de envío de facturas emitidas
+2024-08-01 16:04:56,013 - integracion.integracion.sii.method.facturas_emitidas - INFO - Obteniendo la factura de venta: ATUSL/L/2400001-2
+2024-08-01 16:04:56,049 - integracion.integracion.sii.method.facturas_emitidas - INFO - Construyendo el XML de las facturas emitidas
+2024-08-01 16:04:56,057 - integracion.integracion.sii.method.facturas_emitidas - INFO - NIF del titular: B09318916
+2024-08-01 16:04:56,058 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML construido con éxito
+2024-08-01 16:04:56,058 - integracion.integracion.sii.method.facturas_emitidas - INFO - Validando el XML contra el esquema XSD
+2024-08-01 16:04:56,063 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML válido según el esquema XSD
+2024-08-01 16:04:56,063 - integracion.integracion.sii.method.facturas_emitidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-08-01 16:04:56,064 - integracion.integracion.sii.method.facturas_emitidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-08-01 16:04:56,118 - integracion.integracion.sii.method.facturas_emitidas - INFO - Certificado cargado con éxito
+2024-08-01 16:04:56,118 - integracion.integracion.sii.method.facturas_emitidas - INFO - Firmando el XML
+2024-08-01 16:04:56,172 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML firmado con éxito
+2024-08-01 16:04:56,172 - integracion.integracion.sii.method.facturas_emitidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/method/facturas_emitidas_firmadas_Academia Técnica Universitaria SL_20240801160456.xml
+2024-08-01 16:04:56,172 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML guardado con éxito
+2024-08-01 16:04:56,172 - integracion.integracion.sii.method.facturas_emitidas - INFO - Proceso de envío de facturas emitidas finalizado
+2024-08-01 16:05:44,418 - integracion.integracion.sii.method.facturas_emitidas - INFO - Iniciando el proceso de envío de facturas emitidas
+2024-08-01 16:05:44,419 - integracion.integracion.sii.method.facturas_emitidas - INFO - Obteniendo la factura de venta: ATUSL/L/2400001-2
+2024-08-01 16:05:44,444 - integracion.integracion.sii.method.facturas_emitidas - INFO - Construyendo el XML de las facturas emitidas
+2024-08-01 16:05:44,450 - integracion.integracion.sii.method.facturas_emitidas - INFO - NIF del titular: B09318916
+2024-08-01 16:05:44,451 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML construido con éxito
+2024-08-01 16:05:44,451 - integracion.integracion.sii.method.facturas_emitidas - INFO - Validando el XML contra el esquema XSD
+2024-08-01 16:05:44,455 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML válido según el esquema XSD
+2024-08-01 16:05:44,456 - integracion.integracion.sii.method.facturas_emitidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-08-01 16:05:44,456 - integracion.integracion.sii.method.facturas_emitidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-08-01 16:05:44,510 - integracion.integracion.sii.method.facturas_emitidas - INFO - Certificado cargado con éxito
+2024-08-01 16:05:44,510 - integracion.integracion.sii.method.facturas_emitidas - INFO - Firmando el XML
+2024-08-01 16:05:44,560 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML firmado con éxito
+2024-08-01 16:05:44,561 - integracion.integracion.sii.method.facturas_emitidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/method/facturas_emitidas_firmadas_Academia Técnica Universitaria SL_20240801160544.xml
+2024-08-01 16:05:44,561 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML guardado con éxito
+2024-08-01 16:05:44,561 - integracion.integracion.sii.method.facturas_emitidas - INFO - Proceso de envío de facturas emitidas finalizado
