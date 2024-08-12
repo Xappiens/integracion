@@ -32,16 +32,21 @@ override_whitelisted_methods = {
 
 }
 
+override_doctype_class = {
+    "Purchase Invoice": "integracion.integracion.purchase_invoice_override.CustomPurchaseInvoice"
+}
+
 scheduler_events = {
     "cron": {
         "*/5 * * * *": [
             "integracion.integracion.export_to_csv.export_web_form_data"
         ]
-    },
-    "daily": [
-        "integracion.integracion.employee_status_update.update_employee_status",
-        "integracion.integracion.employee_status_update.disable_inactive_employee_users"
-]
+    }
+    ,
+#     "daily": [
+#         "integracion.integracion.employee_status_update.update_employee_status",
+#         "integracion.integracion.employee_status_update.disable_inactive_employee_users"
+# ]
 }
 
 # Añadir el enlace de Font Awesome al encabezado de HTML
