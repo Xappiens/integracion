@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:REM-{company_abbr}-{fecha}",
+ "creation": "2024-08-07 12:14:36.593165",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "company_abbr",
+  "column_break_irxu",
+  "fecha",
+  "url",
+  "section_break_hzkb",
+  "facturas"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_irxu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "company_abbr",
+   "fieldtype": "Data",
+   "label": "Empresa Abbr",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha Emision"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Small Text",
+   "label": "URL"
+  },
+  {
+   "fieldname": "section_break_hzkb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "facturas",
+   "fieldtype": "Table",
+   "label": "Facturas",
+   "options": "Remesa Factura"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-07 12:39:18.654896",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Remesa Registro",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

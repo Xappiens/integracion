@@ -1,0 +1,112 @@
+2024-07-31 16:39:26,601 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-07-31 16:39:26,728 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-07-31 16:39:26,736 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-07-31 16:39:26,737 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-07-31 16:39:26,737 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-07-31 16:39:26,741 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-07-31 16:39:26,741 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-07-31 16:39:26,741 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-07-31 16:39:26,799 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-07-31 16:39:26,800 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-07-31 16:39:26,852 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-07-31 16:39:26,852 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/method/facturas_recibidas_firmadas_Academia Técnica Universitaria SL_20240731163926.xml
+2024-07-31 16:39:26,852 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-07-31 16:39:26,852 - integracion.integracion.sii.method.facturas_recibidas - INFO - Proceso de envío de facturas recibidas finalizado
+2024-08-01 08:02:12,983 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-08-01 08:02:13,005 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-08-01 08:02:13,010 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-08-01 08:02:13,010 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-08-01 08:02:13,010 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-08-01 08:02:13,013 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-08-01 08:02:13,014 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-08-01 08:02:13,014 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-08-01 08:02:13,061 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-08-01 08:02:13,061 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-08-01 08:02:13,105 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-08-01 08:02:13,105 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/method/facturas_recibidas_firmadas_Academia Técnica Universitaria SL_20240801080213.xml
+2024-08-01 08:02:13,106 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-08-01 08:02:13,106 - integracion.integracion.sii.method.facturas_recibidas - INFO - Proceso de envío de facturas recibidas finalizado
+2024-08-01 08:02:58,974 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-08-01 08:02:58,993 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-08-01 08:02:59,016 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-08-01 08:02:59,016 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-08-01 08:02:59,016 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-08-01 08:02:59,020 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-08-01 08:02:59,020 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-08-01 08:02:59,020 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-08-01 08:02:59,105 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-08-01 08:02:59,105 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-08-01 08:02:59,155 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-08-01 08:02:59,155 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/method/facturas_recibidas_firmadas_Academia Técnica Universitaria SL_20240801080259.xml
+2024-08-01 08:02:59,155 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-08-01 08:02:59,155 - integracion.integracion.sii.method.facturas_recibidas - INFO - Proceso de envío de facturas recibidas finalizado
+2024-08-01 08:07:18,481 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-08-01 08:07:18,503 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-08-01 08:07:18,511 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-08-01 08:07:18,512 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-08-01 08:07:18,512 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-08-01 08:07:18,517 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-08-01 08:07:18,517 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-08-01 08:07:18,517 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-08-01 08:07:18,573 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-08-01 08:07:18,573 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-08-01 08:07:18,620 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-08-01 08:07:18,621 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/method/facturas_recibidas_firmadas_Academia Técnica Universitaria SL_20240801080718.xml
+2024-08-01 08:07:18,621 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-08-01 08:07:18,621 - integracion.integracion.sii.method.facturas_recibidas - INFO - Proceso de envío de facturas recibidas finalizado
+2024-08-01 08:08:54,836 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-08-01 08:08:54,878 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-08-01 08:08:54,881 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-08-01 08:08:54,882 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-08-01 08:08:54,882 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-08-01 08:08:54,885 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-08-01 08:08:54,886 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-08-01 08:08:54,886 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-08-01 08:08:54,989 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-08-01 08:08:54,989 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-08-01 08:08:55,035 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-08-01 08:08:55,035 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/method/facturas_recibidas_firmadas_Academia Técnica Universitaria SL_20240801080854.xml
+2024-08-01 08:08:55,036 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-08-01 08:08:55,036 - integracion.integracion.sii.method.facturas_recibidas - INFO - Proceso de envío de facturas recibidas finalizado
+2024-08-01 08:10:49,492 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-08-01 08:10:49,513 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-08-01 08:10:49,519 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-08-01 08:10:49,519 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-08-01 08:10:49,519 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-08-01 08:10:49,522 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-08-01 08:10:49,523 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-08-01 08:10:49,523 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-08-01 08:10:49,574 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-08-01 08:10:49,575 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-08-01 08:10:49,624 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-08-01 08:10:49,624 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/method/facturas_recibidas_firmadas_Academia Técnica Universitaria SL_20240801081049.xml
+2024-08-01 08:10:49,624 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-08-01 08:10:49,624 - integracion.integracion.sii.method.facturas_recibidas - INFO - Proceso de envío de facturas recibidas finalizado
+2024-08-01 08:52:13,107 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-08-01 08:52:13,128 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-08-01 08:52:13,134 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-08-01 08:52:13,135 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-08-01 08:52:13,135 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-08-01 08:52:13,139 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-08-01 08:52:13,140 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-08-01 08:52:13,140 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-08-01 08:52:13,201 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-08-01 08:52:13,201 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-08-01 08:52:13,253 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-08-01 08:52:13,254 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/method/facturas_recibidas_firmadas_Academia Técnica Universitaria SL_20240801085213.xml
+2024-08-01 08:52:13,254 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-08-01 08:52:13,254 - integracion.integracion.sii.method.facturas_recibidas - INFO - Proceso de envío de facturas recibidas finalizado
+2024-08-01 08:53:53,447 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-08-01 08:53:53,469 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-08-01 08:53:53,473 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-08-01 08:53:53,474 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-08-01 08:53:53,474 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-08-01 08:53:53,478 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-08-01 08:53:53,479 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-08-01 08:53:53,479 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-08-01 08:53:53,533 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-08-01 08:53:53,534 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-08-01 08:53:53,588 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-08-01 08:53:53,588 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/method/facturas_recibidas_firmadas_Academia Técnica Universitaria SL_20240801085353.xml
+2024-08-01 08:53:53,588 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-08-01 08:53:53,588 - integracion.integracion.sii.method.facturas_recibidas - INFO - Proceso de envío de facturas recibidas finalizado

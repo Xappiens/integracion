@@ -1,0 +1,36 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-12 09:13:19.175923",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cuenta",
+  "column_break_ezrk"
+ ],
+ "fields": [
+  {
+   "fieldname": "cuenta",
+   "fieldtype": "Link",
+   "label": "Cuenta",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_ezrk",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-12 09:18:18.330595",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Cuenta Empleado",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

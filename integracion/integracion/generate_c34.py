@@ -1,11 +1,15 @@
 import os
+import json
 import logging
 import datetime
 from urllib.parse import quote
 from office365.runtime.auth.user_credential import UserCredential
 from office365.sharepoint.client_context import ClientContext
+from lxml import etree
+from bs4 import BeautifulSoup  # Librería para manejar HTML
 import frappe
 import pandas as pd
+import json
 from frappe import _
 
 # Leer credenciales desde el archivo de configuración del sitio
@@ -69,40 +73,163 @@ def change_status_to_remesa_emitida(purchase_invoice_name, remesa_name):
     except Exception as e:
         logger.error(f"Error al cambiar el estado de la factura {purchase_invoice_name}: {e}")
 
+# @frappe.whitelist()
+# def generate_c34():
+#     logger.info("Inicio de la generación de Cuaderno 34")
+
+#     # Obtener las facturas que cumplen con los criterios
+#     try:
+#         invoice_names = frappe.get_all("Purchase Invoice", filters={
+#             "custom_aprobado_para_pago": 1,
+#             "status": "Aprobada para pago"
+#         }, fields=["name"])
+#         logger.debug(f"Total facturas encontradas: {len(invoice_names)}")
+#     except Exception as e:
+#         logger.error(f"Error al obtener facturas: {e}")
+#         return
+
+#     invoices_by_company = {}
+#     for invoice_data in invoice_names:
+#         try:
+#             # Obtener el documento completo
+#             invoice = frappe.get_doc("Purchase Invoice", invoice_data.name)
+#             logger.debug(f"Procesando factura {invoice.name}")
+            
+#             # Obtener el modo de pago del proveedor
+#             mode_of_payment = frappe.get_value("Supplier", invoice.supplier, "mode_of_payment")
+            
+#             # Filtrar por modo de pago "Transferencia bancaria"
+#             if mode_of_payment != "Transferencia bancaria":
+#                 logger.debug(f"Factura {invoice.name} ignorada por modo de pago {mode_of_payment} {invoice.supplier}")
+#                 continue
+
+#             # Obtener la empresa asociada a la factura
+#             company = invoice.company
+#             logger.debug(f"Factura {invoice.name} está asociada a la empresa {company}")
+            
+#             if not company:
+#                 logger.error(f"Factura {invoice.name} no tiene una empresa asociada.")
+#                 continue
+
+#             if company not in invoices_by_company:
+#                 invoices_by_company[company] = []
+#             invoices_by_company[company].append(invoice)
+#             logger.debug(f"Factura {invoice.name} agregada a la empresa {company}")
+
+#             # Agregar depuración para el valor de outstanding_amount
+#             logger.debug(f"Valor de outstanding_amount para la factura {invoice.name}: {invoice.outstanding_amount}")
+
+#         except Exception as e:
+#             logger.error(f"Error al procesar la factura {invoice_data.name}: {e}")
+
+#     sharepoint_urls = []
+#     for company, invoices in invoices_by_company.items():
+#         try:
+#             logger.debug(f"Generando archivo Excel para la empresa {company} con {len(invoices)} facturas")
+#             abbr = frappe.get_value("Company", company, "abbr")
+#             now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+#             fichero_id_value = f"Excel-{abbr}-{now}"
+
+#             # Datos para el Excel
+#             data = []
+#             for invoice in invoices:
+#                 try:
+#                     # Obtener IBAN y CIF del proveedor
+#                     supplier_iban = get_supplier_iban(invoice.supplier)
+#                     supplier_cif = frappe.get_value("Supplier", invoice.supplier, "tax_id")
+                    
+#                     # Agregar los datos necesarios al Excel
+#                     data.append({
+#                         "Num Factura Nº Factura Proveedor": invoice.bill_no,
+#                         "Nombre proveedor": invoice.supplier_name,
+#                         "CIF Proveedor": supplier_cif,
+#                         "IBAN Proveedor": supplier_iban,
+#                         "Importe Factura": invoice.outstanding_amount,
+#                         "Objeto de la Factura": invoice.remarks or "Pago de factura",
+#                         "Fecha de factura": invoice.posting_date.strftime('%Y-%m-%d'),
+#                         "Tipo Transferencia" : "SEPA" 
+#                     })
+#                     logger.debug(f"Datos agregados para la factura {invoice.name} del proveedor {invoice.supplier_name}")
+#                 except Exception as e:
+#                     logger.error(f"Error al procesar la factura {invoice.name}: {e}")
+
+#             # Crear un DataFrame de pandas y guardar como Excel
+#             df = pd.DataFrame(data)
+#             file_path = f"/home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/{fichero_id_value}.xlsx"
+#             df.to_excel(file_path, index=False)
+#             logger.info(f"Archivo Excel generado para {company}: {file_path}")
+
+#             # Subir a SharePoint y obtener la URL
+#             sharepoint_url = upload_file_to_sharepoint(file_path, company, fichero_id_value)
+#             if sharepoint_url:
+#                 sharepoint_urls.append({"company": company, "url": sharepoint_url})
+#                 logger.debug(f"Archivo subido a SharePoint: {sharepoint_url}")
+
+#                 # Crear la remesa en Frappe
+#                 remesa_name = create_remesa(company, invoices, sharepoint_url)
+                
+#                 # Cambiar el estado de las facturas a "Remesa Emitida"
+#                 for invoice in invoices:
+#                     change_status_to_remesa_emitida(invoice.name, remesa_name)
+#                     logger.debug(f"Estado cambiado a 'Remesa Emitida' para la factura {invoice.name}")
+                
+#             # Eliminar el archivo local después de subirlo a SharePoint
+#             if os.path.exists(file_path):
+#                 os.remove(file_path)
+#                 logger.info(f"Archivo local {file_path} eliminado después de subirlo a SharePoint")
+
+#         except Exception as e:
+#             logger.error(f"Error al generar o subir el Excel para {company}: {e}")
+
+#     return sharepoint_urls
+
+
 @frappe.whitelist()
-def generate_c34():
+def generate_c34(invoice_data=None):
     logger.info("Inicio de la generación de Cuaderno 34")
 
-    # Obtener las facturas que cumplen con los criterios
     try:
-        invoice_names = frappe.get_all("Purchase Invoice", filters={
-            "custom_aprobado_para_pago": 1,
-            "status": "Aprobada para pago"
-        }, fields=["name"])
-        logger.debug(f"Total facturas encontradas: {len(invoice_names)}")
+        # Deserializar el JSON recibido
+        invoice_names = json.loads(invoice_data) if invoice_data else []
+
+        if invoice_names:
+            logger.debug(f"Procesando facturas específicas: {invoice_names}")
+
+            # Aplicar el filtro solo a las facturas seleccionadas
+            filtered_invoices = frappe.get_all("Purchase Invoice", filters={
+                "name": ["in", invoice_names],
+                "custom_aprobado_para_pago": 1,
+                "status": "Aprobada para pago"
+            }, fields=["name"])
+
+            # Si no se encuentran facturas después del filtro, no hacer nada
+            if not filtered_invoices:
+                logger.warning("No se encontraron facturas que cumplan los criterios.")
+                return
+        else:
+            # Si no se seleccionan facturas, obtener todas las facturas aprobadas
+            filtered_invoices = frappe.get_all("Purchase Invoice", filters={
+                "custom_aprobado_para_pago": 1,
+                "status": "Aprobada para pago"
+            }, fields=["name"])
+            logger.debug(f"Total facturas encontradas: {len(filtered_invoices)}")
+
     except Exception as e:
         logger.error(f"Error al obtener facturas: {e}")
         return
 
     invoices_by_company = {}
-    for invoice_data in invoice_names:
+    for invoice_data in filtered_invoices:
         try:
-            # Obtener el documento completo
-            invoice = frappe.get_doc("Purchase Invoice", invoice_data.name)
+            invoice = frappe.get_doc("Purchase Invoice", invoice_data["name"])
             logger.debug(f"Procesando factura {invoice.name}")
-            
-            # Obtener el modo de pago del proveedor
+
             mode_of_payment = frappe.get_value("Supplier", invoice.supplier, "mode_of_payment")
-            
-            # Filtrar por modo de pago "Transferencia bancaria"
             if mode_of_payment != "Transferencia bancaria":
                 logger.debug(f"Factura {invoice.name} ignorada por modo de pago {mode_of_payment} {invoice.supplier}")
                 continue
 
-            # Obtener la empresa asociada a la factura
             company = invoice.company
-            logger.debug(f"Factura {invoice.name} está asociada a la empresa {company}")
-            
             if not company:
                 logger.error(f"Factura {invoice.name} no tiene una empresa asociada.")
                 continue
@@ -112,29 +239,96 @@ def generate_c34():
             invoices_by_company[company].append(invoice)
             logger.debug(f"Factura {invoice.name} agregada a la empresa {company}")
 
-            # Agregar depuración para el valor de outstanding_amount
-            logger.debug(f"Valor de outstanding_amount para la factura {invoice.name}: {invoice.outstanding_amount}")
-
         except Exception as e:
-            logger.error(f"Error al procesar la factura {invoice_data.name}: {e}")
+            logger.error(f"Error al procesar la factura {invoice_data['name']}: {e}")
 
-    sharepoint_urls = []
+    files = []
     for company, invoices in invoices_by_company.items():
         try:
-            logger.debug(f"Generando archivo Excel para la empresa {company} con {len(invoices)} facturas")
             abbr = frappe.get_value("Company", company, "abbr")
             now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-            fichero_id_value = f"Excel-{abbr}-{now}"
+            fichero_id_value = f"C34-{abbr}-{now}"
+            
+            # Crear el elemento principal del XML conforme al estándar SEPA
+            root = etree.Element("Document", xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03")
+            cstmr_cdt_trf_initn = etree.SubElement(root, "CstmrCdtTrfInitn")
 
-            # Datos para el Excel
+            # Crear el header del grupo
+            grp_hdr = etree.SubElement(cstmr_cdt_trf_initn, "GrpHdr")
+            msg_id = etree.SubElement(grp_hdr, "MsgId")
+            msg_id.text = fichero_id_value
+            cre_dt_tm = etree.SubElement(grp_hdr, "CreDtTm")
+            cre_dt_tm.text = now
+            nb_of_txs = etree.SubElement(grp_hdr, "NbOfTxs")
+            nb_of_txs.text = str(len(invoices))
+            ctrl_sum = etree.SubElement(grp_hdr, "CtrlSum")
+            ctrl_sum.text = str(sum(invoice.grand_total for invoice in invoices))
+            initg_pty = etree.SubElement(grp_hdr, "InitgPty")
+            nm = etree.SubElement(initg_pty, "Nm")
+            nm.text = company
+            id_elem = etree.SubElement(initg_pty, "Id")
+            org_id = etree.SubElement(id_elem, "OrgId")
+            othr = etree.SubElement(org_id, "Othr")
+            othr_id = etree.SubElement(othr, "Id")
+            othr_id.text = frappe.get_value("Company", company, "tax_id")
+
+            # Información de pago
+            pmt_inf = etree.SubElement(cstmr_cdt_trf_initn, "PmtInf")
+            pmt_inf_id = etree.SubElement(pmt_inf, "PmtInfId")
+            pmt_inf_id.text = f"PMT-{abbr}-{now}"
+            pmt_mtd = etree.SubElement(pmt_inf, "PmtMtd")
+            pmt_mtd.text = "TRF"
+            btch_bookg = etree.SubElement(pmt_inf, "BtchBookg")
+            btch_bookg.text = "false"
+            nb_of_txs_pmt_inf = etree.SubElement(pmt_inf, "NbOfTxs")
+            nb_of_txs_pmt_inf.text = str(len(invoices))
+            ctrl_sum_pmt_inf = etree.SubElement(pmt_inf, "CtrlSum")
+            ctrl_sum_pmt_inf.text = str(sum(invoice.grand_total for invoice in invoices))
+            pmt_tp_inf = etree.SubElement(pmt_inf, "PmtTpInf")
+            instr_prty = etree.SubElement(pmt_tp_inf, "InstrPrty")
+            instr_prty.text = "NORM"
+            svc_lvl = etree.SubElement(pmt_tp_inf, "SvcLvl")
+            svc_lvl_cd = etree.SubElement(svc_lvl, "Cd")
+            svc_lvl_cd.text = "SEPA"
+            reqd_exctn_dt = etree.SubElement(pmt_inf, "ReqdExctnDt")
+            reqd_exctn_dt.text = frappe.utils.nowdate()
+
+            # Ordenante
+            dbtr = etree.SubElement(pmt_inf, "Dbtr")
+            dbtr_nm = etree.SubElement(dbtr, "Nm")
+            dbtr_nm.text = company
+
+            # Extraer el texto plano del campo HTML address_html
+            #address_html = frappe.get_value("Company", company, "address_html")
+            #soup = BeautifulSoup(address_html, 'html.parser')
+            #address_text = soup.get_text(separator=", ")
+
+            dbtr_pstl_adr = etree.SubElement(dbtr, "PstlAdr")
+            dbtr_ctry = etree.SubElement(dbtr_pstl_adr, "Ctry")
+            dbtr_ctry.text = "ES"
+            dbtr_adr_line = etree.SubElement(dbtr_pstl_adr, "AdrLine")
+            #dbtr_adr_line.text = address_text
+            dbtr_adr_line.text = "address_text"
+            dbtr_id = etree.SubElement(dbtr, "Id")
+            dbtr_org_id = etree.SubElement(dbtr_id, "OrgId")
+            dbtr_othr = etree.SubElement(dbtr_org_id, "Othr")
+            dbtr_othr_id = etree.SubElement(dbtr_othr, "Id")
+            dbtr_othr_id.text = frappe.get_value("Company", company, "tax_id")
+            dbtr_acct = etree.SubElement(pmt_inf, "DbtrAcct")
+            dbtr_acct_id = etree.SubElement(dbtr_acct, "Id")
+            dbtr_acct_iban = etree.SubElement(dbtr_acct_id, "IBAN")
+            dbtr_acct_iban.text = frappe.get_value("Company", company, "default_bank_account")
+            dbtr_agt = etree.SubElement(pmt_inf, "DbtrAgt")
+            dbtr_fin_instn_id = etree.SubElement(dbtr_agt, "FinInstnId")
+            # dbtr_bic = etree.SubElement(dbtr_fin_instn_id, "BIC")
+            # dbtr_bic.text = frappe.get_value("Company", company, "bic")
+
             data = []
             for invoice in invoices:
                 try:
-                    # Obtener IBAN y CIF del proveedor
                     supplier_iban = get_supplier_iban(invoice.supplier)
                     supplier_cif = frappe.get_value("Supplier", invoice.supplier, "tax_id")
                     
-                    # Agregar los datos necesarios al Excel
                     data.append({
                         "Num Factura Nº Factura Proveedor": invoice.bill_no,
                         "Nombre proveedor": invoice.supplier_name,
@@ -149,35 +343,29 @@ def generate_c34():
                 except Exception as e:
                     logger.error(f"Error al procesar la factura {invoice.name}: {e}")
 
-            # Crear un DataFrame de pandas y guardar como Excel
             df = pd.DataFrame(data)
             file_path = f"/home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/{fichero_id_value}.xlsx"
             df.to_excel(file_path, index=False)
             logger.info(f"Archivo Excel generado para {company}: {file_path}")
 
-            # Subir a SharePoint y obtener la URL
             sharepoint_url = upload_file_to_sharepoint(file_path, company, fichero_id_value)
             if sharepoint_url:
                 sharepoint_urls.append({"company": company, "url": sharepoint_url})
                 logger.debug(f"Archivo subido a SharePoint: {sharepoint_url}")
 
-                # Crear la remesa en Frappe
                 remesa_name = create_remesa(company, invoices, sharepoint_url)
-                
-                # Cambiar el estado de las facturas a "Remesa Emitida"
                 for invoice in invoices:
                     change_status_to_remesa_emitida(invoice.name, remesa_name)
                     logger.debug(f"Estado cambiado a 'Remesa Emitida' para la factura {invoice.name}")
                 
-            # Eliminar el archivo local después de subirlo a SharePoint
             if os.path.exists(file_path):
                 os.remove(file_path)
                 logger.info(f"Archivo local {file_path} eliminado después de subirlo a SharePoint")
-
         except Exception as e:
-            logger.error(f"Error al generar o subir el Excel para {company}: {e}")
+            logger.error(f"Error al subir el archivo {file_path} a SharePoint: {e}")
 
     return sharepoint_urls
+
 
 def create_remesa(company, invoices, sharepoint_url):
     try:
@@ -231,7 +419,7 @@ def upload_file_to_sharepoint(file_path, company, fichero_id_value):
 
         # Extraer la ruta relativa y el nombre del sitio desde la URL completa
         start_idx = sharepoint_base_url.find('/sites/')
-        if (start_idx == -1):
+        if start_idx == -1:
             logger.error("La URL no contiene '/sites/'. No se puede calcular la ruta relativa.")
             return
         site_url = sharepoint_base_url[:start_idx + len('/sites/') + sharepoint_base_url[start_idx + len('/sites/'):].find('/')]

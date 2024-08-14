@@ -29,8 +29,9 @@ override_whitelisted_methods = {
     "integracion.integracion.sii.sii_integracion.enviar_facturas_recibidas_wrapper": "integracion.integracion.sii.sii_integracion.enviar_facturas_recibidas_wrapper",
     "education.education.doctype.course.course.add_course_to_programs": "integracion.integracion.sii.sii_integracion.custom_add_course_to_programs",
     "education.education.doctype.course.course.get_programs_without_course": "integracion.integracion.sii.sii_integracion.custom_get_programs_without_course",
-
+    "integracion.integracion.custom_pdf_make.custom_download_and_attach_pdf": "integracion.integracion.custom_pdf_make.custom_download_and_attach_pdf"
 }
+
 
 override_doctype_class = {
     "Purchase Invoice": "integracion.integracion.purchase_invoice_override.CustomPurchaseInvoice"
@@ -41,17 +42,20 @@ scheduler_events = {
         "*/5 * * * *": [
             "integracion.integracion.export_to_csv.export_web_form_data"
         ]
-    }
-    ,
-#     "daily": [
-#         "integracion.integracion.employee_status_update.update_employee_status",
-#         "integracion.integracion.employee_status_update.disable_inactive_employee_users"
-# ]
+    },
+    "daily": [
+        "integracion.integracion.employee_status_update.update_employee_status",
+        "integracion.integracion.employee_status_update.disable_inactive_employee_users"
+]
 }
 
 # Añadir el enlace de Font Awesome al encabezado de HTML
 app_include_css = [
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+]
+
+app_include_js = [
+    "/assets/integracion/js/custom_printview.js"
 ]
 
 # required_apps = []

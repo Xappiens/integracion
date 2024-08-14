@@ -7,7 +7,6 @@
  "engine": "InnoDB",
  "field_order": [
   "factura",
-  "n\u00ba_fact_proveedor",
   "column_break_cswx",
   "importe"
  ],
@@ -27,19 +26,12 @@
    "fieldtype": "Currency",
    "label": "Importe",
    "options": "currency"
-  },
-  {
-   "fetch_from": "factura.bill_no",
-   "fieldname": "n\u00ba_fact_proveedor",
-   "fieldtype": "Data",
-   "label": "N\u00ba Fact Proveedor",
-   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-13 12:27:10.258682",
+ "modified": "2024-08-07 12:28:13.540488",
  "modified_by": "Administrator",
  "module": "Integracion",
  "name": "Remesa Factura",
