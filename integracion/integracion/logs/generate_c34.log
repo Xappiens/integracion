@@ -1,73 +1,52 @@
-2024-08-14 15:06:21,119 - integracion.integracion.generate_c34 - INFO - Inicio de la generación de Cuaderno 34
-2024-08-14 15:06:21,119 - integracion.integracion.generate_c34 - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-00340']
-2024-08-14 15:06:21,233 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00340
-2024-08-14 15:06:21,234 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00340 agregada a la empresa María Ángeles Alonso de la Fuente
-2024-08-14 15:06:21,243 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00340 del proveedor TAKIN BUSINESS CONSULTING S.L.
-2024-08-14 15:06:21,386 - integracion.integracion.generate_c34 - INFO - Archivo Excel generado para María Ángeles Alonso de la Fuente: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814150621.xlsx
-2024-08-14 15:06:21,386 - integracion.integracion.generate_c34 - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814150621.xlsx a SharePoint para la compañía María Ángeles Alonso de la Fuente con Cuaderno C34-MAN-20240814150621
-2024-08-14 15:06:21,387 - integracion.integracion.generate_c34 - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
-2024-08-14 15:06:21,387 - integracion.integracion.generate_c34 - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
-2024-08-14 15:06:21,387 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente
-2024-08-14 15:06:22,498 - integracion.integracion.generate_c34 - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
-2024-08-14 15:06:22,949 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/María Ángeles Alonso de la Fuente
-2024-08-14 15:06:22,950 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814150621
-2024-08-14 15:06:23,109 - integracion.integracion.generate_c34 - INFO - Conectado a parent María Ángeles Alonso de la Fuente
-2024-08-14 15:06:23,434 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/María Ángeles Alonso de la Fuente/C34-MAN-20240814150621
-2024-08-14 15:06:23,434 - integracion.integracion.generate_c34 - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814150621/C34-MAN-20240814150621.xlsx
-2024-08-14 15:06:24,224 - integracion.integracion.generate_c34 - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814150621/C34-MAN-20240814150621.xlsx
-2024-08-14 15:06:24,225 - integracion.integracion.generate_c34 - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814150621/C34-MAN-20240814150621.xlsx
-2024-08-14 15:06:24,407 - integracion.integracion.generate_c34 - INFO - Remesa creada: REM-MAN-2024-08-14-#### para la empresa María Ángeles Alonso de la Fuente
-2024-08-14 15:06:24,450 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00340
-2024-08-14 15:06:24,451 - integracion.integracion.generate_c34 - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814150621.xlsx eliminado después de subirlo a SharePoint
-2024-08-14 15:12:28,125 - integracion.integracion.generate_c34 - INFO - Inicio de la generación de Cuaderno 34
-2024-08-14 15:12:28,125 - integracion.integracion.generate_c34 - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-00339', 'ACC-PINV-2024-00342', 'ACC-PINV-2024-00341', 'ACC-PINV-2024-00338', 'ACC-PINV-2024-00340']
-2024-08-14 15:12:28,158 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00339
-2024-08-14 15:12:28,159 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00339 agregada a la empresa Academia Técnica Universitaria SL
-2024-08-14 15:12:28,182 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00342
-2024-08-14 15:12:28,184 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00342 agregada a la empresa María Ángeles Alonso de la Fuente
-2024-08-14 15:12:28,202 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00341
-2024-08-14 15:12:28,203 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00341 agregada a la empresa Academia Técnica Universitaria SL
-2024-08-14 15:12:28,223 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00338
-2024-08-14 15:12:28,224 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00338 agregada a la empresa Academia Técnica Universitaria SL
-2024-08-14 15:12:28,246 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00340
-2024-08-14 15:12:28,249 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00340 agregada a la empresa María Ángeles Alonso de la Fuente
-2024-08-14 15:12:28,260 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00339 del proveedor TAKIN BUSINESS CONSULTING S.L.
-2024-08-14 15:12:28,263 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00341 del proveedor TAKIN BUSINESS CONSULTING S.L.
-2024-08-14 15:12:28,266 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00338 del proveedor TAKIN BUSINESS CONSULTING S.L.
-2024-08-14 15:12:28,411 - integracion.integracion.generate_c34 - INFO - Archivo Excel generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20240814151228.xlsx
-2024-08-14 15:12:28,412 - integracion.integracion.generate_c34 - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20240814151228.xlsx a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C34-ATUSL-20240814151228
-2024-08-14 15:12:28,412 - integracion.integracion.generate_c34 - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
-2024-08-14 15:12:28,412 - integracion.integracion.generate_c34 - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
-2024-08-14 15:12:28,412 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL
-2024-08-14 15:12:29,578 - integracion.integracion.generate_c34 - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
-2024-08-14 15:12:29,983 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL
-2024-08-14 15:12:29,983 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20240814151228
-2024-08-14 15:12:30,101 - integracion.integracion.generate_c34 - INFO - Conectado a parent Academia Técnica Universitaria SL
-2024-08-14 15:12:30,393 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL/C34-ATUSL-20240814151228
-2024-08-14 15:12:30,394 - integracion.integracion.generate_c34 - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20240814151228/C34-ATUSL-20240814151228.xlsx
-2024-08-14 15:12:30,877 - integracion.integracion.generate_c34 - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20240814151228/C34-ATUSL-20240814151228.xlsx
-2024-08-14 15:12:30,877 - integracion.integracion.generate_c34 - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20240814151228/C34-ATUSL-20240814151228.xlsx
-2024-08-14 15:12:30,943 - integracion.integracion.generate_c34 - INFO - Remesa creada: REM-ATUSL-2024-08-14-1423 para la empresa Academia Técnica Universitaria SL
-2024-08-14 15:12:30,996 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00339
-2024-08-14 15:12:31,041 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00341
-2024-08-14 15:12:31,079 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00338
-2024-08-14 15:12:31,079 - integracion.integracion.generate_c34 - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20240814151228.xlsx eliminado después de subirlo a SharePoint
-2024-08-14 15:12:31,085 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00342 del proveedor BURGOS ATU, S.L.
-2024-08-14 15:12:31,087 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00340 del proveedor TAKIN BUSINESS CONSULTING S.L.
-2024-08-14 15:12:31,096 - integracion.integracion.generate_c34 - INFO - Archivo Excel generado para María Ángeles Alonso de la Fuente: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814151231.xlsx
-2024-08-14 15:12:31,096 - integracion.integracion.generate_c34 - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814151231.xlsx a SharePoint para la compañía María Ángeles Alonso de la Fuente con Cuaderno C34-MAN-20240814151231
-2024-08-14 15:12:31,096 - integracion.integracion.generate_c34 - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
-2024-08-14 15:12:31,096 - integracion.integracion.generate_c34 - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
-2024-08-14 15:12:31,096 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente
-2024-08-14 15:12:32,136 - integracion.integracion.generate_c34 - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
-2024-08-14 15:12:32,602 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/María Ángeles Alonso de la Fuente
-2024-08-14 15:12:32,603 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814151231
-2024-08-14 15:12:32,726 - integracion.integracion.generate_c34 - INFO - Conectado a parent María Ángeles Alonso de la Fuente
-2024-08-14 15:12:33,078 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/María Ángeles Alonso de la Fuente/C34-MAN-20240814151231
-2024-08-14 15:12:33,079 - integracion.integracion.generate_c34 - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814151231/C34-MAN-20240814151231.xlsx
-2024-08-14 15:12:33,523 - integracion.integracion.generate_c34 - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814151231/C34-MAN-20240814151231.xlsx
-2024-08-14 15:12:33,524 - integracion.integracion.generate_c34 - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814151231/C34-MAN-20240814151231.xlsx
-2024-08-14 15:12:33,541 - integracion.integracion.generate_c34 - INFO - Remesa creada: REM-MAN-2024-08-14-1424 para la empresa María Ángeles Alonso de la Fuente
-2024-08-14 15:12:33,590 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00342
-2024-08-14 15:12:33,630 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00340
-2024-08-14 15:12:33,630 - integracion.integracion.generate_c34 - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814151231.xlsx eliminado después de subirlo a SharePoint
+2024-08-14 15:30:25,326 - integracion.integracion.generate_c34 - INFO - Inicio de la generación de Cuaderno 34
+2024-08-14 15:30:25,326 - integracion.integracion.generate_c34 - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-00340', 'ACC-PINV-2024-00342', 'ACC-PINV-2024-00338', 'ACC-PINV-2024-00341', 'ACC-PINV-2024-00339']
+2024-08-14 15:30:25,361 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00340
+2024-08-14 15:30:25,362 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00340 agregada a la empresa María Ángeles Alonso de la Fuente
+2024-08-14 15:30:25,377 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00342
+2024-08-14 15:30:25,378 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00342 agregada a la empresa María Ángeles Alonso de la Fuente
+2024-08-14 15:30:25,393 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00338
+2024-08-14 15:30:25,393 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00338 agregada a la empresa Academia Técnica Universitaria SL
+2024-08-14 15:30:25,409 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00341
+2024-08-14 15:30:25,410 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00341 agregada a la empresa Academia Técnica Universitaria SL
+2024-08-14 15:30:25,428 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00339
+2024-08-14 15:30:25,429 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00339 agregada a la empresa Academia Técnica Universitaria SL
+2024-08-14 15:30:25,441 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00340 del proveedor TAKIN BUSINESS CONSULTING S.L.
+2024-08-14 15:30:25,444 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00342 del proveedor BURGOS ATU, S.L.
+2024-08-14 15:30:25,570 - integracion.integracion.generate_c34 - INFO - Archivo Excel generado para María Ángeles Alonso de la Fuente: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814153025.xlsx
+2024-08-14 15:30:25,570 - integracion.integracion.generate_c34 - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814153025.xlsx a SharePoint para la compañía María Ángeles Alonso de la Fuente con Cuaderno C34-MAN-20240814153025
+2024-08-14 15:30:25,570 - integracion.integracion.generate_c34 - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-08-14 15:30:25,570 - integracion.integracion.generate_c34 - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-08-14 15:30:25,571 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente
+2024-08-14 15:30:27,184 - integracion.integracion.generate_c34 - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-08-14 15:30:27,711 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/María Ángeles Alonso de la Fuente
+2024-08-14 15:30:27,713 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814153025
+2024-08-14 15:30:27,868 - integracion.integracion.generate_c34 - INFO - Conectado a parent María Ángeles Alonso de la Fuente
+2024-08-14 15:30:28,273 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/María Ángeles Alonso de la Fuente/C34-MAN-20240814153025
+2024-08-14 15:30:28,275 - integracion.integracion.generate_c34 - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814153025/C34-MAN-20240814153025.xlsx
+2024-08-14 15:30:28,833 - integracion.integracion.generate_c34 - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814153025/C34-MAN-20240814153025.xlsx
+2024-08-14 15:30:28,833 - integracion.integracion.generate_c34 - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814153025/C34-MAN-20240814153025.xlsx
+2024-08-14 15:30:28,882 - integracion.integracion.generate_c34 - INFO - Remesa creada: REM-MAN-2024-08-14-0001 para la empresa María Ángeles Alonso de la Fuente
+2024-08-14 15:30:28,931 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00340
+2024-08-14 15:30:28,996 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00342
+2024-08-14 15:30:28,996 - integracion.integracion.generate_c34 - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814153025.xlsx eliminado después de subirlo a SharePoint
+2024-08-14 15:30:29,004 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00338 del proveedor TAKIN BUSINESS CONSULTING S.L.
+2024-08-14 15:30:29,007 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00341 del proveedor TAKIN BUSINESS CONSULTING S.L.
+2024-08-14 15:30:29,012 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00339 del proveedor TAKIN BUSINESS CONSULTING S.L.
+2024-08-14 15:30:29,024 - integracion.integracion.generate_c34 - INFO - Archivo Excel generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20240814153028.xlsx
+2024-08-14 15:30:29,024 - integracion.integracion.generate_c34 - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20240814153028.xlsx a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C34-ATUSL-20240814153028
+2024-08-14 15:30:29,024 - integracion.integracion.generate_c34 - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-08-14 15:30:29,024 - integracion.integracion.generate_c34 - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-08-14 15:30:29,024 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL
+2024-08-14 15:30:30,649 - integracion.integracion.generate_c34 - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-08-14 15:30:31,235 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL
+2024-08-14 15:30:31,236 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20240814153028
+2024-08-14 15:30:31,425 - integracion.integracion.generate_c34 - INFO - Conectado a parent Academia Técnica Universitaria SL
+2024-08-14 15:30:31,852 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL/C34-ATUSL-20240814153028
+2024-08-14 15:30:31,853 - integracion.integracion.generate_c34 - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20240814153028/C34-ATUSL-20240814153028.xlsx
+2024-08-14 15:30:32,495 - integracion.integracion.generate_c34 - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20240814153028/C34-ATUSL-20240814153028.xlsx
+2024-08-14 15:30:32,496 - integracion.integracion.generate_c34 - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20240814153028/C34-ATUSL-20240814153028.xlsx
+2024-08-14 15:30:32,515 - integracion.integracion.generate_c34 - INFO - Remesa creada: REM-ATUSL-2024-08-14-0001 para la empresa Academia Técnica Universitaria SL
+2024-08-14 15:30:32,553 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00338
+2024-08-14 15:30:32,588 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00341
+2024-08-14 15:30:32,625 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00339
+2024-08-14 15:30:32,625 - integracion.integracion.generate_c34 - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20240814153028.xlsx eliminado después de subirlo a SharePoint

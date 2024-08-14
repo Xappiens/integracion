@@ -239,7 +239,7 @@ def generate_c34(invoice_data=None):
                     supplier_cif = frappe.get_value("Supplier", invoice.supplier, "tax_id")
                     
                     data.append({
-                        "Num Factura Nº Factura Proveedor": invoice.bill_no,
+                        "Nº Factura Proveedor": invoice.bill_no,
                         "Nombre proveedor": invoice.supplier_name,
                         "CIF Proveedor": supplier_cif,
                         "IBAN Proveedor": supplier_iban,

@@ -1,13 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:REM-{company_abbr}-{fecha}",
+ "autoname": "naming_series:",
  "creation": "2024-08-07 12:14:36.593165",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "company",
   "company_abbr",
+  "naming_series",
   "column_break_irxu",
   "fecha",
   "url",
@@ -52,15 +53,21 @@
    "fieldtype": "Table",
    "label": "Facturas",
    "options": "Remesa Factura"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Series",
+   "options": "REM-.{company_abbr}.-.{fecha}.-.####."
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-07 12:39:18.654896",
+ "modified": "2024-08-14 15:29:23.543515",
  "modified_by": "Administrator",
  "module": "Integracion",
  "name": "Remesa Registro",
- "naming_rule": "Expression",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
