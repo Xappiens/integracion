@@ -32,9 +32,18 @@ def get_supplier_iban(supplier_name):
     }, fields=["iban"])
     
     if not bank_accounts:
-        return ""  # Devolver un valor vacío si no se encuentra el IBAN
+        # Si no se encuentra el IBAN en las cuentas bancarias del proveedor, buscar el default_bank_account
+        default_bank_account = frappe.get_value("Supplier", supplier_name, "default_bank_account")
+        if default_bank_account:
+            # Obtener el IBAN de la cuenta bancaria predeterminada
+            iban = frappe.get_value("Bank Account", default_bank_account, "iban")
+            if iban:
+                return iban
+        
+        return ""  # Devolver un valor vacío si no se encuentra el IBAN en ninguna parte
     
     return bank_accounts[0].iban
+
 
 def change_status_to_remesa_emitida(purchase_invoice_name, remesa_name):
     try:
