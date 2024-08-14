@@ -1,4 +1,7 @@
-from zeep import Client
+from zeep import xsd
+from zeep import Client, Transport
+from requests import Session
+from requests_pkcs12 import Pkcs12Adapter
 from lxml import etree
 from cryptography.hazmat.primitives.serialization import pkcs12, Encoding, PrivateFormat, NoEncryption
 from signxml import XMLSigner, methods
@@ -187,7 +190,7 @@ def construir_xml_recibidas(facturas):
                 cuota_soportada = etree.SubElement(detalle_iva, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CuotaSoportada")
                 cuota_soportada.text = str(tax.tax_amount or 0)
         
-# Sumar CuotaSoportada para el cálculo de CuotaDeducible
+        # Sumar CuotaSoportada para el cálculo de CuotaDeducible
         if not factura.taxes:
             cuota_deducible_valor = 0
         else:
@@ -209,13 +212,111 @@ def construir_xml_recibidas(facturas):
     logger.info("XML construido con éxito")
     return etree.tostring(envelope, pretty_print=True, xml_declaration=True, encoding='UTF-8')
 
-
 def guardar_xml(xml_firmado, filename):
     logger.info(f"Guardando el XML firmado en {filename}")
     with open(filename, 'wb') as f:  # Usar 'wb' para escribir bytes
         f.write(xml_firmado)
     logger.info("XML guardado con éxito")
 
+def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
+    """
+    Envía el XML firmado al servicio web de la AEAT.
+
+    :param xml_firmado: El contenido del XML firmado que se va a enviar.
+    :param p12_file_path: La ruta al archivo del certificado PFX.
+    :param p12_password: La contraseña del archivo del certificado PFX.
+    :return: La respuesta de la AEAT.
+    """
+    logger.info("Enviando XML firmado a la AEAT")
+    try:
+        # Crear una sesión de requests
+        session = Session()
+        # Adjuntar el certificado PFX
+        session.mount('https://', Pkcs12Adapter(pkcs12_filename=p12_file_path, pkcs12_password=p12_password))
+
+        # Crear el cliente del servicio web con la configuración del certificado
+        transport = Transport(session=session)
+        client = Client(wsdl=wsdl_recibidas, transport=transport)
+
+        # Parsear el XML firmado
+        signed_xml_element = etree.fromstring(xml_firmado)
+
+        # Extraer los elementos necesarios del XML firmado
+        cabecera = signed_xml_element.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Cabecera')
+        registros = signed_xml_element.findall('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroLR.xsd}RegistroLRFacturasRecibidas')
+
+        # Preparar la estructura de datos para Zeep
+        datos_a_enviar = {
+            'Cabecera': {
+                'IDVersionSii': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}IDVersionSii').text,
+                'Titular': {
+                    'NombreRazon': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NombreRazon').text,
+                    'NIF': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF').text
+                },
+                'TipoComunicacion': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoComunicacion').text
+            },
+            'RegistroLRFacturasRecibidas': [
+                {
+                    'PeriodoLiquidacion': {
+                        'Ejercicio': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Ejercicio').text,
+                        'Periodo': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Periodo').text,
+                    },
+                    'IDFactura': {
+                        'IDEmisorFactura': {
+                            'NIF': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF').text,
+                        },
+                        'NumSerieFacturaEmisor': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NumSerieFacturaEmisor').text,
+                        'FechaExpedicionFacturaEmisor': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}FechaExpedicionFacturaEmisor').text,
+                    },
+                    'FacturaRecibida': {
+                        'TipoFactura': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoFactura').text,
+                        'ClaveRegimenEspecialOTrascendencia': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}ClaveRegimenEspecialOTrascendencia').text,
+                        'DescripcionOperacion': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DescripcionOperacion').text,
+                        'FechaOperacion': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}FechaOperacion').text,
+                        'CuotaDeducible': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CuotaDeducible').text,
+                        'Contraparte': {
+                            'NombreRazon': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NombreRazon').text,
+                            'NIF': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF').text
+                        },
+                        'DesgloseFactura': {
+                            'InversionSujetoPasivo': {
+                                'DetalleIVA': [
+                                    {
+                                        'TipoImpositivo': detalle_iva_inversion.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoImpositivo').text,
+                                        'BaseImponible': detalle_iva_inversion.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}BaseImponible').text,
+                                        'CuotaSoportada': detalle_iva_inversion.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CuotaSoportada').text,
+                                    }
+                                    for detalle_iva_inversion in registro.findall('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DetalleIVA')
+                                ]
+                            },
+                            'DesgloseIVA': {
+                                'DetalleIVA': [
+                                    {
+                                        'TipoImpositivo': detalle_iva.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoImpositivo').text,
+                                        'BaseImponible': detalle_iva.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}BaseImponible').text,
+                                        'CuotaSoportada': detalle_iva.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CuotaSoportada').text,
+                                    }
+                                    for detalle_iva in registro.findall('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DetalleIVA')
+                                ]
+                            }
+                        }
+                    }
+                } for registro in registros
+            ]
+        }
+
+        # Llamar al servicio SOAP con los parámetros correctos
+        respuesta = client.service.SuministroLRFacturasRecibidas(**datos_a_enviar)
+
+        # Loggear la respuesta
+        logger.info("XML enviado con éxito")
+        logger.info(f"Respuesta de la AEAT: {respuesta}")
+
+        return respuesta
+
+    except Exception as e:
+        logger.error(f"Error al enviar el XML a la AEAT: {e}")
+        raise
 
 def enviar_facturas_recibidas(docnames):
     logger.info("Iniciando el proceso de envío de facturas recibidas")
@@ -226,7 +327,6 @@ def enviar_facturas_recibidas(docnames):
     xml_data = construir_xml_recibidas(facturas)
 
     xsd_path = '/home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/WSDL/SuministroLR.xsd'
-
 
     # Validar el XML generado con el XSD
     try:
@@ -259,6 +359,13 @@ def enviar_facturas_recibidas(docnames):
     current_directory = os.path.dirname(os.path.abspath(__file__))
     output_file = os.path.join(current_directory, f'facturas_recibidas_firmadas_{empresa}_{now}.xml')
     guardar_xml(xml_firmado, output_file)
+
+    # Enviar el XML firmado a la AEAT
+    try:
+        respuesta = enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password)
+        logger.info(f"Respuesta de la AEAT: {respuesta}")
+    except Exception as e:
+        logger.error(f"Error al enviar el XML a la AEAT: {e}")
     
     logger.info("Proceso de envío de facturas recibidas finalizado")
     return output_file
