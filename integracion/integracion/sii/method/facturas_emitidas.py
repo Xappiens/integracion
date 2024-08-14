@@ -343,6 +343,95 @@ def guardar_xml(xml_firmado, filename):
         f.write(xml_firmado)
     logger.info("XML guardado con éxito")
 
+# def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
+#     """
+#     Envía el XML firmado al servicio web de la AEAT.
+
+#     :param xml_firmado: El contenido del XML firmado que se va a enviar.
+#     :param p12_file_path: La ruta al archivo del certificado PFX.
+#     :param p12_password: La contraseña del archivo del certificado PFX.
+#     :return: La respuesta de la AEAT.
+#     """
+#     logger.info("Enviando XML firmado a la AEAT")
+#     try:
+#         # Crear una sesión de requests
+#         session = Session()
+#         # Adjuntar el certificado PFX
+#         session.mount('https://', Pkcs12Adapter(pkcs12_filename=p12_file_path, pkcs12_password=p12_password))
+
+#         # Crear el cliente del servicio web con la configuración del certificado
+#         transport = Transport(session=session)
+#         client = Client(wsdl=wsdl_emitidas, transport=transport)
+
+#         # Parsear el XML firmado
+#         signed_xml_element = etree.fromstring(xml_firmado)
+
+#         # Extraer los elementos necesarios del XML firmado
+#         cabecera = signed_xml_element.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Cabecera')
+#         registros = signed_xml_element.findall('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroLR.xsd}RegistroLRFacturasEmitidas')
+
+#         # Preparar la estructura de datos para Zeep
+#         datos_a_enviar = {
+#             'Cabecera': {
+#                 'IDVersionSii': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}IDVersionSii').text,
+#                 'Titular': {
+#                     'NombreRazon': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NombreRazon').text,
+#                     'NIF': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF').text
+#                 },
+#                 'TipoComunicacion': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoComunicacion').text
+#             },
+#             'RegistroLRFacturasEmitidas': [
+#                 {
+#                     'PeriodoLiquidacion': {
+#                         'Ejercicio': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Ejercicio').text,
+#                         'Periodo': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Periodo').text,
+#                     },
+#                     'IDFactura': {
+#                         'IDEmisorFactura': {
+#                             'NIF': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF').text,
+#                         },
+#                         'NumSerieFacturaEmisor': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NumSerieFacturaEmisor').text,
+#                         'FechaExpedicionFacturaEmisor': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}FechaExpedicionFacturaEmisor').text,
+#                     },
+#                     'FacturaExpedida': {
+#                         'TipoFactura': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoFactura').text,
+#                         'ClaveRegimenEspecialOTrascendencia': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}ClaveRegimenEspecialOTrascendencia').text,
+#                         'ImporteTotal': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}ImporteTotal').text,
+#                         'DescripcionOperacion': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DescripcionOperacion').text,
+#                         'Contraparte': {
+#                             'NombreRazon': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NombreRazon').text,
+#                             'NIF': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF').text
+#                         },
+#                         'TipoDesglose': {
+#                             'DesgloseFactura': {
+#                                 'Sujeta': {
+#                                     'Exenta': {
+#                                         'DetalleExenta': {
+#                                             'CausaExencion': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CausaExencion').text,
+#                                             'BaseImponible': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}BaseImponible').text,
+#                                         }
+#                                     }
+#                                 }
+#                             }
+#                         }
+#                     }
+#                 } for registro in registros
+#             ]
+#         }
+
+#         # Llamar al servicio SOAP con los parámetros correctos
+#         respuesta = client.service.SuministroLRFacturasEmitidas(**datos_a_enviar)
+
+#         # Loggear la respuesta
+#         logger.info("XML enviado con éxito")
+#         logger.info(f"Respuesta de la AEAT: {respuesta}")
+
+#         return respuesta
+
+#     except Exception as e:
+#         logger.error(f"Error al enviar el XML a la AEAT: {e}")
+#         raise
+
 def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
     """
     Envía el XML firmado al servicio web de la AEAT.
@@ -366,49 +455,55 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
         # Parsear el XML firmado
         signed_xml_element = etree.fromstring(xml_firmado)
 
+        # Definir los namespaces utilizados en el XML
+        namespaces = {
+            'sii': 'https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd',
+            'siiLR': 'https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroLR.xsd'
+        }
+
         # Extraer los elementos necesarios del XML firmado
-        cabecera = signed_xml_element.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Cabecera')
-        registros = signed_xml_element.findall('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroLR.xsd}RegistroLRFacturasEmitidas')
+        cabecera = signed_xml_element.find('.//sii:Cabecera', namespaces=namespaces)
+        registros = signed_xml_element.findall('.//siiLR:RegistroLRFacturasEmitidas', namespaces=namespaces)
 
         # Preparar la estructura de datos para Zeep
         datos_a_enviar = {
             'Cabecera': {
-                'IDVersionSii': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}IDVersionSii').text,
+                'IDVersionSii': cabecera.find('.//sii:IDVersionSii', namespaces=namespaces).text,
                 'Titular': {
-                    'NombreRazon': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NombreRazon').text,
-                    'NIF': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF').text
+                    'NombreRazon': cabecera.find('.//sii:NombreRazon', namespaces=namespaces).text,
+                    'NIF': cabecera.find('.//sii:NIF', namespaces=namespaces).text
                 },
-                'TipoComunicacion': cabecera.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoComunicacion').text
+                'TipoComunicacion': cabecera.find('.//sii:TipoComunicacion', namespaces=namespaces).text
             },
             'RegistroLRFacturasEmitidas': [
                 {
                     'PeriodoLiquidacion': {
-                        'Ejercicio': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Ejercicio').text,
-                        'Periodo': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Periodo').text,
+                        'Ejercicio': registro.find('.//sii:Ejercicio', namespaces=namespaces).text,
+                        'Periodo': registro.find('.//sii:Periodo', namespaces=namespaces).text,
                     },
                     'IDFactura': {
                         'IDEmisorFactura': {
-                            'NIF': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF').text,
+                            'NIF': registro.find('.//sii:NIF', namespaces=namespaces).text,
                         },
-                        'NumSerieFacturaEmisor': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NumSerieFacturaEmisor').text,
-                        'FechaExpedicionFacturaEmisor': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}FechaExpedicionFacturaEmisor').text,
+                        'NumSerieFacturaEmisor': registro.find('.//sii:NumSerieFacturaEmisor', namespaces=namespaces).text,
+                        'FechaExpedicionFacturaEmisor': registro.find('.//sii:FechaExpedicionFacturaEmisor', namespaces=namespaces).text,
                     },
                     'FacturaExpedida': {
-                        'TipoFactura': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoFactura').text,
-                        'ClaveRegimenEspecialOTrascendencia': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}ClaveRegimenEspecialOTrascendencia').text,
-                        'ImporteTotal': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}ImporteTotal').text,
-                        'DescripcionOperacion': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DescripcionOperacion').text,
+                        'TipoFactura': registro.find('.//sii:TipoFactura', namespaces=namespaces).text,
+                        'ClaveRegimenEspecialOTrascendencia': registro.find('.//sii:ClaveRegimenEspecialOTrascendencia', namespaces=namespaces).text,
+                        'ImporteTotal': registro.find('.//sii:ImporteTotal', namespaces=namespaces).text,
+                        'DescripcionOperacion': registro.find('.//sii:DescripcionOperacion', namespaces=namespaces).text,
                         'Contraparte': {
-                            'NombreRazon': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NombreRazon').text,
-                            'NIF': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF').text
+                            'NombreRazon': registro.find('.//sii:NombreRazon', namespaces=namespaces).text,
+                            'NIF': registro.find('.//sii:NIF', namespaces=namespaces).text  # Esto asegura que es el NIF de la contraparte
                         },
                         'TipoDesglose': {
                             'DesgloseFactura': {
                                 'Sujeta': {
                                     'Exenta': {
                                         'DetalleExenta': {
-                                            'CausaExencion': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CausaExencion').text,
-                                            'BaseImponible': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}BaseImponible').text,
+                                            'CausaExencion': registro.find('.//sii:CausaExencion', namespaces=namespaces).text,
+                                            'BaseImponible': registro.find('.//sii:BaseImponible', namespaces=namespaces).text,
                                         }
                                     }
                                 }
