@@ -514,6 +514,7 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
             ]
         }
 
+        logger.debug(f"Datos a enviar: {datos_a_enviar}")
         # Llamar al servicio SOAP con los parámetros correctos
         respuesta = client.service.SuministroLRFacturasEmitidas(**datos_a_enviar)
 
