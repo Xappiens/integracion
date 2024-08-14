@@ -141,7 +141,7 @@ def generate_c34(invoice_data=None):
 
         except Exception as e:
             logger.error(f"Error al procesar la factura {invoice_data['name']}: {e}")
-
+    sharepoint_urls = []
     files = []
     for company, invoices in invoices_by_company.items():
         try:

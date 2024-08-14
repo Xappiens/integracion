@@ -1,23 +1,18 @@
-2024-08-13 14:41:59,322 - integracion.integracion.generate_c34 - INFO - Inicio de la generación de Cuaderno 34
-2024-08-13 14:41:59,322 - integracion.integracion.generate_c34 - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-00339']
-2024-08-13 14:41:59,352 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00339
-2024-08-13 14:41:59,353 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00339 agregada a la empresa Academia Técnica Universitaria SL
-2024-08-13 14:41:59,353 - integracion.integracion.generate_c34 - DEBUG - Generando archivo Excel para la empresa Academia Técnica Universitaria SL con 1 facturas
-2024-08-13 14:41:59,358 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00339 del proveedor TAKIN BUSINESS CONSULTING S.L.
-2024-08-13 14:41:59,491 - integracion.integracion.generate_c34 - INFO - Archivo Excel generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/Excel-ATUSL-20240813144159.xlsx
-2024-08-13 14:41:59,491 - integracion.integracion.generate_c34 - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/Excel-ATUSL-20240813144159.xlsx a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno Excel-ATUSL-20240813144159
-2024-08-13 14:41:59,491 - integracion.integracion.generate_c34 - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
-2024-08-13 14:41:59,491 - integracion.integracion.generate_c34 - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
-2024-08-13 14:41:59,491 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL
-2024-08-13 14:42:00,534 - integracion.integracion.generate_c34 - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
-2024-08-13 14:42:01,029 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL
-2024-08-13 14:42:01,029 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/Excel-ATUSL-20240813144159
-2024-08-13 14:42:01,157 - integracion.integracion.generate_c34 - INFO - Conectado a parent Academia Técnica Universitaria SL
-2024-08-13 14:42:01,478 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL/Excel-ATUSL-20240813144159
-2024-08-13 14:42:01,479 - integracion.integracion.generate_c34 - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/Excel-ATUSL-20240813144159/Excel-ATUSL-20240813144159.xlsx
-2024-08-13 14:42:02,147 - integracion.integracion.generate_c34 - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/Excel-ATUSL-20240813144159/Excel-ATUSL-20240813144159.xlsx
-2024-08-13 14:42:02,154 - integracion.integracion.generate_c34 - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/Excel-ATUSL-20240813144159/Excel-ATUSL-20240813144159.xlsx
-2024-08-13 14:42:02,207 - integracion.integracion.generate_c34 - ERROR - Error al crear el documento de remesa para Academia Técnica Universitaria SL: ('Remesa Registro', 'REM-ATUSL-2024-08-13', IntegrityError(1062, "Duplicate entry 'REM-ATUSL-2024-08-13' for key 'PRIMARY'"))
-2024-08-13 14:42:02,662 - integracion.integracion.generate_c34 - INFO - Estado de la factura ACC-PINV-2024-00339 cambiado a 'Remesa Emitida'
-2024-08-13 14:42:02,662 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00339
-2024-08-13 14:42:02,662 - integracion.integracion.generate_c34 - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/Excel-ATUSL-20240813144159.xlsx eliminado después de subirlo a SharePoint
+2024-08-14 15:00:34,452 - integracion.integracion.generate_c34 - INFO - Inicio de la generación de Cuaderno 34
+2024-08-14 15:00:34,452 - integracion.integracion.generate_c34 - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-00340']
+2024-08-14 15:00:34,479 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00340
+2024-08-14 15:00:34,480 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00340 agregada a la empresa María Ángeles Alonso de la Fuente
+2024-08-14 15:00:34,493 - integracion.integracion.generate_c34 - DEBUG - Datos agregados para la factura ACC-PINV-2024-00340 del proveedor TAKIN BUSINESS CONSULTING S.L.
+2024-08-14 15:00:34,693 - integracion.integracion.generate_c34 - INFO - Archivo Excel generado para María Ángeles Alonso de la Fuente: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814150034.xlsx
+2024-08-14 15:00:34,693 - integracion.integracion.generate_c34 - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814150034.xlsx a SharePoint para la compañía María Ángeles Alonso de la Fuente con Cuaderno C34-MAN-20240814150034
+2024-08-14 15:00:34,693 - integracion.integracion.generate_c34 - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-08-14 15:00:34,693 - integracion.integracion.generate_c34 - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-08-14 15:00:34,693 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente
+2024-08-14 15:00:36,138 - integracion.integracion.generate_c34 - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-08-14 15:00:36,551 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/María Ángeles Alonso de la Fuente
+2024-08-14 15:00:36,551 - integracion.integracion.generate_c34 - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814150034
+2024-08-14 15:00:36,664 - integracion.integracion.generate_c34 - INFO - Conectado a parent María Ángeles Alonso de la Fuente
+2024-08-14 15:00:36,975 - integracion.integracion.generate_c34 - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/María Ángeles Alonso de la Fuente/C34-MAN-20240814150034
+2024-08-14 15:00:36,976 - integracion.integracion.generate_c34 - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814150034/C34-MAN-20240814150034.xlsx
+2024-08-14 15:00:37,497 - integracion.integracion.generate_c34 - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Mar%C3%ADa%20%C3%81ngeles%20Alonso%20de%20la%20Fuente/C34-MAN-20240814150034/C34-MAN-20240814150034.xlsx
+2024-08-14 15:00:37,498 - integracion.integracion.generate_c34 - ERROR - Error al subir el archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-MAN-20240814150034.xlsx a SharePoint: name 'sharepoint_urls' is not defined
