@@ -6,10 +6,8 @@ from urllib.parse import quote
 from office365.runtime.auth.user_credential import UserCredential
 from office365.sharepoint.client_context import ClientContext
 from lxml import etree
-from bs4 import BeautifulSoup  # Librería para manejar HTML
 import frappe
 import pandas as pd
-import json
 from frappe import _
 
 # Leer credenciales desde el archivo de configuración del sitio
@@ -67,121 +65,23 @@ def change_status_to_remesa_emitida(purchase_invoice_name, remesa_name):
             doc.cash_bank_account = default_account
 
         doc.paid_amount = doc.outstanding_amount
-        # Guardar el documento para desencadenar el cambio de estado
-        doc.save()
-        logger.info(f"Estado de la factura {purchase_invoice_name} cambiado a 'Remesa Emitida'")
+
+        if doc.docstatus == 0:
+            # Guardar el documento para desencadenar el cambio de estado
+            doc.save()
+            logger.info(f"Estado de la factura {purchase_invoice_name} cambiado a 'Remesa Emitida'")
+        elif doc.docstatus == 1:
+            # Si la factura está validada, solo marcar los campos personalizados
+            doc.db_set('custom_remesa_emitida', 1)
+            doc.db_set('custom_remesa', remesa_name)
+            doc.db_set('is_paid', 1)
+            doc.db_set('mode_of_payment', supplier_mode_of_payment)
+            if default_account:
+                doc.db_set('cash_bank_account', default_account)
+            doc.db_set('paid_amount', doc.outstanding_amount)
+
     except Exception as e:
         logger.error(f"Error al cambiar el estado de la factura {purchase_invoice_name}: {e}")
-
-# @frappe.whitelist()
-# def generate_c34():
-#     logger.info("Inicio de la generación de Cuaderno 34")
-
-#     # Obtener las facturas que cumplen con los criterios
-#     try:
-#         invoice_names = frappe.get_all("Purchase Invoice", filters={
-#             "custom_aprobado_para_pago": 1,
-#             "status": "Aprobada para pago"
-#         }, fields=["name"])
-#         logger.debug(f"Total facturas encontradas: {len(invoice_names)}")
-#     except Exception as e:
-#         logger.error(f"Error al obtener facturas: {e}")
-#         return
-
-#     invoices_by_company = {}
-#     for invoice_data in invoice_names:
-#         try:
-#             # Obtener el documento completo
-#             invoice = frappe.get_doc("Purchase Invoice", invoice_data.name)
-#             logger.debug(f"Procesando factura {invoice.name}")
-            
-#             # Obtener el modo de pago del proveedor
-#             mode_of_payment = frappe.get_value("Supplier", invoice.supplier, "mode_of_payment")
-            
-#             # Filtrar por modo de pago "Transferencia bancaria"
-#             if mode_of_payment != "Transferencia bancaria":
-#                 logger.debug(f"Factura {invoice.name} ignorada por modo de pago {mode_of_payment} {invoice.supplier}")
-#                 continue
-
-#             # Obtener la empresa asociada a la factura
-#             company = invoice.company
-#             logger.debug(f"Factura {invoice.name} está asociada a la empresa {company}")
-            
-#             if not company:
-#                 logger.error(f"Factura {invoice.name} no tiene una empresa asociada.")
-#                 continue
-
-#             if company not in invoices_by_company:
-#                 invoices_by_company[company] = []
-#             invoices_by_company[company].append(invoice)
-#             logger.debug(f"Factura {invoice.name} agregada a la empresa {company}")
-
-#             # Agregar depuración para el valor de outstanding_amount
-#             logger.debug(f"Valor de outstanding_amount para la factura {invoice.name}: {invoice.outstanding_amount}")
-
-#         except Exception as e:
-#             logger.error(f"Error al procesar la factura {invoice_data.name}: {e}")
-
-#     sharepoint_urls = []
-#     for company, invoices in invoices_by_company.items():
-#         try:
-#             logger.debug(f"Generando archivo Excel para la empresa {company} con {len(invoices)} facturas")
-#             abbr = frappe.get_value("Company", company, "abbr")
-#             now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-#             fichero_id_value = f"Excel-{abbr}-{now}"
-
-#             # Datos para el Excel
-#             data = []
-#             for invoice in invoices:
-#                 try:
-#                     # Obtener IBAN y CIF del proveedor
-#                     supplier_iban = get_supplier_iban(invoice.supplier)
-#                     supplier_cif = frappe.get_value("Supplier", invoice.supplier, "tax_id")
-                    
-#                     # Agregar los datos necesarios al Excel
-#                     data.append({
-#                         "Num Factura Nº Factura Proveedor": invoice.bill_no,
-#                         "Nombre proveedor": invoice.supplier_name,
-#                         "CIF Proveedor": supplier_cif,
-#                         "IBAN Proveedor": supplier_iban,
-#                         "Importe Factura": invoice.outstanding_amount,
-#                         "Objeto de la Factura": invoice.remarks or "Pago de factura",
-#                         "Fecha de factura": invoice.posting_date.strftime('%Y-%m-%d'),
-#                         "Tipo Transferencia" : "SEPA" 
-#                     })
-#                     logger.debug(f"Datos agregados para la factura {invoice.name} del proveedor {invoice.supplier_name}")
-#                 except Exception as e:
-#                     logger.error(f"Error al procesar la factura {invoice.name}: {e}")
-
-#             # Crear un DataFrame de pandas y guardar como Excel
-#             df = pd.DataFrame(data)
-#             file_path = f"/home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/{fichero_id_value}.xlsx"
-#             df.to_excel(file_path, index=False)
-#             logger.info(f"Archivo Excel generado para {company}: {file_path}")
-
-#             # Subir a SharePoint y obtener la URL
-#             sharepoint_url = upload_file_to_sharepoint(file_path, company, fichero_id_value)
-#             if sharepoint_url:
-#                 sharepoint_urls.append({"company": company, "url": sharepoint_url})
-#                 logger.debug(f"Archivo subido a SharePoint: {sharepoint_url}")
-
-#                 # Crear la remesa en Frappe
-#                 remesa_name = create_remesa(company, invoices, sharepoint_url)
-                
-#                 # Cambiar el estado de las facturas a "Remesa Emitida"
-#                 for invoice in invoices:
-#                     change_status_to_remesa_emitida(invoice.name, remesa_name)
-#                     logger.debug(f"Estado cambiado a 'Remesa Emitida' para la factura {invoice.name}")
-                
-#             # Eliminar el archivo local después de subirlo a SharePoint
-#             if os.path.exists(file_path):
-#                 os.remove(file_path)
-#                 logger.info(f"Archivo local {file_path} eliminado después de subirlo a SharePoint")
-
-#         except Exception as e:
-#             logger.error(f"Error al generar o subir el Excel para {company}: {e}")
-
-#     return sharepoint_urls
 
 
 @frappe.whitelist()
@@ -199,7 +99,7 @@ def generate_c34(invoice_data=None):
             filtered_invoices = frappe.get_all("Purchase Invoice", filters={
                 "name": ["in", invoice_names],
                 "custom_aprobado_para_pago": 1,
-                "status": "Aprobada para pago"
+                "custom_remesa_emitida": 0
             }, fields=["name"])
 
             # Si no se encuentran facturas después del filtro, no hacer nada
@@ -210,7 +110,7 @@ def generate_c34(invoice_data=None):
             # Si no se seleccionan facturas, obtener todas las facturas aprobadas
             filtered_invoices = frappe.get_all("Purchase Invoice", filters={
                 "custom_aprobado_para_pago": 1,
-                "status": "Aprobada para pago"
+                "custom_remesa_emitida": 0
             }, fields=["name"])
             logger.debug(f"Total facturas encontradas: {len(filtered_invoices)}")
 
