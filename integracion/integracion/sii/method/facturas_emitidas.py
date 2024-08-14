@@ -320,10 +320,22 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
 
 def enviar_facturas_emitidas(docnames):
     logger.info("Iniciando el proceso de envío de facturas emitidas")
-    if isinstance(docnames, str):
-        docnames = [docnames]
     
-    facturas = [obtener_factura_venta(docname) for docname in docnames]
+    # Asegurarse de que docnames sea una lista
+    if isinstance(docnames, str):
+        # Si se recibe una cadena, quita los corchetes y descompónla en una lista
+        docnames = docnames.strip("[]").replace('"', '').replace("'", "").split(",")
+    
+    # Obtener cada factura basada en el nombre de documento
+    facturas = []
+    for docname in docnames:
+        docname = docname.strip()  # Elimina espacios en blanco al inicio y al final
+        factura = get_doc('Sales Invoice', docname)
+        if factura:
+            facturas.append(factura)
+        else:
+            logger.error(f"Factura de Venta [{docname}] no encontrada")
+            return  # Salir si una factura no se encuentra
     xml_data = construir_xml_emitidas(facturas)
 
     xsd_path = '/home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/WSDL/SuministroLR.xsd'
