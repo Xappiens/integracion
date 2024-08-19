@@ -13,8 +13,6 @@ site_config = frappe.get_site_config()
 user_email = site_config.get('user_sp')
 user_password = site_config.get('pass_sp')
 
-
-
 # Configurar el logger
 logger = logging.getLogger(__name__)
 
@@ -31,6 +29,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
+
 # Mapeo de doctype a estructura de carpetas
 folder_structure_map = {
     "Purchase Invoice": ["company", "name"],
@@ -38,6 +37,14 @@ folder_structure_map = {
     "Company": ["name"],
     # Añade aquí más doctypes y su estructura de carpetas deseada
 }
+
+def sanitize_name(name):
+    """
+    Reemplaza caracteres prohibidos en SharePoint con un guion.
+    """
+    return name.translate(str.maketrans({
+        '*': '-', '"': '-', ':': '-', '<': '-', '>': '-', '?': '-', '/': '-', '\\': '-', '|': '-', ',': '-', '.': '-'
+    }))
 
 def get_folder_structure(doctype, docname, foldername):
     """
@@ -50,13 +57,13 @@ def get_folder_structure(doctype, docname, foldername):
     fields = folder_structure_map[doctype]
     try:
         document = frappe.get_doc(doctype, docname)
-        # Crear la estructura utilizando los campos del documento
+        # Crear la estructura utilizando los campos del documento, sanitizando cada nombre
         structure = []
         for field in fields:
             if field == "name":
-                structure.append(foldername)  # Usa el docname directamente
+                structure.append(sanitize_name(foldername))  # Usa el docname directamente
             elif document.get(field):
-                structure.append(document.get(field))
+                structure.append(sanitize_name(document.get(field)))
         
         logger.info(f"Estructura de carpetas para {doctype} {docname}: {structure}")
         return structure
@@ -87,15 +94,6 @@ def create_folder_if_not_exists(ctx, folder_relative_url, folder_name):
         logger.error(f"Error verificando/creando carpeta en {folder_relative_url}/{folder_name}: {e}")
         raise
 
-def sanitize_name(name):
-    """
-    Reemplaza caracteres prohibidos en SharePoint con un guion.
-    """
-    return name.translate(str.maketrans({
-        '*': '-', '"': '-', ':': '-', '<': '-', '>': '-', '?': '-', '/': '-', '\\': '-', '|': '-'
-    }))
-
-
 def upload_file_to_sharepoint(doc, method):
     logger.info(f"Hook llamado al subir File: {doc.name}")
     try:
@@ -110,7 +108,6 @@ def upload_file_to_sharepoint(doc, method):
         doctype_name = file_doc.attached_to_doctype
         docname = file_doc.attached_to_name
         foldername = sanitize_name(docname)
-        
 
         doc_biblioteca = frappe.get_doc('Bibliotecas SP', doctype_name)
         if not doc_biblioteca:
@@ -142,7 +139,8 @@ def upload_file_to_sharepoint(doc, method):
         # Crear carpetas según la estructura
         current_relative_path = site_relative_path.strip('/')
         for folder_name in folder_structure:
-            folder_name_encoded = quote(folder_name)
+            folder_name_sanitized = sanitize_name(folder_name)
+            folder_name_encoded = quote(folder_name_sanitized)
             create_folder_if_not_exists(ctx, current_relative_path, folder_name_encoded)
             current_relative_path = f"{current_relative_path}/{folder_name_encoded}".strip('/')
 
@@ -218,14 +216,15 @@ def get_sharepoint_structure(doctype, docname):
     current_relative_path = site_relative_path.strip('/')
     carpeta_actual = None
     for i, folder_name in enumerate(folder_structure):
-        folder_name_encoded = quote(folder_name)
+        folder_name_sanitized = sanitize_name(folder_name)
+        folder_name_encoded = quote(folder_name_sanitized)
         next_relative_path = f"{current_relative_path}/{folder_name_encoded}".strip('/')
         if carpeta_existe(ctx, current_relative_path, folder_name_encoded):
             logger.info(f"La carpeta ya existe: {next_relative_path}")
             if i == len(folder_structure) - 1:
                 carpeta_raiz = {
                     "tipo": "C",
-                    "nombre": folder_name,
+                    "nombre": folder_name_sanitized,
                     'url': f"{site_url}/{next_relative_path}",
                     "children": []
                 }
@@ -280,4 +279,3 @@ def procesa_carpeta(ctx, share, ruta, carpeta_actual):
         logger.info(f"Estructura obtenida: {json.dumps(carpeta_actual)}")
     except Exception as e:
         logger.error(f"Error procesando la carpeta {ruta}: {e}")
-
