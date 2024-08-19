@@ -44,8 +44,8 @@ scheduler_events = {
         ]
     },
     "daily": [
-        "integracion.integracion.employee_status_update.update_employee_status",
-        "integracion.integracion.employee_status_update.disable_inactive_employee_users"
+        # "integracion.integracion.employee_status_update.update_employee_status",
+        # "integracion.integracion.employee_status_update.disable_inactive_employee_users"
 ]
 }
 
