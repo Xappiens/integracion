@@ -379,7 +379,7 @@ def guardar_xml(xml_firmado, filename):
     logger.info("XML guardado con éxito")
 
 
-# def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
+# # def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
 #     """
 #     Envía el XML firmado al servicio web de la AEAT.
 
