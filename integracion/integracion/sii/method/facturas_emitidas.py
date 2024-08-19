@@ -494,8 +494,9 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
                         'ImporteTotal': registro.find('.//sii:ImporteTotal', namespaces=namespaces).text,
                         'DescripcionOperacion': registro.find('.//sii:DescripcionOperacion', namespaces=namespaces).text,
                         'Contraparte': {
-                            'NombreRazon': registro.find('.//sii:NombreRazon', namespaces=namespaces).text,
-                            'NIF': registro.find('.//sii:NIF', namespaces=namespaces).text  # Esto asegura que es el NIF de la contraparte
+                            'NombreRazon': registro.find('.//siiLR:Contraparte//sii:NombreRazon', namespaces=namespaces).text,
+                            'NIF': registro.find('.//siiLR:Contraparte//sii:NIF', namespaces=namespaces).text # Esto asegura que es el NIF de la contraparte
+                            logger.debug(f"NIF de la contraparte: {nif_contraparte}")
                         },
                         'TipoDesglose': {
                             'DesgloseFactura': {
