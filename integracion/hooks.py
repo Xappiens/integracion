@@ -37,6 +37,7 @@ override_doctype_class = {
     "Purchase Invoice": "integracion.integracion.purchase_invoice_override.CustomPurchaseInvoice"
 }
 
+
 scheduler_events = {
     "cron": {
         "*/5 * * * *": [
