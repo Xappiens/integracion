@@ -29,8 +29,11 @@ override_whitelisted_methods = {
     "integracion.integracion.sii.sii_integracion.enviar_facturas_recibidas_wrapper": "integracion.integracion.sii.sii_integracion.enviar_facturas_recibidas_wrapper",
     "education.education.doctype.course.course.add_course_to_programs": "integracion.integracion.sii.sii_integracion.custom_add_course_to_programs",
     "education.education.doctype.course.course.get_programs_without_course": "integracion.integracion.sii.sii_integracion.custom_get_programs_without_course",
-    "integracion.integracion.custom_pdf_make.custom_download_and_attach_pdf": "integracion.integracion.custom_pdf_make.custom_download_and_attach_pdf"
+    "integracion.integracion.custom_pdf_make.custom_download_and_attach_pdf": "integracion.integracion.custom_pdf_make.custom_download_and_attach_pdf",
+    "integracion.invoice_from_email": "integracion.integracion.invoice_from_email.invoice_from_email"
+
 }
+
 
 
 override_doctype_class = {

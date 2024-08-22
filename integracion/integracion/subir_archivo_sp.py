@@ -35,7 +35,7 @@ folder_structure_map = {
     "Purchase Invoice": ["company", "name"],
     "Sales Invoice": ["company", "customer", "name"],
     "Company": ["name"],
-    # Añade aquí más doctypes y su estructura de carpetas deseada
+    # Añade aquí más doctypes y su estructura de carpetas 
 }
 
 def sanitize_name(name):

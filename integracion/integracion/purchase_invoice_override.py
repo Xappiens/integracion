@@ -1,8 +1,53 @@
 from erpnext.accounts.doctype.purchase_invoice.purchase_invoice import PurchaseInvoice
 import frappe
 from frappe import _
+import math
 
 class CustomPurchaseInvoice(PurchaseInvoice):
+
+    def calculate_taxes_and_totals(self):
+        # Llamar a la lógica original de la clase base
+        super().calculate_taxes_and_totals()
+
+        # Calcular el total redondeado basado en el nuevo valor del total
+        self.rounded_total = self.custom_round(self.grand_total)
+        self.base_rounded_total = self.custom_round(self.base_grand_total)
+
+        # Ajuste de redondeo calculado como la diferencia entre el total y el total redondeado
+        self.rounding_adjustment = self.rounded_total - self.grand_total
+        self.base_rounding_adjustment = self.base_rounded_total - self.base_grand_total
+
+        # Calcular el monto pendiente basado en el total redondeado menos los pagos anticipados
+        self.outstanding_amount = self.rounded_total - self.total_advance
+
+        # Guardar los valores redondeados y ajustes en la base de datos
+        self.db_set('rounded_total', self.rounded_total)
+        self.db_set('base_rounded_total', self.base_rounded_total)
+        self.db_set('rounding_adjustment', self.rounding_adjustment)
+        self.db_set('base_rounding_adjustment', self.base_rounding_adjustment)
+        self.db_set('outstanding_amount', self.outstanding_amount)
+
+    def custom_round(self, value, decimals=2):
+        """
+        Redondea el segundo decimal hacia arriba basado en el tercer decimal.
+        """
+        shift = 10 ** decimals  # Queremos redondear al segundo decimal
+
+        # Multiplicar para mover el punto decimal dos lugares a la derecha
+        value_shifted = value * shift
+
+        # Obtener el tercer decimal
+        third_decimal = int((value_shifted * 10) % 10)
+
+        # Si el tercer decimal es 5 o más, redondear hacia arriba el segundo decimal
+        if third_decimal >= 5:
+            value_shifted = math.ceil(value_shifted)
+        else:
+            value_shifted = math.floor(value_shifted)
+
+        # Volver a mover el punto decimal a su lugar original
+        return value_shifted / shift
+
 
     def set_status(self, update=False, status=None, update_modified=True):
         # Llamar a la lógica original de la clase base
