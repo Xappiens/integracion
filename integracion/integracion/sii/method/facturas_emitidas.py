@@ -1,5 +1,6 @@
 from zeep import xsd
 from zeep import Client, Transport
+from zeep.helpers import serialize_object
 from requests import Session
 from requests_pkcs12 import Pkcs12Adapter
 from lxml import etree
@@ -614,7 +615,8 @@ def enviar_facturas_emitidas(docnames):
             facturas.append(factura)
         else:
             logger.error(f"Factura de Venta [{docname}] no encontrada")
-            return  # Salir si una factura no se encuentra
+            return {"error": f"Factura de Venta [{docname}] no encontrada"}  # Salir si una factura no se encuentra
+    
     xml_data = construir_xml_emitidas(facturas)
 
     xsd_path = '/home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/WSDL/SuministroLR.xsd'
@@ -624,18 +626,17 @@ def enviar_facturas_emitidas(docnames):
         validate_xml(xml_data, xsd_path)
     except Exception as e:
         logger.error(f"Error en la validación del XML: {e}")
-        return
+        return {"error": f"Error en la validación del XML: {e}"}
 
     # Obtener la empresa de la primera factura
     empresa = facturas[0].company
     logger.info(f"Empresa detectada: {empresa}")
-    now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
     
     # Obtener el certificado correspondiente a la empresa
     certificado_info = certificados.get(empresa)
     if not certificado_info:
         logger.error(f"No se encontró un certificado para la empresa {empresa}")
-        raise ValueError(f"No se encontró un certificado para la empresa {empresa}")
+        return {"error": f"No se encontró un certificado para la empresa {empresa}"}
     
     p12_file_path = certificado_info['ruta']
     p12_password = certificado_info['password']
@@ -646,18 +647,16 @@ def enviar_facturas_emitidas(docnames):
     # Firmar el XML
     xml_firmado = sign_xml(xml_data.decode('utf-8'), private_key, certificate)
     
-    # Guardar el XML firmado
-    current_directory = os.path.dirname(os.path.abspath(__file__))
-    output_file = os.path.join(current_directory, f'facturas_emitidas_firmadas_{empresa}_{now}.xml')
-    #guardar_xml(xml_firmado, output_file)
-
     # Enviar el XML firmado a la AEAT
     try:
         respuesta, datos_a_enviar = enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password)
-        logger.info(f"Respuesta de la AEAT: {respuesta}")
+        logger.info(f"Respuesta de la AEAT (tipo): {type(respuesta)}")
         logger.info(f"Datos enviados: {datos_a_enviar}")
+        respuesta_dict = serialize_object(respuesta)
+        logger.info(f"Respuesta convertida: {respuesta_dict}")
+        return {"success": True, "respuesta": respuesta_dict, "datos_enviados": datos_a_enviar}
     except Exception as e:
         logger.error(f"Error al enviar el XML a la AEAT: {e}")
+        return {"error": f"Error al enviar el XML a la AEAT: {e}"}
     
     logger.info("Proceso de envío de facturas emitidas finalizado")
-    return output_file
