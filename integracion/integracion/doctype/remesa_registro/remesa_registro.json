@@ -9,6 +9,7 @@
   "company",
   "company_abbr",
   "naming_series",
+  "remesa_de",
   "column_break_irxu",
   "fecha",
   "url",
@@ -59,11 +60,17 @@
    "fieldtype": "Data",
    "label": "Series",
    "options": "REM-.{company_abbr}.-.{fecha}.-.####."
+  },
+  {
+   "fieldname": "remesa_de",
+   "fieldtype": "Link",
+   "label": "Remesa de ",
+   "options": "DocType"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-14 15:29:23.543515",
+ "modified": "2024-08-23 11:47:52.751949",
  "modified_by": "Administrator",
  "module": "Integracion",
  "name": "Remesa Registro",

@@ -18,7 +18,7 @@ sharepoint_base_url = "https://grupoatu365.sharepoint.com/sites/DepartamentodeAd
 
 # Configurar el logger
 logger = logging.getLogger(__name__)
-handler = logging.FileHandler('/home/frappe/frappe-bench/apps/integracion/integracion/integracion/logs/generate_c34.log')
+handler = logging.FileHandler('/home/frappe/frappe-bench/apps/integracion/integracion/integracion/logs/generate_c34_compra.log')
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
