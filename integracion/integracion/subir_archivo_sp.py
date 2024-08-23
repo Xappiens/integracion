@@ -2,7 +2,7 @@ import os
 import json
 import logging
 from logging.handlers import RotatingFileHandler
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit, urlunsplit, urlencode, parse_qs
 from office365.runtime.auth.user_credential import UserCredential
 from office365.sharepoint.client_context import ClientContext
 import frappe
@@ -47,6 +47,27 @@ def sanitize_name(name):
         '*': '-', '"': '-', ':': '-', '<': '-', '>': '-', '?': '-', '/': '-', '\\': '-', '|': '-', ',': '-', '.': '-'
     }))
 
+def sanitize_url(url):
+    """
+    Sanitiza la URL codificando los caracteres especiales, incluidos en el path, query y fragment.
+    """
+    # Divide la URL en sus componentes
+    split_url = urlsplit(url)
+    
+    # Sanitiza el path, que es la parte que suele tener caracteres especiales
+    sanitized_path = quote(split_url.path, safe='/')
+    
+    # Sanitiza la query si existe
+    sanitized_query = urlencode({k: quote(v[0], safe='') for k, v in parse_qs(split_url.query).items()})
+    
+    # Sanitiza el fragmento si existe
+    sanitized_fragment = quote(split_url.fragment, safe='')
+
+    # Vuelve a ensamblar la URL completa con el path, query y fragmento sanitizados
+    sanitized_url = urlunsplit((split_url.scheme, split_url.netloc, sanitized_path, sanitized_query, sanitized_fragment))
+    
+    return sanitized_url
+
 def get_folder_structure(doctype, docname, foldername):
     """
     Devuelve la estructura de carpetas para un documento dado.
@@ -81,6 +102,7 @@ def get_folder_structure(doctype, docname, foldername):
 def create_folder_if_not_exists(ctx, folder_relative_url, folder_name):
     try:
         logger.info(f"Comprobando existencia de carpeta en la ruta: {folder_relative_url}/{folder_name}")
+        logger.info(f"Ruta relativa de carpeta: {folder_relative_url}")
         parent_folder = ctx.web.get_folder_by_server_relative_url(f"{folder_relative_url}")
         ctx.load(parent_folder)
         ctx.execute_query()
