@@ -14,6 +14,12 @@ logger.setLevel(logging.DEBUG)
 @frappe.whitelist()
 def invoice_from_email(email_subject, email_content, email_from, attachments):
     logger.debug(f"Received email with subject: {email_subject}, from: {email_from}")
+    
+    if not attachments or not any(attachment.get('filename', '').lower().endswith('.pdf') for attachment in attachments):
+        logger.error("El correo no contiene adjuntos PDF válidos.")
+        return {"status": "error", "message": "Correo no válido. Debe contener al menos un archivo adjunto en formato PDF."}
+
+
 
     try:
         proveedor = frappe.get_all('Supplier', filters={'email_id': email_from}, fields=['name'])
