@@ -38,7 +38,8 @@ override_whitelisted_methods = {
 
 
 override_doctype_class = {
-    "Purchase Invoice": "integracion.integracion.purchase_invoice_override.CustomPurchaseInvoice"
+    "Purchase Invoice": "integracion.integracion.purchase_invoice_override.CustomPurchaseInvoice",
+    "Job Offer": "integracion.integracion.job_offer_override.CustomJobOffer"
 }
 
 

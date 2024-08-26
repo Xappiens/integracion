@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-26 09:31:19.091882",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "modelo",
+  "column_break_jrms",
+  "generar",
+  "section_break_pndy",
+  "datos"
+ ],
+ "fields": [
+  {
+   "fieldname": "modelo",
+   "fieldtype": "Select",
+   "label": "Modelo",
+   "options": "\n111\n190"
+  },
+  {
+   "fieldname": "column_break_jrms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "generar",
+   "fieldtype": "Button",
+   "label": "Generar"
+  },
+  {
+   "fieldname": "section_break_pndy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "datos",
+   "fieldtype": "Table",
+   "label": "Tabla de Datos",
+   "options": "Datos Modelo AEAT"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-26 09:37:36.652888",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Modelos AEAT",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -126,9 +126,9 @@ def construir_xml_recibidas(facturas):
 
         periodo_liquidacion = etree.SubElement(registro, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}PeriodoLiquidacion")
         ejercicio = etree.SubElement(periodo_liquidacion, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Ejercicio")
-        ejercicio.text = str(factura.posting_date.year)
+        ejercicio.text = str(factura.bill_date.year)
         periodo = etree.SubElement(periodo_liquidacion, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Periodo")
-        periodo.text = str(factura.posting_date.month).zfill(2)
+        periodo.text = str(factura.bill_date.month).zfill(2)
 
         id_factura = etree.SubElement(registro, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroLR.xsd}IDFactura")
         id_emisor_factura = etree.SubElement(id_factura, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}IDEmisorFactura")
@@ -137,14 +137,14 @@ def construir_xml_recibidas(facturas):
         num_factura = etree.SubElement(id_factura, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NumSerieFacturaEmisor")
         num_factura.text = str(factura.name)
         fecha = etree.SubElement(id_factura, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}FechaExpedicionFacturaEmisor")
-        fecha.text = factura.posting_date.strftime('%d-%m-%Y')
+        fecha.text = factura.bill_date.strftime('%d-%m-%Y')
 
         factura_recibida = etree.SubElement(registro, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroLR.xsd}FacturaRecibida")
         tipo_factura = etree.SubElement(factura_recibida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoFactura")
         tipo_factura_value = factura.custom_tipo_factura.split(":")[0].strip() if factura.custom_tipo_factura else "F1"
         tipo_factura.text = tipo_factura_value # Extraer el código antes de los dos puntos y eliminar espacios en blanco
         fecha_operacion = etree.SubElement(factura_recibida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}FechaOperacion")
-        fecha_operacion.text = factura.posting_date.strftime('%d-%m-%Y')
+        fecha_operacion.text = factura.bill_date.strftime('%d-%m-%Y')
         clave_regimen = etree.SubElement(factura_recibida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}ClaveRegimenEspecialOTrascendencia")
         clave_regimen_value = factura.custom_clave_regimen.split(":")[0].strip() if factura.custom_clave_regimen else "01"
         clave_regimen.text = clave_regimen_value
@@ -168,9 +168,9 @@ def construir_xml_recibidas(facturas):
                 tipo_impositivo_inversion = etree.SubElement(detalle_iva_inversion, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoImpositivo")
                 tipo_impositivo_inversion.text = str(tax.rate or 0)
                 base_imponible_inversion = etree.SubElement(detalle_iva_inversion, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}BaseImponible")
-                base_imponible_inversion.text = str(tax.tax_base or 0)
+                base_imponible_inversion.text = str(factura.net_total or 0)
                 cuota_soportada_inversion = etree.SubElement(detalle_iva_inversion, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CuotaSoportada")
-                cuota_soportada_inversion.text = str(tax.tax_amount or 0)
+                cuota_soportada_inversion.text = f"{round(tax.tax_amount or 0, 2):.2f}"
 
         desglose_iva = etree.SubElement(desglose_factura, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DesgloseIVA")
         if not factura.taxes:
@@ -187,16 +187,17 @@ def construir_xml_recibidas(facturas):
                 tipo_impositivo = etree.SubElement(detalle_iva, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoImpositivo")
                 tipo_impositivo.text = str(tax.rate or 0)
                 base_imponible = etree.SubElement(detalle_iva, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}BaseImponible")
-                base_imponible.text = str(tax.tax_base or 0)
+                base_imponible.text = str(factura.net_total or 0)
                 cuota_soportada = etree.SubElement(detalle_iva, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CuotaSoportada")
-                cuota_soportada.text = str(tax.tax_amount or 0)
+                cuota_soportada.text = f"{round(tax.tax_amount or 0, 2):.2f}"
         
         # Sumar CuotaSoportada para el cálculo de CuotaDeducible
         if not factura.taxes:
             cuota_deducible_valor = 0
         else:
             cuota_soportada_total = sum([float(tax.tax_amount) for tax in factura.taxes if tax.tax_amount > 0])
-            cuota_deducible_valor = min(float(factura.grand_total), cuota_soportada_total + 1)
+            cuota_deducible_valor = round(min(float(factura.grand_total), cuota_soportada_total + 1), 2)
+
 
         contraparte = etree.SubElement(factura_recibida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Contraparte")
         nombre_proveedor = etree.SubElement(contraparte, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NombreRazon")
@@ -275,6 +276,7 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
                         'DescripcionOperacion': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DescripcionOperacion').text,
                         'FechaOperacion': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}FechaOperacion').text,
                         'CuotaDeducible': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CuotaDeducible').text,
+                        'FechaRegContable': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}FechaRegContable').text,
                         'Contraparte': {
                             'NombreRazon': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NombreRazon').text,
                             'NIF': registro.find('.//{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF').text
@@ -313,7 +315,7 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
         logger.info("XML enviado con éxito")
         logger.info(f"Respuesta de la AEAT: {respuesta}")
 
-        return respuesta
+        return respuesta, datos_a_enviar
 
     except Exception as e:
         logger.error(f"Error al enviar el XML a la AEAT: {e}")
