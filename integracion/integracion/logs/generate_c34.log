@@ -50,3 +50,10 @@
 2024-08-14 15:30:32,588 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00341
 2024-08-14 15:30:32,625 - integracion.integracion.generate_c34 - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00339
 2024-08-14 15:30:32,625 - integracion.integracion.generate_c34 - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20240814153028.xlsx eliminado después de subirlo a SharePoint
+2024-08-21 12:33:37,704 - integracion.integracion.generate_c34 - INFO - Inicio de la generación de Cuaderno 34
+2024-08-21 12:33:37,705 - integracion.integracion.generate_c34 - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-00451', 'ACC-PINV-2024-00450']
+2024-08-21 12:33:37,713 - integracion.integracion.generate_c34 - WARNING - No se encontraron facturas que cumplan los criterios.
+2024-08-21 12:34:12,935 - integracion.integracion.generate_c34 - INFO - Inicio de la generación de Cuaderno 34
+2024-08-21 12:34:12,935 - integracion.integracion.generate_c34 - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-00451']
+2024-08-21 12:34:12,967 - integracion.integracion.generate_c34 - DEBUG - Procesando factura ACC-PINV-2024-00451
+2024-08-21 12:34:12,968 - integracion.integracion.generate_c34 - DEBUG - Factura ACC-PINV-2024-00451 ignorada por modo de pago None ANANDA GESTION ETT SL
