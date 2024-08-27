@@ -9,6 +9,14 @@ from lxml import etree
 import frappe
 import pandas as pd
 from frappe import _
+import unicodedata
+import re
+
+def remove_accents(input_str):
+    # Normalize the string to decompose the accents from the characters
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    # Filter out any non-ASCII characters (this removes accents)
+    return "".join([c for c in nfkd_form if not unicodedata.combining(c)])
 
 # Leer credenciales desde el archivo de configuración del sitio
 site_config = frappe.get_site_config()
@@ -153,8 +161,11 @@ def generate_c34_venta(invoice_data=None):
     files = []
     for company, invoices in invoices_by_company.items():
         try:
+            company_clean = remove_accents(company)
             abbr = frappe.get_value("Company", company, "abbr")
             now = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+            now_format = datetime.datetime.now().strftime("%Y-%m-%d")
+            tax_id = frappe.get_value("Company", company, "tax_id")  # Obteniendo el CIF de la empresa
             fichero_id_value = f"C34-{abbr}-{now.replace(':', '')}"
             
             # Crear el elemento principal del XML conforme al estándar SEPA
@@ -170,10 +181,10 @@ def generate_c34_venta(invoice_data=None):
             nb_of_txs = etree.SubElement(grp_hdr, "NbOfTxs")
             nb_of_txs.text = str(len(invoices))
             ctrl_sum = etree.SubElement(grp_hdr, "CtrlSum")
-            ctrl_sum.text = str(sum(invoice.grand_total for invoice in invoices))
+            ctrl_sum_pmt_inf.text = "{:.2f}".format(sum(invoice.grand_total for invoice in invoices))
             initg_pty = etree.SubElement(grp_hdr, "InitgPty")
             nm = etree.SubElement(initg_pty, "Nm")
-            nm.text = company
+            nm.text = company_clean
             id_elem = etree.SubElement(initg_pty, "Id")
             org_id = etree.SubElement(id_elem, "OrgId")
             othr = etree.SubElement(org_id, "Othr")
@@ -186,13 +197,13 @@ def generate_c34_venta(invoice_data=None):
             # Información de pago
             pmt_inf = etree.SubElement(cstmr_drct_dbt_initn, "PmtInf")
             pmt_inf_id = etree.SubElement(pmt_inf, "PmtInfId")
-            pmt_inf_id.text = f"PMT-{abbr}-{now}"
+            pmt_inf_id.text = f"{tax_id} {now_format}"
             pmt_mtd = etree.SubElement(pmt_inf, "PmtMtd")
             pmt_mtd.text = "DD"
             nb_of_txs_pmt_inf = etree.SubElement(pmt_inf, "NbOfTxs")
             nb_of_txs_pmt_inf.text = str(len(invoices))
             ctrl_sum_pmt_inf = etree.SubElement(pmt_inf, "CtrlSum")
-            ctrl_sum_pmt_inf.text = str(sum(invoice.grand_total for invoice in invoices))
+            ctrl_sum_pmt_inf.text = "{:.2f}".format(sum(invoice.grand_total for invoice in invoices))
             pmt_tp_inf = etree.SubElement(pmt_inf, "PmtTpInf")
             svc_lvl = etree.SubElement(pmt_tp_inf, "SvcLvl")
             svc_lvl_cd = etree.SubElement(svc_lvl, "Cd")
@@ -208,7 +219,7 @@ def generate_c34_venta(invoice_data=None):
             # Acreedor (Cdtr)
             cdtr = etree.SubElement(pmt_inf, "Cdtr")
             cdtr_nm = etree.SubElement(cdtr, "Nm")
-            cdtr_nm.text = company
+            cdtr_nm.text = company_clean
 
             cdtr_acct = etree.SubElement(pmt_inf, "CdtrAcct")
             cdtr_acct_id = etree.SubElement(cdtr_acct, "Id")
@@ -244,7 +255,7 @@ def generate_c34_venta(invoice_data=None):
                 end_to_end_id.text = invoice.name
 
                 amt = etree.SubElement(drct_dbt_tx_inf, "InstdAmt", Ccy="EUR")
-                amt.text = str(invoice.grand_total)
+                amt.text = "{:.2f}".format(invoice.grand_total)
 
                 drct_dbt_tx = etree.SubElement(drct_dbt_tx_inf, "DrctDbtTx")
                 mndt_rltd_inf = etree.SubElement(drct_dbt_tx, "MndtRltdInf")
