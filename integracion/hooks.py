@@ -39,7 +39,8 @@ override_whitelisted_methods = {
 
 override_doctype_class = {
     "Purchase Invoice": "integracion.integracion.purchase_invoice_override.CustomPurchaseInvoice",
-    "Job Offer": "integracion.integracion.job_offer_override.CustomJobOffer"
+    "Job Offer": "integracion.integracion.job_offer_override.CustomJobOffer",
+    "Opportunity": "integracion.integracion.opportunity_override.CustomOpportunity",
 }
 
 
@@ -63,6 +64,11 @@ app_include_css = [
 app_include_js = [
     "/assets/integracion/js/custom_printview.js"
 ]
+
+doctype_js = {
+    "Opportunity": "public/js/custom_opportunity.js"
+}
+
 
 # required_apps = []
 
