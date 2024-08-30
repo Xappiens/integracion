@@ -62,7 +62,9 @@ app_include_css = [
 ]
 
 app_include_js = [
-    "/assets/integracion/js/custom_printview.js"
+    "/assets/integracion/js/custom_printview.js",
+    "/assets/integracion/js/custom_communication.js",
+    "/assets/integracion/js/custom_buttons.js"
 ]
 
 doctype_js = {
