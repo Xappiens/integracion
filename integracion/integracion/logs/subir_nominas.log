@@ -1,0 +1,48 @@
+2024-09-09 12:52:19,473 - integracion.integracion.subir_nominas - DEBUG - Iniciando el proceso de subida de nóminas.
+2024-09-09 12:52:19,473 - integracion.integracion.subir_nominas - DEBUG - Procesando archivo XML para la empresa: NUTECFOR Andalucía SL.
+2024-09-09 12:52:19,484 - integracion.integracion.subir_nominas - DEBUG - XML cargado correctamente.
+2024-09-09 12:52:19,484 - integracion.integracion.subir_nominas - DEBUG - Archivo de errores inicializado.
+2024-09-09 12:52:19,484 - integracion.integracion.subir_nominas - DEBUG - Comenzando el proceso de validación y ajuste de cuentas.
+2024-09-09 12:52:19,527 - integracion.integracion.subir_nominas - DEBUG - Cuenta del empleado actualizada para el NIF 54371734X.
+2024-09-09 12:52:19,570 - integracion.integracion.subir_nominas - DEBUG - Cuenta del empleado actualizada para el NIF 54371734X.
+2024-09-09 12:52:19,601 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 465.
+2024-09-09 12:52:19,631 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 642.
+2024-09-09 12:52:19,659 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 476.
+2024-09-09 12:52:19,659 - integracion.integracion.subir_nominas - DEBUG - Comenzando el proceso de creación de asientos contables.
+2024-09-09 12:52:19,891 - integracion.integracion.subir_nominas - INFO - Journal Entry creado para el NIF 54371734X, fecha 2024-07-31.
+2024-09-09 12:52:19,959 - integracion.integracion.subir_nominas - DEBUG - Proceso completado, generando URLs de los archivos.
+2024-09-09 13:09:52,726 - integracion.integracion.subir_nominas - DEBUG - Iniciando el proceso de subida de nóminas.
+2024-09-09 13:09:52,726 - integracion.integracion.subir_nominas - DEBUG - Procesando archivo XML para la empresa: TAKIN Business Consulting SL.
+2024-09-09 13:09:52,739 - integracion.integracion.subir_nominas - DEBUG - XML cargado correctamente.
+2024-09-09 13:09:52,739 - integracion.integracion.subir_nominas - DEBUG - Archivo de errores inicializado.
+2024-09-09 13:09:52,739 - integracion.integracion.subir_nominas - DEBUG - Comenzando el proceso de validación y ajuste de cuentas.
+2024-09-09 13:09:52,773 - integracion.integracion.subir_nominas - DEBUG - Cuenta del empleado actualizada para el NIF 71273111K.
+2024-09-09 13:09:52,799 - integracion.integracion.subir_nominas - DEBUG - Cuenta del empleado actualizada para el NIF 71273111K.
+2024-09-09 13:09:52,826 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 465.
+2024-09-09 13:09:52,868 - integracion.integracion.subir_nominas - DEBUG - Cuenta del empleado actualizada para el NIF 52414649H.
+2024-09-09 13:09:52,908 - integracion.integracion.subir_nominas - DEBUG - Cuenta del empleado actualizada para el NIF 52414649H.
+2024-09-09 13:09:52,948 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 465.
+2024-09-09 13:09:52,972 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 642.
+2024-09-09 13:09:52,996 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 476.
+2024-09-09 13:09:53,022 - integracion.integracion.subir_nominas - DEBUG - Cuenta del empleado actualizada para el NIF 71365088K.
+2024-09-09 13:09:53,046 - integracion.integracion.subir_nominas - DEBUG - Cuenta del empleado actualizada para el NIF 71365088K.
+2024-09-09 13:09:53,077 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 465.
+2024-09-09 13:09:53,101 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 642.
+2024-09-09 13:09:53,125 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 476.
+2024-09-09 13:09:53,150 - integracion.integracion.subir_nominas - WARNING - No se encontró cuenta hija para el NIF 12439113T, usando cuenta padre.
+2024-09-09 13:09:53,180 - integracion.integracion.subir_nominas - WARNING - No se encontró cuenta hija para el NIF 12439113T, usando cuenta padre.
+2024-09-09 13:09:53,222 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 465.
+2024-09-09 13:09:53,254 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 642.
+2024-09-09 13:09:53,282 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 476.
+2024-09-09 13:09:53,310 - integracion.integracion.subir_nominas - WARNING - No se encontró cuenta hija para el NIF 71304608P, usando cuenta padre.
+2024-09-09 13:09:53,334 - integracion.integracion.subir_nominas - WARNING - No se encontró cuenta hija para el NIF 71304608P, usando cuenta padre.
+2024-09-09 13:09:53,358 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 465.
+2024-09-09 13:09:53,383 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 642.
+2024-09-09 13:09:53,408 - integracion.integracion.subir_nominas - DEBUG - Cuenta hija encontrada para la cuenta 476.
+2024-09-09 13:09:53,408 - integracion.integracion.subir_nominas - DEBUG - Comenzando el proceso de creación de asientos contables.
+2024-09-09 13:09:53,578 - integracion.integracion.subir_nominas - INFO - Journal Entry creado para el NIF 71273111K, fecha 2024-07-31.
+2024-09-09 13:09:53,770 - integracion.integracion.subir_nominas - INFO - Journal Entry creado para el NIF 52414649H, fecha 2024-07-31.
+2024-09-09 13:09:53,953 - integracion.integracion.subir_nominas - INFO - Journal Entry creado para el NIF 71365088K, fecha 2024-07-31.
+2024-09-09 13:09:54,357 - integracion.integracion.subir_nominas - INFO - Journal Entry creado para el NIF 12439113T, fecha 2024-07-31.
+2024-09-09 13:09:54,764 - integracion.integracion.subir_nominas - INFO - Journal Entry creado para el NIF 71304608P, fecha 2024-07-31.
+2024-09-09 13:09:54,825 - integracion.integracion.subir_nominas - DEBUG - Proceso completado, generando URLs de los archivos.

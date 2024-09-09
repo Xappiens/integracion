@@ -114,7 +114,8 @@ def generate_c34_venta(invoice_data=None):
             filtered_invoices = frappe.get_all("Sales Invoice", filters={
                 "name": ["in", invoice_names],
                 "custom_aprobada_para_cobro": 1,
-                "custom_remesa_emitida": 0
+                "custom_remesa_emitida": 0,
+                "docstatus": ["!=", 2]
             }, fields=["name"])
 
             # Si no se encuentran facturas después del filtro, no hacer nada
@@ -125,7 +126,8 @@ def generate_c34_venta(invoice_data=None):
             # Si no se seleccionan facturas, obtener todas las facturas aprobadas
             filtered_invoices = frappe.get_all("Sales Invoice", filters={
                 "custom_aprobada_para_cobro": 1,
-                "custom_remesa_emitida": 0
+                "custom_remesa_emitida": 0,
+                "docstatus": ["!=", 2]
             }, fields=["name"])
             logger.debug(f"Total facturas encontradas: {len(filtered_invoices)}")
 

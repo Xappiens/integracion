@@ -13,6 +13,7 @@
   "column_break_irxu",
   "fecha",
   "url",
+  "enviada",
   "section_break_hzkb",
   "facturas"
  ],
@@ -38,6 +39,8 @@
    "default": "Today",
    "fieldname": "fecha",
    "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Fecha Emision"
   },
   {
@@ -66,11 +69,19 @@
    "fieldtype": "Link",
    "label": "Remesa de ",
    "options": "DocType"
+  },
+  {
+   "default": "0",
+   "fieldname": "enviada",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Remesa Enviada"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-23 11:47:52.751949",
+ "modified": "2024-09-05 14:18:49.944576",
  "modified_by": "Administrator",
  "module": "Integracion",
  "name": "Remesa Registro",

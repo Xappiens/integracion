@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-05 15:12:49.659017",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_offer",
+  "company",
+  "position",
+  "column_break_oqzv",
+  "fecha_inicio",
+  "fevha_fin",
+  "contract_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_offer",
+   "fieldtype": "Link",
+   "label": "Hoja de Contratacion",
+   "options": "Job Offer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "job_offer.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "job_offer.designation",
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Puesto",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_oqzv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_offer.custom_fecha_inicio",
+   "fieldname": "fecha_inicio",
+   "fieldtype": "Date",
+   "label": "Fecha Inicio",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "job_offer.custom_fecha_fin",
+   "fieldname": "fevha_fin",
+   "fieldtype": "Date",
+   "label": "Fecha fin",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "job_offer.custom_tipo_de_contrato",
+   "fieldname": "contract_type",
+   "fieldtype": "Data",
+   "label": "Contrato",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-05 16:12:04.720702",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Empleado Historial Incor",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

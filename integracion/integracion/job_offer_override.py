@@ -2,7 +2,7 @@ from hrms.hr.doctype.job_offer.job_offer import JobOffer
 import frappe
 
 class CustomJobOffer(JobOffer):
-
+    
     def on_change(self):
         # Aquí actualizas el estado del solicitante de empleo sin necesidad de usar before_cancel
         self.custom_update_job_applicant(self.status, self.job_applicant)
