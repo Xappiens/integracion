@@ -41,9 +41,16 @@ def subir_nominas(company, xml_file):
         logger.error(f"Error al cargar el XML: {str(e)}")
         return {'error': f'Error al cargar el archivo XML: {str(e)}'}
 
+    # Obtener la fecha actual para incluir en los nombres de archivo
+    current_date = datetime.now().strftime('%Y-%m-%d')
+
+    # Generar nombres de archivo personalizados con la fecha y el nombre de la empresa
+    error_log_filename = f"NOMINAS_{company}_{current_date}_ERROR.log".replace(" ", "_")
+    fallo_xml_filename = f"NOMINAS_{company}_{current_date}_ERROR.xml".replace(" ", "_")
+
     # Crear el archivo de errores
     temp_folder_path = frappe.get_site_path("private", "files")
-    error_log_path = os.path.join(temp_folder_path, 'errores_nominas.txt')
+    error_log_path = os.path.join(temp_folder_path, error_log_filename)
 
     # Crear el XML de fallos con la misma estructura que el original
     root_fallos = ET.Element("Exportacion", attrib={"Origen": "Nominas", "Destino": "Contabilidad"})
@@ -53,12 +60,42 @@ def subir_nominas(company, xml_file):
     })
     asientos_fallos = ET.SubElement(empresa_fallos, "Asientos")
 
+    # Diccionario para almacenar asientos ya registrados
+    asientos_registrados = set()
+
     # Función para registrar errores en el archivo TXT y XML de fallos
     def log_error_and_register_asiento(asiento, nif, motivo):
         # Registrar el error en el archivo TXT
+        fecha_asiento = asiento.attrib['Fecha']
+        try:
+        # Convertir al formato normalizado
+            fecha_normalizada = datetime.strptime(fecha_asiento, '%d/%m/%Y').strftime('%Y-%m-%d')
+        except ValueError as e:
+            logger.error(f"Error en la conversión de fecha: {e}")
+            fecha_normalizada = fecha_asiento  # Mantener la fecha original si no se puede convertir
+
+
+        asiento_id = f"{nif}_{fecha_normalizada}"
+        
+        logger.debug(f"Registrando asiento fallido: {asiento_id} - {motivo}")
+
+        logger.debug(f"Asientos registrados: {asientos_registrados}")
+
+        # Verificar si el asiento ya fue registrado
+        if asiento_id in asientos_registrados:
+            logger.warning(f"Asiento ya registrado: {asiento_id}. Evitando duplicación.")
+            return  # Si ya fue registrado, no hacer nada
+        
+        empleado_name = ""
+
+        if frappe.db.exists("Employee", {"custom_dninie_id": nif}) or frappe.db.exists("Employee", {"custom_dninie": nif}):
+            empleado = frappe.get_doc("Employee", {"custom_dninie_id": nif})
+            empleado_name = empleado.employee_name
+
+
         with open(error_log_path, 'a') as f:
-            f.write(f"Empleado {nif} {motivo}\n")
-        logger.error(f"{nif} - {motivo}")
+            f.write(f"Empleado {nif} {empleado_name} {motivo}\n")
+            logger.error(f"{nif} {empleado_name} - {motivo}")
 
         # Registrar el asiento fallido en el XML de fallos
         asiento_fallo = ET.SubElement(asientos_fallos, "Asiento", attrib={
@@ -69,6 +106,7 @@ def subir_nominas(company, xml_file):
         })
         for apunte in asiento.findall("Apunte"):
             ET.SubElement(asiento_fallo, "Apunte", attrib=apunte.attrib).text = apunte.text
+        asientos_registrados.add(asiento_id)
 
     # Limpiar el archivo de errores si ya existe
     with open(error_log_path, 'w') as f:
@@ -137,8 +175,9 @@ def subir_nominas(company, xml_file):
                     apunte.set('Cuenta', account['account_number'])
                     logger.debug(f"Cuenta del empleado actualizada para el NIF {nif}.")
                 else:
-                    apunte.set('Cuenta', cuenta_prefix)  # Usar la cuenta padre (640 o 4751)
-                    logger.warning(f"No se encontró cuenta hija para el NIF {nif}, usando cuenta padre.")
+                    logger.warning(f"No se encontró cuenta empleado para el NIF {nif}.")
+                    log_error_and_register_asiento(asiento, nif, "No se encontró cuenta para el empleado")
+                    break  # Salimos del bucle ya que el asiento completo falla
 
             else:
                 # Para otras cuentas (como 642), buscar la primera cuenta hija disponible
@@ -154,8 +193,9 @@ def subir_nominas(company, xml_file):
                         apunte.set('Cuenta', account['account_number'])
                         logger.debug(f"Cuenta hija encontrada para la cuenta {cuenta_prefix}.")
                     else:
-                        apunte.set('Cuenta', cuenta_prefix)  # Usar la cuenta padre si no hay hijas
-                        logger.warning(f"No se encontró cuenta hija para la cuenta {cuenta_prefix}, usando cuenta padre.")
+                        logger.warning(f"No se encontró cuenta hija para la cuenta {cuenta_prefix}.")
+                        log_error_and_register_asiento(asiento, nif, f"No se encontró cuenta hija para empresa {cuenta_prefix}")
+                        break  # Salimos del bucle ya que el asiento completo falla
 
     # **Paso 2: Crear los asientos contables**
     logger.debug("Comenzando el proceso de creación de asientos contables.")
@@ -244,25 +284,27 @@ def subir_nominas(company, xml_file):
         except Exception as e:
             log_error_and_register_asiento(asiento, nif, str(e))
 
-    # Guardar el XML de fallos
+    # Guardar el XML de fallos con la fecha y el nombre de la empresa
+    fallo_xml_path = os.path.join(temp_folder_path, fallo_xml_filename)
     fallo_tree = ET.ElementTree(root_fallos)
-    fallo_xml_path = os.path.join(temp_folder_path, 'fallos.xml')
     fallo_tree.write(fallo_xml_path)
 
     # Guardar el archivo de errores y el XML generado en la carpeta de files
     error_log_url = frappe.get_doc({
         "doctype": "File",
-        "file_name": "errores_nominas.txt",
-        "file_url": "/private/files/errores_nominas.txt",
+        "file_name": error_log_filename,
+        "file_url": f"/private/files/{error_log_filename}",
         "is_private": 1,
     }).insert().file_url
 
     fallo_xml_url = frappe.get_doc({
         "doctype": "File",
-        "file_name": "fallos.xml",
-        "file_url": "/private/files/fallos.xml",
+        "file_name": fallo_xml_filename,
+        "file_url": f"/private/files/{fallo_xml_filename}",
         "is_private": 1,
     }).insert().file_url
+
+    create_registro(error_log_url,fallo_xml_url,company,current_date)
 
     # Devolver las URLs de los archivos generados para que puedan ser descargados en el frontend
     logger.debug("Proceso completado, generando URLs de los archivos.")
@@ -270,3 +312,23 @@ def subir_nominas(company, xml_file):
         "error_log": error_log_url,
         "fallo_xml": fallo_xml_url
     }
+
+def create_registro(error_log,error_xml,company,date):
+    try:
+        # Crear un nuevo documento de Remesa
+        fallos_doc = frappe.get_doc({
+            "doctype": "Nominas Fallos",
+            "empresa": company,
+            "fecha": date,
+            "log": error_log,
+            "xml": error_xml
+        })
+        
+        # Insertar el documento en la base de datos
+        fallos_doc.insert()
+        
+        logger.info(f"Registro fallos creado: {fallos_doc.name} para la empresa {company}")
+        return fallos_doc.name
+    except Exception as e:
+        logger.error(f"Error al crear el documento de fallos para {company}: {e}")
+        return None

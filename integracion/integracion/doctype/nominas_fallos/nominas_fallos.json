@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-09-09 16:06:40.215020",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "log",
+  "empresa",
+  "fecha",
+  "column_break_vfzn",
+  "xml",
+  "company_abbr",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "log",
+   "fieldtype": "Small Text",
+   "label": "LOG de errores"
+  },
+  {
+   "fieldname": "column_break_vfzn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "xml",
+   "fieldtype": "Small Text",
+   "label": "XML Erroneos"
+  },
+  {
+   "fieldname": "empresa",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company"
+  },
+  {
+   "fetch_from": "empresa.abbr",
+   "fieldname": "company_abbr",
+   "fieldtype": "Data",
+   "label": "Abreviatura Empresa",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Series",
+   "options": "NOM-.{company_abbr}.-.{fecha}.-.####."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-09 16:17:19.097647",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Nominas Fallos",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
