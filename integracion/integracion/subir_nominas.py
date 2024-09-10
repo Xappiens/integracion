@@ -84,7 +84,7 @@ def subir_nominas(company, xml_file):
         # Verificar si el asiento ya fue registrado
         if asiento_id in asientos_registrados:
             logger.warning(f"Asiento ya registrado: {asiento_id}. Evitando duplicación.")
-            return  # Si ya fue registrado, no hacer nada
+            return  # Si ya fue registrado, no hacer nad
         
         empleado_name = ""
 
