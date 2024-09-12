@@ -24,13 +24,13 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 logger.setLevel(logging.DEBUG)
 
-def get_supplier_iban(supplier_name):
+def get_supplier_iban(supplier_name, company):
     # Consultar la cuenta bancaria que tiene un enlace al proveedor
     bank_accounts = frappe.get_all("Bank Account", filters={
         "party_type": "Supplier",
         "party": supplier_name
-    }, fields=["iban"])
-    
+    }, fields=["iban", "company"])
+
     if not bank_accounts:
         # Si no se encuentra el IBAN en las cuentas bancarias del proveedor, buscar el default_bank_account
         default_bank_account = frappe.get_value("Supplier", supplier_name, "default_bank_account")
@@ -41,8 +41,14 @@ def get_supplier_iban(supplier_name):
                 return iban
         
         return ""  # Devolver un valor vacío si no se encuentra el IBAN en ninguna parte
-    
-    return bank_accounts[0].iban
+
+    # Filtrar cuentas bancarias por la empresa específica
+    filtered_accounts = [account for account in bank_accounts if account.get("company") == company]
+
+    if filtered_accounts:
+        return filtered_accounts[0].iban
+    else:
+        return bank_accounts[0].iban  # Si no hay coincidencia con la empresa, devolver el primero disponible
 
 
 def change_status_to_remesa_emitida(purchase_invoice_name, remesa_name):
@@ -237,7 +243,7 @@ def generate_c34_compra(invoice_data=None):
             data = []
             for invoice in invoices:
                 try:
-                    supplier_iban = get_supplier_iban(invoice.supplier)
+                    supplier_iban = get_supplier_iban(invoice.supplier,company)
                     supplier_cif = frappe.get_value("Supplier", invoice.supplier, "tax_id")
                     
                     data.append({
@@ -247,7 +253,7 @@ def generate_c34_compra(invoice_data=None):
                         "IBAN Proveedor": supplier_iban,
                         "Importe Factura": invoice.outstanding_amount,
                         "Objeto de la Factura": invoice.remarks or "Pago de factura",
-                        "Fecha de factura": invoice.posting_date.strftime('%Y-%m-%d'),
+                        "Fecha de factura": invoice.bill_date.strftime('%Y-%m-%d'),
                         "Tipo Transferencia" : "SEPA" 
                     })
                     logger.debug(f"Datos agregados para la factura {invoice.name} del proveedor {invoice.supplier_name}")
@@ -283,13 +289,13 @@ def create_remesa(company, invoices, sharepoint_url):
         # Crear un nuevo documento de Remesa
         remesa_doc = frappe.get_doc({
             "doctype": "Remesa Registro",
-            "company": company,
             "remesa_de": "Purchase Invoice",
+            "company": company,
             "fecha": frappe.utils.nowdate(),
             "url": sharepoint_url,
             "facturas": [{"factura": inv.name, "importe": inv.outstanding_amount} for inv in invoices]
         })
-        
+        logger.info(remesa_doc)
         # Insertar el documento en la base de datos
         remesa_doc.insert()
         

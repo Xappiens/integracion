@@ -17,6 +17,12 @@ doc_events = {
     "File": {
         "on_create" : "integracion.integracion.subir_archivo_sp.on_update_or_create",
         "on_update" : "integracion.integracion.subir_archivo_sp.on_update_or_create"
+    },
+    "Purchase Invoice": {
+        "before_save": "integracion.integracion.subir_archivo_sp.handle_structure_change"
+    },
+    "Sales Invoice": {
+        "before_save": "integracion.integracion.subir_archivo_sp.handle_structure_change"
     }
 }
 
@@ -36,12 +42,19 @@ override_whitelisted_methods = {
     "integracion.subir_nominas": "integracion.integracion.subir_nominas.subir_nominas",
 }
 
+permission_query_conditions = {
+    "Job Offer": "integracion.integracion.permissions.job_offer_query"
+}
 
 
 override_doctype_class = {
     "Purchase Invoice": "integracion.integracion.purchase_invoice_override.CustomPurchaseInvoice",
     "Job Offer": "integracion.integracion.job_offer_override.CustomJobOffer",
     "Opportunity": "integracion.integracion.opportunity_override.CustomOpportunity",
+}
+
+override_doctype_dashboards = {
+   "Planes Formativos": "integracion.integracion.planes_formativos_dashboard.get_data"
 }
 
 

@@ -32,13 +32,13 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 logger.setLevel(logging.DEBUG)
 
-def get_customer_iban(client_name):
+def get_customer_iban(client_name, company):
     # Consultar la cuenta bancaria que tiene un enlace al cliente
     bank_accounts = frappe.get_all("Bank Account", filters={
         "party_type": "Customer",
         "party": client_name
-    }, fields=["iban"])
-    
+    }, fields=["iban", "company"])
+
     if not bank_accounts:
         # Si no se encuentra el IBAN en las cuentas bancarias del cliente, buscar el default_bank_account
         default_bank_account = frappe.get_value("Customer", client_name, "default_bank_account")
@@ -49,8 +49,15 @@ def get_customer_iban(client_name):
                 return iban
         
         return ""  # Devolver un valor vacío si no se encuentra el IBAN en ninguna parte
-    
-    return bank_accounts[0].iban
+
+    # Filtrar cuentas bancarias por la empresa específica
+    filtered_accounts = [account for account in bank_accounts if account.get("company") == company]
+
+    if filtered_accounts:
+        return filtered_accounts[0].iban
+    else:
+        return bank_accounts[0].iban  # Si no hay coincidencia con la empresa, devolver el primero disponible
+
 
 def change_status_to_remesa_emitida(sales_invoice_name, remesa_name):
     try:
