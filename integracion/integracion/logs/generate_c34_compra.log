@@ -1,30 +1,22 @@
-2024-09-11 09:35:18,951 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
-2024-09-11 09:35:18,952 - integracion.integracion.generate_c34_compra - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-00961', 'ACC-PINV-2024-00665', 'ACC-PINV-2024-00669']
-2024-09-11 09:35:18,986 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-00961
-2024-09-11 09:35:18,987 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-00961 agregada a la empresa Burgos atu SL
-2024-09-11 09:35:19,007 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-00665
-2024-09-11 09:35:19,009 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-00665 agregada a la empresa Burgos atu SL
-2024-09-11 09:35:19,031 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-00669
-2024-09-11 09:35:19,032 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-00669 agregada a la empresa Burgos atu SL
-2024-09-11 09:35:19,041 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-00961 del proveedor DANIEL PÉREZ PARRA
-2024-09-11 09:35:19,044 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-00665 del proveedor DANIEL PÉREZ PARRA
-2024-09-11 09:35:19,047 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-00669 del proveedor DANIEL PÉREZ PARRA
-2024-09-11 09:35:19,203 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Burgos atu SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-BATU-20240911093519.xlsx
-2024-09-11 09:35:19,204 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-BATU-20240911093519.xlsx a SharePoint para la compañía Burgos atu SL con Cuaderno C34-BATU-20240911093519
-2024-09-11 09:35:19,204 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
-2024-09-11 09:35:19,204 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
-2024-09-11 09:35:19,204 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Burgos%20atu%20SL
-2024-09-11 09:35:20,955 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
-2024-09-11 09:35:21,497 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Burgos atu SL
-2024-09-11 09:35:21,497 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Burgos%20atu%20SL/C34-BATU-20240911093519
-2024-09-11 09:35:21,663 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Burgos atu SL
-2024-09-11 09:35:22,099 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Burgos atu SL/C34-BATU-20240911093519
-2024-09-11 09:35:22,100 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Burgos%20atu%20SL/C34-BATU-20240911093519/C34-BATU-20240911093519.xlsx
-2024-09-11 09:35:22,843 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Burgos%20atu%20SL/C34-BATU-20240911093519/C34-BATU-20240911093519.xlsx
-2024-09-11 09:35:22,844 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Burgos%20atu%20SL/C34-BATU-20240911093519/C34-BATU-20240911093519.xlsx
-2024-09-11 09:35:22,862 - integracion.integracion.generate_c34_compra - INFO - RemesaRegistro(unsaved)
-2024-09-11 09:35:22,924 - integracion.integracion.generate_c34_compra - INFO - Remesa creada: REM-BATU-2024-09-11-0001 para la empresa Burgos atu SL
-2024-09-11 09:35:22,976 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00961
-2024-09-11 09:35:23,024 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00665
-2024-09-11 09:35:23,075 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-00669
-2024-09-11 09:35:23,075 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-BATU-20240911093519.xlsx eliminado después de subirlo a SharePoint
+2024-09-23 06:37:56,163 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
+2024-09-23 06:37:56,164 - integracion.integracion.generate_c34_compra - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-01470']
+2024-09-23 06:37:56,195 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01470
+2024-09-23 06:37:56,196 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01470 agregada a la empresa Grupo Almería Formación SL
+2024-09-23 06:37:56,207 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01470 del proveedor LUIS CARLOS GONZALEZ DE VEGA D
+2024-09-23 06:37:56,374 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Grupo Almería Formación SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-GAF-20240923063756.xlsx
+2024-09-23 06:37:56,374 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-GAF-20240923063756.xlsx a SharePoint para la compañía Grupo Almería Formación SL con Cuaderno C34-GAF-20240923063756
+2024-09-23 06:37:56,375 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-09-23 06:37:56,375 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-09-23 06:37:56,375 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL
+2024-09-23 06:37:57,978 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-09-23 06:37:58,668 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Grupo Almería Formación SL
+2024-09-23 06:37:58,669 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C34-GAF-20240923063756
+2024-09-23 06:37:58,869 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Grupo Almería Formación SL
+2024-09-23 06:37:59,366 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Grupo Almería Formación SL/C34-GAF-20240923063756
+2024-09-23 06:37:59,367 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C34-GAF-20240923063756/C34-GAF-20240923063756.xlsx
+2024-09-23 06:37:59,993 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C34-GAF-20240923063756/C34-GAF-20240923063756.xlsx
+2024-09-23 06:37:59,993 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C34-GAF-20240923063756/C34-GAF-20240923063756.xlsx
+2024-09-23 06:38:00,045 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-09-23 06:38:00,118 - integracion.integracion.generate_c34_compra - INFO - Remesa creada: REM-GAF-2024-09-23-0001 para la empresa Grupo Almería Formación SL
+2024-09-23 06:38:00,171 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01470
+2024-09-23 06:38:00,171 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-GAF-20240923063756.xlsx eliminado después de subirlo a SharePoint

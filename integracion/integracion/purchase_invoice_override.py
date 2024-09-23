@@ -48,7 +48,6 @@ class CustomPurchaseInvoice(PurchaseInvoice):
         # Volver a mover el punto decimal a su lugar original
         return value_shifted / shift
 
-
     def set_status(self, update=False, status=None, update_modified=True):
         # Llamar a la lógica original de la clase base
         super().set_status(update=update, status=status, update_modified=update_modified)
@@ -63,7 +62,7 @@ class CustomPurchaseInvoice(PurchaseInvoice):
             if self.custom_remesa_emitida and self.status == "Aprobada para pago":
                 self.status = "Remesa Emitida"
                 self.db_set('status', self.status, update_modified=update_modified)
-    
+
     def set_tax_withholding(self):
         # Llamar a la lógica original del método set_tax_withholding
         super().set_tax_withholding()
@@ -72,7 +71,7 @@ class CustomPurchaseInvoice(PurchaseInvoice):
         withholding_accounts = frappe.get_all("Tax Withholding Account", filters={"company": self.company}, fields=["account"])
 
         # Si `apply_tds` está desactivado o `tax_withholding_category` está vacío, eliminar la línea de IRPF
-        if not self.apply_tds or not self.tax_withholding_category:
+        if not self.tax_withholding_category or self.tax_withholding_net_total == 0:
             # Eliminar cualquier línea en taxes cuyo encabezado de cuenta esté en las cuentas de Tax Withholding Account
             self.taxes = [tax for tax in self.taxes if tax.account_head not in [acc['account'] for acc in withholding_accounts]]
             self.calculate_taxes_and_totals()
@@ -102,21 +101,21 @@ class CustomPurchaseInvoice(PurchaseInvoice):
         for tax in self.taxes:
             if tax.account_head == account_head or tax.account_head in [acc['account'] for acc in withholding_accounts]:
                 # Si el impuesto existe o si una cuenta está en Tax Withholding Account, actualizar
-                tax.charge_type = "On Net Total"
+                tax.charge_type = "Actual"
                 tax.rate = withholding_rate
                 tax.description = _("Retención IRPF ({0}%)").format(withholding_rate)
-                tax.tax_amount = None  # Dejar que se calcule automáticamente
+                tax.tax_amount = (self.tax_withholding_net_total * withholding_rate) / 100  # Calcular basado en tax_withholding_net_total
                 tax_exists = True
                 break
 
         # Si no existe, añadir una nueva fila a la tabla de impuestos
         if not tax_exists:
             self.append("taxes", {
-                "charge_type": "On Net Total",
+                "charge_type": "Actual",
                 "account_head": account_head,
                 "description": _("Retención IRPF ({0}%)").format(withholding_rate),
                 "rate": withholding_rate,
-                "tax_amount": None,  # Dejar que se calcule automáticamente
+                "tax_amount": (self.tax_withholding_net_total * withholding_rate) / 100,  # Calcular basado en tax_withholding_net_total
                 "category": "Total",
                 "add_deduct_tax": "Deduct"
             })

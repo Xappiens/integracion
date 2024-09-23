@@ -6,6 +6,7 @@ from urllib.parse import quote, urlsplit, urlunsplit, urlencode, parse_qs
 from office365.runtime.auth.user_credential import UserCredential
 from office365.sharepoint.client_context import ClientContext
 import frappe
+import re
 from frappe import _
 
 # Leer credenciales desde el archivo de configuración del sitio
@@ -19,7 +20,7 @@ handler = logging.FileHandler('/home/frappe/frappe-bench/apps/integracion/integr
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.ERROR)
 # Crear un RotatingFileHandler
 handler = RotatingFileHandler(
     '/home/frappe/frappe-bench/apps/integracion/integracion/integracion/logs/sharepoint_subida.log',
@@ -41,11 +42,21 @@ folder_structure_map = {
 
 def sanitize_name(name):
     """
-    Reemplaza caracteres prohibidos en SharePoint con un guion.
+    Reemplaza caracteres prohibidos en SharePoint con un guion, 
+    elimina dobles espacios, y quita espacios al inicio o final.
     """
-    return name.translate(str.maketrans({
+    # Reemplaza caracteres prohibidos
+    sanitized_name = name.translate(str.maketrans({
         '*': '-', '"': '-', ':': '-', '<': '-', '>': '-', '?': '-', '/': '-', '\\': '-', '|': '-', ',': '-', '.': '-'
     }))
+    
+    # Reemplaza dobles o más espacios por uno solo
+    sanitized_name = re.sub(r'\s+', ' ', sanitized_name)
+
+    # Elimina espacios al inicio y al final
+    sanitized_name = sanitized_name.strip()
+
+    return sanitized_name
 
 def sanitize_url(url):
     """

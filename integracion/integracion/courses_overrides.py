@@ -33,3 +33,26 @@ def custom_get_programs_without_course(course):
         if course not in courses:
             data.append(program.name)
     return data
+
+
+def delete_course_link(doc, method):
+    # Obtener todos los programas que tienen vinculado el curso
+    programs_with_course = frappe.get_all("Program Course Link", filters={
+        "course": doc.name
+    }, fields=["parent"])
+
+    # Eliminar el vínculo del curso de cada programa encontrado
+    for entry in programs_with_course:
+        try:
+            # Obtener el documento del programa
+            program = frappe.get_doc("Program", entry.parent)
+
+            # Buscar y eliminar el curso en la lista de "courses" del programa
+            program.courses = [c for c in program.courses if c.course != doc.name]
+            program.save()
+
+        except Exception as e:
+            # Registrar el error en los logs
+            frappe.log_error(f"Error removing course {doc.name} from program {entry.parent}: {str(e)}")
+            # Lanzar una excepción para detener la eliminación
+            frappe.throw(f"No se pudo eliminar el curso del programa {entry.parent}. Error: {str(e)}")

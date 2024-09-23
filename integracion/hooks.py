@@ -9,7 +9,8 @@ app_license = "mit"
 doc_events = {
     "User": {
         "on_update": "integracion.integracion.password_utils.create_user_in_crm",
-        "on_trash": "integracion.integracion.delete_user_crm.delete_user_in_crm"
+        "on_trash": "integracion.integracion.delete_user_crm.delete_user_in_crm",
+        "before_validate": "integracion.integracion.not_set_over.force_disable_user"
     },
     "__Auth": {
         "on_update": "integracion.integracion.password_update.update_password_in_crm"
@@ -23,7 +24,14 @@ doc_events = {
     },
     "Sales Invoice": {
         "before_save": "integracion.integracion.subir_archivo_sp.handle_structure_change"
+    },
+    "Course": {
+        "on_trash": "integracion.integracion.courses_overrides.delete_course_link"
+    },
+    "ToDo":{
+        "after_insert": "integracion.integracion.metodos_varios.notify_on_assign"
     }
+
 }
 
 override_whitelisted_methods = {
@@ -40,6 +48,9 @@ override_whitelisted_methods = {
     "integracion.invoice_from_email": "integracion.integracion.invoice_from_email.invoice_from_email",
     "integracion.make_employee": "integracion.integracion.make_employee.make_employee",
     "integracion.subir_nominas": "integracion.integracion.subir_nominas.subir_nominas",
+    "hrms.hr.doctype.employee_onboarding.employee_onboarding.make_employee": "integracion.integracion.employee_onboarding_overr.make_employee",
+    "erpnext.selling.doctype.sales_order.sales_order.make_sales_invoice": "integracion.integracion.metodos_varios.make_sales_invoice",
+
 }
 
 permission_query_conditions = {
@@ -51,6 +62,12 @@ override_doctype_class = {
     "Purchase Invoice": "integracion.integracion.purchase_invoice_override.CustomPurchaseInvoice",
     "Job Offer": "integracion.integracion.job_offer_override.CustomJobOffer",
     "Opportunity": "integracion.integracion.opportunity_override.CustomOpportunity",
+    "Student": "integracion.integracion.student_override.CustomStudent",
+    "Employee Onboarding": "integracion.integracion.employee_onboarding_overr.CustomEmployeeOnboarding",
+    "Employee Onboarding Controller": "integracion.integracion.empl_onb_con_over.CustomEmployeeBoardingController",
+    "Program Enrollment": "integracion.integracion.program_override.CustomProgramEnrollment",
+    "Bank Statement Import": "integracion.integracion.bank_tool_over.CustomBankStatementImport",
+
 }
 
 override_doctype_dashboards = {
@@ -62,7 +79,11 @@ scheduler_events = {
     "cron": {
         "*/5 * * * *": [
             "integracion.integracion.export_to_csv.export_web_form_data"
-        ]
+        ],
+        "0 16 * * *":[
+            "integracion.integracion.hc_diary_noti.enviar_notificacion_a_asesoria"
+        ],
+        
     },
     "daily": [
         # "integracion.integracion.employee_status_update.update_employee_status",
@@ -78,11 +99,15 @@ app_include_css = [
 app_include_js = [
     "/assets/integracion/js/custom_printview.js",
     "/assets/integracion/js/custom_communication.js",
-    "/assets/integracion/js/custom_buttons.js"
+    "/assets/integracion/js/custom_buttons.js",
+    "/assets/integracion/js/custom_notificacion.js",
 ]
 
+
 doctype_js = {
-    "Opportunity": "public/js/custom_opportunity.js"
+    "Opportunity": "public/js/custom_opportunity.js",
+    "Program Enrollment": "public/js/program_enrollment.js",
+    "Student Applicant": "public/js/student_applicant.js",
 }
 
 

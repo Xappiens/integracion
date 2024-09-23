@@ -152,57 +152,52 @@ def construir_xml_recibidas(facturas):
         tipo_factura.text = tipo_factura_value
         fecha_operacion = etree.SubElement(factura_recibida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}FechaOperacion")
         fecha_operacion.text = factura.bill_date.strftime('%d-%m-%Y')
+
+        # Aquí agregamos la ClaveRegimenEspecialOTrascendencia antes de DesgloseFactura
         clave_regimen = etree.SubElement(factura_recibida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}ClaveRegimenEspecialOTrascendencia")
         clave_regimen_value = factura.custom_clave_regimen.split(":")[0].strip() if factura.custom_clave_regimen else "01"
         clave_regimen.text = clave_regimen_value
+
         descripcion_operacion = etree.SubElement(factura_recibida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DescripcionOperacion")
         descripcion_operacion.text = factura.custom_descripcion_factura if factura.custom_descripcion_factura else "Factura de Compra"
 
         desglose_factura = etree.SubElement(factura_recibida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DesgloseFactura")
-        
-        inversion_sujeto_pasivo = etree.SubElement(desglose_factura, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}InversionSujetoPasivo")
-        
+
+        # Listas para separar los items sin plantilla de impuestos
+        items_sin_impuesto_especifico = []
+
         # Manejar impuestos a nivel de producto o a nivel de factura general
         impuestos = defaultdict(lambda: {"base_imponible": 0, "cuota_soportada": 0})
-        impuestos_no_especificos = defaultdict(lambda: {"base_imponible": 0, "cuota_soportada": 0})
-        
+
         # Iterar sobre los productos de la factura para obtener los impuestos específicos
         for item in factura.items:
             if item.item_tax_template:
-                # Obtener el detalle del impuesto para cada producto específico
                 item_tax_template = frappe.get_doc('Item Tax Template', item.item_tax_template)
                 for tax_detail in item_tax_template.taxes:
                     tax_rate = tax_detail.tax_rate
                     tax_base = item.net_amount
 
                     impuestos[tax_rate]["base_imponible"] += tax_base
-                    impuestos[tax_rate]["cuota_soportada"] += tax_base * (tax_rate / 100)
-                    logger.info(f"Impuesto {tax_rate}%: Base Imponible: {tax_base}, Cuota Soportada: {tax_base * (tax_rate / 100)} en producto {item.item_code}")
+                    impuestos[tax_rate]["cuota_soportada"] += item.net_amount * (tax_rate / 100)
+                    logger.info(f"Impuesto {tax_rate}%: Base Imponible: {tax_base}, Cuota Soportada: {item.net_amount * (tax_rate / 100)} en producto {item.item_code}")
             else:
-                # Si el producto no tiene impuestos específicos, agregarlo a los productos sin impuesto específico
-                for tax in factura.taxes:
-                    tax_rate = tax.rate
-                    tax_base = item.net_amount
+                # Si no tiene plantilla de impuestos, agregar el item a la lista
+                items_sin_impuesto_especifico.append(item)
 
-                    impuestos_no_especificos[tax_rate]["base_imponible"] += tax_base
-                    impuestos_no_especificos[tax_rate]["cuota_soportada"] += tax_base * (tax_rate / 100)
+        # Procesar los impuestos de los items sin plantilla
+        for tax in factura.taxes:
+            tax_rate = tax.rate
+            if tax_rate not in impuestos and tax.add_deduct_tax != "Deduct":  # Si este impuesto no ha sido ya calculado
+                total_base_sin_impuesto = sum([item.net_amount for item in items_sin_impuesto_especifico])
+                total_impuesto_sin_plantilla = total_base_sin_impuesto * (tax_rate / 100)
 
-        # Ajustar los impuestos generales solo a los productos que no tienen impuestos específicos
-        for tax_rate, values in impuestos_no_especificos.items():
-            impuestos[tax_rate]["base_imponible"] += values["base_imponible"]
-            impuestos[tax_rate]["cuota_soportada"] += values["cuota_soportada"]
+                impuestos[tax_rate]["base_imponible"] += total_base_sin_impuesto
+                impuestos[tax_rate]["cuota_soportada"] += total_impuesto_sin_plantilla
+                logger.info(f"Impuesto {tax_rate}%: Base Imponible: {total_base_sin_impuesto}, Cuota Soportada: {total_impuesto_sin_plantilla} para items sin plantilla")
 
-        # **Detalle IVA dentro de Inversion Sujeto Pasivo**
-        logger.info(f"Impuestos a incluir en el XML: {impuestos}")
-        for tax_rate, values in impuestos.items():
-            logger.info(f"Procesando impuesto {tax_rate}%: Base Imponible: {values['base_imponible']}, Cuota Soportada: {values['cuota_soportada']}")
-            detalle_iva_inversion = etree.SubElement(inversion_sujeto_pasivo, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DetalleIVA")
-            tipo_impositivo_inversion = etree.SubElement(detalle_iva_inversion, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoImpositivo")
-            tipo_impositivo_inversion.text = str(tax_rate)
-            base_imponible_inversion = etree.SubElement(detalle_iva_inversion, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}BaseImponible")
-            base_imponible_inversion.text = f"{round(values['base_imponible'], 2):.2f}"
-            cuota_soportada_inversion = etree.SubElement(detalle_iva_inversion, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CuotaSoportada")
-            cuota_soportada_inversion.text = f"{round(values['cuota_soportada'], 2):.2f}"
+        # Si no hay impuestos, asegurarse de agregar una entrada con 0
+        if not impuestos:
+            impuestos[0] = {"base_imponible": round(factura.net_total, 2), "cuota_soportada": 0}
 
         # **Desglose IVA**
         desglose_iva = etree.SubElement(desglose_factura, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DesgloseIVA")
@@ -216,16 +211,16 @@ def construir_xml_recibidas(facturas):
             cuota_soportada = etree.SubElement(detalle_iva, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CuotaSoportada")
             cuota_soportada.text = f"{round(values['cuota_soportada'], 2):.2f}"
 
-        # Sumar la cuota soportada para el cálculo de la CuotaDeducible
-        cuota_deducible_valor = sum([values['cuota_soportada'] for values in impuestos.values()])
-
-        # Generar contraparte
+        logger.info("Desglose de IVA completado")
+        cuota_deducible_valor = sum([values['cuota_soportada'] for _, values in impuestos.items()])
+        # Mover la creación del elemento "Contraparte" antes de "FechaRegContable"
         contraparte = etree.SubElement(factura_recibida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Contraparte")
         nombre_proveedor = etree.SubElement(contraparte, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NombreRazon")
         nombre_proveedor.text = str(factura.supplier_name)
         nif_proveedor = etree.SubElement(contraparte, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF")
         nif_proveedor.text = str(factura.tax_id)
 
+        # Después de "Contraparte", añadir "FechaRegContable" y "CuotaDeducible"
         fecha_reg_contable = etree.SubElement(factura_recibida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}FechaRegContable")
         fecha_reg_contable.text = factura.posting_date.strftime('%d-%m-%Y')
 
@@ -515,6 +510,7 @@ def enviar_facturas_recibidas(docnames):
     
     # Firmar el XML
     xml_firmado = sign_xml(xml_data.decode('utf-8'), private_key, certificate)
+    guardar_xml(xml_firmado, 'facturas_recibidas.xml')
     
     # Enviar el XML firmado a la AEAT
     try:

@@ -291,17 +291,20 @@ def create_remesa(company, invoices, sharepoint_url):
             "doctype": "Remesa Registro",
             "remesa_de": "Purchase Invoice",
             "company": company,
+            "company_abbr": frappe.get_value("Company", company, "abbr"),
             "fecha": frappe.utils.nowdate(),
             "url": sharepoint_url,
-            "facturas": [{"factura": inv.name, "importe": inv.outstanding_amount} for inv in invoices]
+            "facturas": [{"factura": inv.name, "importe": inv.outstanding_amount} for inv in invoices],
+            "naming_series": "REM-.{company_abbr}.-.{fecha}.-.####.",
         })
-        logger.info(remesa_doc)
+        logger.info(f"Remesa doc name: {remesa_doc.name}")
         # Insertar el documento en la base de datos
-        remesa_doc.insert()
+        remesa_doc.save(ignore_permissions=True)  # Esto validará y guardará el documento en vez de insertarlo directamente.
         
         logger.info(f"Remesa creada: {remesa_doc.name} para la empresa {company}")
         return remesa_doc.name
     except Exception as e:
+        frappe.log_error(message=frappe.get_traceback(), title="Error al crear Remesa")
         logger.error(f"Error al crear el documento de remesa para {company}: {e}")
         return None
 

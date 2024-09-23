@@ -58,9 +58,6 @@ def invoice_from_email(email_subject, email_content, email_from, attachments):
                     logger.error(f"Error decodificando o procesando el archivo adjunto: {e}")
                     return {"status": "error", "message": f"Error procesando el archivo adjunto: {e}"}
 
-        if not keyword_found:
-            logger.error(f"La palabra clave '{keyword}' no fue encontrada en ninguno de los PDFs. No se creará la factura.")
-            return {"status": "error", "message": f"La palabra clave '{keyword}' no fue encontrada en los PDFs. No se creará la factura."}
 
         # Continuar con la creación de la factura solo si se encuentra la palabra clave en algún PDF
         proveedor = frappe.get_all('Supplier', filters={'email_id': email_from}, fields=['name'])

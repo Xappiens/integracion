@@ -17,7 +17,11 @@ logger.setLevel(logging.DEBUG)
 @frappe.whitelist()
 def subir_nominas(company, xml_file):
     logger.debug("Iniciando el proceso de subida de nóminas.")
-    
+        # Publicar el progreso inicial
+
+    progreso = 1
+
+
     if not company:
         logger.error("No se proporcionó una empresa.")
         return {'error': 'La empresa es obligatoria'}
@@ -40,7 +44,14 @@ def subir_nominas(company, xml_file):
     except Exception as e:
         logger.error(f"Error al cargar el XML: {str(e)}")
         return {'error': f'Error al cargar el archivo XML: {str(e)}'}
-
+    
+    total_asientos = len(root.findall("./Empresa/Asientos/Asiento")) + 1
+    frappe.cache().hset('nominas_progreso', 'total_asientos', total_asientos)
+    frappe.cache().hset('nominas_progreso', 'progreso', progreso)
+    frappe.publish_realtime(
+        "subir_nominas_progress", {"progress": [progreso, total_asientos], "message": "Iniciando la carga del archivo XML..."}, user=frappe.session.user
+    )
+    progreso += 1
     # Obtener la fecha actual para incluir en los nombres de archivo
     current_date = datetime.now().strftime('%Y-%m-%d')
 
@@ -136,13 +147,28 @@ def subir_nominas(company, xml_file):
 
     # Función para obtener el empleado a partir del NIF
     def get_employee(nif):
-        employee = frappe.get_all('Employee', filters={'custom_dninie_id': nif}, fields=['name'])
-        if not employee:
-            employee = frappe.get_all('Employee', filters={'custom_dninie': nif}, fields=['name'])
+        # Verifica si existe el empleado con el campo 'custom_dninie_id'
+        if frappe.db.exists('Employee', {'custom_dninie_id': nif}):
+            # Si existe, obtiene el empleado
+            employee = frappe.get_all('Employee', filters={'custom_dninie_id': nif}, fields=['name'])
+        elif frappe.db.exists('Employee', {'name': nif}):
+            # Si no existe en 'custom_dninie_id', verifica si existe con 'custom_dninie'
+            employee = frappe.get_all('Employee', filters={'name': nif}, fields=['name'])
+        else:
+            # Si no existe en ninguno de los campos, devuelve None
+            employee = None
+
         return employee[0] if employee else None
+
 
     # **Paso 1: Comprobar y ajustar las cuentas en el XML**
     logger.debug("Comenzando el proceso de validación y ajuste de cuentas.")
+        # Continuar el procesamiento
+    frappe.publish_realtime(
+        "subir_nominas_progress", {"progress": [progreso, total_asientos], "message": "Comprobando cuentas/empleados..."}, user=frappe.session.user
+    )
+    progreso += 1
+
     
     for asiento in root.findall("./Empresa/Asientos/Asiento"):
         nif = asiento.attrib['Nif']
@@ -199,8 +225,14 @@ def subir_nominas(company, xml_file):
 
     # **Paso 2: Crear los asientos contables**
     logger.debug("Comenzando el proceso de creación de asientos contables.")
+        # Continuar el procesamiento
+
 
     for asiento in root.findall("./Empresa/Asientos/Asiento"):
+        progreso += 1
+        frappe.publish_realtime(
+            "subir_nominas_progress", {"progress": [progreso, total_asientos], "message": f"Procesando asiento {progreso} de {total_asientos-1}"}, user=frappe.session.user
+        )
         nif = asiento.attrib['Nif']
         posting_date = datetime.strptime(asiento.attrib['Fecha'], '%d/%m/%Y').strftime('%Y-%m-%d')  # Convertir la fecha al formato esperado por Frappe
 
@@ -284,6 +316,11 @@ def subir_nominas(company, xml_file):
         except Exception as e:
             log_error_and_register_asiento(asiento, nif, str(e))
 
+        # Continuar el procesamiento
+    frappe.publish_realtime(
+        "subir_nominas_progress", {"progress": [progreso, total_asientos], "message": "Guardado fallos y registrando en Doctype..."}, user=frappe.session.user
+    )
+
     # Guardar el XML de fallos con la fecha y el nombre de la empresa
     fallo_xml_path = os.path.join(temp_folder_path, fallo_xml_filename)
     fallo_tree = ET.ElementTree(root_fallos)
@@ -308,6 +345,12 @@ def subir_nominas(company, xml_file):
 
     # Devolver las URLs de los archivos generados para que puedan ser descargados en el frontend
     logger.debug("Proceso completado, generando URLs de los archivos.")
+
+    frappe.publish_realtime(
+        "subir_nominas_progress", {"progress": [total_asientos, total_asientos], "message": "Proceso completado con éxito."}, user=frappe.session.user
+    )
+    frappe.cache().hdel('nominas_progreso', 'progreso')  # Borrar cuando termine el proceso
+    frappe.cache().hdel('nominas_progreso', 'total_asientos')  # Borrar cuando termine el proceso
     return {
         "error_log": error_log_url,
         "fallo_xml": fallo_xml_url
@@ -332,3 +375,15 @@ def create_registro(error_log,error_xml,company,date):
     except Exception as e:
         logger.error(f"Error al crear el documento de fallos para {company}: {e}")
         return None
+
+@frappe.whitelist()
+def get_nominas_progreso():
+    progreso = frappe.cache().hget('nominas_progreso', 'progreso')
+    total_asientos = frappe.cache().hget('nominas_progreso', 'total_asientos')
+
+    if progreso and total_asientos:
+        return {
+            "progreso": int(progreso),
+            "total_asientos": int(total_asientos)
+        }
+    return None
