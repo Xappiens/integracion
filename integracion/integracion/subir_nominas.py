@@ -11,7 +11,7 @@ handler = logging.FileHandler('/home/frappe/frappe-bench/apps/integracion/integr
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.ERROR)
 
 # Función principal para procesar el archivo XML
 @frappe.whitelist()
