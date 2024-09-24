@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Libro Mayor</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 10px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            font-size: 14px;
+        }
+        .company-info {
+            margin-bottom: 20px;
+        }
+        .page-info, .list-period {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .observations, .account-info {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+        }
+        .table-header {
+            border-bottom: 1px solid #000;
+            font-weight: bold;
+        }
+        .table-header span {
+            display: inline-block;
+            width: 100px;
+        }
+        .entry {
+            margin-bottom: 2px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .entry span {
+            display: inline-block;
+            width: 100px;
+        }
+        .totals {
+            border-top: 1px solid #000;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .totals .total {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    {% for entry in data %}
+    <div class="entry">
+        <span>{{ entry.posting_date }}</span>
+        <span>{{ entry.concept }}</span>
+        <span>{{ entry.voucher_no }}</span>
+        <span>{{ entry.debit }}</span>
+        <span>{{ entry.credit }}</span>
+        <span>{{ entry.balance }}</span>
+    </div>
+    {% endfor %}
+
+    <div class="totals">
+        <span class="total">Total cuenta</span>
+        <span>{{ total_debit }}</span>
+        <span>{{ total_credit }}</span>
+    </div>
+</body>
+</html>

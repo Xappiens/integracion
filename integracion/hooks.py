@@ -23,7 +23,8 @@ doc_events = {
         "before_save": "integracion.integracion.subir_archivo_sp.handle_structure_change"
     },
     "Sales Invoice": {
-        "before_save": "integracion.integracion.subir_archivo_sp.handle_structure_change"
+        "before_save": "integracion.integracion.subir_archivo_sp.handle_structure_change",
+        "after_insert": "integracion.integracion.metodos_varios.copy_attachments_from_sales_order"
     },
     "Course": {
         "on_trash": "integracion.integracion.courses_overrides.delete_course_link"
@@ -49,7 +50,7 @@ override_whitelisted_methods = {
     "integracion.make_employee": "integracion.integracion.make_employee.make_employee",
     "integracion.subir_nominas": "integracion.integracion.subir_nominas.subir_nominas",
     "hrms.hr.doctype.employee_onboarding.employee_onboarding.make_employee": "integracion.integracion.employee_onboarding_overr.make_employee",
-    "erpnext.selling.doctype.sales_order.sales_order.make_sales_invoice": "integracion.integracion.metodos_varios.make_sales_invoice",
+    #"erpnext.selling.doctype.sales_order.sales_order.make_sales_invoice": "integracion.integracion.metodos_varios.make_sales_invoice",
 
 }
 
@@ -100,8 +101,10 @@ app_include_js = [
     "/assets/integracion/js/custom_printview.js",
     "/assets/integracion/js/custom_communication.js",
     "/assets/integracion/js/custom_buttons.js",
-    "/assets/integracion/js/custom_notificacion.js",
+    "/assets/integracion/js/custom_notify.js",
+    "/assets/integracion/js/custom_genlibro.js",
 ]
+
 
 
 doctype_js = {

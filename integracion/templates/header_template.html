@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 10px;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            font-size: 14px;
+            text-align: center;
+        }
+        .company-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+        .company-info strong {
+            font-size: 12px;
+        }
+        .page-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+        .observations {
+            font-size: 10px;
+            text-align: left;
+            margin-bottom: 10px;
+            padding: 5px;
+            background-color: #f2f2f2;
+            border: 1px solid black;
+        }
+        .account-info {
+            font-size: 12px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .table-header {
+            border-bottom: 1px solid #000;
+            font-weight: bold;
+        }
+        .table-header span {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Listado de Cuentas Corrientes</h1>
+
+        <!-- Company Info -->
+        <div class="company-info">
+            <strong>Empresa: {{ company }}</strong>
+            <strong>Página: [page]</strong>
+        </div>
+
+        <!-- Date and Period -->
+        <div class="page-info">
+            <span>Fecha listado: {{ today_date }}</span>
+            <span>Periodo: {{ formatted_period }}</span>
+        </div>
+
+        <!-- Observaciones -->
+        <div class="observations">
+            Observaciones
+        </div>
+
+        <!-- Account Info -->
+        <div class="account-info">
+            {{ account }}
+        </div>
+
+        <!-- Table Header -->
+        <div class="table-header">
+            <span>Fecha</span>
+            <span>Concepto</span>
+            <span>Documento</span>
+            <span>Debe</span>
+            <span>Haber</span>
+            <span>Saldo</span>
+        </div>
+    </div>
+</body>
+</html>
