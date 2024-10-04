@@ -190,7 +190,7 @@ def generate_c34_venta(invoice_data=None):
             nb_of_txs = etree.SubElement(grp_hdr, "NbOfTxs")
             nb_of_txs.text = str(len(invoices))
             ctrl_sum = etree.SubElement(grp_hdr, "CtrlSum")
-            ctrl_sum_pmt_inf.text = "{:.2f}".format(sum(invoice.grand_total for invoice in invoices))
+            ctrl_sum.text = "{:.2f}".format(sum(invoice.grand_total for invoice in invoices))
             initg_pty = etree.SubElement(grp_hdr, "InitgPty")
             nm = etree.SubElement(initg_pty, "Nm")
             nm.text = company_clean
@@ -284,7 +284,8 @@ def generate_c34_venta(invoice_data=None):
                 dbtr_acct = etree.SubElement(drct_dbt_tx_inf, "DbtrAcct")
                 dbtr_acct_id = etree.SubElement(dbtr_acct, "Id")
                 iban_elem = etree.SubElement(dbtr_acct_id, "IBAN")
-                iban_elem.text = get_customer_iban(invoice.customer).upper()
+                iban_elem.text = get_customer_iban(invoice.customer, invoice.company).upper()
+
 
                 rmt_inf = etree.SubElement(drct_dbt_tx_inf, "RmtInf")
                 ustrd = etree.SubElement(rmt_inf, "Ustrd")
@@ -310,7 +311,7 @@ def generate_c34_venta(invoice_data=None):
             data = []
             for invoice in invoices:
                 try:
-                    customer_iban = get_customer_iban(invoice.customer).upper()
+                    customer_iban = get_customer_iban(invoice.customer, invoice.company).upper()
                     customer_cif = frappe.get_value("Customer", invoice.customer, "tax_id")
 
                     data.append({

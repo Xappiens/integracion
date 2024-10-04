@@ -1,4 +1,5 @@
 import frappe
+from frappe import _
 
 form_grid_templates = {"items": "templates/form_grid/item_grid.html"}
 
@@ -8,11 +9,13 @@ def notify_on_assign(doc, method):
     if doc.allocated_to:
         user = doc.allocated_to
         document_link = frappe.utils.get_url_to_form(doc.reference_type, doc.reference_name)
+
+        reference_type_es = _(doc.reference_type)
         
         # Publicar evento de notificación en tiempo real (sin usar "message" y con un diccionario directamente)
         frappe.publish_realtime(
             "show_notification",
-            {"message": f"Se te ha asignado un nuevo documento: {doc.reference_type}", "link": document_link},
+            {"message": f"Se te ha asignado un nuevo documento: {reference_type_es}", "link": document_link},
             user=user
         )
 

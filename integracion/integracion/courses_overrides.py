@@ -3,6 +3,40 @@
 import frappe
 import json
 from frappe import _
+import requests
+
+def send_course_to_crm(doc, method):
+    # Datos del nuevo curso (valores locales)
+    course_name_local = doc.course_name  # Campo en el DocType local
+    local_name = doc.name  # El nombre del documento que estás insertando
+
+    # URL del CRM remoto
+    crm_url = "https://crm.grupoatu.com/api/resource/Course"
+
+    # Encabezados para la solicitud
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "token f9e5b8daebc542f:09918536453036a"
+    }
+
+    # Datos que enviaremos al CRM remoto
+    data = {
+        "course_name": course_name_local,  # Nombre del curso del servidor local
+        "id_curso": local_name  # Nombre del documento local
+    }
+
+    # Realizamos la solicitud POST para crear el curso en el CRM remoto
+    try:
+        response = requests.post(crm_url, json=data, headers=headers)
+
+        # Verificar el estado de la solicitud
+        if response.status_code == 200 or response.status_code == 201:
+            frappe.msgprint(f"Curso creado con éxito en el CRM: {response.json()}")
+        else:
+            frappe.throw(f"Error al crear el curso en el CRM: {response.text}")
+    except Exception as e:
+        frappe.throw(f"Excepción al conectarse al CRM: {str(e)}")
+
 
 @frappe.whitelist()
 def custom_add_course_to_programs(course, programs, mandatory=False):

@@ -31,6 +31,9 @@ doc_events = {
     },
     "ToDo":{
         "after_insert": "integracion.integracion.metodos_varios.notify_on_assign"
+    },
+    "Course": {
+        "after_insert": "integracion.integracion.courses_overrides.send_course_to_crm"
     }
 
 }
@@ -50,12 +53,15 @@ override_whitelisted_methods = {
     "integracion.make_employee": "integracion.integracion.make_employee.make_employee",
     "integracion.subir_nominas": "integracion.integracion.subir_nominas.subir_nominas",
     "hrms.hr.doctype.employee_onboarding.employee_onboarding.make_employee": "integracion.integracion.employee_onboarding_overr.make_employee",
+    #"erpnext.accounts.doctype.bank_transaction.bank_transaction.reconcile_vouchers": "integracion.integracion.bank_tool_over.reconcile_vouchers"
+
     #"erpnext.selling.doctype.sales_order.sales_order.make_sales_invoice": "integracion.integracion.metodos_varios.make_sales_invoice",
 
 }
 
 permission_query_conditions = {
-    "Job Offer": "integracion.integracion.permissions.job_offer_query"
+    "Job Offer": "integracion.integracion.permissions.job_offer_query",
+    "User": "integracion.integracion.permissions.user_query",
 }
 
 
@@ -68,6 +74,8 @@ override_doctype_class = {
     "Employee Onboarding Controller": "integracion.integracion.empl_onb_con_over.CustomEmployeeBoardingController",
     "Program Enrollment": "integracion.integracion.program_override.CustomProgramEnrollment",
     "Bank Statement Import": "integracion.integracion.bank_tool_over.CustomBankStatementImport",
+    "Account": "integracion.integracion.account_override.CustomAccount",
+    "Assignment Rule": "integracion.integracion.assignament_override.AssignmentRuleOverride",
 
 }
 
@@ -78,9 +86,6 @@ override_doctype_dashboards = {
 
 scheduler_events = {
     "cron": {
-        "*/5 * * * *": [
-            "integracion.integracion.export_to_csv.export_web_form_data"
-        ],
         "0 16 * * *":[
             "integracion.integracion.hc_diary_noti.enviar_notificacion_a_asesoria"
         ],
@@ -100,10 +105,16 @@ app_include_css = [
 app_include_js = [
     "/assets/integracion/js/custom_printview.js",
     "/assets/integracion/js/custom_communication.js",
-    "/assets/integracion/js/custom_buttons.js",
+    "/assets/integracion/js/custom_buttonsactu.js",
     "/assets/integracion/js/custom_notify.js",
-    "/assets/integracion/js/custom_genlibro.js",
+    "/assets/integracion/js/custom_genlibmyr.js",
+    "/assets/integracion/js/custom_balanceshote.js",
 ]
+
+page_js = {
+    "user-profile": "public/js/custom_user_p.js"
+}
+
 
 
 

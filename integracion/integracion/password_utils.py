@@ -19,8 +19,9 @@ def deactivate_user_in_crm(email):
     crm_url = "https://crm.grupoatu.com/api/resource/User"
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "token 565da94061d98f1:4182b2cbe6de514"
+        "Authorization": "token f9e5b8daebc542f:09918536453036a"
     }
+
 
     response = requests.put(f"{crm_url}/{email}", json={"enabled": 0}, headers=headers)
     
@@ -60,8 +61,9 @@ def create_user_in_crm(doc, method):
     crm_url = "https://crm.grupoatu.com/api/resource/User"
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "token 565da94061d98f1:4182b2cbe6de514"
+        "Authorization": "token f9e5b8daebc542f:09918536453036a"
     }
+
 
     response = requests.post(crm_url, json=payload, headers=headers)
 

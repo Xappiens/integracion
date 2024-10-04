@@ -33,7 +33,7 @@ def update_password_in_crm(doc, method):
         # Encabezados para la solicitud
         headers = {
             "Content-Type": "application/json",
-            "Authorization": "token 565da94061d98f1:4182b2cbe6de514"
+            "Authorization": "token f9e5b8daebc542f:09918536453036a"
         }
 
         # Realizar la solicitud POST al CRM para actualizar la contraseña

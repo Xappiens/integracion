@@ -332,7 +332,6 @@ def construir_xml_emitidas(facturas):
             tipo_desglose = etree.SubElement(factura_expedida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoDesglose")
             desglose_operacion = etree.SubElement(tipo_desglose, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DesgloseTipoOperacion")
             prestacion_servicios = etree.SubElement(desglose_operacion, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}PrestacionServicios")
-            sujeta = etree.SubElement(prestacion_servicios, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Sujeta")
         else:
             # Para NIF y CIF, usar la estructura NIF
             nif_cliente_elem = etree.SubElement(contraparte, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF")
@@ -340,13 +339,9 @@ def construir_xml_emitidas(facturas):
             tipo_desglose = etree.SubElement(factura_expedida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoDesglose")
             desglose_factura = etree.SubElement(tipo_desglose, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DesgloseFactura")
     
-            # Sujeta debe estar dentro de DesgloseFactura
-            sujeta = etree.SubElement(desglose_factura, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Sujeta")
-
-
         # Si hay impuestos, agregar el bloque NoExenta
         if factura.taxes:
-            no_exenta = etree.SubElement(sujeta, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NoExenta")
+            no_exenta = etree.SubElement(desglose_factura, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NoExenta")
             tipo_no_exenta = etree.SubElement(no_exenta, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoNoExenta")
             tipo_no_exenta_value = factura.custom_tipo_no_exenta.split(":")[0].strip() if factura.custom_tipo_no_exenta else "S1"
             tipo_no_exenta.text = tipo_no_exenta_value
@@ -357,17 +352,14 @@ def construir_xml_emitidas(facturas):
                 tipo_impositivo = etree.SubElement(detalle_iva, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoImpositivo")
                 tipo_impositivo.text = str(tax.rate or 0)
                 base_imponible = etree.SubElement(detalle_iva, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}BaseImponible")
-                base_imponible.text = f"{factura.total:.2f}"  # Cambiado a usar factura.total como base imponible
+                base_imponible.text = f"{factura.total:.2f}"
                 cuota_repercutida = etree.SubElement(detalle_iva, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CuotaRepercutida")
                 cuota_repercutida.text = f"{(tax.tax_amount or 0):.2f}"
         else:
-            # Si no hay impuestos, agregar el bloque Exenta
-            exenta = etree.SubElement(sujeta, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Exenta")
-            detalle_exenta = etree.SubElement(exenta, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DetalleExenta")
-            causa_exencion = etree.SubElement(detalle_exenta, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CausaExencion")
-            causa_exencion.text = "E1"  # Código para indicar que está exenta por una razón específica
-            base_exenta = etree.SubElement(detalle_exenta, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}BaseImponible")
-            base_exenta.text = f"{factura.total:.2f}"  # Usar el total de la factura como base exenta
+            # Si no hay impuestos, agregar el bloque NoSujeta (sin Sujeta)
+            no_sujeta = etree.SubElement(desglose_factura, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NoSujeta")
+            importe_art_7_14 = etree.SubElement(no_sujeta, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}ImportePorArticulos7_14_Otros")
+            importe_art_7_14.text = f"{factura.total:.2f}"
 
     logger.info("XML construido con éxito")
     return etree.tostring(envelope, pretty_print=True, xml_declaration=True, encoding='UTF-8')
@@ -528,56 +520,57 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
                 tipo_desglose_key = 'DesgloseFactura'
 
             # Preparar los detalles del desglose según el tipo de operación
-            if tipo_desglose_key == 'DesgloseFactura':
-                desglose = {
-                    'Sujeta': {
-                        'Exenta': {
-                            'DetalleExenta': {
-                                'CausaExencion': registro.find(f'.//siiLR:FacturaExpedida/sii:TipoDesglose/sii:{tipo_desglose_key}/sii:Sujeta/sii:Exenta/sii:DetalleExenta/sii:CausaExencion', namespaces=namespaces).text if registro.find(f'.//siiLR:FacturaExpedida/sii:TipoDesglose/sii:{tipo_desglose_key}/sii:Sujeta/sii:Exenta/sii:DetalleExenta/sii:CausaExencion', namespaces=namespaces) is not None else '',
-                                'BaseImponible': registro.find(f'.//siiLR:FacturaExpedida/sii:TipoDesglose/sii:{tipo_desglose_key}/sii:Sujeta/sii:Exenta/sii:DetalleExenta/sii:BaseImponible', namespaces=namespaces).text if registro.find(f'.//siiLR:FacturaExpedida/sii:TipoDesglose/sii:{tipo_desglose_key}/sii:Sujeta/sii:Exenta/sii:DetalleExenta/sii:BaseImponible', namespaces=namespaces) is not None else ''
+            desglose_element = registro.find(f'.//siiLR:FacturaExpedida/sii:TipoDesglose/sii:{tipo_desglose_key}', namespaces=namespaces)
+            if desglose_element is not None:
+                desglose = {}
+                no_exenta_element = desglose_element.find('.//sii:NoExenta', namespaces=namespaces)
+                if no_exenta_element is not None:
+                    desglose['NoExenta'] = {
+                        'TipoNoExenta': no_exenta_element.find('.//sii:TipoNoExenta', namespaces=namespaces).text if no_exenta_element.find('.//sii:TipoNoExenta', namespaces=namespaces) is not None else '',
+                        'DesgloseIVA': {
+                            'DetalleIVA': {
+                                'TipoImpositivo': no_exenta_element.find('.//sii:DesgloseIVA/sii:DetalleIVA/sii:TipoImpositivo', namespaces=namespaces).text if no_exenta_element.find('.//sii:DesgloseIVA/sii:DetalleIVA/sii:TipoImpositivo', namespaces=namespaces) is not None else '',
+                                'BaseImponible': no_exenta_element.find('.//sii:DesgloseIVA/sii:DetalleIVA/sii:BaseImponible', namespaces=namespaces).text if no_exenta_element.find('.//sii:DesgloseIVA/sii:DetalleIVA/sii:BaseImponible', namespaces=namespaces) is not None else '',
+                                'CuotaRepercutida': no_exenta_element.find('.//sii:DesgloseIVA/sii:DetalleIVA/sii:CuotaRepercutida', namespaces=namespaces).text if no_exenta_element.find('.//sii:DesgloseIVA/sii:DetalleIVA/sii:CuotaRepercutida', namespaces=namespaces) is not None else ''
                             }
                         }
                     }
-                }
-            else:  # DesgloseTipoOperacion
-                desglose = {
-                    'DesgloseTipoOperacion': {
-                        'PrestacionServicios': {
-                            'Sujeta': {
-                                'Exenta': {
-                                    'DetalleExenta': {
-                                        'CausaExencion': registro.find(f'.//siiLR:FacturaExpedida/sii:TipoDesglose/sii:{tipo_desglose_key}/sii:PrestacionServicios/sii:Sujeta/sii:Exenta/sii:DetalleExenta/sii:CausaExencion', namespaces=namespaces).text if registro.find(f'.//siiLR:FacturaExpedida/sii:TipoDesglose/sii:{tipo_desglose_key}/sii:PrestacionServicios/sii:Sujeta/sii:Exenta/sii:DetalleExenta/sii:CausaExencion', namespaces=namespaces) is not None else '',
-                                        'BaseImponible': registro.find(f'.//siiLR:FacturaExpedida/sii:TipoDesglose/sii:{tipo_desglose_key}/sii:PrestacionServicios/sii:Sujeta/sii:Exenta/sii:DetalleExenta/sii:BaseImponible', namespaces=namespaces).text if registro.find(f'.//siiLR:FacturaExpedida/sii:TipoDesglose/sii:{tipo_desglose_key}/sii:PrestacionServicios/sii:Sujeta/sii:Exenta/sii:DetalleExenta/sii:BaseImponible', namespaces=namespaces) is not None else ''
-                                    }
-                                }
-                            }
-                        }
+                no_sujeta_element = desglose_element.find('.//sii:NoSujeta', namespaces=namespaces)
+                if no_sujeta_element is not None:
+                    desglose['NoSujeta'] = {
+                        'ImportePorArticulos7_14_Otros': no_sujeta_element.find('.//sii:ImportePorArticulos7_14_Otros', namespaces=namespaces).text if no_sujeta_element.find('.//sii:ImportePorArticulos7_14_Otros', namespaces=namespaces) is not None else '',
+                        'ImporteTAIReglasLocalizacion': no_sujeta_element.find('.//sii:ImporteTAIReglasLocalizacion', namespaces=namespaces).text if no_sujeta_element.find('.//sii:ImporteTAIReglasLocalizacion', namespaces=namespaces) is not None else ''
                     }
-                }
 
-            registro_a_enviar = {
-                'PeriodoLiquidacion': {
-                    'Ejercicio': registro.find('.//sii:PeriodoLiquidacion/sii:Ejercicio', namespaces=namespaces).text if registro.find('.//sii:PeriodoLiquidacion/sii:Ejercicio', namespaces=namespaces) is not None else '',
-                    'Periodo': registro.find('.//sii:PeriodoLiquidacion/sii:Periodo', namespaces=namespaces).text if registro.find('.//sii:PeriodoLiquidacion/sii:Periodo', namespaces=namespaces) is not None else ''
-                },
-                'IDFactura': {
-                    'IDEmisorFactura': {
-                        'NIF': registro.find('.//siiLR:IDFactura/sii:IDEmisorFactura/sii:NIF', namespaces=namespaces).text if registro.find('.//siiLR:IDFactura/sii:IDEmisorFactura/sii:NIF', namespaces=namespaces) is not None else ''
+                # Asegurarse de que al menos uno de los bloques (Sujeta o NoSujeta) esté presente
+                if 'NoExenta' not in desglose and 'NoSujeta' not in desglose:
+                    raise ValueError("El desglose debe tener al menos un bloque 'NoExenta' o 'NoSujeta'")
+
+                desglose_factura = {'DesgloseFactura': desglose} if tipo_desglose_key == 'DesgloseFactura' else {'DesgloseTipoOperacion': desglose}
+
+                registro_a_enviar = {
+                    'PeriodoLiquidacion': {
+                        'Ejercicio': registro.find('.//sii:PeriodoLiquidacion/sii:Ejercicio', namespaces=namespaces).text if registro.find('.//sii:PeriodoLiquidacion/sii:Ejercicio', namespaces=namespaces) is not None else '',
+                        'Periodo': registro.find('.//sii:PeriodoLiquidacion/sii:Periodo', namespaces=namespaces).text if registro.find('.//sii:PeriodoLiquidacion/sii:Periodo', namespaces=namespaces) is not None else ''
                     },
-                    'NumSerieFacturaEmisor': registro.find('.//siiLR:IDFactura/sii:NumSerieFacturaEmisor', namespaces=namespaces).text if registro.find('.//siiLR:IDFactura/sii:NumSerieFacturaEmisor', namespaces=namespaces) is not None else '',
-                    'FechaExpedicionFacturaEmisor': registro.find('.//siiLR:IDFactura/sii:FechaExpedicionFacturaEmisor', namespaces=namespaces).text if registro.find('.//siiLR:IDFactura/sii:FechaExpedicionFacturaEmisor', namespaces=namespaces) is not None else ''
-                },
-                'FacturaExpedida': {
-                    'TipoFactura': registro.find('.//siiLR:FacturaExpedida/sii:TipoFactura', namespaces=namespaces).text if registro.find('.//siiLR:FacturaExpedida/sii:TipoFactura', namespaces=namespaces) is not None else '',
-                    'ClaveRegimenEspecialOTrascendencia': registro.find('.//siiLR:FacturaExpedida/sii:ClaveRegimenEspecialOTrascendencia', namespaces=namespaces).text if registro.find('.//siiLR:FacturaExpedida/sii:ClaveRegimenEspecialOTrascendencia', namespaces=namespaces) is not None else '',
-                    'ImporteTotal': registro.find('.//siiLR:FacturaExpedida/sii:ImporteTotal', namespaces=namespaces).text if registro.find('.//siiLR:FacturaExpedida/sii:ImporteTotal', namespaces=namespaces) is not None else '',
-                    'DescripcionOperacion': registro.find('.//siiLR:FacturaExpedida/sii:DescripcionOperacion', namespaces=namespaces).text if registro.find('.//siiLR:FacturaExpedida/sii:DescripcionOperacion', namespaces=namespaces) is not None else '',
-                    'Contraparte': contraparte,
-                    'TipoDesglose': desglose
+                    'IDFactura': {
+                        'IDEmisorFactura': {
+                            'NIF': registro.find('.//siiLR:IDFactura/sii:IDEmisorFactura/sii:NIF', namespaces=namespaces).text if registro.find('.//siiLR:IDFactura/sii:IDEmisorFactura/sii:NIF', namespaces=namespaces) is not None else ''
+                        },
+                        'NumSerieFacturaEmisor': registro.find('.//siiLR:IDFactura/sii:NumSerieFacturaEmisor', namespaces=namespaces).text if registro.find('.//siiLR:IDFactura/sii:NumSerieFacturaEmisor', namespaces=namespaces) is not None else '',
+                        'FechaExpedicionFacturaEmisor': registro.find('.//siiLR:IDFactura/sii:FechaExpedicionFacturaEmisor', namespaces=namespaces).text if registro.find('.//siiLR:IDFactura/sii:FechaExpedicionFacturaEmisor', namespaces=namespaces) is not None else ''
+                    },
+                    'FacturaExpedida': {
+                        'TipoFactura': registro.find('.//siiLR:FacturaExpedida/sii:TipoFactura', namespaces=namespaces).text if registro.find('.//siiLR:FacturaExpedida/sii:TipoFactura', namespaces=namespaces) is not None else '',
+                        'ClaveRegimenEspecialOTrascendencia': registro.find('.//siiLR:FacturaExpedida/sii:ClaveRegimenEspecialOTrascendencia', namespaces=namespaces).text if registro.find('.//siiLR:FacturaExpedida/sii:ClaveRegimenEspecialOTrascendencia', namespaces=namespaces) is not None else '',
+                        'ImporteTotal': registro.find('.//siiLR:FacturaExpedida/sii:ImporteTotal', namespaces=namespaces).text if registro.find('.//siiLR:FacturaExpedida/sii:ImporteTotal', namespaces=namespaces) is not None else '',
+                        'DescripcionOperacion': registro.find('.//siiLR:FacturaExpedida/sii:DescripcionOperacion', namespaces=namespaces).text if registro.find('.//siiLR:FacturaExpedida/sii:DescripcionOperacion', namespaces=namespaces) is not None else '',
+                        'Contraparte': contraparte,
+                        'TipoDesglose': desglose_factura
+                    }
                 }
-            }
 
-            datos_a_enviar['RegistroLRFacturasEmitidas'].append(registro_a_enviar)
+                datos_a_enviar['RegistroLRFacturasEmitidas'].append(registro_a_enviar)
 
         for registro in datos_a_enviar['RegistroLRFacturasEmitidas']:
             contraparte = registro['FacturaExpedida']['Contraparte']
@@ -596,7 +589,6 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
     except Exception as e:
         logger.error(f"Error al enviar el XML a la AEAT: {e}")
         raise
-
 
 def enviar_facturas_emitidas(docnames):
     logger.info("Iniciando el proceso de envío de facturas emitidas")

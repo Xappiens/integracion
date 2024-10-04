@@ -3276,3 +3276,1113 @@ frappe.exceptions.ValidationError: Factura de proveedor No existe en la factura 
 2024-09-24 04:39:44,024 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01584
 2024-09-24 04:39:49,811 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura 149713387717da83.pdf
 2024-09-24 04:39:50,139 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01584
+2024-09-24 06:40:04,408 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura de Venta 0-41646 hasta 0-41646, from: contabilidad@lozanosuministros.es
+2024-09-24 06:40:04,408 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 06:40:04,489 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: contabilidad@lozanosuministros.es
+2024-09-24 06:40:04,490 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 06:40:04,510 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 06:40:07,896 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01587
+2024-09-24 06:40:11,813 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura de Venta 0-41646 hasta 0-416462a8baa.pdf
+2024-09-24 06:40:12,213 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01587
+2024-09-24 07:40:26,391 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Fras auditores sin pagar, from: rosa.medrano@grupoatu.com
+2024-09-24 07:40:26,391 - integracion.integracion.invoice_from_email - DEBUG - Found 5 PDF attachments.
+2024-09-24 07:40:26,411 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: rosa.medrano@grupoatu.com
+2024-09-24 07:40:26,412 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 07:40:26,492 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 07:40:30,324 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01589
+2024-09-24 07:40:34,939 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FRA 21497011d.pdf
+2024-09-24 07:40:39,215 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FRA 21397011d.pdf
+2024-09-24 07:40:43,866 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FRA 21297011d.pdf
+2024-09-24 07:40:47,966 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FRA 21197011d.pdf
+2024-09-24 07:40:52,101 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FRA 21097011d.pdf
+2024-09-24 07:40:52,474 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01589
+2024-09-24 08:15:41,997 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Facturas, from: alicante-benalua@alfil.be
+2024-09-24 08:15:41,998 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 08:15:42,025 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: MARLEN CHINEA CABRERA-ALFILB
+2024-09-24 08:15:42,086 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: {'name': '40001030 - MARLEN CHINEA CABRERA-ALFILB - ATUSL'}
+2024-09-24 08:15:42,089 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(40001030 - MARLEN CHINEA CABRERA-ALFILB - ATUSL) currency EUR
+2024-09-24 08:15:46,080 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01592
+2024-09-24 08:15:50,250 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Fra_A-2400071 (1)c279f8.pdf
+2024-09-24 08:15:50,797 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01592
+2024-09-24 09:01:00,500 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Nuevo documento de facturación, from: no-reply@eu.holded.com
+2024-09-24 09:01:00,500 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 09:01:00,848 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Nuevo documento de facturación, from: no-reply@eu.holded.com
+2024-09-24 09:01:00,848 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 09:01:01,276 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: no-reply@eu.holded.com
+2024-09-24 09:01:01,277 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 09:01:01,303 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 09:01:01,524 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: no-reply@eu.holded.com
+2024-09-24 09:01:01,524 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 09:01:01,538 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 09:01:02,135 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Nuevo documento de facturación, from: no-reply@eu.holded.com
+2024-09-24 09:01:02,135 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 09:01:02,735 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: no-reply@eu.holded.com
+2024-09-24 09:01:02,735 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 09:01:02,749 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 09:01:05,040 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01594
+2024-09-24 09:01:09,530 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/F24-00680db88c.pdf
+2024-09-24 09:01:09,929 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01594
+2024-09-24 09:01:13,499 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01595
+2024-09-24 09:01:18,039 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/F24-0067983cec.pdf
+2024-09-24 09:01:18,436 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01595
+2024-09-24 09:01:22,024 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01596
+2024-09-24 09:01:26,214 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/F24-0066542ca5.pdf
+2024-09-24 09:01:26,715 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01596
+2024-09-24 11:16:28,124 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura, from: gestion@formaconsultora.com
+2024-09-24 11:16:28,124 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 11:16:28,169 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: gestion@formaconsultora.com
+2024-09-24 11:16:28,169 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 11:16:28,180 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 11:16:31,599 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01603
+2024-09-24 11:16:35,950 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Academia Técnica Universitaria, SL (2)6eb066.pdf
+2024-09-24 11:16:36,301 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01603
+2024-09-24 11:31:45,572 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Facturas, from: albert@betalent.es
+2024-09-24 11:31:45,572 - integracion.integracion.invoice_from_email - DEBUG - Found 7 PDF attachments.
+2024-09-24 11:31:45,660 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: albert@betalent.es
+2024-09-24 11:31:45,660 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 11:31:45,676 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 11:31:49,223 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01605
+2024-09-24 11:31:53,100 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/INV-0030168edbbb.pdf
+2024-09-24 11:31:56,648 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/INV-0030178edbbb.pdf
+2024-09-24 11:32:00,194 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/INV-003017-28edbbb.pdf
+2024-09-24 11:32:03,927 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/INV-0030188edbbb.pdf
+2024-09-24 11:32:07,589 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/INV-0030198edbbb.pdf
+2024-09-24 11:32:11,219 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/INV-0030208edbbb.pdf
+2024-09-24 11:32:14,669 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/INV-0030218edbbb.pdf
+2024-09-24 11:32:15,041 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01605
+2024-09-24 12:12:01,853 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura de Venta 0-41647 hasta 0-41647, from: lozano@lozanosuministros.es
+2024-09-24 12:12:01,853 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 12:12:01,914 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: lozano@lozanosuministros.es
+2024-09-24 12:12:01,914 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 12:12:01,952 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 12:12:05,957 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01608
+2024-09-24 12:12:10,261 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura de Venta 0-41647 hasta 0-41647ebf907.pdf
+2024-09-24 12:12:10,673 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01608
+2024-09-24 12:57:19,609 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Adjunto remito Factura, from: admin@solucionesdelhard.com
+2024-09-24 12:57:19,610 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 12:57:19,653 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura para BURGOS ATU S.L., from: prosalsl@prosalsl.com
+2024-09-24 12:57:19,653 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 12:57:19,713 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: prosalsl@prosalsl.com
+2024-09-24 12:57:19,713 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 12:57:19,760 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: admin@solucionesdelhard.com
+2024-09-24 12:57:19,760 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 12:57:19,762 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 12:57:19,794 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 12:57:23,965 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01610
+2024-09-24 12:57:27,923 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FACTURA(S)_DE_PROTECCION_SALUD_PUBLICA_S.L._PARA_BURGOS_ATU_S.L.6d937a.PDF
+2024-09-24 12:57:28,364 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01610
+2024-09-24 12:57:31,576 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01611
+2024-09-24 12:57:39,035 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/BURGOS ATU S.L. 242080 240924db124b.pdf
+2024-09-24 12:57:39,393 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01611
+2024-09-24 14:12:41,032 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Asociado 572 Factura Trimestral ANCYPEL CUOTA 4º TRIMESTRE 2024, from: felix@ancypel.es
+2024-09-24 14:12:41,032 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 14:12:41,101 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: felix@ancypel.es
+2024-09-24 14:12:41,101 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 14:12:41,117 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 14:12:44,714 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01617
+2024-09-24 14:12:48,806 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/572FacturaCentro414c97.pdf
+2024-09-24 14:12:49,219 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01617
+2024-09-24 14:57:59,340 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Adjunto remito Factura, from: admin@solucionesdelhard.com
+2024-09-24 14:57:59,340 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 14:57:59,383 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: admin@solucionesdelhard.com
+2024-09-24 14:57:59,383 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 14:57:59,396 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 14:58:02,993 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01621
+2024-09-24 14:58:07,396 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/BURGOS ATU S.L. 242082 240924ea9d25.pdf
+2024-09-24 14:58:07,739 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01621
+2024-09-24 16:33:21,797 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: ENCUESTA DE CALIDAD 2024 PROSAL, from: administracion@prosalsl.com
+2024-09-24 16:33:21,798 - integracion.integracion.invoice_from_email - ERROR - El correo no contiene adjuntos PDF válidos.
+2024-09-24 16:58:38,599 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Adjunto remito Factura, from: admin@solucionesdelhard.com
+2024-09-24 16:58:38,599 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 16:58:38,693 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: admin@solucionesdelhard.com
+2024-09-24 16:58:38,693 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 16:58:38,753 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 16:58:38,986 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Adjunto remito Factura, from: admin@solucionesdelhard.com
+2024-09-24 16:58:38,986 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 16:58:39,041 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: admin@solucionesdelhard.com
+2024-09-24 16:58:39,041 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 16:58:39,052 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 16:58:42,756 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01622
+2024-09-24 16:58:46,711 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/BURGOS ATU S.L. 242087 2409244e4c14.pdf
+2024-09-24 16:58:47,085 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01622
+2024-09-24 16:58:50,288 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01623
+2024-09-24 16:58:54,256 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/BURGOS ATU S.L. 242088 240924a9aa49.pdf
+2024-09-24 16:58:54,594 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01623
+2024-09-24 17:23:55,241 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA CORREGIDA, from: academiapunto@gmail.com
+2024-09-24 17:23:55,241 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 17:23:55,338 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: academiapunto@gmail.com
+2024-09-24 17:23:55,338 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 17:23:55,414 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 17:23:59,811 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01624
+2024-09-24 17:24:04,007 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/4. OFI. ACTIVIDADES DE GESTIÓN ADMINISTRATIVA (AGOSTO)901328.pdf
+2024-09-24 17:24:04,380 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01624
+2024-09-24 23:04:32,072 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Final Notification, from: system@sent-via.netsuite.com
+2024-09-24 23:04:32,072 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-24 23:04:32,118 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: system@sent-via.netsuite.com
+2024-09-24 23:04:32,118 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-24 23:04:32,134 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-24 23:04:37,246 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01625
+2024-09-24 23:04:41,378 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Invoice_INV13135157122af4.pdf
+2024-09-24 23:04:41,746 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01625
+2024-09-25 07:10:18,485 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURAS PENDIENTES PAGO, from: copisteriatribunal@gmail.com
+2024-09-25 07:10:18,485 - integracion.integracion.invoice_from_email - DEBUG - Found 3 PDF attachments.
+2024-09-25 07:10:18,578 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: copisteriatribunal@gmail.com
+2024-09-25 07:10:18,578 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 07:10:18,594 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 07:10:21,928 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01630
+2024-09-25 07:10:26,295 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/702dc2edf.pdf
+2024-09-25 07:10:30,177 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/812dc2edf.pdf
+2024-09-25 07:10:33,828 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/808dc2edf.pdf
+2024-09-25 07:10:34,267 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01630
+2024-09-25 07:20:34,441 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RV: Finance Info-Reminder Letter-Centre No: ES814, from: martacorreas@grupoatu.com
+2024-09-25 07:20:34,441 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 07:20:34,456 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: martacorreas@grupoatu.com
+2024-09-25 07:20:34,456 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 07:20:34,474 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 07:20:38,346 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01633
+2024-09-25 07:20:42,413 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Finance Info-Reminder Letter-Centre No: ES81496d368.PDF
+2024-09-25 07:20:42,833 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01633
+2024-09-25 07:55:54,873 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA 4T- ANCYPEL, from: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-25 07:55:54,874 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 07:55:54,987 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-25 07:55:54,987 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 07:55:55,069 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 07:55:59,632 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01635
+2024-09-25 07:56:04,010 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/572FacturaCentro_4T_ancypel414c97.pdf
+2024-09-25 07:56:04,380 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01635
+2024-09-25 08:01:06,308 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura 1-000485.pdf, from: oficop@telefonica.net
+2024-09-25 08:01:06,309 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 08:01:06,462 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura 1-000485.pdf, from: oficop@telefonica.net
+2024-09-25 08:01:06,462 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 08:01:08,356 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: oficop@telefonica.net
+2024-09-25 08:01:08,356 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 08:01:08,369 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 08:01:08,450 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: oficop@telefonica.net
+2024-09-25 08:01:08,450 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 08:01:08,465 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 08:01:12,473 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01636
+2024-09-25 08:01:16,675 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura 1-000485d5b4f4.pdf
+2024-09-25 08:01:17,078 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01636
+2024-09-25 08:01:20,281 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01637
+2024-09-25 08:01:24,522 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura 1-0004859c4e88.pdf
+2024-09-25 08:01:24,890 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01637
+2024-09-25 10:41:32,020 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: factura La boutique del Peluquero, from: laboutiquedelpeluquero@gmail.com
+2024-09-25 10:41:32,020 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 10:41:32,137 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: laboutiquedelpeluquero@gmail.com
+2024-09-25 10:41:32,137 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 10:41:32,216 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 10:41:37,263 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01642
+2024-09-25 10:41:41,866 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/atu58e38b.pdf
+2024-09-25 10:41:42,269 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01642
+2024-09-25 10:51:48,646 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Enviando por correo electrónico: doc09562520240925115449.pdf, doc09562420240925115411.pdf, from: bego@atress.es
+2024-09-25 10:51:48,646 - integracion.integracion.invoice_from_email - DEBUG - Found 2 PDF attachments.
+2024-09-25 10:51:48,660 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: bego@atress.es
+2024-09-25 10:51:48,660 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 10:51:48,673 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 10:51:52,074 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01643
+2024-09-25 10:51:56,394 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc095625202409251154499f39b3.pdf
+2024-09-25 10:52:00,130 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc095624202409251154119f39b3.pdf
+2024-09-25 10:52:00,518 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01643
+2024-09-25 11:37:06,795 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Venta rectificativa 9-0360 de DISEÑO DE RECURSOS EDUCATIVOS, SL para BURGOS ATU SL, from: no-reply@eu.holded.com
+2024-09-25 11:37:06,795 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 11:37:07,617 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: no-reply@eu.holded.com
+2024-09-25 11:37:07,618 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 11:37:07,631 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 11:37:11,311 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01647
+2024-09-25 11:37:15,468 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/9-03600b8ea7.pdf
+2024-09-25 11:37:15,969 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01647
+2024-09-25 11:42:22,083 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura AL1046AG, from: gestion@gestoriaucles.com
+2024-09-25 11:42:22,084 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 11:42:22,092 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: gestion@gestoriaucles.com
+2024-09-25 11:42:22,092 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 11:42:22,107 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 11:42:22,382 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Fwd: Factura nave octubre, from: pulporapido@hotmail.com
+2024-09-25 11:42:22,383 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 11:42:22,502 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: pulporapido@hotmail.com
+2024-09-25 11:42:22,502 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 11:42:22,516 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 11:42:25,535 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01649
+2024-09-25 11:42:29,855 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc0638142024092512365412d3b7.pdf
+2024-09-25 11:42:30,376 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01649
+2024-09-25 11:42:33,765 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01650
+2024-09-25 11:42:38,260 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Facturas - 2024-1043dfe2.pdf
+2024-09-25 11:42:38,891 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01650
+2024-09-25 14:47:53,259 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-25 14:47:53,259 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 14:47:53,291 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-25 14:47:53,291 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 14:47:53,306 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 14:47:56,874 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01656
+2024-09-25 14:48:00,981 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/2024_F_7116a5f8a9.Pdf
+2024-09-25 14:48:01,419 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01656
+2024-09-25 14:53:08,240 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-25 14:53:08,240 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 14:53:08,271 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-25 14:53:08,271 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 14:53:08,282 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 14:53:12,115 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01657
+2024-09-25 14:53:16,532 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/2024_F_7117f7da13.Pdf
+2024-09-25 14:53:16,995 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01657
+2024-09-25 15:08:24,726 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-25 15:08:24,727 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 15:08:24,818 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-25 15:08:24,818 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 15:08:24,917 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 15:08:29,512 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01658
+2024-09-25 15:08:33,945 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/2024_F_71184107ba.Pdf
+2024-09-25 15:08:34,303 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01658
+2024-09-25 15:23:41,426 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Adjunto remito Factura, from: admin@solucionesdelhard.com
+2024-09-25 15:23:41,426 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 15:23:41,502 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: admin@solucionesdelhard.com
+2024-09-25 15:23:41,502 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 15:23:41,580 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 15:23:45,397 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01659
+2024-09-25 15:23:49,881 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/BURGOS ATU S.L. 242107 2509242f9b60.pdf
+2024-09-25 15:23:50,242 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01659
+2024-09-25 15:58:58,101 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura Cartucho Service. Rebonds S.L., from: info@cartuchoservice.es
+2024-09-25 15:58:58,101 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 15:58:58,549 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Envío de factura   2405725/2024, from: macofi@macofi.com
+2024-09-25 15:58:58,549 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 15:58:58,668 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: macofi@macofi.com
+2024-09-25 15:58:58,668 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 15:58:58,719 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: info@cartuchoservice.es
+2024-09-25 15:58:58,719 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 15:58:58,759 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 15:58:58,761 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 15:59:03,624 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01660
+2024-09-25 15:59:07,577 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/2024__2405725__4316344_BURGOS  ATU  SL3e6c25.PDF
+2024-09-25 15:59:08,055 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01660
+2024-09-25 15:59:08,227 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: Factura de proveedor No existe en la factura de compra ACC-PINV-2024-00928
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 291, in insert
+    self.run_before_save_methods()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 1091, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 962, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 1322, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 1304, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 959, in fn
+    return method_object(*args, **kwargs)
+  File "/home/frappe/frappe-bench/apps/erpnext/erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py", line 249, in validate
+    self.validate_supplier_invoice()
+  File "/home/frappe/frappe-bench/apps/erpnext/erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py", line 1527, in validate_supplier_invoice
+    frappe.throw(_("Supplier Invoice No exists in Purchase Invoice {0}").format(pi))
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 645, in throw
+    msgprint(
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 610, in msgprint
+    _raise_exception()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 561, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Factura de proveedor No existe en la factura de compra ACC-PINV-2024-00928
+2024-09-25 16:39:17,091 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA CRISPAT : FA24014897, from: administracion@crispatpapel.com
+2024-09-25 16:39:17,091 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 16:39:17,139 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: administracion@crispatpapel.com
+2024-09-25 16:39:17,140 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 16:39:17,163 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 16:39:20,913 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01662
+2024-09-25 16:39:24,843 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FA24014897a93cee.pdf
+2024-09-25 16:39:25,222 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01662
+2024-09-25 17:24:36,205 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura Nº 240014318, from: recepcion@lopezescudero.com
+2024-09-25 17:24:36,205 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 17:24:36,248 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: recepcion@lopezescudero.com
+2024-09-25 17:24:36,248 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 17:24:36,263 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 17:24:39,701 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01663
+2024-09-25 17:24:43,570 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FA240014318ecd5d1.pdf
+2024-09-25 17:24:43,898 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01663
+2024-09-25 18:39:57,826 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: ENVÍO FACTURA, from: info@ypaper.com
+2024-09-25 18:39:57,826 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 18:39:57,879 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: info@ypaper.com
+2024-09-25 18:39:57,879 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 18:39:57,943 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 18:40:01,980 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01664
+2024-09-25 18:40:06,223 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Fact80474fbe03f.pdf
+2024-09-25 18:40:06,582 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01664
+2024-09-25 19:40:16,919 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura septiembre, from: info@sursumweb.com
+2024-09-25 19:40:16,919 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 19:40:16,938 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: SURSUM WEB S.L.
+2024-09-25 19:40:17,019 - integracion.integracion.invoice_from_email - ERROR - No se encontró la cuenta contable para el proveedor: SURSUM WEB S.L. y la empresa: Academia Técnica Universitaria SL
+2024-09-25 19:55:32,987 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA 2/2 COMERCIO ELECTRÓNICO KIT DIGITAL NEOGUERREROS (JESÚS VILLAMUZA MERINERO), from: daviddelriopascual@gmail.com
+2024-09-25 19:55:32,987 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-25 19:55:33,012 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: daviddelriopascual@gmail.com
+2024-09-25 19:55:33,013 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-25 19:55:33,043 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-25 19:55:42,507 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01665
+2024-09-25 19:55:46,584 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/82.2024 Comercio Electrónico Jesús Villamuza Merinero Pago 2cbc51f.pdf
+2024-09-25 19:55:46,940 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01665
+2024-09-26 09:56:49,200 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: DIMAPA PALENCIA (EXTINTORES), from: miriam.iglesias@grupoatu.com
+2024-09-26 09:56:49,200 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 09:56:49,210 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: miriam.iglesias@grupoatu.com
+2024-09-26 09:56:49,211 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 09:56:49,284 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 09:56:54,041 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01666
+2024-09-26 09:56:58,701 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FACTURA DIMAPA PALENCIA_26.09.2024643d09.pdf
+2024-09-26 09:56:59,139 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01666
+2024-09-26 10:02:04,517 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura FERRETERIA LEPANTO por pdf., from: administracion@ferreterialepanto.com
+2024-09-26 10:02:04,517 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 10:02:04,593 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: administracion@ferreterialepanto.com
+2024-09-26 10:02:04,593 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 10:02:04,654 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 10:02:09,157 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01667
+2024-09-26 10:02:14,707 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura 2-002564940e8a.pdf
+2024-09-26 10:02:15,181 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01667
+2024-09-26 11:27:27,246 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura, from: oscar.perez@grupoatu.com
+2024-09-26 11:27:27,246 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 11:27:28,084 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: oscar.perez@grupoatu.com
+2024-09-26 11:27:28,084 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 11:27:28,164 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 11:27:31,887 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01671
+2024-09-26 11:27:36,336 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/WPF150680aac085.pdf
+2024-09-26 11:27:36,746 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01671
+2024-09-26 12:12:43,470 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Ya puedes consultar la última factura de tu móvil, from: info.empresas@email.telefonica.es
+2024-09-26 12:12:43,470 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 12:12:43,494 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: info.empresas@email.telefonica.es
+2024-09-26 12:12:43,494 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 12:12:43,507 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 12:12:47,050 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01672
+2024-09-26 12:12:51,478 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura_movistar_1_20241001a4fd4c.pdf
+2024-09-26 12:12:51,885 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01672
+2024-09-26 13:03:03,618 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA 1/2 DISEÑO WEB KIT DIGITAL REAL ÓPTICA (ÁNGELA SAN JUAN GARCÍA), from: daviddelriopascual@gmail.com
+2024-09-26 13:03:03,618 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 13:03:03,655 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: daviddelriopascual@gmail.com
+2024-09-26 13:03:03,655 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 13:03:03,678 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 13:03:07,848 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01673
+2024-09-26 13:03:12,104 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/83.2024 Diseño Web Real Óptica Valladolid Pago 1bbbadf.pdf
+2024-09-26 13:03:12,491 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01673
+2024-09-26 13:38:25,282 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RE: FACTURACIÓN JULIO, from: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-26 13:38:25,282 - integracion.integracion.invoice_from_email - ERROR - El correo no contiene adjuntos PDF válidos.
+2024-09-26 13:58:44,292 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RE: Factura Nº 240014318 LOPEZ ESCUDERO, from: doloressantiago@grupoatu.com
+2024-09-26 13:58:44,292 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 13:58:44,309 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: doloressantiago@grupoatu.com
+2024-09-26 13:58:44,309 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 13:58:44,380 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 13:58:48,745 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01675
+2024-09-26 13:58:53,362 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/ALBARAN  PTOS LIMPIEZA952e8a.pdf
+2024-09-26 13:58:53,790 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01675
+2024-09-26 15:14:00,742 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura Reverte septiembre, from: academiadejoseluisreverte@gmail.com
+2024-09-26 15:14:00,742 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 15:14:00,847 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: academiadejoseluisreverte@gmail.com
+2024-09-26 15:14:00,847 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 15:14:00,933 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 15:14:05,431 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01676
+2024-09-26 15:14:09,627 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/A00153dd61b.pdf
+2024-09-26 15:14:10,062 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01676
+2024-09-26 16:44:22,499 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Re: facturación - MAGALI, from: magali@newcursos.com
+2024-09-26 16:44:22,499 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 16:44:22,577 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: magali@newcursos.com
+2024-09-26 16:44:22,578 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 16:44:22,673 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 16:44:27,153 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01677
+2024-09-26 16:44:31,019 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FACTURA 202445425e51.pdf
+2024-09-26 16:44:31,453 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01677
+2024-09-26 16:59:39,947 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Fwd: Factura de Agosto y suplidos, from: mario@dialsl.com
+2024-09-26 16:59:39,947 - integracion.integracion.invoice_from_email - DEBUG - Found 2 PDF attachments.
+2024-09-26 16:59:40,227 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: mario@dialsl.com
+2024-09-26 16:59:40,227 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 16:59:40,245 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 16:59:43,647 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01678
+2024-09-26 16:59:47,548 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/011-24 Atu Alquiler mes y suplido gastos (octubre)564d2e.pdf
+2024-09-26 16:59:50,946 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Repsol Agosto (471,39)564d2e.pdf
+2024-09-26 16:59:51,291 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01678
+2024-09-26 17:54:58,537 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura Alquiler OCTUBRE - Escuelas segunda oportunidad Extremadura-, from: englishforyouacademia@gmail.com
+2024-09-26 17:54:58,537 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 17:54:58,573 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: DANIEL DE LA FUENTE MÉNDEZ
+2024-09-26 17:54:58,859 - integracion.integracion.invoice_from_email - ERROR - No se encontró la cuenta contable para el proveedor: DANIEL DE LA FUENTE MÉNDEZ y la empresa: Academia Técnica Universitaria SL
+2024-09-26 20:55:25,928 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura nº FA24-045, de BURGOS A T U, from: maviburgos@gmail.com
+2024-09-26 20:55:25,928 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 20:55:26,028 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura nº FA24-044, de BURGOS A T U, from: maviburgos@gmail.com
+2024-09-26 20:55:26,028 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 20:55:26,091 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: maviburgos@gmail.com
+2024-09-26 20:55:26,091 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 20:55:26,154 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: maviburgos@gmail.com
+2024-09-26 20:55:26,154 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 20:55:26,172 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 20:55:26,207 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 20:55:31,047 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01679
+2024-09-26 20:55:35,427 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura nº FA24-044, BURGOS A T U, 26.09.2024 - 22.50h62cd26.pdf
+2024-09-26 20:55:35,822 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01679
+2024-09-26 20:55:39,256 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01680
+2024-09-26 20:55:43,551 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura nº FA24-045, BURGOS A T U, 26.09.2024 - 22.53hb1f8e6.pdf
+2024-09-26 20:55:43,924 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01680
+2024-09-26 23:25:52,811 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura Athlon Car Lease, from: facturacionclientes@athlon.com
+2024-09-26 23:25:52,812 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-26 23:25:52,861 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacionclientes@athlon.com
+2024-09-26 23:25:52,862 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-26 23:25:52,930 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-26 23:25:56,731 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01681
+2024-09-26 23:26:01,027 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Fra70482553_BURGOS_ATU__S.L.64c62c.pdf
+2024-09-26 23:26:01,368 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01681
+2024-09-27 03:46:25,545 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Tu factura 202780600789 con fecha de 27/09/2024, from: noreply@ionos.es
+2024-09-27 03:46:25,545 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 03:46:25,583 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: noreply@ionos.es
+2024-09-27 03:46:25,584 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 03:46:25,603 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 03:46:29,153 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01682
+2024-09-27 03:46:33,194 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura_2024-09-27_202780600789_V45591732163a93.pdf
+2024-09-27 03:46:33,525 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01682
+2024-09-27 07:21:56,222 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURAS SEPTIEMBRE, from: manuel@grupopic.com
+2024-09-27 07:21:56,222 - integracion.integracion.invoice_from_email - DEBUG - Found 3 PDF attachments.
+2024-09-27 07:21:56,365 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: manuel@grupopic.com
+2024-09-27 07:21:56,366 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 07:21:56,390 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 07:22:00,280 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01685
+2024-09-27 07:22:04,538 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/GRUPO ATU 24-241d38fe9.pdf
+2024-09-27 07:22:08,145 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/GRUPO ATU 24-256d38fe9.pdf
+2024-09-27 07:22:11,866 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/GRUPO ATU 24-257d38fe9.pdf
+2024-09-27 07:22:12,273 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01685
+2024-09-27 07:42:12,087 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Envío su e-Factura VA-2400454, from: administracion@hidemursa.com
+2024-09-27 07:42:12,087 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 07:42:12,190 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: administracion@hidemursa.com
+2024-09-27 07:42:12,190 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 07:42:12,245 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 07:42:16,386 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01686
+2024-09-27 07:42:20,567 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/2024-VA-240045409cf0b.PDF
+2024-09-27 07:42:20,955 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01686
+2024-09-27 08:27:31,449 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA J24021 JONATHAN FERNANDEZ VILLA, from: jonathan.fernandez@grupoatu.com
+2024-09-27 08:27:31,449 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 08:27:31,479 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: jonathan.fernandez@grupoatu.com
+2024-09-27 08:27:31,479 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 08:27:31,494 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 08:27:35,258 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01692
+2024-09-27 08:27:39,833 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FACTURA J24021 FORMACION GRUPO ATU  a  2024 SETIEMBRE91d4df.pdf
+2024-09-27 08:27:40,188 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01692
+2024-09-27 08:32:49,654 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURAS 243391 - 243392, from: administracion@sercotec.es
+2024-09-27 08:32:49,654 - integracion.integracion.invoice_from_email - DEBUG - Found 2 PDF attachments.
+2024-09-27 08:32:49,712 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: SERCOTEC-SOLUCIONES DIGITALES
+2024-09-27 08:32:49,722 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41012040 - SERCOTEC-SOLUCIONES DIGITALES - ATUSL) currency EUR
+2024-09-27 08:32:54,087 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01694
+2024-09-27 08:32:58,797 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/F.24339233ae12.pdf
+2024-09-27 08:33:02,878 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/F.24339133ae12.pdf
+2024-09-27 08:33:03,399 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01694
+2024-09-27 08:48:03,975 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Su factura AG24ES-00027276 - Plenitude, from: factura@clientes.eniplenitude.es
+2024-09-27 08:48:03,975 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 08:48:04,072 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Su factura AG24ES-00027275 - Plenitude, from: factura@clientes.eniplenitude.es
+2024-09-27 08:48:04,073 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 08:48:04,135 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: factura@clientes.eniplenitude.es
+2024-09-27 08:48:04,135 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 08:48:04,152 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 08:48:04,226 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: factura@clientes.eniplenitude.es
+2024-09-27 08:48:04,226 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 08:48:04,242 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 08:48:07,971 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01696
+2024-09-27 08:48:12,576 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/23R22009285_092024_AG24ES-0002727640ece6.pdf
+2024-09-27 08:48:12,932 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01696
+2024-09-27 08:48:16,445 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01697
+2024-09-27 08:48:21,018 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/23R22009285_092024_AG24ES-00027275e0638c.pdf
+2024-09-27 08:48:21,457 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01697
+2024-09-27 09:43:27,791 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: IEDITORIAL AAGOSTO - ID24-18304 - EXTREMADURA 2023- 3439.80€, from: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-27 09:43:27,791 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 09:43:27,834 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-27 09:43:27,834 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 09:43:27,874 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 09:43:28,923 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: IEDITORIAL AGOSTO - ID24-18305- FC CYL 2023- 117€, from: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-27 09:43:28,923 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 09:43:28,951 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-27 09:43:28,951 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 09:43:28,963 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 09:43:31,775 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01702
+2024-09-27 09:43:36,290 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/31-08-2024-ID24-18304-BURGOS ATU-3439.80€620273.pdf
+2024-09-27 09:43:36,678 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01702
+2024-09-27 09:43:40,593 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01703
+2024-09-27 09:43:44,863 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/31-08-2024-ID24-18305-BURGOS ATU-117€40b432.pdf
+2024-09-27 09:43:45,263 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01703
+2024-09-27 09:48:43,490 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: IEDITORIAL AGOSTO - ID24-18307-LABORA 2023- 390€, from: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-27 09:48:43,490 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 09:48:43,516 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-27 09:48:43,516 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 09:48:43,531 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 09:48:47,288 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01704
+2024-09-27 09:48:51,849 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/31-08-2024-ID24-18307-BURGOS ATU-390€63ac7d.pdf
+2024-09-27 09:48:52,246 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01704
+2024-09-27 09:58:55,620 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura 2ª oportunidad Sexpe lote 2, from: facturacion@publiprint.net
+2024-09-27 09:58:55,620 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 09:58:55,704 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@publiprint.net
+2024-09-27 09:58:55,704 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 09:58:55,772 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 09:58:59,643 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01706
+2024-09-27 09:59:03,558 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura_F-24-122945c569.pdf
+2024-09-27 09:59:03,940 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01706
+2024-09-27 10:04:11,932 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura 2ª oportunidad Sexpe lote 1, from: facturacion@publiprint.net
+2024-09-27 10:04:11,932 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 10:04:11,980 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@publiprint.net
+2024-09-27 10:04:11,980 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 10:04:12,016 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 10:04:15,733 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01708
+2024-09-27 10:04:19,923 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura_F-24-1230bf1987.pdf
+2024-09-27 10:04:20,373 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01708
+2024-09-27 10:19:35,973 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: IEDITORIAL AGOSTO - ID24-18311-OCUPADOS TIC CYL 23-  371.80€, from: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-27 10:19:35,973 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 10:19:35,994 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-27 10:19:35,995 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 10:19:36,005 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 10:19:36,676 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: IEDITORIAL AGOSTO - ID24-18308-OCUPADOS CYL-1270.62€, from: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-27 10:19:36,676 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 10:19:36,722 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: sararodriguez@grupoatu365.onmicrosoft.com
+2024-09-27 10:19:36,722 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 10:19:36,740 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 10:19:40,020 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01711
+2024-09-27 10:19:44,026 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/31-08-2024-ID24-18311-BURGOS ATU-371.80€2664a1.pdf
+2024-09-27 10:19:44,434 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01711
+2024-09-27 10:19:47,684 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01712
+2024-09-27 10:19:51,510 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/31-08-2024-ID24-18308-BURGOS ATU-1270.62€8fc626.pdf
+2024-09-27 10:19:51,974 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01712
+2024-09-27 10:39:45,452 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA:  FAC300136493-24 ASCENSORES ZENER GRUPO ARMONIZA S.L.U., from: facturacion@ascensores.com
+2024-09-27 10:39:45,452 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 10:39:45,539 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@ascensores.com
+2024-09-27 10:39:45,539 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 10:39:45,618 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 10:39:49,671 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01713
+2024-09-27 10:39:53,524 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FAC300136493-24ed028b.pdf
+2024-09-27 10:39:53,908 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01713
+2024-09-27 10:45:00,783 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA CURSO ATU EN CASTILVIEJO FORMACION, from: info@autoescuelacastilviejo.com
+2024-09-27 10:45:00,783 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 10:45:00,892 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: CASTILVIEJO FORMACION S.COOP
+2024-09-27 10:45:00,950 - integracion.integracion.invoice_from_email - ERROR - No se encontró la cuenta contable para el proveedor: CASTILVIEJO FORMACION S.COOP y la empresa: Academia Técnica Universitaria SL
+2024-09-27 10:50:19,095 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FRA. ANUAL DE MANTENIMIENTO, from: lourdesjulian@castellana-syc.com
+2024-09-27 10:50:19,095 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 10:50:19,127 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: lourdesjulian@castellana-syc.com
+2024-09-27 10:50:19,127 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 10:50:19,192 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 10:50:23,578 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01714
+2024-09-27 10:50:28,113 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura 2024349168504a.pdf
+2024-09-27 10:50:28,536 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01714
+2024-09-27 11:00:34,579 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Facturas Pendientes Graficas Malpica, from: laura@gmalpica.com
+2024-09-27 11:00:34,579 - integracion.integracion.invoice_from_email - DEBUG - Found 3 PDF attachments.
+2024-09-27 11:00:34,733 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura 2ª oportunidad Sexpe, from: facturacion@publiprint.net
+2024-09-27 11:00:34,734 - integracion.integracion.invoice_from_email - DEBUG - Found 2 PDF attachments.
+2024-09-27 11:00:34,854 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@publiprint.net
+2024-09-27 11:00:34,854 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 11:00:34,923 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 11:00:35,743 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: laura@gmalpica.com
+2024-09-27 11:00:35,743 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 11:00:35,770 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 11:00:39,542 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01715
+2024-09-27 11:00:43,686 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura_F-24-122987cffc.pdf
+2024-09-27 11:00:47,367 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura_F-24-123087cffc.pdf
+2024-09-27 11:00:47,809 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01715
+2024-09-27 11:00:51,111 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01716
+2024-09-27 11:00:55,310 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura B-5646 TAKIN BUSINESS CONSULTING, S.L.606793.pdf
+2024-09-27 11:00:59,253 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura B-5647 ATU Asesoria de Formacion, S.L.606793.pdf
+2024-09-27 11:01:03,175 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura B-5615 TAKIN BUSINESS CONSULTING, S.L.606793.pdf
+2024-09-27 11:01:03,716 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01716
+2024-09-27 11:05:48,787 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA AULAS MADRID SEPTIMBRE, from: teresa.noval@grupoatu.com
+2024-09-27 11:05:48,788 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 11:05:48,904 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: teresa.noval@grupoatu.com
+2024-09-27 11:05:48,905 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 11:05:48,949 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura 81917, from: info@ofimaticadelsegura.com
+2024-09-27 11:05:48,949 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 11:05:48,972 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 11:05:49,008 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: OFIMATICA DEL SEGURA S.L.
+2024-09-27 11:05:49,093 - integracion.integracion.invoice_from_email - ERROR - No se encontró la cuenta contable para el proveedor: OFIMATICA DEL SEGURA S.L. y la empresa: Academia Técnica Universitaria SL
+2024-09-27 11:05:53,262 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01717
+2024-09-27 11:05:57,284 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/1306 Ventas - Factura FVP24-01846b0491.pdf
+2024-09-27 11:05:57,768 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01717
+2024-09-27 11:46:07,347 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Adjunto remito Factura, from: admin@solucionesdelhard.com
+2024-09-27 11:46:07,348 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 11:46:07,453 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: admin@solucionesdelhard.com
+2024-09-27 11:46:07,453 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 11:46:07,509 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 11:46:11,610 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01718
+2024-09-27 11:46:15,944 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/BURGOS ATU S.L. 242129 270924a71f0d.pdf
+2024-09-27 11:46:16,296 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01718
+2024-09-27 11:51:25,403 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RV: Facturas comisiones Elkargi, from: tania@grupoatu.com
+2024-09-27 11:51:25,403 - integracion.integracion.invoice_from_email - DEBUG - Found 2 PDF attachments.
+2024-09-27 11:51:25,454 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: tania@grupoatu.com
+2024-09-27 11:51:25,455 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 11:51:25,485 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 11:51:25,510 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RV: Facturas comisiones Elkargi, from: tania@grupoatu.com
+2024-09-27 11:51:25,511 - integracion.integracion.invoice_from_email - DEBUG - Found 2 PDF attachments.
+2024-09-27 11:51:25,561 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: tania@grupoatu.com
+2024-09-27 11:51:25,561 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 11:51:25,577 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 11:51:25,955 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RV: Facturas comisiones Elkargi, from: tania@grupoatu.com
+2024-09-27 11:51:25,955 - integracion.integracion.invoice_from_email - DEBUG - Found 2 PDF attachments.
+2024-09-27 11:51:25,967 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RV: Facturas comisiones Elkargi, from: tania@grupoatu.com
+2024-09-27 11:51:25,967 - integracion.integracion.invoice_from_email - DEBUG - Found 2 PDF attachments.
+2024-09-27 11:51:26,015 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: tania@grupoatu.com
+2024-09-27 11:51:26,015 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 11:51:26,048 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: tania@grupoatu.com
+2024-09-27 11:51:26,049 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 11:51:26,052 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 11:51:26,064 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 11:51:28,840 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01719
+2024-09-27 11:51:33,019 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/281859 AV_2969574561314.pdf
+2024-09-27 11:51:36,875 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/_2969839561314.pdf
+2024-09-27 11:51:37,277 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01719
+2024-09-27 11:51:41,171 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01720
+2024-09-27 11:51:45,220 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/281860 AV_296957559814c.pdf
+2024-09-27 11:51:48,760 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/_296984059814c.pdf
+2024-09-27 11:51:49,124 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01720
+2024-09-27 11:51:52,357 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01721
+2024-09-27 11:51:56,330 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/281862 AV_2969577fdb013.pdf
+2024-09-27 11:52:00,139 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/_2969842fdb013.pdf
+2024-09-27 11:52:00,485 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01721
+2024-09-27 11:52:03,776 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01722
+2024-09-27 11:52:07,877 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/281861 AV_296957686fb47.pdf
+2024-09-27 11:52:11,598 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/_296984186fb47.pdf
+2024-09-27 11:52:12,071 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01722
+2024-09-27 11:56:38,790 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RV: FACTURA - LIMPIEZAS LA PARISIEN, from: direccionalicante@grupoatu.com
+2024-09-27 11:56:38,790 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 11:56:38,884 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: direccionalicante@grupoatu.com
+2024-09-27 11:56:38,884 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 11:56:38,950 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 11:56:43,376 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01723
+2024-09-27 11:56:47,922 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/9_2024_BURGOS ATU SL_F2400027513d9dea.pdf
+2024-09-27 11:56:48,318 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01723
+2024-09-27 12:01:57,622 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RE: FACTURA:  FAC300136493-24 ASCENSORES ZENER GRUPO ARMONIZA S.L.U., from: direccionvalladolid@grupoatu.com
+2024-09-27 12:01:57,622 - integracion.integracion.invoice_from_email - DEBUG - Found 2 PDF attachments.
+2024-09-27 12:01:59,309 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: direccionvalladolid@grupoatu.com
+2024-09-27 12:01:59,310 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 12:01:59,349 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 12:02:03,091 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01724
+2024-09-27 12:02:07,401 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/STD-24-60942 bis Presupuesto cambio baterias aceptadoc4904b.pdf
+2024-09-27 12:02:11,842 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/STD-24-60942 Presupuesto cambio bateriasc4904b.pdf
+2024-09-27 12:02:12,418 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01724
+2024-09-27 12:37:17,374 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RE: FACTURAS SEPTIEMBRE - GRUPO PIC, from: marisag@grupoatu.com
+2024-09-27 12:37:17,374 - integracion.integracion.invoice_from_email - ERROR - El correo no contiene adjuntos PDF válidos.
+2024-09-27 12:52:32,706 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RE: Facturas Pendientes Graficas Malpica, from: direccionvalladolid@grupoatu.com
+2024-09-27 12:52:32,706 - integracion.integracion.invoice_from_email - DEBUG - Found 3 PDF attachments.
+2024-09-27 12:52:32,733 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: direccionvalladolid@grupoatu.com
+2024-09-27 12:52:32,733 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 12:52:32,788 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 12:52:36,581 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01732
+2024-09-27 12:52:40,465 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FACTURA 5615 MALPICA TAKIN SL3396eb.pdf
+2024-09-27 12:52:44,427 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FACTURA 5646 MALPICA TAKIN SL3396eb.pdf
+2024-09-27 12:52:48,005 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FACTURA 5647 MALPICA ATU ASESORIA SL3396eb.pdf
+2024-09-27 12:52:48,383 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01732
+2024-09-27 13:07:47,310 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Su factura G24ES-00324445 - Plenitude, from: factura@clientes.eniplenitude.es
+2024-09-27 13:07:47,310 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 13:07:47,454 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: factura@clientes.eniplenitude.es
+2024-09-27 13:07:47,454 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 13:07:47,465 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 13:07:50,916 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01733
+2024-09-27 13:07:55,065 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/23R22009289_092024_G24ES-00324445fc13b6.pdf
+2024-09-27 13:07:55,444 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01733
+2024-09-27 13:23:08,422 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RV: FRA. ANUAL DE MANTENIMIENTO, from: doloresdiez@castellana-syc.com
+2024-09-27 13:23:08,422 - integracion.integracion.invoice_from_email - DEBUG - Found 2 PDF attachments.
+2024-09-27 13:23:08,500 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: doloresdiez@castellana-syc.com
+2024-09-27 13:23:08,500 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 13:23:08,527 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 13:23:12,710 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01734
+2024-09-27 13:23:17,493 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura 202434911ea8ee.pdf
+2024-09-27 13:23:21,725 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/-202409271520243241ea8ee.pdf
+2024-09-27 13:23:22,228 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01734
+2024-09-27 13:33:20,467 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Adjunto remito Factura, from: admin@solucionesdelhard.com
+2024-09-27 13:33:20,468 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-27 13:33:20,514 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: admin@solucionesdelhard.com
+2024-09-27 13:33:20,514 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 13:33:20,525 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 13:33:23,878 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01735
+2024-09-27 13:33:28,222 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/BURGOS ATU S.L. 242130 27092442b4ec.pdf
+2024-09-27 13:33:28,585 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01735
+2024-09-27 16:13:50,557 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Enviando por correo electrónico: doc09601120240927171201.pdf, doc09601220240927171216.pdf, doc09601320240927171315.pdf, doc09601420240927171340.pdf, doc09601620240927171358.pdf, doc09601720240927171416.pdf, doc09601820240927171430.pdf, doc0960192024092717, from: bego@atress.es
+2024-09-27 16:13:50,557 - integracion.integracion.invoice_from_email - DEBUG - Found 14 PDF attachments.
+2024-09-27 16:13:50,628 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: bego@atress.es
+2024-09-27 16:13:50,628 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 16:13:50,688 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 16:13:54,752 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01736
+2024-09-27 16:13:58,879 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09601120240927171201bb901f.pdf
+2024-09-27 16:14:02,671 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09601220240927171216bb901f.pdf
+2024-09-27 16:14:06,557 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09601320240927171315bb901f.pdf
+2024-09-27 16:14:10,508 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09601420240927171340bb901f.pdf
+2024-09-27 16:14:14,232 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09601620240927171358bb901f.pdf
+2024-09-27 16:14:17,891 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09601720240927171416bb901f.pdf
+2024-09-27 16:14:21,788 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09601820240927171430bb901f.pdf
+2024-09-27 16:14:25,515 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09601920240927171445bb901f.pdf
+2024-09-27 16:14:29,162 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09602020240927171504bb901f.pdf
+2024-09-27 16:14:32,986 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09602120240927171518bb901f.pdf
+2024-09-27 16:14:36,668 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09600720240927170836bb901f.pdf
+2024-09-27 16:14:40,442 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09600820240927170849bb901f.pdf
+2024-09-27 16:14:44,098 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09600920240927170902bb901f.pdf
+2024-09-27 16:14:47,730 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/doc09601020240927171148bb901f.pdf
+2024-09-27 16:14:48,171 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01736
+2024-09-27 18:29:09,534 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURAS JULIO 2024 Y AGOSTO 2024 - ALQUILER USO AULAS CENTRO DE FORMACION MANSOF +, from: mansofmalaga@gmail.com
+2024-09-27 18:29:09,534 - integracion.integracion.invoice_from_email - DEBUG - Found 2 PDF attachments.
+2024-09-27 18:29:13,098 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: mansofmalaga@gmail.com
+2024-09-27 18:29:13,098 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-27 18:29:13,116 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-27 18:29:16,763 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01737
+2024-09-27 18:29:21,045 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura 1-000205cc6d72.pdf
+2024-09-27 18:29:24,925 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Factura 1-000267cc6d72.pdf
+2024-09-27 18:29:25,277 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01737
+2024-09-28 16:55:54,420 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA ALQUILER AULAS AVILA, from: academiacemaavila@gmail.com
+2024-09-28 16:55:54,420 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-28 16:55:54,501 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: JORGE MUÑOZ JIMENEZ
+2024-09-28 16:55:54,689 - integracion.integracion.invoice_from_email - ERROR - No se encontró la cuenta contable para el proveedor: JORGE MUÑOZ JIMENEZ y la empresa: Academia Técnica Universitaria SL
+2024-09-28 21:36:26,161 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Due in 7 days Invoice INV13139533 Amount: €3 113,54 , from: system@sent-via.netsuite.com
+2024-09-28 21:36:26,161 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-28 21:36:26,247 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: system@sent-via.netsuite.com
+2024-09-28 21:36:26,247 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-28 21:36:26,334 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-28 21:36:31,137 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01738
+2024-09-28 21:36:35,251 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/Invoice_INV13139533a4b19a.pdf
+2024-09-28 21:36:35,634 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01738
+2024-09-29 09:27:24,615 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA 2/2 CONTRATO REDES SOCIALES HAMBURGUESERÍA BURDEOS (JUAN PABLO ARRANZ VELASCO), from: daviddelriopascual@gmail.com
+2024-09-29 09:27:24,616 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-29 09:27:24,722 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: daviddelriopascual@gmail.com
+2024-09-29 09:27:24,722 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-29 09:27:24,821 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-29 09:27:29,279 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01739
+2024-09-29 09:27:33,384 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/85.2024 Redes Sociales Hamburguesería Burdeos Pago 23d1f52.pdf
+2024-09-29 09:27:33,860 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01739
+2024-09-29 16:23:05,290 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA CATERING DÍA 26/09/2024, from: clientes@machaco.es
+2024-09-29 16:23:05,290 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-29 16:23:05,383 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: clientes@machaco.es
+2024-09-29 16:23:05,383 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-29 16:23:05,486 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-29 16:23:10,254 - integracion.integracion.invoice_from_email - DEBUG - Factura de compra creada: ACC-PINV-2024-01740
+2024-09-29 16:23:14,579 - integracion.integracion.invoice_from_email - DEBUG - Archivo adjunto guardado: /private/files/FACTURA CAFET-18-24 BURGOS ATU, S.L 26.09.2457d080.pdf
+2024-09-29 16:23:14,986 - integracion.integracion.invoice_from_email - INFO - Factura guardada y transacción commitida: ACC-PINV-2024-01740
+2024-09-30 06:54:17,936 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RV: PEDIDO Mª ANGELES BURGOS, from: mjose.jubitero@paraninfo.es
+2024-09-30 06:54:17,936 - integracion.integracion.invoice_from_email - ERROR - El correo no contiene adjuntos PDF válidos.
+2024-09-30 06:54:18,453 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: RV: PEDIDO Mª ANGELES BURGOS, from: mjose.jubitero@paraninfo.es
+2024-09-30 06:54:18,453 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 06:54:18,563 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: mjose.jubitero@paraninfo.es
+2024-09-30 06:54:18,563 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 06:54:18,581 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: Account(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 06:54:19,562 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 07:14:34,078 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Envío su Factura 001-635, from: facturacion@ceoecepymesalamanca.es
+2024-09-30 07:14:34,078 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 07:14:34,197 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@ceoecepymesalamanca.es
+2024-09-30 07:14:34,197 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 07:14:34,229 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 07:14:34,862 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 07:49:53,033 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura Burgos atu, from: laboutiquedelpeluquero@gmail.com
+2024-09-30 07:49:53,033 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 07:49:53,117 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: laboutiquedelpeluquero@gmail.com
+2024-09-30 07:49:53,117 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 07:49:53,210 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 07:49:53,788 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 08:05:08,639 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA DE LIMPIEZA : FA24001879, from: angel@limpiezaslolo.es
+2024-09-30 08:05:08,639 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 08:05:08,727 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: angel@limpiezaslolo.es
+2024-09-30 08:05:08,727 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 08:05:08,820 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 08:05:09,432 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 08:30:26,148 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: factura asociación hueco oxma / Burgo de Osma, from: elhuecooxma@gmail.com
+2024-09-30 08:30:26,148 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 08:30:27,234 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: elhuecooxma@gmail.com
+2024-09-30 08:30:27,234 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 08:30:27,304 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 08:30:27,861 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 08:45:42,202 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Enviando por correo electrónico: doc09615020240930094701.pdf, from: bego@atress.es
+2024-09-30 08:45:42,203 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 08:45:42,211 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: bego@atress.es
+2024-09-30 08:45:42,211 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 08:45:42,254 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 08:45:42,372 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 08:45:47,977 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: facturas datainfo, from: gestion-atu@grupoatu.com
+2024-09-30 08:45:47,977 - integracion.integracion.invoice_from_email - DEBUG - Found 6 PDF attachments.
+2024-09-30 08:45:48,154 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: gestion-atu@grupoatu.com
+2024-09-30 08:45:48,154 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 08:45:48,168 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 08:45:48,255 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 09:05:59,879 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA SEPTIEMBRE, from: info@artelimpieza.com
+2024-09-30 09:05:59,879 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 09:05:59,930 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: ARTLIMPSA SL
+2024-09-30 09:05:59,983 - integracion.integracion.invoice_from_email - ERROR - No se encontró la cuenta contable para el proveedor: ARTLIMPSA SL y la empresa: Academia Técnica Universitaria SL
+2024-09-30 10:01:19,574 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: SOLITIUM, S.L. - Factura servicio 24SF10235341, from: gruposolitium@gruposolitium.es
+2024-09-30 10:01:19,574 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 10:01:19,685 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: SOLITIUM, S.L.
+2024-09-30 10:01:19,800 - integracion.integracion.invoice_from_email - ERROR - No se encontró la cuenta contable para el proveedor: SOLITIUM, S.L. y la empresa: Academia Técnica Universitaria SL
+2024-09-30 10:11:39,013 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA Nº 459, from: extensa@extensatelecom.com
+2024-09-30 10:11:39,013 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 10:11:39,085 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: extensa@extensatelecom.com
+2024-09-30 10:11:39,085 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 10:11:39,147 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 10:11:39,644 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 10:51:59,796 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FRAS 243459 - 3460 - 3461 - 3462 - 3463 - 3464, from: administracion@sercotec.es
+2024-09-30 10:51:59,796 - integracion.integracion.invoice_from_email - DEBUG - Found 6 PDF attachments.
+2024-09-30 10:51:59,995 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: SERCOTEC-SOLUCIONES DIGITALES
+2024-09-30 10:52:00,026 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41012040 - SERCOTEC-SOLUCIONES DIGITALES - ATUSL) currency EUR
+2024-09-30 10:52:00,493 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 11:07:10,913 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-30 11:07:10,913 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 11:07:11,013 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,014 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 11:07:11,110 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 11:07:11,215 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,215 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 11:07:11,278 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,279 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 11:07:11,326 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,326 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 11:07:11,365 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,365 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 11:07:11,375 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 11:07:11,399 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 11:07:11,611 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,611 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 11:07:11,689 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,689 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 11:07:11,721 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 11:07:11,726 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,729 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 11:07:11,810 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,810 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 11:07:11,842 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,843 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 11:07:11,845 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 11:07:11,890 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,891 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 11:07:11,908 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-30 11:07:11,910 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 11:07:11,926 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 11:07:12,019 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-30 11:07:12,019 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 11:07:12,075 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 11:07:12,636 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 11:07:12,661 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 11:07:12,663 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 11:07:12,664 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 11:07:12,667 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 11:07:12,691 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-30 11:07:12,692 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 11:07:12,710 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Factura HOGAR HOTEL ALMERIA S.L., from: facturacion@hogar-hotel.com
+2024-09-30 11:07:12,711 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 11:07:12,725 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 11:07:12,754 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 11:07:12,779 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-30 11:07:12,779 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 11:07:12,782 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: facturacion@hogar-hotel.com
+2024-09-30 11:07:12,782 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 11:07:12,803 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 11:07:12,818 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 11:07:14,022 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 11:07:14,056 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 11:27:27,159 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: FACTURA DE LIMPIEZA : FA24001879. CORRECTA, from: angel@limpiezaslolo.es
+2024-09-30 11:27:27,160 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 11:27:27,241 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: angel@limpiezaslolo.es
+2024-09-30 11:27:27,241 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 11:27:27,303 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 11:27:27,933 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 11:37:43,233 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: NUMERO DE PEDIDO JOSE LA VENTA EMPEDRADA, from: obrasyserviciosdiazperez@gmail.com
+2024-09-30 11:37:43,233 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 11:37:43,313 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: obrasyserviciosdiazperez@gmail.com
+2024-09-30 11:37:43,313 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 11:37:43,380 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 11:37:43,846 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError
+2024-09-30 12:38:03,383 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Fwd: FACTURACION SEPTIEMBRE, from: antoniopadilla80@gmail.com
+2024-09-30 12:38:03,383 - integracion.integracion.invoice_from_email - ERROR - El correo no contiene adjuntos PDF válidos.
+2024-09-30 12:38:05,724 - integracion.integracion.invoice_from_email - DEBUG - Received email with subject: Fwd: FACTURACION SEPTIEMBRE, from: antoniopadilla80@gmail.com
+2024-09-30 12:38:05,724 - integracion.integracion.invoice_from_email - DEBUG - Found 1 PDF attachments.
+2024-09-30 12:38:05,794 - integracion.integracion.invoice_from_email - ERROR - Proveedor no encontrado para el email: antoniopadilla80@gmail.com
+2024-09-30 12:38:05,795 - integracion.integracion.invoice_from_email - DEBUG - Proveedor final: BURGOS ATU, S.L.
+2024-09-30 12:38:05,861 - integracion.integracion.invoice_from_email - DEBUG - Cuenta contable encontrada: CustomAccount(41000030 - ACREEDORES BURGOS ATU - ATUSL) currency EUR
+2024-09-30 12:38:06,537 - integracion.integracion.invoice_from_email - ERROR - Error al manejar el correo: 
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/invoice_from_email.py", line 124, in invoice_from_email
+    invoice.insert()
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 284, in insert
+    self.check_permission("create")
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 220, in check_permission
+    self.raise_no_permission_to(permtype)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 241, in raise_no_permission_to
+    raise frappe.PermissionError
+frappe.exceptions.PermissionError

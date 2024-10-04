@@ -9,3 +9,14 @@ def job_offer_query(user):
         return "`tabJob Offer`.docstatus = 1"
 
     return ""
+
+def user_query(user):
+    # Verificar si el usuario tiene el Role Profile 'Base'
+    role_profile = frappe.db.get_value('User', user, 'role_profile_name')
+
+    if role_profile == 'Base':
+        # Si el usuario tiene el Role Profile 'Base', retornar una cadena que limite la vista a su propio usuario
+        return f"name = '{user}'"
+    else:
+        # Si no tiene el Role Profile 'Base', retornar una cadena para excluir a 'Guest' y 'Administrator'
+        return "name NOT IN ('Guest', 'Administrator') AND enabled = 1"
