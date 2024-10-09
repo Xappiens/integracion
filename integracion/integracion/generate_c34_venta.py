@@ -259,8 +259,9 @@ def generate_c34_venta(invoice_data=None):
 
             # Datos de las transacciones (facturas)
             for invoice in invoices:
-                ref_mandato = frappe.get_value("Customer", invoice.customer, "custom_ref_mandato")
-                firma_mandato = frappe.get_value("Customer", invoice.customer, "custom_fecha_mandato")
+                customer_cif = frappe.get_value("Customer", invoice.customer, "tax_id")
+                ref_mandato = frappe.get_value("Customer", invoice.customer, "custom_ref_mandato") or customer_cif
+                firma_mandato = frappe.get_value("Customer", invoice.customer, "custom_fecha_mandato")     
                 drct_dbt_tx_inf = etree.SubElement(pmt_inf, "DrctDbtTxInf")
                 pmt_id = etree.SubElement(drct_dbt_tx_inf, "PmtId")
                 end_to_end_id = etree.SubElement(pmt_id, "EndToEndId")
@@ -272,7 +273,7 @@ def generate_c34_venta(invoice_data=None):
                 drct_dbt_tx = etree.SubElement(drct_dbt_tx_inf, "DrctDbtTx")
                 mndt_rltd_inf = etree.SubElement(drct_dbt_tx, "MndtRltdInf")
                 mndt_id = etree.SubElement(mndt_rltd_inf, "MndtId")
-                mndt_id.text = ref_mandato or "" # Mandato relacionado con la factura
+                mndt_id.text = ref_mandato # Mandato relacionado con la factura
 
                 dt_of_sgntr = etree.SubElement(mndt_rltd_inf, "DtOfSgntr")
                 dt_of_sgntr.text = firma_mandato or ""  # Fecha de la firma del mandato
