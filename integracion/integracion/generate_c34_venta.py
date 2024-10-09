@@ -1,7 +1,7 @@
 import os
 import json
 import logging
-import datetime
+from datetime import datetime, timedelta
 from urllib.parse import quote
 from office365.runtime.auth.user_credential import UserCredential
 from office365.sharepoint.client_context import ClientContext
@@ -223,7 +223,8 @@ def generate_c34_venta(invoice_data=None):
             seq_tp = etree.SubElement(pmt_tp_inf, "SeqTp")
             seq_tp.text = "RCUR"
             reqd_colltn_dt = etree.SubElement(pmt_inf, "ReqdColltnDt")
-            reqd_colltn_dt.text = frappe.utils.nowdate()
+            reqd_colltn_date = frappe.utils.getdate(frappe.utils.nowdate()) + timedelta(days=4)
+            reqd_colltn_dt.text = reqd_colltn_date.strftime('%Y-%m-%d')
 
             # Acreedor (Cdtr)
             cdtr = etree.SubElement(pmt_inf, "Cdtr")
@@ -258,6 +259,8 @@ def generate_c34_venta(invoice_data=None):
 
             # Datos de las transacciones (facturas)
             for invoice in invoices:
+                ref_mandato = frappe.get_value("Customer", invoice.customer, "custom_ref_mandato")
+                firma_mandato = frappe.get_value("Customer", invoice.customer, "custom_fecha_mandato")
                 drct_dbt_tx_inf = etree.SubElement(pmt_inf, "DrctDbtTxInf")
                 pmt_id = etree.SubElement(drct_dbt_tx_inf, "PmtId")
                 end_to_end_id = etree.SubElement(pmt_id, "EndToEndId")
@@ -269,10 +272,10 @@ def generate_c34_venta(invoice_data=None):
                 drct_dbt_tx = etree.SubElement(drct_dbt_tx_inf, "DrctDbtTx")
                 mndt_rltd_inf = etree.SubElement(drct_dbt_tx, "MndtRltdInf")
                 mndt_id = etree.SubElement(mndt_rltd_inf, "MndtId")
-                mndt_id.text = f"MANDATE-{invoice.name}"  # Mandato relacionado con la factura
+                mndt_id.text = ref_mandato or "" # Mandato relacionado con la factura
 
                 dt_of_sgntr = etree.SubElement(mndt_rltd_inf, "DtOfSgntr")
-                dt_of_sgntr.text = frappe.utils.nowdate()  # Fecha de la firma del mandato
+                dt_of_sgntr.text = firma_mandato or ""  # Fecha de la firma del mandato
 
                 dbtr_agt = etree.SubElement(drct_dbt_tx_inf, "DbtrAgt")
                 fin_instn_id = etree.SubElement(dbtr_agt, "FinInstnId")  # No necesita BIC
@@ -289,7 +292,7 @@ def generate_c34_venta(invoice_data=None):
 
                 rmt_inf = etree.SubElement(drct_dbt_tx_inf, "RmtInf")
                 ustrd = etree.SubElement(rmt_inf, "Ustrd")
-                ustrd.text = invoice.remarks or "Pago de factura"
+                ustrd.text = invoice.name or "Pago de factura"
 
             # Guardar el XML
             xml_file_path = f"/home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/{fichero_id_value}.xml"
@@ -312,7 +315,17 @@ def generate_c34_venta(invoice_data=None):
             for invoice in invoices:
                 try:
                     customer_iban = get_customer_iban(invoice.customer, invoice.company).upper()
+                    fecha_cobro = frappe.utils.getdate(frappe.utils.nowdate()) + timedelta(days=4)
                     customer_cif = frappe.get_value("Customer", invoice.customer, "tax_id")
+                    pais = frappe.get_value("Customer", invoice.customer, "custom_pais")
+                    ref_mandato = frappe.get_value("Customer", invoice.customer, "custom_ref_mandato") or customer_cif
+                    residente = "Si"
+                    if pais:
+                        if pais.code == "es":
+                            residente = "Si"
+                        else:
+                            residente = "No"
+
 
                     data.append({
                         "Nombre cliente": invoice.customer_name,
@@ -321,6 +334,10 @@ def generate_c34_venta(invoice_data=None):
                         "Importe Factura": invoice.outstanding_amount,
                         "Objeto de la Factura": invoice.remarks or "Pago de factura",
                         "Fecha de factura": invoice.posting_date.strftime('%Y-%m-%d'),
+                        "Residente": residente,
+                        "Referencia de Mandato": ref_mandato,
+                        "Referencia Adeudo": invoice.name,
+                        "Fecha de Cobro": fecha_cobro.strftime('%Y-%m-%d'),
                         "Tipo Transferencia": "SEPA"
                     })
                     logger.debug(f"Datos agregados para la factura {invoice.name} del cliente {invoice.customer_name}")

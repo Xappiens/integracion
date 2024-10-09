@@ -35,7 +35,6 @@ doc_events = {
     "Course": {
         "after_insert": "integracion.integracion.courses_overrides.send_course_to_crm"
     }
-
 }
 
 override_whitelisted_methods = {
@@ -109,6 +108,7 @@ app_include_js = [
     "/assets/integracion/js/custom_notify.js",
     "/assets/integracion/js/custom_genlibmyr.js",
     "/assets/integracion/js/custom_balanceshote.js",
+    "/assets/integracion/js/custom_profit_and_loss_statement.js",
 ]
 
 page_js = {

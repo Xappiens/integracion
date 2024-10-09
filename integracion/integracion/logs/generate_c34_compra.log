@@ -878,3 +878,252 @@
 2024-10-04 15:14:35,517 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01866
 2024-10-04 15:14:35,565 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01852
 2024-10-04 15:14:35,565 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ASF-20241004151431.xlsx eliminado después de subirlo a SharePoint
+2024-10-07 18:09:39,265 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
+2024-10-07 18:09:39,265 - integracion.integracion.generate_c34_compra - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-01958', 'ACC-PINV-2024-01927', 'ACC-PINV-2024-01933', 'ACC-PINV-2024-01937-1', 'ACC-PINV-2024-01951', 'ACC-PINV-2024-01945', 'ACC-PINV-2024-01944', 'ACC-PINV-2024-01932', 'ACC-PINV-2024-01934', 'ACC-PINV-2024-01928', 'ACC-PINV-2024-01946', 'ACC-PINV-2024-01925', 'ACC-PINV-2024-01959', 'ACC-PINV-2024-01935-1', 'ACC-PINV-2024-01939-1', 'ACC-PINV-2024-01950', 'ACC-PINV-2024-01931-1', 'ACC-PINV-2024-01955', 'ACC-PINV-2024-01960', 'ACC-PINV-2024-01930', 'ACC-PINV-2024-01941', 'ACC-PINV-2024-01943', 'ACC-PINV-2024-01954', 'ACC-PINV-2024-01926', 'ACC-PINV-2024-01953', 'ACC-PINV-2024-01924', 'ACC-PINV-2024-01952', 'ACC-PINV-2024-01947', 'ACC-PINV-2024-01936', 'ACC-PINV-2024-01938', 'ACC-PINV-2024-01948', 'ACC-PINV-2024-01929', 'ACC-PINV-2024-01942', 'ACC-PINV-2024-01940', 'ACC-PINV-2024-01949-1']
+2024-10-07 18:09:39,320 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01935-1
+2024-10-07 18:09:39,321 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01935-1 agregada a la empresa TAKIN Business Consulting SL
+2024-10-07 18:09:39,342 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01949-1
+2024-10-07 18:09:39,344 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01949-1 agregada a la empresa TAKIN Business Consulting SL
+2024-10-07 18:09:39,373 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01931-1
+2024-10-07 18:09:39,374 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01931-1 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,396 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01955
+2024-10-07 18:09:39,397 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01955 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-07 18:09:39,420 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01960
+2024-10-07 18:09:39,421 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01960 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,440 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01959
+2024-10-07 18:09:39,441 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01959 agregada a la empresa TAKIN Business Consulting SL
+2024-10-07 18:09:39,460 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01958
+2024-10-07 18:09:39,461 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01958 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,479 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01954
+2024-10-07 18:09:39,481 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01954 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,499 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01953
+2024-10-07 18:09:39,500 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01953 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,518 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01952
+2024-10-07 18:09:39,519 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01952 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,538 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01951
+2024-10-07 18:09:39,539 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01951 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,561 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01950
+2024-10-07 18:09:39,562 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01950 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-07 18:09:39,581 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01948
+2024-10-07 18:09:39,582 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01948 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,600 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01947
+2024-10-07 18:09:39,601 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01947 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,622 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01945
+2024-10-07 18:09:39,623 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01945 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,642 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01946
+2024-10-07 18:09:39,643 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01946 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,663 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01944
+2024-10-07 18:09:39,664 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01944 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,683 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01943
+2024-10-07 18:09:39,684 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01943 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,704 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01942
+2024-10-07 18:09:39,705 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01942 agregada a la empresa ATU Asesoría de Formación SL
+2024-10-07 18:09:39,725 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01939-1
+2024-10-07 18:09:39,726 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01939-1 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,744 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01941
+2024-10-07 18:09:39,745 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01941 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,767 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01940
+2024-10-07 18:09:39,768 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01940 agregada a la empresa TAKIN Business Consulting SL
+2024-10-07 18:09:39,789 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01938
+2024-10-07 18:09:39,790 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01938 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-07 18:09:39,811 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01937-1
+2024-10-07 18:09:39,812 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01937-1 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,834 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01936
+2024-10-07 18:09:39,835 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01936 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,853 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01934
+2024-10-07 18:09:39,855 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01934 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-07 18:09:39,874 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01933
+2024-10-07 18:09:39,875 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01933 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,894 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01932
+2024-10-07 18:09:39,895 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01932 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,914 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01928
+2024-10-07 18:09:39,915 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01928 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,935 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01930
+2024-10-07 18:09:39,936 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01930 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:39,954 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01929
+2024-10-07 18:09:39,955 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01929 agregada a la empresa TAKIN Business Consulting SL
+2024-10-07 18:09:39,975 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01926
+2024-10-07 18:09:39,976 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01926 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-07 18:09:39,995 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01927
+2024-10-07 18:09:39,997 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01927 agregada a la empresa Grupo Almería Formación SL
+2024-10-07 18:09:40,019 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01925
+2024-10-07 18:09:40,020 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01925 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-07 18:09:40,039 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01924
+2024-10-07 18:09:40,040 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01924 agregada a la empresa Burgos atu SL
+2024-10-07 18:09:40,049 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01935-1 del proveedor KHALID KOUTAIBI CHRIF
+2024-10-07 18:09:40,052 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01949-1 del proveedor REBONDS, S.L
+2024-10-07 18:09:40,056 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01959 del proveedor MACGIMENEZ SLU
+2024-10-07 18:09:40,059 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01940 del proveedor Graficas Malpica S.L.
+2024-10-07 18:09:40,062 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01929 del proveedor INOCENCIO RONCERO HURTADO
+2024-10-07 18:09:40,080 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para TAKIN Business Consulting SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-TBC-20241007180940.xlsx
+2024-10-07 18:09:40,080 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-TBC-20241007180940.xlsx a SharePoint para la compañía TAKIN Business Consulting SL con Cuaderno C34-TBC-20241007180940
+2024-10-07 18:09:40,080 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-10-07 18:09:40,080 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-10-07 18:09:40,080 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/TAKIN%20Business%20Consulting%20SL
+2024-10-07 18:09:41,880 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-10-07 18:09:42,458 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/TAKIN Business Consulting SL
+2024-10-07 18:09:42,458 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/TAKIN%20Business%20Consulting%20SL/C34-TBC-20241007180940
+2024-10-07 18:09:43,145 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent TAKIN Business Consulting SL
+2024-10-07 18:09:43,721 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/TAKIN Business Consulting SL/C34-TBC-20241007180940
+2024-10-07 18:09:43,722 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/TAKIN%20Business%20Consulting%20SL/C34-TBC-20241007180940/C34-TBC-20241007180940.xlsx
+2024-10-07 18:09:44,561 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/TAKIN%20Business%20Consulting%20SL/C34-TBC-20241007180940/C34-TBC-20241007180940.xlsx
+2024-10-07 18:09:44,561 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/TAKIN%20Business%20Consulting%20SL/C34-TBC-20241007180940/C34-TBC-20241007180940.xlsx
+2024-10-07 18:09:44,571 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-10-07 18:09:44,655 - integracion.integracion.generate_c34_compra - INFO - Remesa creada: REM-TBC-2024-10-07-0001 para la empresa TAKIN Business Consulting SL
+2024-10-07 18:09:44,703 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01935-1
+2024-10-07 18:09:44,747 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01949-1
+2024-10-07 18:09:44,791 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01959
+2024-10-07 18:09:44,845 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01940
+2024-10-07 18:09:44,890 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01929
+2024-10-07 18:09:44,890 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-TBC-20241007180940.xlsx eliminado después de subirlo a SharePoint
+2024-10-07 18:09:44,896 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01931-1 del proveedor ROSARIO SAURA ZORRILLA
+2024-10-07 18:09:44,899 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01960 del proveedor MACGIMENEZ SLU
+2024-10-07 18:09:44,902 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01958 del proveedor MACGIMENEZ SLU
+2024-10-07 18:09:44,905 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01954 del proveedor CÁMARA DE COMERCIO E INDUSTRIA DE BÉJAR
+2024-10-07 18:09:44,907 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01953 del proveedor DAVID DEL RIO PASCUAL
+2024-10-07 18:09:44,910 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01952 del proveedor EMILIO RITORE GARCIA
+2024-10-07 18:09:44,912 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01951 del proveedor TEMA CB
+2024-10-07 18:09:44,915 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01948 del proveedor LIMPIEZAS NIEVES EXTREMADURA
+2024-10-07 18:09:44,918 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01947 del proveedor ALARMAS TELECOM 2019 SL
+2024-10-07 18:09:44,920 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01945 del proveedor LABEI COSMETICS, S.L.U.
+2024-10-07 18:09:44,923 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01946 del proveedor GERARDO MUÑOZ HERNANDEZ-ALQUIL
+2024-10-07 18:09:44,925 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01944 del proveedor Fundación Educativa Jesuitas Noroeste
+2024-10-07 18:09:44,928 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01943 del proveedor ESATUR INVERSIONES, S.L.
+2024-10-07 18:09:44,931 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01939-1 del proveedor ESATUR INVERSIONES, S.L.
+2024-10-07 18:09:44,934 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01941 del proveedor ESATUR INVERSIONES, S.L.
+2024-10-07 18:09:44,937 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01937-1 del proveedor VIZAN AUTO, S.A.
+2024-10-07 18:09:44,940 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01936 del proveedor VIZAN AUTO, S.A.
+2024-10-07 18:09:44,943 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01933 del proveedor Pinturas Juan Cantón, S.L.
+2024-10-07 18:09:44,946 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01932 del proveedor MAVIBUR CARPINTERIA Y DECORACI
+2024-10-07 18:09:44,949 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01928 del proveedor ROSARIO SAURA ZORRILLA
+2024-10-07 18:09:44,952 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01930 del proveedor MAVIBUR CARPINTERIA Y DECORACI
+2024-10-07 18:09:44,955 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01924 del proveedor Fernando Pintueles Garcia
+2024-10-07 18:09:44,978 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Burgos atu SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-BATU-20241007180944.xlsx
+2024-10-07 18:09:44,978 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-BATU-20241007180944.xlsx a SharePoint para la compañía Burgos atu SL con Cuaderno C34-BATU-20241007180944
+2024-10-07 18:09:44,978 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-10-07 18:09:44,978 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-10-07 18:09:44,978 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Burgos%20atu%20SL
+2024-10-07 18:09:46,838 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-10-07 18:09:47,429 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Burgos atu SL
+2024-10-07 18:09:47,429 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Burgos%20atu%20SL/C34-BATU-20241007180944
+2024-10-07 18:09:47,846 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Burgos atu SL
+2024-10-07 18:09:48,265 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Burgos atu SL/C34-BATU-20241007180944
+2024-10-07 18:09:48,265 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Burgos%20atu%20SL/C34-BATU-20241007180944/C34-BATU-20241007180944.xlsx
+2024-10-07 18:09:48,853 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Burgos%20atu%20SL/C34-BATU-20241007180944/C34-BATU-20241007180944.xlsx
+2024-10-07 18:09:48,853 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Burgos%20atu%20SL/C34-BATU-20241007180944/C34-BATU-20241007180944.xlsx
+2024-10-07 18:09:48,856 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-10-07 18:09:48,920 - integracion.integracion.generate_c34_compra - INFO - Remesa creada: REM-BATU-2024-10-07-0001 para la empresa Burgos atu SL
+2024-10-07 18:09:48,972 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01931-1
+2024-10-07 18:09:49,027 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01960
+2024-10-07 18:09:49,087 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01958
+2024-10-07 18:09:49,136 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01954
+2024-10-07 18:09:49,187 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01953
+2024-10-07 18:09:49,236 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01952
+2024-10-07 18:09:49,286 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01951
+2024-10-07 18:09:49,336 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01948
+2024-10-07 18:09:49,391 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01947
+2024-10-07 18:09:49,447 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01945
+2024-10-07 18:09:49,495 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01946
+2024-10-07 18:09:49,543 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01944
+2024-10-07 18:09:49,590 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01943
+2024-10-07 18:09:49,637 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01939-1
+2024-10-07 18:09:49,682 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01941
+2024-10-07 18:09:49,729 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01937-1
+2024-10-07 18:09:49,779 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01936
+2024-10-07 18:09:49,832 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01933
+2024-10-07 18:09:49,881 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01932
+2024-10-07 18:09:49,928 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01928
+2024-10-07 18:09:49,977 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01930
+2024-10-07 18:09:50,026 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01924
+2024-10-07 18:09:50,026 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-BATU-20241007180944.xlsx eliminado después de subirlo a SharePoint
+2024-10-07 18:09:50,033 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01955 del proveedor GRUPO DE PROYECTOS SOCIALES MA
+2024-10-07 18:09:50,036 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01950 del proveedor UNIVERSITATES S.L.
+2024-10-07 18:09:50,039 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01938 del proveedor FUNDACIÓN DE LA UNIVERSIDAD DE ALMERÍA
+2024-10-07 18:09:50,042 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01934 del proveedor FORJOB, SERVICIOS DE FORMACIÓN, SL
+2024-10-07 18:09:50,045 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01926 del proveedor MANUEL ANGEL PIQUERAS MONDEJAR
+2024-10-07 18:09:50,048 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01925 del proveedor JULIO MARTIN FIGUEROA-PROF
+2024-10-07 18:09:50,060 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20241007180950.xlsx
+2024-10-07 18:09:50,060 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20241007180950.xlsx a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C34-ATUSL-20241007180950
+2024-10-07 18:09:50,060 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-10-07 18:09:50,060 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-10-07 18:09:50,061 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL
+2024-10-07 18:09:52,147 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-10-07 18:09:52,672 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL
+2024-10-07 18:09:52,672 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20241007180950
+2024-10-07 18:09:53,088 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Academia Técnica Universitaria SL
+2024-10-07 18:09:53,501 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL/C34-ATUSL-20241007180950
+2024-10-07 18:09:53,502 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20241007180950/C34-ATUSL-20241007180950.xlsx
+2024-10-07 18:09:54,308 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20241007180950/C34-ATUSL-20241007180950.xlsx
+2024-10-07 18:09:54,308 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20241007180950/C34-ATUSL-20241007180950.xlsx
+2024-10-07 18:09:54,311 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-10-07 18:09:54,341 - integracion.integracion.generate_c34_compra - INFO - Remesa creada: REM-ATUSL-2024-10-07-0001 para la empresa Academia Técnica Universitaria SL
+2024-10-07 18:09:54,388 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01955
+2024-10-07 18:09:54,444 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01950
+2024-10-07 18:09:54,495 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01938
+2024-10-07 18:09:54,541 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01934
+2024-10-07 18:09:54,588 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01926
+2024-10-07 18:09:54,636 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01925
+2024-10-07 18:09:54,636 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20241007180950.xlsx eliminado después de subirlo a SharePoint
+2024-10-07 18:09:54,644 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01942 del proveedor Graficas Malpica S.L.
+2024-10-07 18:09:54,659 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para ATU Asesoría de Formación SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ASF-20241007180954.xlsx
+2024-10-07 18:09:54,659 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ASF-20241007180954.xlsx a SharePoint para la compañía ATU Asesoría de Formación SL con Cuaderno C34-ASF-20241007180954
+2024-10-07 18:09:54,659 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-10-07 18:09:54,659 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-10-07 18:09:54,659 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL
+2024-10-07 18:09:55,996 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-10-07 18:09:56,762 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/ATU Asesoría de Formación SL
+2024-10-07 18:09:56,762 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C34-ASF-20241007180954
+2024-10-07 18:09:56,909 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent ATU Asesoría de Formación SL
+2024-10-07 18:09:57,422 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/ATU Asesoría de Formación SL/C34-ASF-20241007180954
+2024-10-07 18:09:57,422 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C34-ASF-20241007180954/C34-ASF-20241007180954.xlsx
+2024-10-07 18:09:58,267 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C34-ASF-20241007180954/C34-ASF-20241007180954.xlsx
+2024-10-07 18:09:58,268 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C34-ASF-20241007180954/C34-ASF-20241007180954.xlsx
+2024-10-07 18:09:58,271 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-10-07 18:09:58,293 - integracion.integracion.generate_c34_compra - INFO - Remesa creada: REM-ASF-2024-10-07-0001 para la empresa ATU Asesoría de Formación SL
+2024-10-07 18:09:58,344 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01942
+2024-10-07 18:09:58,344 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ASF-20241007180954.xlsx eliminado después de subirlo a SharePoint
+2024-10-07 18:09:58,353 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01927 del proveedor TAKIN BUSINESS CONSULTING S.L.
+2024-10-07 18:09:58,371 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Grupo Almería Formación SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-GAF-20241007180958.xlsx
+2024-10-07 18:09:58,371 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-GAF-20241007180958.xlsx a SharePoint para la compañía Grupo Almería Formación SL con Cuaderno C34-GAF-20241007180958
+2024-10-07 18:09:58,371 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-10-07 18:09:58,371 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-10-07 18:09:58,371 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL
+2024-10-07 18:10:00,092 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-10-07 18:10:00,773 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Grupo Almería Formación SL
+2024-10-07 18:10:00,774 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C34-GAF-20241007180958
+2024-10-07 18:10:01,140 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Grupo Almería Formación SL
+2024-10-07 18:10:01,797 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Grupo Almería Formación SL/C34-GAF-20241007180958
+2024-10-07 18:10:01,798 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C34-GAF-20241007180958/C34-GAF-20241007180958.xlsx
+2024-10-07 18:10:02,756 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C34-GAF-20241007180958/C34-GAF-20241007180958.xlsx
+2024-10-07 18:10:02,756 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C34-GAF-20241007180958/C34-GAF-20241007180958.xlsx
+2024-10-07 18:10:02,760 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-10-07 18:10:02,781 - integracion.integracion.generate_c34_compra - INFO - Remesa creada: REM-GAF-2024-10-07-0001 para la empresa Grupo Almería Formación SL
+2024-10-07 18:10:02,836 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01927
+2024-10-07 18:10:02,836 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-GAF-20241007180958.xlsx eliminado después de subirlo a SharePoint
+2024-10-08 12:50:09,708 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
+2024-10-08 12:50:09,709 - integracion.integracion.generate_c34_compra - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-01842']
+2024-10-08 12:50:09,732 - integracion.integracion.generate_c34_compra - WARNING - No se encontraron facturas que cumplan los criterios.
+2024-10-08 12:50:45,085 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
+2024-10-08 12:50:45,085 - integracion.integracion.generate_c34_compra - DEBUG - Procesando facturas específicas: ['ACC-PINV-2024-01842']
+2024-10-08 12:50:45,131 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-01842
+2024-10-08 12:50:45,132 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-01842 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-08 12:50:45,147 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-01842 del proveedor GENERALI ESPAÑA S.A.
+2024-10-08 12:50:45,176 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20241008125045.xlsx
+2024-10-08 12:50:45,176 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20241008125045.xlsx a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C34-ATUSL-20241008125045
+2024-10-08 12:50:45,176 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-10-08 12:50:45,176 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-10-08 12:50:45,176 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL
+2024-10-08 12:50:46,472 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-10-08 12:50:47,122 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL
+2024-10-08 12:50:47,123 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20241008125045
+2024-10-08 12:50:47,312 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Academia Técnica Universitaria SL
+2024-10-08 12:50:47,961 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL/C34-ATUSL-20241008125045
+2024-10-08 12:50:47,962 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20241008125045/C34-ATUSL-20241008125045.xlsx
+2024-10-08 12:50:48,582 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20241008125045/C34-ATUSL-20241008125045.xlsx
+2024-10-08 12:50:48,583 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-20241008125045/C34-ATUSL-20241008125045.xlsx
+2024-10-08 12:50:48,619 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-10-08 12:50:48,730 - integracion.integracion.generate_c34_compra - INFO - Remesa creada: REM-ATUSL-2024-10-08-0001 para la empresa Academia Técnica Universitaria SL
+2024-10-08 12:50:48,799 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-01842
+2024-10-08 12:50:48,972 - integracion.integracion.generate_c34_compra - ERROR - Error al crear el documento de Payment Entry para Academia Técnica Universitaria SL: Source Exchange Rate es obligatorio
+2024-10-08 12:50:48,973 - integracion.integracion.generate_c34_compra - ERROR - No se pudo crear el Payment Entry para la factura ACC-PINV-2024-01842
+2024-10-08 12:50:48,973 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-20241008125045.xlsx eliminado después de subirlo a SharePoint

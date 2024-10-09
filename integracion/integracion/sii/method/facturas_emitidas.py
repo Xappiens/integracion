@@ -332,11 +332,11 @@ def construir_xml_emitidas(facturas):
             nif_cliente_elem = etree.SubElement(contraparte, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NIF")
             nif_cliente_elem.text = nif_cliente
 
-        # TipoDesglose para la factura
+        # TipoDesglose para la factura exenta o no exenta
         tipo_desglose = etree.SubElement(factura_expedida, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoDesglose")
 
-        # Si hay impuestos, agregar el bloque NoExenta
         if factura.taxes:
+            # Si hay impuestos, agregar el bloque NoExenta
             no_exenta = etree.SubElement(tipo_desglose, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}NoExenta")
             tipo_no_exenta = etree.SubElement(no_exenta, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoNoExenta")
             tipo_no_exenta_value = factura.custom_tipo_no_exenta.split(":")[0].strip() if factura.custom_tipo_no_exenta else "S1"
@@ -348,14 +348,14 @@ def construir_xml_emitidas(facturas):
                 tipo_impositivo = etree.SubElement(detalle_iva, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}TipoImpositivo")
                 tipo_impositivo.text = str(tax.rate or 0)
                 base_imponible = etree.SubElement(detalle_iva, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}BaseImponible")
-                base_imponible.text = f"{factura.total:.2f}"
+                base_imponible.text = f"{factura.total_taxes_and_charges:.2f}"
                 cuota_repercutida = etree.SubElement(detalle_iva, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CuotaRepercutida")
                 cuota_repercutida.text = f"{(tax.tax_amount or 0):.2f}"
         else:
-            # Si no hay impuestos, usar el bloque DesgloseTipoOperacion para facturas exentas
+            # Si no hay impuestos, usar el bloque Sujeta con Exenta (sin PrestacionServicios)
             desglose_tipo_operacion = etree.SubElement(tipo_desglose, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DesgloseTipoOperacion")
-            prestacion_servicios = etree.SubElement(desglose_tipo_operacion, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}PrestacionServicios")
-            sujeta = etree.SubElement(prestacion_servicios, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Sujeta")
+            prestacionservicios = etree.SubElement(desglose_tipo_operacion, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}PrestacionServicios")
+            sujeta = etree.SubElement(prestacionservicios, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Sujeta")
             exenta = etree.SubElement(sujeta, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}Exenta")
             detalle_exenta = etree.SubElement(exenta, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}DetalleExenta")
             causa_exencion = etree.SubElement(detalle_exenta, "{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd}CausaExencion")
@@ -365,6 +365,7 @@ def construir_xml_emitidas(facturas):
 
     logger.info("XML construido con éxito")
     return etree.tostring(envelope, pretty_print=True, xml_declaration=True, encoding='UTF-8')
+
 
 def guardar_xml(xml_firmado, filename):
     logger.info(f"Guardando el XML firmado en {filename}")
@@ -534,15 +535,13 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
                         exenta_element = sujeta_element.find('.//sii:Exenta', namespaces=namespaces)
                         if exenta_element is not None:
                             detalle_exenta_element = exenta_element.find('.//sii:DetalleExenta', namespaces=namespaces)
-                            desglose['PrestacionServicios'] = {
-                                'Sujeta': {
+                            desglose['Sujeta'] = {
                                     'Exenta': {
                                         'DetalleExenta': {
                                             'CausaExencion': detalle_exenta_element.find('.//sii:CausaExencion', namespaces=namespaces).text if detalle_exenta_element.find('.//sii:CausaExencion', namespaces=namespaces) is not None else '',
                                             'BaseImponible': detalle_exenta_element.find('.//sii:BaseImponible', namespaces=namespaces).text if detalle_exenta_element.find('.//sii:BaseImponible', namespaces=namespaces) is not None else ''
                                         }
                                     }
-                                }
                             }
                 no_exenta_element = desglose_element.find('.//sii:NoExenta', namespaces=namespaces)
                 if no_exenta_element is not None:
@@ -566,15 +565,13 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
             # Asegurarse de que el desglose incluya la información correcta para facturas exentas
             if not desglose:
                 # Si no se encuentra NoExenta, Sujeta o NoSujeta, agregar un bloque PrestacionServicios con Exenta vacío para cumplir con el esquema
-                desglose['PrestacionServicios'] = {
-                    'Sujeta': {
+                desglose['Sujeta'] = {
                         'Exenta': {
                             'DetalleExenta': {
                                 'CausaExencion': '',
                                 'BaseImponible': ''
                             }
                         }
-                    }
                 }
 
             desglose_factura = {'DesgloseFactura': desglose} if tipo_desglose_key == 'DesgloseFactura' else {'DesgloseTipoOperacion': desglose}

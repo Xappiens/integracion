@@ -1,24 +1,21 @@
-2024-10-07 07:52:20,337 - integracion.integracion.sii.method.facturas_emitidas - INFO - Iniciando el proceso de envío de facturas emitidas
-2024-10-07 07:52:20,451 - integracion.integracion.sii.method.facturas_emitidas - INFO - Construyendo el XML de las facturas emitidas
-2024-10-07 07:52:20,458 - integracion.integracion.sii.method.facturas_emitidas - INFO - NIF del titular: B09318916
-2024-10-07 07:52:20,494 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML construido con éxito
-2024-10-07 07:52:20,494 - integracion.integracion.sii.method.facturas_emitidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/xml_emitidas.xml
-2024-10-07 07:52:20,494 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML guardado con éxito
-2024-10-07 07:52:20,494 - integracion.integracion.sii.method.facturas_emitidas - INFO - Validando el XML contra el esquema XSD
-2024-10-07 07:52:20,502 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML válido según el esquema XSD
-2024-10-07 07:52:20,503 - integracion.integracion.sii.method.facturas_emitidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
-2024-10-07 07:52:20,504 - integracion.integracion.sii.method.facturas_emitidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
-2024-10-07 07:52:20,561 - integracion.integracion.sii.method.facturas_emitidas - INFO - Certificado cargado con éxito
-2024-10-07 07:52:20,562 - integracion.integracion.sii.method.facturas_emitidas - INFO - Firmando el XML
-2024-10-07 07:52:20,628 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML firmado con éxito
-2024-10-07 07:52:20,628 - integracion.integracion.sii.method.facturas_emitidas - INFO - Enviando XML firmado a la AEAT
-2024-10-07 07:52:21,227 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML enviado con éxito
-2024-10-07 07:52:21,228 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta de la AEAT: {
-    'CSV': '8KHM9HNKJKLP336U',
-    'DatosPresentacion': {
-        'NIFPresentador': 'B09318916',
-        'TimestampPresentacion': '07-10-2024 09:52:21'
-    },
+2024-10-08 10:02:14,877 - integracion.integracion.sii.method.facturas_emitidas - INFO - Iniciando el proceso de envío de facturas emitidas
+2024-10-08 10:02:15,013 - integracion.integracion.sii.method.facturas_emitidas - INFO - Construyendo el XML de las facturas emitidas
+2024-10-08 10:02:15,021 - integracion.integracion.sii.method.facturas_emitidas - INFO - NIF del titular: B09318916
+2024-10-08 10:02:15,054 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML construido con éxito
+2024-10-08 10:02:15,054 - integracion.integracion.sii.method.facturas_emitidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/xml_emitidas.xml
+2024-10-08 10:02:15,055 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML guardado con éxito
+2024-10-08 10:02:15,056 - integracion.integracion.sii.method.facturas_emitidas - INFO - Validando el XML contra el esquema XSD
+2024-10-08 10:02:15,062 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML válido según el esquema XSD
+2024-10-08 10:02:15,064 - integracion.integracion.sii.method.facturas_emitidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-10-08 10:02:15,064 - integracion.integracion.sii.method.facturas_emitidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-10-08 10:02:15,130 - integracion.integracion.sii.method.facturas_emitidas - INFO - Certificado cargado con éxito
+2024-10-08 10:02:15,131 - integracion.integracion.sii.method.facturas_emitidas - INFO - Firmando el XML
+2024-10-08 10:02:15,192 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML firmado con éxito
+2024-10-08 10:02:15,193 - integracion.integracion.sii.method.facturas_emitidas - INFO - Enviando XML firmado a la AEAT
+2024-10-08 10:02:15,792 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML enviado con éxito
+2024-10-08 10:02:15,792 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta de la AEAT: {
+    'CSV': None,
+    'DatosPresentacion': None,
     'Cabecera': {
         'IDVersionSii': '1.1',
         'Titular': {
@@ -28,26 +25,126 @@
         },
         'TipoComunicacion': 'A0'
     },
-    'EstadoEnvio': 'Correcto',
+    'EstadoEnvio': 'Incorrecto',
     'RespuestaLinea': [
         {
             'IDFactura': {
                 'IDEmisorFactura': {
                     'NIF': 'B09318916'
                 },
-                'NumSerieFacturaEmisor': 'ATUSL/AR/2400125',
+                'NumSerieFacturaEmisor': 'ATUSL/R/2400003-1',
                 'NumSerieFacturaEmisorResumenFin': None,
-                'FechaExpedicionFacturaEmisor': '07-10-2024'
+                'FechaExpedicionFacturaEmisor': '08-10-2024'
             },
             'RefExterna': None,
-            'EstadoRegistro': 'Correcto',
-            'CodigoErrorRegistro': None,
-            'DescripcionErrorRegistro': None,
+            'EstadoRegistro': 'Incorrecto',
+            'CodigoErrorRegistro': 1100,
+            'DescripcionErrorRegistro': 'Valor o tipo incorrecto del campo: BaseImponible',
             'CSV': None,
             'RegistroDuplicado': None
         }
     ]
 }
-2024-10-07 07:52:21,228 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFEmitidasType'>
-2024-10-07 07:52:21,228 - integracion.integracion.sii.method.facturas_emitidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasEmitidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '10'}, 'IDFactura': {'IDEmisorFactura': {'NIF': 'B09318916'}, 'NumSerieFacturaEmisor': 'ATUSL/AR/2400125', 'FechaExpedicionFacturaEmisor': '07-10-2024'}, 'FacturaExpedida': {'TipoFactura': 'F1', 'ClaveRegimenEspecialOTrascendencia': '01', 'ImporteTotal': '250.00', 'DescripcionOperacion': 'Venta de Producto/Servicio', 'Contraparte': {'NombreRazon': 'ABDESLAM KRIBILE', 'IDOtro': {'CodigoPais': 'MA', 'IDType': '04', 'ID': 'Z0495804K'}}, 'TipoDesglose': {'DesgloseTipoOperacion': {'PrestacionServicios': {'Sujeta': {'Exenta': {'DetalleExenta': {'CausaExencion': 'E1', 'BaseImponible': '250.00'}}}}}}}}]}
-2024-10-07 07:52:21,229 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta convertida: OrderedDict([('CSV', '8KHM9HNKJKLP336U'), ('DatosPresentacion', OrderedDict([('NIFPresentador', 'B09318916'), ('TimestampPresentacion', '07-10-2024 09:52:21')])), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Correcto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', 'B09318916')])), ('NumSerieFacturaEmisor', 'ATUSL/AR/2400125'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '07-10-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Correcto'), ('CodigoErrorRegistro', None), ('DescripcionErrorRegistro', None), ('CSV', None), ('RegistroDuplicado', None)])])])
+2024-10-08 10:02:15,792 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFEmitidasType'>
+2024-10-08 10:02:15,792 - integracion.integracion.sii.method.facturas_emitidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasEmitidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '10'}, 'IDFactura': {'IDEmisorFactura': {'NIF': 'B09318916'}, 'NumSerieFacturaEmisor': 'ATUSL/R/2400003-1', 'FechaExpedicionFacturaEmisor': '08-10-2024'}, 'FacturaExpedida': {'TipoFactura': 'F1', 'ClaveRegimenEspecialOTrascendencia': '01', 'ImporteTotal': '-1430.00', 'DescripcionOperacion': 'Venta de Producto/Servicio', 'Contraparte': {'NombreRazon': 'CERÁMICAS GALA S.A.', 'NIF': 'A09003633'}, 'TipoDesglose': {'DesgloseFactura': {'Sujeta': {'Exenta': {'DetalleExenta': {'CausaExencion': '', 'BaseImponible': ''}}}}}}}]}
+2024-10-08 10:02:15,792 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta convertida: OrderedDict([('CSV', None), ('DatosPresentacion', None), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Incorrecto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', 'B09318916')])), ('NumSerieFacturaEmisor', 'ATUSL/R/2400003-1'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '08-10-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Incorrecto'), ('CodigoErrorRegistro', 1100), ('DescripcionErrorRegistro', 'Valor o tipo incorrecto del campo: BaseImponible'), ('CSV', None), ('RegistroDuplicado', None)])])])
+2024-10-08 10:05:49,214 - integracion.integracion.sii.method.facturas_emitidas - INFO - Iniciando el proceso de envío de facturas emitidas
+2024-10-08 10:05:49,271 - integracion.integracion.sii.method.facturas_emitidas - INFO - Construyendo el XML de las facturas emitidas
+2024-10-08 10:05:49,281 - integracion.integracion.sii.method.facturas_emitidas - INFO - NIF del titular: B09318916
+2024-10-08 10:05:49,312 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML construido con éxito
+2024-10-08 10:05:49,313 - integracion.integracion.sii.method.facturas_emitidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/xml_emitidas.xml
+2024-10-08 10:05:49,313 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML guardado con éxito
+2024-10-08 10:05:49,313 - integracion.integracion.sii.method.facturas_emitidas - INFO - Validando el XML contra el esquema XSD
+2024-10-08 10:05:49,318 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML válido según el esquema XSD
+2024-10-08 10:05:49,320 - integracion.integracion.sii.method.facturas_emitidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-10-08 10:05:49,320 - integracion.integracion.sii.method.facturas_emitidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-10-08 10:05:49,382 - integracion.integracion.sii.method.facturas_emitidas - INFO - Certificado cargado con éxito
+2024-10-08 10:05:49,383 - integracion.integracion.sii.method.facturas_emitidas - INFO - Firmando el XML
+2024-10-08 10:05:49,455 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML firmado con éxito
+2024-10-08 10:05:49,455 - integracion.integracion.sii.method.facturas_emitidas - INFO - Enviando XML firmado a la AEAT
+2024-10-08 10:05:50,036 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML enviado con éxito
+2024-10-08 10:05:50,037 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta de la AEAT: {
+    'CSV': None,
+    'DatosPresentacion': None,
+    'Cabecera': {
+        'IDVersionSii': '1.1',
+        'Titular': {
+            'NombreRazon': 'Academia Técnica Universitaria SL',
+            'NIFRepresentante': None,
+            'NIF': 'B09318916'
+        },
+        'TipoComunicacion': 'A0'
+    },
+    'EstadoEnvio': 'Incorrecto',
+    'RespuestaLinea': [
+        {
+            'IDFactura': {
+                'IDEmisorFactura': {
+                    'NIF': 'B09318916'
+                },
+                'NumSerieFacturaEmisor': 'ATUSL/R/2400003-1',
+                'NumSerieFacturaEmisorResumenFin': None,
+                'FechaExpedicionFacturaEmisor': '08-10-2024'
+            },
+            'RefExterna': None,
+            'EstadoRegistro': 'Incorrecto',
+            'CodigoErrorRegistro': 1100,
+            'DescripcionErrorRegistro': 'Valor o tipo incorrecto del campo: BaseImponible',
+            'CSV': None,
+            'RegistroDuplicado': None
+        }
+    ]
+}
+2024-10-08 10:05:50,037 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFEmitidasType'>
+2024-10-08 10:05:50,037 - integracion.integracion.sii.method.facturas_emitidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasEmitidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '10'}, 'IDFactura': {'IDEmisorFactura': {'NIF': 'B09318916'}, 'NumSerieFacturaEmisor': 'ATUSL/R/2400003-1', 'FechaExpedicionFacturaEmisor': '08-10-2024'}, 'FacturaExpedida': {'TipoFactura': 'F1', 'ClaveRegimenEspecialOTrascendencia': '01', 'ImporteTotal': '-1430.00', 'DescripcionOperacion': 'Venta de Producto/Servicio', 'Contraparte': {'NombreRazon': 'CERÁMICAS GALA S.A.', 'NIF': 'A09003633'}, 'TipoDesglose': {'DesgloseFactura': {'Sujeta': {'Exenta': {'DetalleExenta': {'CausaExencion': '', 'BaseImponible': ''}}}}}}}]}
+2024-10-08 10:05:50,038 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta convertida: OrderedDict([('CSV', None), ('DatosPresentacion', None), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Incorrecto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', 'B09318916')])), ('NumSerieFacturaEmisor', 'ATUSL/R/2400003-1'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '08-10-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Incorrecto'), ('CodigoErrorRegistro', 1100), ('DescripcionErrorRegistro', 'Valor o tipo incorrecto del campo: BaseImponible'), ('CSV', None), ('RegistroDuplicado', None)])])])
+2024-10-08 10:11:05,510 - integracion.integracion.sii.method.facturas_emitidas - INFO - Iniciando el proceso de envío de facturas emitidas
+2024-10-08 10:11:05,543 - integracion.integracion.sii.method.facturas_emitidas - INFO - Construyendo el XML de las facturas emitidas
+2024-10-08 10:11:05,549 - integracion.integracion.sii.method.facturas_emitidas - INFO - NIF del titular: B09318916
+2024-10-08 10:11:05,578 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML construido con éxito
+2024-10-08 10:11:05,578 - integracion.integracion.sii.method.facturas_emitidas - INFO - Guardando el XML firmado en /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/xml_emitidas.xml
+2024-10-08 10:11:05,579 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML guardado con éxito
+2024-10-08 10:11:05,579 - integracion.integracion.sii.method.facturas_emitidas - INFO - Validando el XML contra el esquema XSD
+2024-10-08 10:11:05,585 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML válido según el esquema XSD
+2024-10-08 10:11:05,586 - integracion.integracion.sii.method.facturas_emitidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-10-08 10:11:05,586 - integracion.integracion.sii.method.facturas_emitidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-10-08 10:11:05,642 - integracion.integracion.sii.method.facturas_emitidas - INFO - Certificado cargado con éxito
+2024-10-08 10:11:05,643 - integracion.integracion.sii.method.facturas_emitidas - INFO - Firmando el XML
+2024-10-08 10:11:05,692 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML firmado con éxito
+2024-10-08 10:11:05,692 - integracion.integracion.sii.method.facturas_emitidas - INFO - Enviando XML firmado a la AEAT
+2024-10-08 10:11:06,251 - integracion.integracion.sii.method.facturas_emitidas - INFO - XML enviado con éxito
+2024-10-08 10:11:06,251 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta de la AEAT: {
+    'CSV': None,
+    'DatosPresentacion': None,
+    'Cabecera': {
+        'IDVersionSii': '1.1',
+        'Titular': {
+            'NombreRazon': 'Academia Técnica Universitaria SL',
+            'NIFRepresentante': None,
+            'NIF': 'B09318916'
+        },
+        'TipoComunicacion': 'A0'
+    },
+    'EstadoEnvio': 'Incorrecto',
+    'RespuestaLinea': [
+        {
+            'IDFactura': {
+                'IDEmisorFactura': {
+                    'NIF': 'B09318916'
+                },
+                'NumSerieFacturaEmisor': 'ATUSL/R/2400003-1',
+                'NumSerieFacturaEmisorResumenFin': None,
+                'FechaExpedicionFacturaEmisor': '08-10-2024'
+            },
+            'RefExterna': None,
+            'EstadoRegistro': 'Incorrecto',
+            'CodigoErrorRegistro': 1100,
+            'DescripcionErrorRegistro': 'Valor o tipo incorrecto del campo: BaseImponible',
+            'CSV': None,
+            'RegistroDuplicado': None
+        }
+    ]
+}
+2024-10-08 10:11:06,252 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFEmitidasType'>
+2024-10-08 10:11:06,252 - integracion.integracion.sii.method.facturas_emitidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasEmitidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '10'}, 'IDFactura': {'IDEmisorFactura': {'NIF': 'B09318916'}, 'NumSerieFacturaEmisor': 'ATUSL/R/2400003-1', 'FechaExpedicionFacturaEmisor': '08-10-2024'}, 'FacturaExpedida': {'TipoFactura': 'F3', 'ClaveRegimenEspecialOTrascendencia': '01', 'ImporteTotal': '-1430.00', 'DescripcionOperacion': 'Venta de Producto/Servicio', 'Contraparte': {'NombreRazon': 'CERÁMICAS GALA S.A.', 'NIF': 'A09003633'}, 'TipoDesglose': {'DesgloseFactura': {'Sujeta': {'Exenta': {'DetalleExenta': {'CausaExencion': '', 'BaseImponible': ''}}}}}}}]}
+2024-10-08 10:11:06,252 - integracion.integracion.sii.method.facturas_emitidas - INFO - Respuesta convertida: OrderedDict([('CSV', None), ('DatosPresentacion', None), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Incorrecto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', 'B09318916')])), ('NumSerieFacturaEmisor', 'ATUSL/R/2400003-1'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '08-10-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Incorrecto'), ('CodigoErrorRegistro', 1100), ('DescripcionErrorRegistro', 'Valor o tipo incorrecto del campo: BaseImponible'), ('CSV', None), ('RegistroDuplicado', None)])])])

@@ -20,6 +20,61 @@ logger.addHandler(handler)
 logger.setLevel(logging.INFO)
 
 # Funciones auxiliares
+def account_div(account):
+    return f"""
+    <table style="width:100%;" class="account">
+        <td>{account["account"]}</td>
+        <td style="text-align: right;">{decimal(account["balance"])}</td>
+    </table>
+    """
+
+def title_div(title):
+    return f"""
+    <div style="width: 100%; margin-bottom: 10px; margin-top: 10px; font-size: 10.5px;">
+        <span>
+        {title["parent"]}
+        </span>
+        <span style="float: right; padding-left: 10px;">{decimal(title["total"]) if "total" in title else decimal(0.00)}</span>
+    </div>
+    """
+
+def accounts_html(balance_structure, ol_format, title_format, body_html):
+    if ol_format != "custom":
+        body_html += f"<ol type='{ol_format}'>\n"
+
+    for parent in balance_structure:
+        if parent.get("total"):
+            if title_format:
+                body_html += f"<{title_format}>"
+
+            if ol_format != "custom":
+                body_html += "<li>"
+
+            body_html += title_div(parent)
+
+            if title_format:
+                body_html += f"</{title_format}>"
+
+            if has_accounts(parent):
+                for account in parent["accounts"]:
+                    body_html += account_div(account)
+
+            elif has_children(parent):
+                body_html = accounts_html(
+                    parent["children"],
+                    parent.get("ol"),
+                    parent.get("title_format"),
+                    body_html
+                )
+
+            if ol_format != "custom":
+                body_html += "</li>"
+
+    if ol_format != "custom":
+        body_html += "</ol>"
+
+    return body_html
+
 def has_children(to_check):
     if "children" in to_check:
         return True
@@ -104,8 +159,9 @@ def get_balance_sheet_data(filters):
     return data
 
 def filter_accounts(account_numbers, balance_data):
-    negative_accounts = list(filter(lambda an: type(an) == str, account_numbers))
-    account_numbers = list(map(int, account_numbers))
+    indistinct_accounts = list(filter(lambda an: type(an) == str and an.endswith("*"), account_numbers))
+    negative_accounts = list(filter(lambda an: type(an) == str and an not in indistinct_accounts, account_numbers))
+    account_numbers = list(map(lambda a: int(str(a).removesuffix("*")), account_numbers))
 
     res = tuple(filter(
         lambda bd: int(bd["account_number"]) in account_numbers,
@@ -115,10 +171,8 @@ def filter_accounts(account_numbers, balance_data):
     for entry in res:
         if str(entry["account_number"]) in negative_accounts:
             if entry["balance"] > 0:
-                logger.info(entry)
-
                 entry["balance"] = -entry["balance"]
-        else:
+        elif str(entry) + "*" not in indistinct_accounts:
             entry["balance"] = abs(entry["balance"])
 
     return res
@@ -600,77 +654,14 @@ def export_balance_sheet(format, filters):
         </head>
         <body>
         """
-        def account_div(account): 
-            return f"""
-            <table style="width:100%;" class="account">
-                <td>{account["account"]}</td>
-                <td style="text-align: right;">{decimal(account["balance"])}</td>
-            </table>
-            """
-
-        def title_div(title):
-            return f"""
-            <div style="width: 100%; margin-bottom: 10px; margin-top: 10px; font-size: 10.5px;">
-                <span>
-                {title["parent"]}
-                </span>
-                <span style="float: right; padding-left: 10px;">{decimal(title["total"]) if "total" in title else decimal(0.00)}</span>
-            </div>
-            """
-
-        def accounts_html(balance_structure, ol_format, title_format):
-            nonlocal body_html
-
-
-            if ol_format != "custom":
-                body_html += f"""
-                <ol {f"type={ol_format}"}>
-                """
-
-            for parent in balance_structure:
-                if parent["total"]:
-                    if title_format:
-                        body_html += f"<{title_format}>"
-
-                    if ol_format != "custom":
-                        body_html += """
-                        <li>
-                        """
-
-                    body_html += title_div(parent)
-
-                    if title_format:
-                        body_html += f"</{title_format}>"
-
-                    if has_accounts(parent):
-                        for account in parent["accounts"]:
-                            body_html += account_div(account)
-
-                    elif has_children(parent):
-                        accounts_html(
-                            parent["children"],
-                            parent["ol"] if "ol" in parent else None,
-                            parent["title_format"] if "title_format" in parent else None
-                        )
-                    if ol_format != "custom":
-                        body_html += """
-                            </li>
-                        """
-
-            if ol_format != "custom":
-                body_html += """
-                </ol>
-                """
-
 
         # Añadir las entradas de la tabla
-        total_balance = 0
         for main_title in balance_sheet_skeleton:
             body_html += f"""
             <div class="observations">{main_title["parent"]}</div>
                 <div style="width:95%;">
             """
-            accounts_html(main_title["children"], main_title["ol"], main_title["title_format"])
+            body_html = accounts_html(main_title["children"], main_title["ol"], main_title["title_format"], body_html)
             body_html += "</div>"
 
             body_html += f"""
@@ -684,7 +675,7 @@ def export_balance_sheet(format, filters):
                 </div>
             """
 
-        # # Combinar el contenido del encabezado y el cuerpo
+        # Combinar el contenido del encabezado y el cuerpo
         html_content = header_html + body_html
 
         # Generar el archivo PDF

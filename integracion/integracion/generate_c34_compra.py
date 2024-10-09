@@ -46,9 +46,9 @@ def get_supplier_iban(supplier_name, company):
     filtered_accounts = [account for account in bank_accounts if account.get("company") == company]
 
     if filtered_accounts:
-        return filtered_accounts[0].iban
+        return filtered_accounts[0]
     else:
-        return bank_accounts[0].iban  # Si no hay coincidencia con la empresa, devolver el primero disponible
+        return bank_accounts[0] # Si no hay coincidencia con la empresa, devolver el primero disponible
 
 
 def change_status_to_remesa_emitida(purchase_invoice_name, remesa_name):
@@ -98,6 +98,45 @@ def change_status_to_remesa_emitida(purchase_invoice_name, remesa_name):
     except Exception as e:
         logger.error(f"Error al cambiar el estado de la factura {purchase_invoice_name}: {e}")
 
+def create_payment_entry_for_invoice(company, invoice):
+    try:
+        # Obtener la cuenta bancaria del proveedor utilizando get_supplier_iban
+        bank_account_info = get_supplier_iban(invoice.supplier, company)
+        bank_account = bank_account_info.get('iban') if bank_account_info else None
+
+        # Crear un nuevo documento de Payment Entry
+        payment_entry_doc = frappe.get_doc({
+            "doctype": "Payment Entry",
+            "payment_type": "Pay",
+            "party_type": "Supplier",
+            "company": company,
+            "party": invoice.supplier,
+            "posting_date": frappe.utils.nowdate(),
+            "paid_from": frappe.get_value("Company", company, "default_payable_account"),
+            "paid_to": bank_account,
+            "paid_amount": invoice.outstanding_amount,
+            "received_amount": invoice.outstanding_amount,
+            "references": [
+                {
+                    "reference_doctype": "Purchase Invoice",
+                    "reference_name": invoice.name,
+                    "due_date": invoice.due_date,
+                    "total_amount": invoice.grand_total,
+                    "outstanding_amount": invoice.outstanding_amount,
+                    "allocated_amount": invoice.outstanding_amount
+                }
+            ],
+        })
+
+        # Insertar y guardar el documento de Payment Entry
+        payment_entry_doc.insert(ignore_permissions=True)
+        payment_entry_doc.submit()
+        logger.info(f"Payment Entry creado: {payment_entry_doc.name} para la empresa {company}")
+        return payment_entry_doc.name
+    except Exception as e:
+        frappe.log_error(message=frappe.get_traceback(), title="Error al crear Payment Entry")
+        logger.error(f"Error al crear el documento de Payment Entry para {company}: {e}")
+        return None
 
 @frappe.whitelist()
 def generate_c34_compra(invoice_data=None):
@@ -243,7 +282,8 @@ def generate_c34_compra(invoice_data=None):
             data = []
             for invoice in invoices:
                 try:
-                    supplier_iban = get_supplier_iban(invoice.supplier,company)
+                    supplier_bank = get_supplier_iban(invoice.supplier,company)
+                    supplier_iban = supplier_bank.get('iban') if supplier_bank else None
                     supplier_cif = frappe.get_value("Supplier", invoice.supplier, "tax_id")
                     
                     data.append({
@@ -274,6 +314,12 @@ def generate_c34_compra(invoice_data=None):
                 for invoice in invoices:
                     change_status_to_remesa_emitida(invoice.name, remesa_name)
                     logger.debug(f"Estado cambiado a 'Remesa Emitida' para la factura {invoice.name}")
+                    # Crear el registro de Payment Entry para cada factura
+                    # payment_entry_name = create_payment_entry_for_invoice(company, invoice)
+                    # if payment_entry_name:
+                    #     logger.info(f"Payment Entry creado exitosamente: {payment_entry_name} para la factura {invoice.name}")
+                    # else:
+                    #     logger.error(f"No se pudo crear el Payment Entry para la factura {invoice.name}")
                 
             if os.path.exists(file_path):
                 os.remove(file_path)

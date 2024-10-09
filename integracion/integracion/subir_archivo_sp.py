@@ -97,6 +97,82 @@ def get_folder_structure(doctype, docname, foldername):
     except Exception as e:
         logger.error(f"Error al obtener la estructura de carpetas para {doctype} {docname}: {e}")
         return []
+    
+
+
+
+
+# Función modifcada para solucionar problema autonumerico ERP vs Sharepoint (carpetas originales)
+
+
+# def strip_version_suffix(docname):
+#     """
+#     Eliminamos cualquier sufijo de versión del nombre del documento. Por ejemplo: "-1", "-2", etc.
+#     Esto es importante para evitar que se creen carpetas duplicadas en SharePoint y luego al buscarlas, no se encuentren.
+#     """
+#     return re.sub(r'-\d+$', '', docname)  # Reemplazamos el sufijo de versión numérico al final del nombre.
+
+# def get_folder_structure(doctype, docname, foldername):
+#     """
+#     Devuelve la estructura de carpetas para un documento dado en función del 'doctype'.
+#     Elimina los sufijos de versión tanto del nombre del documento como del nombre de la carpeta, 
+#     asegurando que se use el nombre original y no versiones incrementales.
+    
+#     Argumentos:
+#     - doctype: El tipo de documento (ej. "Purchase Invoice", "Sales Invoice").
+#     - docname: El nombre del documento en ERPNext.
+#     - foldername: El nombre de la carpeta, que puede ser el mismo que el docname o personalizado.
+    
+#     Retorna:
+#     - Una lista con la estructura de carpetas basada en los campos del documento.
+#     """
+#     if doctype not in folder_structure_map:
+#         # Registrar un error si el 'doctype' no se encuentra en el mapa de estructuras.
+#         logger.error(f"No se encontró estructura de carpetas para el doctype {doctype}")
+#         return []
+
+#     # Eliminar el sufijo de versión del nombre del documento y la carpeta.
+#     # Esto evita que se creen versiones duplicadas en SharePoint como "HR-OFF-2024-00343-1".
+#     sanitized_docname = sanitize_name(strip_version_suffix(docname))
+#     sanitized_foldername = sanitize_name(strip_version_suffix(foldername))
+
+#     # Obtener los campos del mapa de estructuras de carpetas para el 'doctype' actual.
+#     fields = folder_structure_map[doctype]
+    
+#     try:
+#         # Cargar el documento desde ERPNext usando el nombre sin sufijo de versión.
+#         document = frappe.get_doc(doctype, sanitized_docname)
+#         structure = []
+        
+#         # Iterar sobre los campos definidos para este 'doctype' y construir la estructura de carpetas.
+#         for field in fields:
+#             if ' - ' in field:
+#                 # Si el campo tiene un guion ' - ', significa que es una concatenación de varios valores.
+#                 parts = field.split(' - ')
+#                 # Combinar los valores de los campos en un solo string para formar el nombre de la carpeta.
+#                 combined_field_value = ' - '.join(sanitize_name(document.get(part)) for part in parts if document.get(part))
+#                 if combined_field_value:
+#                     structure.append(combined_field_value)  # Agregar el valor combinado a la estructura.
+#             elif field == "name":
+#                 # Si el campo es "name", usamos el nombre de la carpeta ya sanitizado (sin sufijo de versión).
+#                 structure.append(sanitized_foldername)
+#             elif document.get(field):
+#                 # Para otros campos, agregar el valor sanitizado a la estructura si el campo tiene valor.
+#                 structure.append(sanitize_name(document.get(field)))
+
+#         # Registrar la estructura de carpetas generada para fines de auditoría.
+#         logger.info(f"Estructura de carpetas para {doctype} {sanitized_docname}: {structure}")
+#         return structure
+    
+#     except Exception as e:
+#         # Capturar cualquier error que ocurra al obtener el documento o al construir la estructura.
+#         logger.error(f"Error al obtener la estructura de carpetas para {doctype} {sanitized_docname}: {e}")
+#         return []
+
+
+
+
+
 
 def create_folder_if_not_exists(ctx, folder_relative_url, folder_name):
     try:
@@ -120,6 +196,7 @@ def create_folder_if_not_exists(ctx, folder_relative_url, folder_name):
         logger.error(f"Error verificando/creando carpeta en {folder_relative_url}/{folder_name}: {e}")
         raise
 
+
 def handle_structure_change(doc, method):
     try:
         doctype = doc.doctype
@@ -141,7 +218,7 @@ def handle_structure_change(doc, method):
         for field in fields_to_check:
             if field == "name":
                 continue  # El nombre del documento no debería cambiar, omítelo
-
+            
             # Obtener tanto el valor antiguo como el nuevo valor desde la base de datos directamente
             old_value = frappe.db.get_value(doctype, docname, field)
             new_value = doc.get(field)  # Valor del objeto actual antes de guardar
