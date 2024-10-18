@@ -1,0 +1,145 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Fecha",
+   "width": 0
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Cuenta",
+   "options": "Account",
+   "width": 0
+  },
+  {
+   "fieldname": "debit",
+   "fieldtype": "Currency",
+   "label": "Debe",
+   "width": 0
+  },
+  {
+   "fieldname": "credit",
+   "fieldtype": "Currency",
+   "label": "Haber",
+   "width": 0
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Data",
+   "label": "Tipo de Voucher",
+   "width": 0
+  },
+  {
+   "fieldname": "voucher_no",
+   "fieldtype": "Dynamic Link",
+   "label": "N\u00famero de Voucher",
+   "options": "Voucher Type",
+   "width": 0
+  },
+  {
+   "fieldname": "against",
+   "fieldtype": "Data",
+   "label": "Contra Cuenta",
+   "width": 0
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Observaciones",
+   "width": 0
+  },
+  {
+   "fieldname": "num_movements",
+   "fieldtype": "Data",
+   "label": "Num. Movimientos",
+   "width": 0
+  }
+ ],
+ "creation": "2024-10-09 10:30:50.239765",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "Desde",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "Hasta",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "MultiSelectList",
+   "label": "Cuenta",
+   "mandatory": 1,
+   "options": "Account",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "mandatory": 0,
+   "options": "Company",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Es Grupo",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "account_type",
+   "fieldtype": "Select",
+   "label": "Tipo de Cuenta",
+   "mandatory": 0,
+   "options": "\nEmpleado\nProfesional\nAlquiler",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "totals",
+   "fieldtype": "Check",
+   "label": "Obtener Totales",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "",
+ "letterhead": null,
+ "modified": "2024-10-10 09:28:55.669181",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Movimiento de Cuenta",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "GL Entry",
+ "reference_report": "General Ledger",
+ "report_name": "Movimiento de Cuenta",
+ "report_script": "import frappe\r\nfrom frappe.utils import flt, getdate\r\n\r\ndef execute(filters=None):\r\n    if not filters:\r\n        return []\r\n\r\n    # Obtener los filtros\r\n    from_date = filters.get(\"from_date\")\r\n    to_date = filters.get(\"to_date\")\r\n    account = filters.get(\"account\")\r\n    company = filters.get(\"company\")\r\n\r\n    # Verificar si la cuenta es un grupo\r\n    account_doc = frappe.get_doc(\"Account\", account)\r\n    conditions = []\r\n\r\n    # Filtros de fecha\r\n    if from_date:\r\n        conditions.append(\"gl.posting_date >= %(from_date)s\")\r\n    if to_date:\r\n        conditions.append(\"gl.posting_date <= %(to_date)s\")\r\n\r\n    # Filtrar por compa\u00f1\u00eda\r\n    if company:\r\n        conditions.append(\"gl.company = %(company)s\")\r\n\r\n    # Filtrar por cuenta\r\n    if account_doc.is_group:\r\n        conditions.append(\"gl.account LIKE %(account)s || '%'\")\r\n    else:\r\n        conditions.append(\"gl.account = %(account)s\")\r\n\r\n    # Construir la condici\u00f3n para la consulta\r\n    conditions_str = \" AND \".join(conditions)\r\n\r\n    # Consultar GL Entry con las condiciones\r\n    query = f\"\"\"\r\n        SELECT \r\n            gl.posting_date, gl.account, gl.debit, gl.credit,\r\n            gl.voucher_type, gl.voucher_no, gl.against, gl.remarks\r\n        FROM \r\n            `tabGL Entry` AS gl\r\n        WHERE \r\n            {conditions_str}\r\n        ORDER BY \r\n            gl.account ASC, gl.posting_date ASC\r\n    \"\"\"\r\n\r\n    # Ejecutar la consulta\r\n    result = frappe.db.sql(query, filters, as_dict=True)\r\n\r\n    # Devolver los datos como una lista\r\n    return result\r\n",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Auditor"
+  }
+ ]
+}

@@ -209,6 +209,11 @@ frappe.query_reports["General Ledger"] = {
             label: __("Ignore Exchange Rate Revaluation Journals"),
             fieldtype: "Check",
         },
+        {
+            fieldname: "bill_date",
+            label: __("Bill Date"),
+            fieldtype: "Date",
+        },
     ],
 
     onload: function (report) {

@@ -22,7 +22,7 @@ logger.setLevel(logging.INFO)
 # Funciones auxiliares
 def account_div(account):
     return f"""
-    <table style="width:100%;" class="account">
+    <table class="account">
         <td>{account["account"]}</td>
         <td style="text-align: right;">{decimal(account["balance"])}</td>
     </table>
@@ -38,17 +38,13 @@ def title_div(title):
     </div>
     """
 
-def accounts_html(balance_structure, ol_format, title_format, body_html):
-    if ol_format != "custom":
-        body_html += f"<ol type='{ol_format}'>\n"
+def accounts_html(balance_structure, title_format, body_html):
+    body_html += """<div class="container">"""
 
     for parent in balance_structure:
         if parent.get("total"):
             if title_format:
                 body_html += f"<{title_format}>"
-
-            if ol_format != "custom":
-                body_html += "<li>"
 
             body_html += title_div(parent)
 
@@ -62,16 +58,11 @@ def accounts_html(balance_structure, ol_format, title_format, body_html):
             elif has_children(parent):
                 body_html = accounts_html(
                     parent["children"],
-                    parent.get("ol"),
                     parent.get("title_format"),
                     body_html
                 )
 
-            if ol_format != "custom":
-                body_html += "</li>"
-
-    if ol_format != "custom":
-        body_html += "</ol>"
+    body_html += "</div>"
 
     return body_html
 
@@ -106,55 +97,99 @@ def calculate_totals(balance_structure):
             total = sum(child.get('total', 0) for child in parent['children'] if 'total' in child)
             parent['total'] = total
 
-# # Función auxiliar para obtener los datos del General Ledger
+# Función auxiliar para obtener los datos del General Ledger
 def get_balance_sheet_data(filters):
-    period_list = get_period_list(
-        filters.from_fiscal_year, filters.to_fiscal_year, filters.period_start_date, filters.period_end_date,
-        filters.filter_based_on, filters.periodicity, company=filters.company,
-	)
+    # HACK Lógica de datos anterior
 
-    filters.period_start_date = period_list[0]["year_start_date"]
+    # period_list = get_period_list(
+    #     filters.from_fiscal_year, filters.to_fiscal_year, filters.period_start_date, filters.period_end_date,
+    #     filters.filter_based_on, filters.periodicity, company=filters.company,
+	# )
 
-    asset = get_data(
-        filters.company, "Asset", "Debit", period_list, only_current_fiscal_year=False, filters=filters,
-        accumulated_values=filters.accumulated_values,
-	)
+    # filters.period_start_date = period_list[0]["year_start_date"]
 
-    liability = get_data(
-		filters.company, "Liability", "Credit", period_list, only_current_fiscal_year=False, filters=filters,
-		accumulated_values=filters.accumulated_values,
-	)
+    # asset = get_data(
+    #     filters.company, "Asset", "Debit", period_list, only_current_fiscal_year=False, filters=filters,
+    #     accumulated_values=filters.accumulated_values,
+	# )
 
-    equity = get_data(
-		filters.company, "Equity", "Credit", period_list, only_current_fiscal_year=False, filters=filters,
-		accumulated_values=filters.accumulated_values,
-	)
+    # liability = get_data(
+	# 	filters.company, "Liability", "Credit", period_list, only_current_fiscal_year=False, filters=filters,
+	# 	accumulated_values=filters.accumulated_values,
+	# )
 
-    data = []
-    data.extend(asset or [])
-    data.extend(liability or [])
-    data.extend(equity or [])
+    # equity = get_data(
+	# 	filters.company, "Equity", "Credit", period_list, only_current_fiscal_year=False, filters=filters,
+	# 	accumulated_values=filters.accumulated_values,
+	# )
 
-    data = sorted(
-        [{"balance": e["total"], "account": e["account"], "account_number": 0} for e in data if e],
-        key=lambda a: a["account"]
-    )
+    # data = []
+    # data.extend(asset or [])
+    # data.extend(liability or [])
+    # data.extend(equity or [])
 
-    # Búsqueda de número de cuenta con query
-    account_query = f"""
-    SELECT account_number, name
-    FROM `tabAccount`
-    WHERE company = "{filters.company}"
+    # data = sorted(
+    #     [{"balance": e["total"], "account": e["account"], "account_number": 0} for e in data if e],
+    #     key=lambda a: a["account"]
+    # )
+
+    # # Búsqueda de número de cuenta con query
+    # account_query = f"""
+    # SELECT account_number, name
+    # FROM `tabAccount`
+    # WHERE company = "{filters.company}"
+    # ORDER BY account_number
+    # """
+
+    # tabAccounts = frappe.db.sql(account_query, as_dict=True)
+
+    # for entry in data:
+    #     account_number = list(filter(lambda a: a["name"] == entry["account"], tabAccounts))
+
+    #     if len(account_number):
+    #         entry.update({"account_number": account_number[0]["account_number"]})
+
+    # HACK Lógica de datos temporal
+    acc_query = f"""
+    SELECT
+        account_number, name, lft, rgt
+    FROM
+        `tabAccount`
+    WHERE
+        company = "{filters.company}" AND report_type = "Balance Sheet"
     ORDER BY account_number
     """
 
-    tabAccounts = frappe.db.sql(account_query, as_dict=True)
+    Accounts = frappe.db.sql(acc_query, as_dict=True)
 
-    for entry in data:
-        account_number = list(filter(lambda a: a["name"] == entry["account"], tabAccounts))
+    gl_query = f"""
+    SELECT
+        account.name, (SUM(gl_entry.debit) - SUM(gl_entry.credit)) AS balance, account.lft
+    FROM
+        `tabGL Entry` gl_entry
+    LEFT JOIN
+        `tabAccount` account ON account.name = gl_entry.account
+    WHERE
+        gl_entry.company = "{filters.company}"
+        AND account.company = "{filters.company}"
+        AND account.report_type = "Balance Sheet"
+    GROUP BY account.name
+    """
 
-        if len(account_number):
-            entry.update({"account_number": account_number[0]["account_number"]})
+    GLEntries = frappe.db.sql(gl_query, as_dict=True)
+
+    data = []
+
+    for entry in Accounts:
+        account_gl_entries = list(filter(lambda gl: gl["lft"] >= entry["lft"] and gl["lft"] <= entry["rgt"], GLEntries))
+        if account_gl_entries:
+            data.append({
+                "balance": sum(a["balance"] for a in account_gl_entries),
+                "account": entry["name"],
+                "account_number": entry["account_number"]
+            })
+
+    logger.info(data)
 
     return data
 
@@ -208,173 +243,160 @@ def export_balance_sheet(format, filters):
 
     balance_sheet_skeleton = [{
         "parent": "ACTIVO",
-        "ol": "A",
         "title_format": "h3",
         "children": [
             {
-                "parent": "ACTIVO NO CORRIENTE",
-                "ol": "I",
+                "parent": "A) ACTIVO NO CORRIENTE",
                 "title_format": "b",
                 "children": [
                     {
-                        "parent": "Inmovilizado intangible.",
-                        "ol": "1",
+                        "parent": "I. Inmovilizado intangible.",
                         "children": [
-                            {"parent": "Desarrollo.", "accounts": (201, "2801", "2901")},
-                            {"parent": "Concesiones.", "accounts": (202, "2802", "2902")},
-                            {"parent": "Patentes, licencias, marcas y similares.", "accounts": (203, "2803", "2903")},
-                            {"parent": "Fondos de comercio.", "accounts": (204, "2804")},
-                            {"parent": "Aplicaciones informáticas.", "accounts": (206, "2806", "2906")},
-                            {"parent": "Otro inmovilizado intangible.", "accounts": (205, 209, "2805", "2905")}
+                            {"parent": "1. Desarrollo.", "accounts": (201, "2801", "2901")},
+                            {"parent": "2. Concesiones.", "accounts": (202, "2802", "2902")},
+                            {"parent": "3. Patentes, licencias, marcas y similares.", "accounts": (203, "2803", "2903")},
+                            {"parent": "4. Fondos de comercio.", "accounts": (204, "2804")},
+                            {"parent": "5. Aplicaciones informáticas.", "accounts": (206, "2806", "2906")},
+                            {"parent": "6. Otro inmovilizado intangible.", "accounts": (205, 209, "2805", "2905")}
                         ]
                     },
                     {
-                        "parent": "Inmovilizado material.",
-                        "ol": "1",
+                        "parent": "II. Inmovilizado material.",
                         "children": [
-                            {"parent": "Terrenos y construcciones.", "accounts": (210, 211, "2811", "2910", "2911")},
+                            {"parent": "1. Terrenos y construcciones.", "accounts": (210, 211, "2811", "2910", "2911")},
                             {
-                                "parent": "Instalaciones técnicas, y otro inmovilizado material.",
+                                "parent": "2. Instalaciones técnicas, y otro inmovilizado material.",
                                 "accounts": (
                                     212, 213, 214, 215, 216, 217, 218, 219, "2812", "2813", "2814", "2815", "2816",
                                     "2817", "2818", "2819", "2912", "2913", "2914", "2915", "2916", "2917", "2918",
                                     "2919"
                                 )
                             },
-                            {"parent": "Inmovilizado en curso y anticipos.", "accounts": (23, )}
+                            {"parent": "3. Inmovilizado en curso y anticipos.", "accounts": (23, )}
                         ]
                     },
                     {
-                        "parent": "Inversiones inmobiliarias.",
-                        "ol": "1",
+                        "parent": "III. Inversiones inmobiliarias.",
                         "children": [
-                            {"parent": "Terrenos.", "accounts": (220, "2920")},
-                            {"parent": "Construcciones.", "accounts": (221, "282", "2921")}
+                            {"parent": "1. Terrenos.", "accounts": (220, "2920")},
+                            {"parent": "2. Construcciones.", "accounts": (221, "282", "2921")}
                         ]
                     },
                     {
-                        "parent": "Inversiones en empresas del grupo y asociadas a largo plazo.",
-                        "ol": "1",
+                        "parent": "IV. Inversiones en empresas del grupo y asociadas a largo plazo.",
                         "children": [
                             {
-                                "parent": "Instrumentos de patrimonio.",
+                                "parent": "1. Instrumentos de patrimonio.",
                                 "accounts": (
                                     2403, 2404, "2493", "2494", "2933", "2934"
                                 )
                             },
-                            {"parent": "Créditos a empresas.", "accounts": (2423, 2424, "2953", "2954")},
-                            {"parent": "Valores representativos de deuda.", "accounts": (2413, 2414, "2943", "2944")},
-                            {"parent": "Derivados.", "accounts": tuple()},
-                            {"parent": "Otros activos financieros.", "accounts": tuple()}
+                            {"parent": "2. Créditos a empresas.", "accounts": (2423, 2424, "2953", "2954")},
+                            {"parent": "3. Valores representativos de deuda.", "accounts": (2413, 2414, "2943", "2944")},
+                            {"parent": "4. Derivados.", "accounts": tuple()},
+                            {"parent": "5. Otros activos financieros.", "accounts": tuple()}
                         ]
                     },
                     {
-                        "parent": "Inversiones financieras a largo plazo.",
-                        "ol": "1",
+                        "parent": "V. Inversiones financieras a largo plazo.",
                         "children": [
                             {
-                                "parent": "Instrumentos de patrimonio.",
+                                "parent": "1. Instrumentos de patrimonio.",
                                 "accounts": (2405, "2495", 250, "259", "2935", "2936")
                             },
-                            {"parent": "Créditos a terceros.", "accounts": (2425, 252, 253, 254, "2955", "298")},
-                            {"parent": "Valores representativos de deuda.", "accounts": (2415, 251, "2945", "297")},
-                            {"parent": "Derivados.", "accounts": (255, )},
-                            {"parent": "Otros activos financieros.", "accounts": (258, 26)}
+                            {"parent": "2. Créditos a terceros.", "accounts": (2425, 252, 253, 254, "2955", "298")},
+                            {"parent": "3. Valores representativos de deuda.", "accounts": (2415, 251, "2945", "297")},
+                            {"parent": "4. Derivados.", "accounts": (255, )},
+                            {"parent": "5. Otros activos financieros.", "accounts": (258, 26)}
                         ]
                     },
                     {
-                        "parent": "Activos por impuesto diferido.",
+                        "parent": "VI. Activos por impuesto diferido.",
                         "accounts": (474, )
                     }
                 ]
             },
             {
-                "parent": "ACTIVO CORRIENTE",
-                "ol": "I",
+                "parent": "B) ACTIVO CORRIENTE",
                 "title_format": "b",
                 "children": [
                     {
-                        "parent": "Activos no corrientes mantenidos para la venta.",
+                        "parent": "I. Activos no corrientes mantenidos para la venta.",
                         "accounts": (580, 581, 582, 583, 584, "599")
                     },
                     {
-                        "parent": "Existencias.",
-                        "ol": "1",
+                        "parent": "II. Existencias.",
                         "children": [
-                            {"parent": "Comerciales.", "accounts": (30, "390")},
+                            {"parent": "1. Comerciales.", "accounts": (30, "390")},
                             {
-                                "parent": "Materias primas y otros aprovisionamientos.",
+                                "parent": "2. Materias primas y otros aprovisionamientos.",
                                 "accounts": (31, 32, "391", "392")
                             },
-                            {"parent": "Productos en curso.", "accounts": (33, 34, "393", "394")},
-                            {"parent": "Productos terminados.", "accounts": (35, "395")},
-                            {"parent": "Subproductos, residuos y materiales recuperados.", "accounts": (36, "396")},
-                            {"parent": "Anticipos a proveedores", "accounts": (407, )}
+                            {"parent": "3. Productos en curso.", "accounts": (33, 34, "393", "394")},
+                            {"parent": "4. Productos terminados.", "accounts": (35, "395")},
+                            {"parent": "5. Subproductos, residuos y materiales recuperados.", "accounts": (36, "396")},
+                            {"parent": "6. Anticipos a proveedores", "accounts": (407, )}
                         ]
                     },{
-                        "parent": "Deudores comerciales y otras cuentas a cobrar.",
-                        "ol": "1",
+                        "parent": "III. Deudores comerciales y otras cuentas a cobrar.",
                         "children": [
                             {
-                                "parent": "Clientes por ventas y prestaciones de servicios.",
+                                "parent": "1. Clientes por ventas y prestaciones de servicios.",
                                 "accounts": (430, 431, 432, 435, 436, "437", "490", "4935")},
                             {
-                                "parent": "Clientes, empresas del grupo y asociadas.",
+                                "parent": "2. Clientes, empresas del grupo y asociadas.",
                                 "accounts": (433, 434, "4933", "4934")
                             },
-                            {"parent": "Deudores varios.", "accounts": (44,)},
-                            {"parent": "Personal", "accounts": (460, 544)},
-                            {"parent": "Activos por impuesto corriente.", "accounts": (4709, )},
+                            {"parent": "3. Deudores varios.", "accounts": (44,)},
+                            {"parent": "4. Personal", "accounts": (460, 544)},
+                            {"parent": "5. Activos por impuesto corriente.", "accounts": (4709, )},
                             {
-                                "parent": "Otros créditos con las Administraciones Públicas.",
+                                "parent": "6. Otros créditos con las Administraciones Públicas.",
                                 "accounts": (4700, 4708, 471, 472)
                             },
-                            {"parent": "Accionistas (socios) por desembolsos exigidos.", "accounts": (5580, )},
+                            {"parent": "7. Accionistas (socios) por desembolsos exigidos.", "accounts": (5580, )},
                         ]
                     },
                     {
-                        "parent": "Inversiones en empresas del grupo y asociadas a corto plazo.",
-                        "ol": "1",
+                        "parent": "IV. Inversiones en empresas del grupo y asociadas a corto plazo.",
                         "children": [
                             {
-                                "parent": "Instrumentos de patrimonio.",
+                                "parent": "1. Instrumentos de patrimonio.",
                                 "accounts": (5303, 5304, "5393", "5394", "5933", "5934")
                             },
-                            {"parent": "Créditos a empresas.", "accounts": (5323, 5324, 5343, 5344, "5953", "5954")},
+                            {"parent": "2. Créditos a empresas.", "accounts": (5323, 5324, 5343, 5344, "5953", "5954")},
                             {
-                                "parent": "Valores representativos de deuda.",
+                                "parent": "3. Valores representativos de deuda.",
                                 "accounts": (5313, 5314, 5333, 5334, "5943", "5944")
                             },
-                            {"parent": "Derivados.",  "accounts": tuple()},
-                            {"parent": "Otros activos financieros.",  "accounts": (5353, 5354, 5523, 5524)},
+                            {"parent": "4. Derivados.",  "accounts": tuple()},
+                            {"parent": "5. Otros activos financieros.",  "accounts": (5353, 5354, 5523, 5524)},
                         ]
                     },
                     {
-                        "parent": "Inversiones financieras a corto plazo.",
-                        "ol": "1",
+                        "parent": "V. Inversiones financieras a corto plazo.",
                         "children": [
                             {
-                                "parent": "Instrumentos del patrimonio.",
+                                "parent": "1. Instrumentos del patrimonio.",
                                 "accounts": (5305, 540, "5395", "549", "5935", "5936")
                             },
-                            {"parent": "Créditos a empresas.", "accounts": (5325, 5345, 542, 543, 547, "5955", "598")},
+                            {"parent": "2, Créditos a empresas.", "accounts": (5325, 5345, 542, 543, 547, "5955", "598")},
                             {
-                                "parent": "Valores representativos de deuda.",
+                                "parent": "3. Valores representativos de deuda.",
                                 "accounts": (5315, 5335, 541, 546, "5945", "597")
                             },
-                            {"parent": "Derivados.", "accounts": (5590, 5593)},
-                            {"parent": "Otros activos financieros.", "accounts": (5355, 545, 548, 551, 5525, 565, 566)},
+                            {"parent": "4. Derivados.", "accounts": (5590, 5593)},
+                            {"parent": "5. Otros activos financieros.", "accounts": (5355, 545, 548, 551, 5525, 565, 566)},
                         ]
                     },
                     {
-                        "parent": "Periodificaciones a corto plazo.", "accounts": (480, 567)
+                        "parent": "VI. Periodificaciones a corto plazo.", "accounts": (480, 567)
                     },
                     {
-                        "parent": "Efectivo y otros activos líquidos equivalentes.",
-                        "ol": "1",
+                        "parent": "VII. Efectivo y otros activos líquidos equivalentes.",
                         "children": [
-                            {"parent": "Tesorería.", "accounts": (570, 571, 572, 573, 574, 575)},
-                            {"parent": "Otros activos líquidos equivalentes.", "accounts": (576, )}
+                            {"parent": "1. Tesorería.", "accounts": (570, 571, 572, 573, 574, 575)},
+                            {"parent": "2. Otros activos líquidos equivalentes.", "accounts": (576, )}
                         ]
                     }
                 ]
@@ -384,80 +406,76 @@ def export_balance_sheet(format, filters):
     {
         "parent": "PATRIMONIO NETO Y PASIVO",
         "title_format": "h3",
-        "ol": "A",
         "children": [
             {
-                "parent": "PATRIMONIO NETO",
+                "parent": "A) PATRIMONIO NETO",
                 "title_format": "b",
-                "ol": "custom",
                 "children": [
                     {
                         "parent": "A-1) Fondos propios.",
-                        "ol": "I",
                         "title_format": "b",
                         "children": [
                             {
-                                "parent": "Capital",
+                                "parent": "I. Capital.",
                                 "children": [
-                                    {"parent": "Capital escriturado", "accounts": (100, 101, 102)},
-                                    {"parent": "(Capital no exigido)", "accounts": ("1030", "1040")},
+                                    {"parent": "1. Capital escriturado.", "accounts": (100, 101, 102)},
+                                    {"parent": "2. (Capital no exigido).", "accounts": ("1030", "1040")},
                                 ]
                             },
                             {
-                                "parent": "Prima de emisión",
+                                "parent": "II. Prima de emisión",
                                 "accounts": (110, )
                             },
                             {
-                                "parent": "Reservas",
+                                "parent": "III. Reservas",
                                 "children": [
-                                    {"parent": "Legal y estatutarias.", "accounts": (112, 1141)},
-                                    {"parent": "Otras reservas.", "accounts": (113, 1140, 1142, 1143, 1144, 115, 119)},
+                                    {"parent": "1. Legal y estatutarias.", "accounts": (112, 1141)},
+                                    {"parent": "2. Otras reservas.", "accounts": (113, 1140, 1142, 1143, 1144, 115, 119)},
                                 ]
                             },
                             {
-                                "parent": "(Acciones y participaciones en patrimonio propias).",
+                                "parent": "IV. (Acciones y participaciones en patrimonio propias).",
                                 "accounts": ("108", "109")
                             },
                             {
-                                "parent": "Resultados de ejercicios anteriores.",
+                                "parent": "V. Resultados de ejercicios anteriores.",
                                 "children": [
-                                    {"parent": "Remanente.", "accounts": (120, )},
-                                    {"parent":  "(Resultados negativos de ejercicios anteriores)", "accounts": ("121", )}
+                                    {"parent": "1. Remanente.", "accounts": (120, )},
+                                    {"parent":  "2. (Resultados negativos de ejercicios anteriores)", "accounts": ("121", )}
                                 ]
                             },
                             {
-                                "parent": "Otras aportaciones de socios.",
+                                "parent": "VI. Otras aportaciones de socios.",
                                 "accounts": (118, )
                             },
                             {
-                                "parent": "Resultado del ejercicio.",
+                                "parent": "VII. Resultado del ejercicio.",
                                 "accounts": (129, )
                             },
                             {
-                                "parent": "(Dividendo a cuenta).",
+                                "parent": "VIII. (Dividendo a cuenta).",
                                 "accounts": ("557", )
                             },
                             {
-                                "parent": "Otros instrumentos de patrimonio neto.",
+                                "parent": "IX. Otros instrumentos de patrimonio neto.",
                                 "accounts": (111, )
                             },
                         ]
                     },
                     {
                         "parent": "A-2) Ajustes por cambios de valor.",
-                        "ol": "I",
                         "title_format": "b",
                         "children": [
                             {
-                                "parent": "Activos financieros a valor razonable con cambios en el patrimonio neto.",
+                                "parent": "I. Activos financieros a valor razonable con cambios en el patrimonio neto.",
                                 "accounts": (133, )
                             },
                             {
-                                "parent": "Operaciones de cobertura.",
+                                "parent": "II. Operaciones de cobertura.",
                                 "accounts": (1340, )
                             },
                             {
-                                "parent": "Otros.",
+                                "parent": "III. Otros.",
                                 "accounts": (137, )
                             },
                         ]
@@ -469,59 +487,56 @@ def export_balance_sheet(format, filters):
                 ]
             },
             {
-                "parent": "PASIVO NO CORRIENTE",
+                "parent": "B) PASIVO NO CORRIENTE",
                 "title_format": "b",
-                "ol": "I",
                 "children": [
                     {
-                        "parent": "Provisiones a largo plazo",
-                        "ol": "1",
+                        "parent": "I. Provisiones a largo plazo",
                         "children": [
-                            {"parent": "Obligaciones por prestaciones a largo plazo al personal.", "accounts": (140, )},
-                            {"parent": "Actuaciones medioambientales.", "accounts": (145, )},
-                            {"parent": "Provisiones por reestructuración", "accounts": (146, )},
-                            {"parent": "Otras provisiones", "accounts": (141, 142, 143, 147)},
+                            {"parent": "1. Obligaciones por prestaciones a largo plazo al personal.", "accounts": (140, )},
+                            {"parent": "2. Actuaciones medioambientales.", "accounts": (145, )},
+                            {"parent": "3. Provisiones por reestructuración", "accounts": (146, )},
+                            {"parent": "4. Otras provisiones", "accounts": (141, 142, 143, 147)},
                         ]
                     },
                     {
-                        "parent": "Deudas a largo plazo.", "children": [
-                            {"parent": "Obligaciones y otros valores negociables.", "accounts": (177, 178, 179)},
-                            {"parent": "Deudas con entidades de crédito.", "accounts": (1605, 170)},
-                            {"parent": "Acreedores por arrendamiento financiero.", "accounts": (1625, 174)},
-                            {"parent": "Derivados.", "accounts": (176, )},
-                            {"parent": "Otros pasivos financieros.", "accounts": (1615,1635,171,172,173,175,180,185,189)}
+                        "parent": "II. Deudas a largo plazo.", "children": [
+                            {"parent": "1. Obligaciones y otros valores negociables.", "accounts": (177, 178, 179)},
+                            {"parent": "2. Deudas con entidades de crédito.", "accounts": (1605, 170)},
+                            {"parent": "3. Acreedores por arrendamiento financiero.", "accounts": (1625, 174)},
+                            {"parent": "4. Derivados.", "accounts": (176, )},
+                            {"parent": "5. Otros pasivos financieros.", "accounts": (1615,1635,171,172,173,175,180,185,189)}
                         ]
                     },
                     {
-                        "parent": "Deudas con empresas del grupo y asociadas a largo plazo.",
+                        "parent": "III. Deudas con empresas del grupo y asociadas a largo plazo.",
                         "accounts": (1603,1604,1613,1614,1623,1624,1633,1634)
                     },
                     {
-                        "parent": "Pasivos por impuesto diferido.", "accounts": (479, )
+                        "parent": "IV. Pasivos por impuesto diferido.", "accounts": (479, )
                     },
                     {
-                        "parent": "Periodificaciones a largo plazo.", "accounts": (181, )
+                        "parent": "V. Periodificaciones a largo plazo.", "accounts": (181, )
                     },
                 ]
             },
             {
-                "parent": "PASIVO CORRIENTE",
+                "parent": "C) PASIVO CORRIENTE",
                 "title_format": "b",
-                "ol": "I",
                 "children": [
                     {
-                        "parent": "Pasivos vinculados con activos no corrientes mantenidos para la venta.",
+                        "parent": "I. Pasivos vinculados con activos no corrientes mantenidos para la venta.",
                         "accounts": (585, 586, 587, 588, 589)
                     },
-                    {"parent": "Provisiones a corto plazo.", "accounts": (499, 529)},
+                    {"parent": "II. Provisiones a corto plazo.", "accounts": (499, 529)},
                     {
-                        "parent": "Deudas a corto plazo.", "children": [
-                            {"parent": "Obligaciones y otros valores negociables.", "accounts": (500, 501, 505, 506)},
-                            {"parent": "Deudas con entidades de crédito.", "accounts": (5105, 520, 527)},
-                            {"parent": "Acreedores por arrendamiento financiero.", "accounts": (5125, 524)},
-                            {"parent": "Derivados.", "accounts": (5595, 5598)},
+                        "parent": "III. Deudas a corto plazo.", "children": [
+                            {"parent": "1.Obligaciones y otros valores negociables.", "accounts": (500, 501, 505, 506)},
+                            {"parent": "2. Deudas con entidades de crédito.", "accounts": (5105, 520, 527)},
+                            {"parent": "3. Acreedores por arrendamiento financiero.", "accounts": (5125, 524)},
+                            {"parent": "4. Derivados.", "accounts": (5595, 5598)},
                             {
-                                "parent": "Otros pasivos financieros.",
+                                "parent": "5. Otros pasivos financieros.",
                                 "accounts": (
                                     "1034", "1044", "190", "192", 194, 509, 5115, 5135, 5145, 521, 522, 523, 525, 526,
                                     528, 551, 5525, 555, 5565, 5566, 560, 561, 569
@@ -530,32 +545,32 @@ def export_balance_sheet(format, filters):
                         ]
                     },
                     {
-                        "parent": "Deudas con empresas del grupo y asociadas a corto plazo.",
+                        "parent": "IV. Deudas con empresas del grupo y asociadas a corto plazo.",
                         "accounts": (5103, 5104, 5113, 5114, 5123, 5124, 5133, 5134, 5143, 5144, 5523, 5524, 5563, 5564)
                     },
                     {
-                        "parent": "Acreedores comerciales y otras cuentas a pagar.",
+                        "parent": "V. Acreedores comerciales y otras cuentas a pagar.",
                         "children": [
-                            {"parent": "Proveedores.", "accounts": (400, 401, 405, "406")},
+                            {"parent": "1. Proveedores.", "accounts": (400, 401, 405, "406")},
                             {
-                                "parent": "Proveedores, empresas del grupo y asociadas",
+                                "parent": "2. Proveedores, empresas del grupo y asociadas",
                                 "accounts": (403, 404)
                             },
-                            {"parent": "Acreedores varios.", "accounts": (41, )},
-                            {"parent": "Personal (remuneraciones pendientes de pago).", "accounts": (465, 466)},
-                            {"parent": "Pasivos por impuesto corriente.", "accounts": (4752, )},
+                            {"parent": "3. Acreedores varios.", "accounts": (41, )},
+                            {"parent": "4. Personal (remuneraciones pendientes de pago).", "accounts": (465, 466)},
+                            {"parent": "5. Pasivos por impuesto corriente.", "accounts": (4752, )},
                             {
-                                "parent": "Otras deudas con las Administraciones Públicas.",
+                                "parent": "6. Otras deudas con las Administraciones Públicas.",
                                 "accounts": (4750, 4751, 4758, 476, 477)
                             },
                             {
-                                "parent": "Anticipos de clientes.",
+                                "parent": "7. Anticipos de clientes.",
                                 "accounts": (438, )
                             }
                         ]
                     },
                     {
-                        "parent": "Periodificaciones a corto plazo", "accounts": (485, 568)
+                        "parent": "VI. Periodificaciones a corto plazo", "accounts": (485, 568)
                     }
                 ]
             }
@@ -614,8 +629,16 @@ def export_balance_sheet(format, filters):
                     border: 1px solid black;
                 }}
                 .account {{
+                    width: 98%;
+                    margin-left: auto; 
+                    margin-right: 0;
                     font-size: 10px;
                     text-transform: uppercase;
+                }}
+                .container {{
+                    width: 98%;
+                    margin-left: auto; 
+                    margin-right: 0;
                 }}
             </style>
         </head>
@@ -661,7 +684,7 @@ def export_balance_sheet(format, filters):
             <div class="observations">{main_title["parent"]}</div>
                 <div style="width:95%;">
             """
-            body_html = accounts_html(main_title["children"], main_title["ol"], main_title["title_format"], body_html)
+            body_html = accounts_html(main_title["children"], main_title["title_format"], body_html)
             body_html += "</div>"
 
             body_html += f"""

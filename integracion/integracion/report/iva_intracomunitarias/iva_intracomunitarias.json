@@ -1,0 +1,54 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Proveedor",
+   "width": 0
+  }
+ ],
+ "creation": "2024-10-17 13:33:02.245961",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "Desde",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Burgos ATU",
+ "letterhead": null,
+ "modified": "2024-10-17 14:08:20.748487",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "IVA Intracomunitarias",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Purchase Invoice",
+ "report_name": "IVA Intracomunitarias",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Purchase User"
+  },
+  {
+   "role": "Auditor"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Departamento de Justificaci\u00f3n"
+  }
+ ]
+}

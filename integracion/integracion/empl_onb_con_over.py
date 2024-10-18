@@ -20,12 +20,27 @@ class CustomEmployeeBoardingController(Document):
 
     def on_submit(self):
         # Crear el proyecto basado solo en 'employee', eliminando 'job_applicant'
-        project_name = _(self.doctype) + " : " + self.employee
+        frappe.log_error("CustomEmployeeBoardingController")
+        project_name = _(self.doctype) + " : "
+        if self.doctype == "Employee Onboarding":
+            project_name += self.employee
+        elif self.doctype == "Employee Separation":
+            project_name += self.employee_name
+        else:
+            project_name += self.employee
+
+                    # Tipo de proyecto según el tipo de documento
+        if self.doctype == "Employee Separation":
+            project_type = "Separacion Empleado"
+        elif self.doctype == "Employee Onboarding":
+            project_type = "Onboarding Empleado"
+        else:
+            project_type = None  # Puedes ajustar este valor según tu lógica
 
         project = frappe.get_doc({
             "doctype": "Project",
             "project_name": project_name,
-            "project_type": "Onboarding Empleado",
+            "project_type": project_type,
             "expected_start_date": self.date_of_joining
                 if self.doctype == "Employee Onboarding"
                 else self.resignation_letter_date,
@@ -41,6 +56,8 @@ class CustomEmployeeBoardingController(Document):
 
         # Llamar al método que crea tareas y notifica a los usuarios
         self.create_task_and_notify_user()
+
+
 
     def create_task_and_notify_user(self):
         # Obtener la lista de días festivos

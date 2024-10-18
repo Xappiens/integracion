@@ -314,6 +314,8 @@ def generate_c34_compra(invoice_data=None):
                 for invoice in invoices:
                     change_status_to_remesa_emitida(invoice.name, remesa_name)
                     logger.debug(f"Estado cambiado a 'Remesa Emitida' para la factura {invoice.name}")
+
+                    create_payment_entry_for_purchase_invoice(invoice)
                     # Crear el registro de Payment Entry para cada factura
                     # payment_entry_name = create_payment_entry_for_invoice(company, invoice)
                     # if payment_entry_name:
@@ -433,3 +435,50 @@ def upload_file_to_sharepoint(file_path, company, fichero_id_value):
     except Exception as e:
         logger.error(f"Error al subir archivo a SharePoint: {str(e)}")
         return None
+
+def create_payment_entry_for_purchase_invoice(invoice):
+    try:
+        # Obtener la cuenta de débito desde la factura de compra
+        debit_account = frappe.get_value("Company", invoice.company, "default_payable_account")
+        
+        # Obtener la cuenta de pago por defecto de la compañía
+        default_payment_account = frappe.get_value("Company", invoice.company, "default_payable_account")
+        
+        # Crear el documento de Payment Entry
+        payment_entry = frappe.get_doc({
+            "doctype": "Payment Entry",
+            "payment_type": "Pay",
+            "posting_date": frappe.utils.nowdate(),
+            "party_type": "Supplier",
+            "party": invoice.supplier,
+            "company": invoice.company,
+            "mode_of_payment": frappe.get_value("Supplier", invoice.supplier, "mode_of_payment"),
+            "paid_amount": invoice.grand_total,
+            "received_amount": invoice.grand_total,
+            "paid_from": debit_account,  # Cuenta de origen del pago
+            "paid_to": default_payment_account,  # Cuenta de pago
+            "paid_to_account_currency": "EUR",  # Moneda en EUR
+            "bank_account": frappe.get_value("Company", invoice.company, "default_bank_account"),  # Cuenta bancaria por defecto de la empresa
+            "party_bank_account": frappe.get_value("Supplier", invoice.supplier, "default_bank_account"),  # Cuenta bancaria del proveedor
+            "reference_no": invoice.name,
+            "reference_date": invoice.posting_date,
+            "references": [
+                {
+                    "reference_doctype": "Purchase Invoice",
+                    "reference_name": invoice.name,
+                    "total_amount": invoice.grand_total,
+                    "outstanding_amount": invoice.outstanding_amount,
+                    "allocated_amount": invoice.grand_total,
+                }
+            ],
+            "currency": "EUR",  # Moneda definida a EUR
+        })
+        
+        # Guardar el Payment Entry
+        payment_entry.insert(ignore_permissions=True)
+        payment_entry.submit()
+        
+        logger.info(f"Payment Entry creado para la factura {invoice.name}: {payment_entry.name}")
+
+    except Exception as e:
+        logger.error(f"Error al crear Payment Entry para la factura {invoice.name}: {e}")

@@ -1,7 +1,42 @@
-from erpnext.accounts.doctype.purchase_invoice.purchase_invoice import PurchaseInvoice
+
+import json
+
 import frappe
-from frappe import _
+from frappe import _, throw
+from frappe.model import child_table_fields, default_fields
+from frappe.model.meta import get_field_precision
+from frappe.model.utils import get_fetch_values
+from frappe.query_builder.functions import IfNull, Sum
+from frappe.utils import add_days, add_months, cint, cstr, flt, getdate
+
+from erpnext import get_company_currency
+from erpnext.accounts.doctype.pricing_rule.pricing_rule import (
+	get_pricing_rule_for_item,
+	set_transaction_type,
+)
+from erpnext.setup.doctype.brand.brand import get_brand_defaults
+from erpnext.setup.doctype.item_group.item_group import get_item_group_defaults
+from erpnext.setup.utils import get_exchange_rate
+from erpnext.stock.doctype.item.item import get_item_defaults, get_uom_conv_factor
+from erpnext.stock.doctype.item_manufacturer.item_manufacturer import get_item_manufacturer_part_no
+from erpnext.stock.doctype.price_list.price_list import get_price_list_details
+
+from erpnext.accounts.doctype.purchase_invoice.purchase_invoice import PurchaseInvoice
+
 import math
+
+
+
+from collections import OrderedDict, defaultdict
+from frappe import qb, scrub
+from frappe.desk.reportview import get_filters_cond, get_match_cond
+from frappe.query_builder import Criterion, CustomFunction
+from frappe.query_builder.functions import Concat, Locate, Sum
+from frappe.utils import nowdate, today, unique
+from pypika import Order
+
+import erpnext
+from erpnext.stock.get_item_details import _get_item_tax_template
 
 class CustomPurchaseInvoice(PurchaseInvoice):
 
@@ -122,3 +157,45 @@ class CustomPurchaseInvoice(PurchaseInvoice):
 
         # Recalcular los totales después de agregar o eliminar el impuesto
         self.calculate_taxes_and_totals()
+
+@frappe.whitelist()
+def get_custom_item_tax_info(item_tax_template):
+    tax_info = {}
+    if item_tax_template:
+        template = frappe.get_cached_doc("Item Tax Template", item_tax_template)
+        for d in template.taxes:
+            tax_info[d.tax_type] = {
+                "tax_rate": d.tax_rate,
+                "add_deduct_tax": d.add_deduct_tax
+            }
+    return tax_info
+
+@frappe.whitelist()
+@frappe.validate_and_sanitize_search_inputs
+def get_custom_expense_account(doctype, txt, searchfield, start, page_len, filters):
+    from erpnext.controllers.queries import get_match_cond
+
+    if not filters:
+        filters = {}
+
+    doctype = "Account"
+    condition = ""
+    if filters.get("company"):
+        condition += "and tabAccount.company = %(company)s"
+
+    # Condición para obtener las cuentas cuya cuenta root tiene el account number 2
+    root_condition = ""
+    if filters.get("company"):
+        root_condition = "or (tabAccount.account_number LIKE '2%%' and tabAccount.company = %(company)s and tabAccount.is_group = 0)"
+
+    return frappe.db.sql(
+        f"""select tabAccount.name from `tabAccount`
+        where (tabAccount.report_type = "Profit and Loss"
+                or tabAccount.account_type in ("Expense Account", "Fixed Asset", "Temporary", "Asset Received But Not Billed", "Capital Work in Progress")
+                {root_condition})
+            and tabAccount.is_group=0
+            and tabAccount.docstatus!=2
+            and tabAccount.{searchfield} LIKE %(txt)s
+            {condition} {get_match_cond(doctype)}""",
+        {"company": filters.get("company", ""), "txt": "%" + txt + "%"},
+    )

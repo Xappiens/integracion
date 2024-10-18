@@ -19,17 +19,21 @@
           <sii:IDEmisorFactura>
             <sii:NIF>B09318916</sii:NIF>
           </sii:IDEmisorFactura>
-          <sii:NumSerieFacturaEmisor>ATUSL/R/2400003-1</sii:NumSerieFacturaEmisor>
-          <sii:FechaExpedicionFacturaEmisor>08-10-2024</sii:FechaExpedicionFacturaEmisor>
+          <sii:NumSerieFacturaEmisor>ATUSL/AR/2400155</sii:NumSerieFacturaEmisor>
+          <sii:FechaExpedicionFacturaEmisor>17-10-2024</sii:FechaExpedicionFacturaEmisor>
         </siiLR:IDFactura>
         <siiLR:FacturaExpedida>
-          <sii:TipoFactura>F3</sii:TipoFactura>
+          <sii:TipoFactura>F1</sii:TipoFactura>
           <sii:ClaveRegimenEspecialOTrascendencia>01</sii:ClaveRegimenEspecialOTrascendencia>
-          <sii:ImporteTotal>-1430.00</sii:ImporteTotal>
+          <sii:ImporteTotal>500.00</sii:ImporteTotal>
           <sii:DescripcionOperacion>Venta de Producto/Servicio</sii:DescripcionOperacion>
           <sii:Contraparte>
-            <sii:NombreRazon>CERÁMICAS GALA S.A.</sii:NombreRazon>
-            <sii:NIF>A09003633</sii:NIF>
+            <sii:NombreRazon>HICHAM SALLAMI</sii:NombreRazon>
+            <sii:IDOtro>
+              <sii:CodigoPais>MA</sii:CodigoPais>
+              <sii:IDType>04</sii:IDType>
+              <sii:ID>Y8352637V</sii:ID>
+            </sii:IDOtro>
           </sii:Contraparte>
           <sii:TipoDesglose>
             <sii:DesgloseTipoOperacion>
@@ -38,7 +42,7 @@
                   <sii:Exenta>
                     <sii:DetalleExenta>
                       <sii:CausaExencion>E1</sii:CausaExencion>
-                      <sii:BaseImponible>-1430.00</sii:BaseImponible>
+                      <sii:BaseImponible>500.00</sii:BaseImponible>
                     </sii:DetalleExenta>
                   </sii:Exenta>
                 </sii:Sujeta>

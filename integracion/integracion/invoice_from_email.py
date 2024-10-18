@@ -121,7 +121,9 @@ def invoice_from_email(email_subject, email_content, email_from, attachments):
             }]
         })
 
+        frappe.flags.ignore_permissions = True
         invoice.insert()
+        frappe.flags.ignore_permissions = False
         logger.debug(f"Factura de compra creada: {invoice.name}")
         
         # Manejar múltiples adjuntos (solo PDFs)

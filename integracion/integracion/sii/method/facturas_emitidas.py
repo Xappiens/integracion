@@ -17,7 +17,7 @@ handler = logging.FileHandler('/home/frappe/frappe-bench/apps/integracion/integr
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 
 # Ruta al archivo WSDL para facturas emitidas
 wsdl_emitidas = '/home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/WSDL/SuministroFactEmitidas.wsdl'
@@ -525,6 +525,7 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
 
             # Preparar los detalles del desglose según el tipo de operación
             desglose_element = registro.find(f'.//siiLR:FacturaExpedida/sii:TipoDesglose/sii:{tipo_desglose_key}', namespaces=namespaces)
+            logger.debug(f"Desglose: {desglose_element}")
             desglose = {}
 
             if desglose_element is not None:
@@ -535,13 +536,15 @@ def enviar_xml_a_aeat(xml_firmado, p12_file_path, p12_password):
                         exenta_element = sujeta_element.find('.//sii:Exenta', namespaces=namespaces)
                         if exenta_element is not None:
                             detalle_exenta_element = exenta_element.find('.//sii:DetalleExenta', namespaces=namespaces)
-                            desglose['Sujeta'] = {
+                            desglose['PrestacionServicios'] = {
+                                'Sujeta': {
                                     'Exenta': {
                                         'DetalleExenta': {
                                             'CausaExencion': detalle_exenta_element.find('.//sii:CausaExencion', namespaces=namespaces).text if detalle_exenta_element.find('.//sii:CausaExencion', namespaces=namespaces) is not None else '',
                                             'BaseImponible': detalle_exenta_element.find('.//sii:BaseImponible', namespaces=namespaces).text if detalle_exenta_element.find('.//sii:BaseImponible', namespaces=namespaces) is not None else ''
                                         }
                                     }
+                                }
                             }
                 no_exenta_element = desglose_element.find('.//sii:NoExenta', namespaces=namespaces)
                 if no_exenta_element is not None:

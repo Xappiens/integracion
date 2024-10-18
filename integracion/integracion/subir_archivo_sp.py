@@ -20,7 +20,7 @@ handler = logging.FileHandler('/home/frappe/frappe-bench/apps/integracion/integr
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-logger.setLevel(logging.ERROR)
+logger.setLevel(logging.DEBUG)
 # Crear un RotatingFileHandler
 handler = RotatingFileHandler(
     '/home/frappe/frappe-bench/apps/integracion/integracion/integracion/logs/sharepoint_subida.log',
@@ -866,3 +866,97 @@ def procesa_carpeta(ctx, share, ruta, carpeta_actual):
         logger.info(f"Estructura obtenida: {json.dumps(carpeta_actual)}")
     except Exception as e:
         logger.error(f"Error procesando la carpeta {ruta}: {e}")
+
+
+def create_project_folder(doc, method):
+    """
+    Hook para crear la carpeta base automáticamente cuando se inserta un proyecto.
+    """
+    logger.info(f"Creando carpeta para el proyecto: {doc.name}")
+    
+    try:
+        doctype = "Project"
+        docname = doc.name
+        foldername = sanitize_name(docname)
+        
+        # Obtener la URL de SharePoint del documento
+        parent_folder_full_url = None
+        project_type = None
+        
+        if doc.project_type:
+            project_type = doc.project_type
+            biblioteca_name = frappe.db.get_value(
+                'Bibliotecas SP Docnames',
+                {'docname': project_type},
+                'parent'
+            )
+            logger.info(f"Tabla hija: {biblioteca_name}")
+        else:
+            biblioteca_name = frappe.db.get_value(
+                'Bibliotecas SP Docnames',
+                {'docname': docname},
+                'parent'
+            )
+            logger.info(f"Tabla hija: {biblioteca_name}")
+        
+        if biblioteca_name:
+            parent_folder_full_url = frappe.db.get_value('Bibliotecas SP', biblioteca_name, 'url_sp')
+            logger.info(f"URL encontrada en la tabla hija para Project con docname {docname}: {parent_folder_full_url}")
+        else:
+            # Si no se encuentra en la tabla hija, buscar en 'Bibliotecas SP' general
+            biblioteca_name = frappe.db.get_value('Bibliotecas SP', {'documento': doctype}, 'name')
+            if not biblioteca_name:
+                logger.info(f"No se encontró ningún documento en 'Bibliotecas SP' para {doctype}.")
+                return
+
+            doc_biblioteca = frappe.get_doc('Bibliotecas SP', biblioteca_name)
+
+            if doc_biblioteca.docnames:
+                matching_entry = next((entry for entry in doc_biblioteca.docnames if entry.docname == docname), None)
+                if matching_entry:
+                    parent_folder_full_url = doc_biblioteca.url_sp
+                else:
+                    logger.info(f"No se encontró una coincidencia en la tabla hija para {docname}, cancelando la ejecución.")
+                    return
+            else:
+                parent_folder_full_url = doc_biblioteca.url_sp
+                logger.info(f"Usando la URL general para {doctype}: {parent_folder_full_url}")
+
+        # Verificar que se obtuvo la URL correcta
+        if not parent_folder_full_url:
+            logger.error("No se pudo obtener la URL de la carpeta en SharePoint.")
+            return
+
+        # Obtener la ruta relativa en SharePoint
+        start_idx = parent_folder_full_url.find('/sites/')
+        if start_idx == -1:
+            logger.error("La URL no contiene '/sites/'. No se puede calcular la ruta relativa.")
+            return
+
+        site_url = parent_folder_full_url[:start_idx + len('/sites/') + parent_folder_full_url[start_idx + len('/sites/'):].find('/')]
+        site_relative_path = parent_folder_full_url[start_idx + len('/sites/') + parent_folder_full_url[start_idx + len('/sites/'):].find('/') + 1:]
+        logger.info(f"Ruta relativa calculada: {site_relative_path}")
+        logger.info(f"Conectando al contexto del sitio: {site_url}")
+
+        # Conectar a SharePoint
+        credentials = UserCredential(user_email, user_password)
+        ctx = ClientContext(site_url).with_credentials(credentials)
+
+        # Obtener la estructura de carpetas del proyecto
+        folder_structure = get_folder_structure(doctype, docname, foldername)
+        if not folder_structure:
+            logger.error(f"No se encontró la estructura de carpetas para {doctype} con nombre {docname}")
+            return
+
+        # Crear la estructura de carpetas en SharePoint
+        current_relative_path = site_relative_path.strip('/')
+        for folder_name in folder_structure:
+            folder_name_sanitized = sanitize_name(folder_name)
+            logger.info(f"Verificando existencia o creando carpeta: {current_relative_path}/{folder_name_sanitized}")
+            create_folder_if_not_exists(ctx, current_relative_path, folder_name_sanitized)
+            current_relative_path = f"{current_relative_path}/{folder_name_sanitized}".strip('/')
+
+        logger.info(f"Carpeta creada exitosamente para el proyecto {docname}.")
+
+    except Exception as e:
+        logger.error(f"Error al crear la carpeta para el proyecto {docname}: {e}")

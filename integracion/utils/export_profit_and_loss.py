@@ -112,40 +112,36 @@ def export_pdf(filters):
 
     profit_and_loss_skeleton = [{
         "parent": "A.3) RESULTADO ANTES DE IMPUESTOS",
-        "ol": "custom",
         "title_format": "h3",
         "children": [
             {
                 "parent": "A.1) RESULTADO DE EXPLOTACIÓN",
-                "ol": "1",
                 "title_format": "h3",
                 "children": [
                     {
-                        "parent": "Importe neto de la cifra de negocios.",
-                        "ol": "a",
+                        "parent": "I. Importe neto de la cifra de negocios.",
                         "children": [
-                            {"parent": "Ventas.", "accounts": (700,701,702,703,704,"706","708","709")},
-                            {"parent": "Prestaciones de servicios.", "accounts": (705, )},
+                            {"parent": "a) Ventas.", "accounts": (700,701,702,703,704,"706","708","709")},
+                            {"parent": "b) Prestaciones de servicios.", "accounts": (705, )},
                         ]
                     },
                     {
-                        "parent": "Variación de existencias de productos terminados y en curso de fabricación.",
+                        "parent": "2. Variación de existencias de productos terminados y en curso de fabricación.",
                         "accounts": ("6930", "71*", 7930)
                     },
-                    {"parent": "Trabajos realizados por la empresa para su activo.", "accounts": (73, )},
+                    {"parent": "3. Trabajos realizados por la empresa para su activo.", "accounts": (73, )},
                     {
-                        "parent": "Aprovisionamientos.",
-                        "ol": "a",
+                        "parent": "4. Aprovisionamientos.",
                         "children": [
-                            {"parent": "Consumo de mercaderías.", "accounts": ("600", 6060, 6080, 6090, "610*")},
+                            {"parent": "a) Consumo de mercaderías.", "accounts": ("600", 6060, 6080, 6090, "610*")},
                             {
-                                "parent": "Consumo de materias primas y otras materias consumibles.", "accounts": (
+                                "parent": "b) Consumo de materias primas y otras materias consumibles.", "accounts": (
                                     "601", "602", 6061, 6062, 6081, 6082, 6091, 6092, "611*", "612*"
                                 )
                             },
-                            {"parent": "Trabajos realizados por otras empresas.", "accounts": ("607", )},
+                            {"parent": "c) Trabajos realizados por otras empresas.", "accounts": ("607",)},
                             {
-                                "parent": "Deterioro de mercaderías, materias primas y otros aprovisionamientos.",
+                                "parent": "d) Deterioro de mercaderías, materias primas y otros aprovisionamientos.",
                                 "accounts": (
                                     "6931", "6932", "6933", 7931, 7932, 7933
                                 )
@@ -153,91 +149,83 @@ def export_pdf(filters):
                         ]
                     },
                     {
-                        "parent": "Otros ingresos de explotación.",
-                        "ol": "a",
+                        "parent": "5. Otros ingresos de explotación.",
                         "children": [
-                            {"parent": "Ingresos accesorios y otros de gestión corriente.", "accounts": (75, )},
+                            {"parent": "a) Ingresos accesorios y otros de gestión corriente.", "accounts": (75, )},
                             {
-                                "parent": "Subvenciones de explotación incorporadas al resultado del ejercicio.",
+                                "parent": "b) Subvenciones de explotación incorporadas al resultado del ejercicio.",
                                 "accounts": (740, 747)
                             }
                         ]
                     },
                     {
-                        "parent": "Gastos de personal.",
-                        "ol": "a",
+                        "parent": "6. Gastos de personal.",
                         "children": [
-                            {"parent": "Sueldos, salarios y asimilados.", "accounts": ("640","641","6450")},
-                            {"parent": "Cargas sociales.", "accounts": ("642","643","649")},
-                            {"parent": "Provisiones.", "accounts": ("644", "6457", 7950, 7957)}
+                            {"parent": "a) Sueldos, salarios y asimilados.", "accounts": ("640","641","6450")},
+                            {"parent": "b) Cargas sociales.", "accounts": ("642","643","649")},
+                            {"parent": "c) Provisiones.", "accounts": ("644", "6457", 7950, 7957)}
                         ]
                     },
                     {
-                        "parent": "Otros gastos de explotación.",
-                        "ol": "a",
+                        "parent": "5. Otros gastos de explotación.",
                         "children": [
-                            {"parent": "Servicios exteriores.", "accounts": (62, )},
-                            {"parent": "Tributos.", "accounts": ("631", "634", 636, 639)},
+                            {"parent": "a) Servicios exteriores.", "accounts": (62, )},
+                            {"parent": "b) Tributos.", "accounts": ("631", "634", 636, 639)},
                             {
-                                "parent": "Pérdidas, deterioro y variación de provisiones por operaciones comerciales.",
+                                "parent": "c) Pérdidas, deterioro y variación de provisiones por operaciones comerciales.",
                                 "accounts": ("650", "694", "695", 794, 7954)
                             },
-                            {"parent": "Otros gastos de gestión corriente.", "accounts": ("651", "659")},
+                            {"parent": "d) Otros gastos de gestión corriente.", "accounts": ("651", "659")},
                         ]
                     },
                     {
-                        "parent": "Amortización del inmovilizado", "accounts": ("68", )
+                        "parent": "8. Amortización del inmovilizado.", "accounts": ("68", )
                     },
                     {
-                        "parent": "Imputación de subvenciones de inmovilizado no financiero y otras.", "accounts": (746, )
+                        "parent": "9. Imputación de subvenciones de inmovilizado no financiero y otras.", "accounts": (746, )
                     },
                     {
-                        "parent": "Excesos de provisiones.", "accounts": (7951, 7952, 7955, 7956)
+                        "parent": "10. Excesos de provisiones.", "accounts": (7951, 7952, 7955, 7956)
                     },
                     {
-                        "parent": "Deterioro y resultado por enajenaciones del inmovilizado.",
-                        "ol": "a",
+                        "parent": "11. Deterioro y resultado por enajenaciones del inmovilizado.",
                         "children": [
-                            {"parent": "Deterioros y pérdidas.", "accounts": ("690", "691", "692", 790, 791, 792)},
+                            {"parent": "a) Deterioros y pérdidas.", "accounts": ("690", "691", "692", 790, 791, 792)},
                             {
-                                "parent": "Resultados por enajenaciones y otras.",
+                                "parent": "b) Resultados por enajenaciones y otras.",
                                 "accounts": ("670", "671", "672", 770, 771, 772)
                             }
                         ]
                     },
                     {
-                        "parent": "Impuestos sobre beneficios.",
+                        "parent": "17. Impuestos sobre beneficios.",
                         "accounts": ("6300*", "6301*", "633", 638)
                     }
                 ]
             },
             {
                 "parent": "A.2) RESULTADO FINANCIERO",
-                "ol": "1",
                 "title_format": "h3",
                 "children": [
                     {
-                        "parent": "Ingresos financieros.",
-                        "ol": "a",
+                        "parent": "12. Ingresos financieros.",
                         "children": [
                             {
-                                "parent": "De participaciones en instrumentos de patrimonio.",
-                                "ol": "1",
+                                "parent": "a) De participaciones en instrumentos de patrimonio.",
                                 "children": [
-                                    {"parent": "En empresas del grupo y asociadas.", "accounts": (7600, 7601)},
-                                    {"parent": "En terceros", "accounts": (7602, 7603)}
+                                    {"parent": "a₁) En empresas del grupo y asociadas.", "accounts": (7600, 7601)},
+                                    {"parent": "a₂) En terceros", "accounts": (7602, 7603)}
                                 ]
                             },
                             {
-                                "parent": "De valores negociables y otros instrumentos financieros.",
-                                "ol": "1",
+                                "parent": "b) De valores negociables y otros instrumentos financieros.",
                                 "children": [
                                     {
-                                        "parent": "De empresas del grupo y asociadas.",
+                                        "parent": "b₁) De empresas del grupo y asociadas.",
                                         "accounts": (7610, 7611, 76200, 76201, 76210, 76211)
                                     },
                                     {
-                                        "parent": "De terceros.",
+                                        "parent": "b₂) De terceros.",
                                         "accounts": (7612, 7613, 76202, 76203, 76212, 76213, 767, 769)
                                     }
                                 ]
@@ -245,53 +233,51 @@ def export_pdf(filters):
                         ]
                     },
                     {
-                        "parent": "Gastos financieros.",
-                        "ol": "a",
+                        "parent": "13. Gastos financieros.",
                         "children": [
                             {
-                                "parent": "Por deudas con empresas del grupo y asociadas.",
+                                "parent": "a) Por deudas con empresas del grupo y asociadas.",
                                 "accounts": (
                                     "6610", "6611", "6615", "6616", "6620", "6621",
                                     "6640", "6641", "6650", "6651", "6654", "6655"
                                 )
                             },
                             {
-                                "parent": "Por deudas con terceros.",
+                                "parent": "b) Por deudas con terceros.",
                                 "accounts": (
                                     "6612", "6613", "6617", "6618", "6622", "6623", "6624", "6642", "6643",
                                     "6652", "6653", "6656", "6657", "669"
                                 )
                             },
-                            {"parent": "Por actualización de provisiones.", "accounts": ("660", )}
+                            {"parent": "c) Por actualización de provisiones.", "accounts": ("660", )}
                         ]
                     },
                     {
-                        "parent": "Variación del valor razonable en instrumentos financieros.",
-                        "ol": "a",
+                        "parent": "14. Variación del valor razonable en instrumentos financieros.",
                         "children": [
                             {
-                                "parent": "Valor razonable con cambios en pérdidas y ganancias.",
+                                "parent": "a) Valor razonable con cambios en pérdidas y ganancias.",
                                 "accounts": ("6630", "6631", "6633", "6634", 7630, 7631, 7633, 7634)
                             },
                             {
-                                "parent": "Transferencia de ajustes de valor razonable con cambios en el patrimonio neto.",
+                                "parent": "b) Transferencia de ajustes de valor razonable con cambios en el patrimonio neto.",
                                 "accounts": ("6632",7632)
                             },
                         ]
                     },
                     {
-                        "parent": "Diferencias de cambio.", "accounts": ("668", 768)
+                        "parent": "15. Diferencias de cambio.", "accounts": ("668", 768)
                     },
                     {
-                        "parent": "Deterioro y resultado por enajenaciones de instrumentos financieros.",
+                        "parent": "16. Deterioro y resultado por enajenaciones de instrumentos financieros.",
                         "children": [
                             {
-                                "parent": "Deterioros y pérdidas.", "accounts": (
+                                "parent": "a) Deterioros y pérdidas.", "accounts": (
                                     "696", "697", "698", "699", 796, 797, 798, 799
                                 )
                             },
                             {
-                                "parent": "Resultados por enajenaciones y otras.",
+                                "parent": "b) Resultados por enajenaciones y otras.",
                                 "accounts": ("666", "667", "673", "675", 766, 773, 775)
                             }
                         ]
@@ -300,8 +286,7 @@ def export_pdf(filters):
             }
         ]
     },{
-        "parent": "Impuestos sobre beneficios.",
-        "ol": "1",
+        "parent": "17. Impuestos sobre beneficios.",
         "title_format": "h3",
         "accounts": ("6300*", "6301*", "633" ,638)
     }]
@@ -355,8 +340,15 @@ def export_pdf(filters):
                 border: 1px solid black;
             }}
             .account {{
+                width: 98%;
+                margin-left: auto;
                 font-size: 10px;
                 text-transform: uppercase;
+            }}
+            .container {{
+                width: 98%;
+                margin-left: auto;
+                margin-right: 0;
             }}
         </style>
     </head>
@@ -402,9 +394,9 @@ def export_pdf(filters):
 
     for title in main_title["children"]:
         body_html += f"""
-        <div style="width:95%;">
+        <div class="container">
         """
-        body_html = accounts_html(title["children"], title["ol"], title["title_format"], body_html)
+        body_html = accounts_html(title["children"], title["title_format"], body_html)
         body_html += "</div>"
 
         body_html += f"""
@@ -430,7 +422,7 @@ def export_pdf(filters):
     """
 
     a3_taxes = [profit_and_loss_skeleton[1]]
-    body_html = accounts_html(a3_taxes, "1", "h3", body_html)
+    body_html = accounts_html(a3_taxes, "h3", body_html)
 
     body_html += f"""
     <div class="observations">
@@ -449,11 +441,11 @@ def export_pdf(filters):
             </tr>
         </table>
     </div>
-    <div style="width: 100%;">
-        <div style="width: 95%;">
-            <table style="width:100%;">
-                <td><b>Resultado del ejercicio procedente de operaciones interrumpidas neto de impuestos.</b></td>
-                <td style="text-align: right;"><b>0</b></td>
+    <div class="width: 98%; margin: auto;">
+        <div class="container">
+            <table style="width: 100%;">
+                <td><b>18. Resultado del ejercicio procedente de operaciones interrumpidas neto de impuestos.</b></td>
+                <td style="text-align: right; padding-left: 20px;"><b>0</b></td>
             </table>
         </div>
     </div>

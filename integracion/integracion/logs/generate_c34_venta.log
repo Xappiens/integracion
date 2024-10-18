@@ -1,78 +1,83 @@
-2024-09-26 12:54:22,173 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
-2024-09-26 12:54:22,173 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ATUSL/I/2400011', 'ATUSL/I/2400024', 'ATUSL/I/2400027', 'ATUSL/I/2400028', 'ATUSL/I/2400029', 'ATUSL/I/2400031', 'ATUSL/I/2400032', 'ATUSL/I/2400034', 'ATUSL/I/2400035']
-2024-09-26 12:54:22,210 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400029
-2024-09-26 12:54:22,211 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400029 agregada a la empresa Academia Técnica Universitaria SL
-2024-09-26 12:54:22,235 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400028
-2024-09-26 12:54:22,236 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400028 agregada a la empresa Academia Técnica Universitaria SL
-2024-09-26 12:54:22,258 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400027
-2024-09-26 12:54:22,259 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400027 agregada a la empresa Academia Técnica Universitaria SL
-2024-09-26 12:54:22,280 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400024
-2024-09-26 12:54:22,281 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400024 agregada a la empresa Academia Técnica Universitaria SL
-2024-09-26 12:54:22,302 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400011
-2024-09-26 12:54:22,303 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400011 agregada a la empresa Academia Técnica Universitaria SL
-2024-09-26 12:54:22,325 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400035
-2024-09-26 12:54:22,326 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400035 agregada a la empresa Academia Técnica Universitaria SL
-2024-09-26 12:54:22,348 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400034
-2024-09-26 12:54:22,350 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400034 agregada a la empresa Academia Técnica Universitaria SL
-2024-09-26 12:54:22,380 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400032
-2024-09-26 12:54:22,382 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400032 agregada a la empresa Academia Técnica Universitaria SL
-2024-09-26 12:54:22,414 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400031
-2024-09-26 12:54:22,416 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400031 agregada a la empresa Academia Técnica Universitaria SL
-2024-09-26 12:54:22,446 - integracion.integracion.generate_c34_venta - INFO - Archivo XML generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-09-26T125422.xml
-2024-09-26 12:54:22,453 - integracion.integracion.generate_c34_venta - INFO - El archivo XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-09-26T125422.xml es válido según el XSD.
-2024-09-26 12:54:22,458 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400029 del cliente LOURDES MARIA COLE DIAZ
-2024-09-26 12:54:22,461 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400028 del cliente LOURDES MARIA COLE DIAZ
-2024-09-26 12:54:22,465 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400027 del cliente LOURDES MARIA COLE DIAZ
-2024-09-26 12:54:22,468 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400024 del cliente LOURDES MARIA COLE DIAZ
-2024-09-26 12:54:22,471 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400011 del cliente LOURDES MARIA COLE DIAZ
-2024-09-26 12:54:22,478 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400035 del cliente LOURDES MARIA COLE DIAZ
-2024-09-26 12:54:22,482 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400034 del cliente LOURDES MARIA COLE DIAZ
-2024-09-26 12:54:22,487 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400032 del cliente LOURDES MARIA COLE DIAZ
-2024-09-26 12:54:22,500 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400031 del cliente LOURDES MARIA COLE DIAZ
-2024-09-26 12:54:22,647 - integracion.integracion.generate_c34_venta - INFO - Archivo Excel generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-09-26T125422.xlsx
-2024-09-26 12:54:22,647 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-09-26T125422.xml a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C34-ATUSL-2024-09-26T125422
-2024-09-26 12:54:22,647 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
-2024-09-26 12:54:22,647 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
-2024-09-26 12:54:22,647 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL
-2024-09-26 12:54:23,951 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
-2024-09-26 12:54:24,540 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL
-2024-09-26 12:54:24,540 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-09-26T125422
-2024-09-26 12:54:24,723 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Academia Técnica Universitaria SL
-2024-09-26 12:54:25,172 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL/C34-ATUSL-2024-09-26T125422
-2024-09-26 12:54:25,172 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-09-26T125422/C34-ATUSL-2024-09-26T125422.xml
-2024-09-26 12:54:25,689 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-09-26T125422/C34-ATUSL-2024-09-26T125422.xml
-2024-09-26 12:54:25,689 - integracion.integracion.generate_c34_venta - DEBUG - Archivo XML subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-09-26T125422/C34-ATUSL-2024-09-26T125422.xml
-2024-09-26 12:54:25,689 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-09-26T125422.xlsx a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C34-ATUSL-2024-09-26T125422
-2024-09-26 12:54:25,690 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
-2024-09-26 12:54:25,690 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
-2024-09-26 12:54:25,690 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL
-2024-09-26 12:54:26,986 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
-2024-09-26 12:54:27,569 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL
-2024-09-26 12:54:27,570 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-09-26T125422
-2024-09-26 12:54:27,755 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Academia Técnica Universitaria SL
-2024-09-26 12:54:28,182 - integracion.integracion.generate_c34_venta - INFO - La carpeta ya existe: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-09-26T125422
-2024-09-26 12:54:28,183 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-09-26T125422/C34-ATUSL-2024-09-26T125422.xlsx
-2024-09-26 12:54:28,911 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-09-26T125422/C34-ATUSL-2024-09-26T125422.xlsx
-2024-09-26 12:54:28,911 - integracion.integracion.generate_c34_venta - DEBUG - Archivo Excel subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-09-26T125422/C34-ATUSL-2024-09-26T125422.xlsx
-2024-09-26 12:54:28,985 - integracion.integracion.generate_c34_venta - INFO - Remesa doc name: None
-2024-09-26 12:54:29,080 - integracion.integracion.generate_c34_venta - INFO - Remesa creada: REM-ATUSL-2024-09-26-0002 para la empresa Academia Técnica Universitaria SL
-2024-09-26 12:54:29,132 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400029: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-09-26 12:54:29,132 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400029
-2024-09-26 12:54:29,184 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400028: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-09-26 12:54:29,184 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400028
-2024-09-26 12:54:29,233 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400027: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-09-26 12:54:29,234 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400027
-2024-09-26 12:54:29,281 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400024: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-09-26 12:54:29,281 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400024
-2024-09-26 12:54:29,326 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400011: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-09-26 12:54:29,326 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400011
-2024-09-26 12:54:29,378 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400035: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-09-26 12:54:29,378 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400035
-2024-09-26 12:54:29,427 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400034: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-09-26 12:54:29,428 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400034
-2024-09-26 12:54:29,478 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400032: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-09-26 12:54:29,478 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400032
-2024-09-26 12:54:29,530 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400031: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-09-26 12:54:29,530 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400031
-2024-09-26 12:54:29,530 - integracion.integracion.generate_c34_venta - INFO - Archivo local XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-09-26T125422.xml eliminado después de subirlo a SharePoint
-2024-09-26 12:54:29,531 - integracion.integracion.generate_c34_venta - INFO - Archivo local Excel /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-09-26T125422.xlsx eliminado después de subirlo a SharePoint
+2024-10-09 09:36:39,451 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-10-09 09:36:39,451 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ATUSL/I/2400010', 'ATUSL/I/2400011', 'ATUSL/I/2400024', 'ATUSL/I/2400027', 'ATUSL/I/2400028', 'ATUSL/I/2400029', 'ATUSL/I/2400031', 'ATUSL/I/2400032', 'ATUSL/I/2400034', 'ATUSL/I/2400035']
+2024-10-09 09:36:39,558 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400035
+2024-10-09 09:36:39,561 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400035 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-09 09:36:39,586 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400034
+2024-10-09 09:36:39,587 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400034 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-09 09:36:39,608 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400032
+2024-10-09 09:36:39,609 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400032 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-09 09:36:39,645 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400031
+2024-10-09 09:36:39,647 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400031 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-09 09:36:39,667 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400029
+2024-10-09 09:36:39,669 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400029 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-09 09:36:39,688 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400028
+2024-10-09 09:36:39,689 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400028 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-09 09:36:39,707 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400027
+2024-10-09 09:36:39,709 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400027 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-09 09:36:39,727 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400024
+2024-10-09 09:36:39,728 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400024 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-09 09:36:39,754 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400011
+2024-10-09 09:36:39,756 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400011 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-09 09:36:39,775 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400010
+2024-10-09 09:36:39,776 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400010 agregada a la empresa Academia Técnica Universitaria SL
+2024-10-09 09:36:39,866 - integracion.integracion.generate_c34_venta - INFO - Archivo XML generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xml
+2024-10-09 09:36:39,871 - integracion.integracion.generate_c34_venta - INFO - El archivo XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xml es válido según el XSD.
+2024-10-09 09:36:39,878 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400035 del cliente LOURDES MARIA COLE DIAZ
+2024-10-09 09:36:39,883 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400034 del cliente LOURDES MARIA COLE DIAZ
+2024-10-09 09:36:39,887 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400032 del cliente LOURDES MARIA COLE DIAZ
+2024-10-09 09:36:39,892 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400031 del cliente LOURDES MARIA COLE DIAZ
+2024-10-09 09:36:39,898 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400029 del cliente LOURDES MARIA COLE DIAZ
+2024-10-09 09:36:39,904 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400028 del cliente LOURDES MARIA COLE DIAZ
+2024-10-09 09:36:39,913 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400027 del cliente LOURDES MARIA COLE DIAZ
+2024-10-09 09:36:39,921 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400024 del cliente LOURDES MARIA COLE DIAZ
+2024-10-09 09:36:39,929 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400011 del cliente LOURDES MARIA COLE DIAZ
+2024-10-09 09:36:39,937 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400010 del cliente LOURDES MARIA COLE DIAZ
+2024-10-09 09:36:40,145 - integracion.integracion.generate_c34_venta - INFO - Archivo Excel generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xlsx
+2024-10-09 09:36:40,145 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xml a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C34-ATUSL-2024-10-09T093639
+2024-10-09 09:36:40,145 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-10-09 09:36:40,145 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-10-09 09:36:40,146 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL
+2024-10-09 09:36:41,685 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-10-09 09:36:42,444 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL
+2024-10-09 09:36:42,444 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639
+2024-10-09 09:36:42,665 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Academia Técnica Universitaria SL
+2024-10-09 09:36:43,189 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL/C34-ATUSL-2024-10-09T093639
+2024-10-09 09:36:43,190 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xml
+2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xml
+2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - DEBUG - Archivo XML subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xml
+2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xlsx a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C34-ATUSL-2024-10-09T093639
+2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL
+2024-10-09 09:36:45,380 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-10-09 09:36:46,107 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL
+2024-10-09 09:36:46,108 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639
+2024-10-09 09:36:46,313 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Academia Técnica Universitaria SL
+2024-10-09 09:36:46,556 - integracion.integracion.generate_c34_venta - INFO - La carpeta ya existe: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639
+2024-10-09 09:36:46,557 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xlsx
+2024-10-09 09:36:47,174 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xlsx
+2024-10-09 09:36:47,175 - integracion.integracion.generate_c34_venta - DEBUG - Archivo Excel subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xlsx
+2024-10-09 09:36:47,205 - integracion.integracion.generate_c34_venta - INFO - Remesa doc name: None
+2024-10-09 09:36:47,437 - integracion.integracion.generate_c34_venta - INFO - Remesa creada: REM-ATUSL-2024-10-09-0001 para la empresa Academia Técnica Universitaria SL
+2024-10-09 09:36:47,500 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400035: (1054, "Unknown column 'is_paid' in 'field list'")
+2024-10-09 09:36:47,500 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400035
+2024-10-09 09:36:47,559 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400034: (1054, "Unknown column 'is_paid' in 'field list'")
+2024-10-09 09:36:47,559 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400034
+2024-10-09 09:36:47,644 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400032: (1054, "Unknown column 'is_paid' in 'field list'")
+2024-10-09 09:36:47,645 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400032
+2024-10-09 09:36:47,716 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400031: (1054, "Unknown column 'is_paid' in 'field list'")
+2024-10-09 09:36:47,717 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400031
+2024-10-09 09:36:47,797 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400029: (1054, "Unknown column 'is_paid' in 'field list'")
+2024-10-09 09:36:47,797 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400029
+2024-10-09 09:36:47,855 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400028: (1054, "Unknown column 'is_paid' in 'field list'")
+2024-10-09 09:36:47,855 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400028
+2024-10-09 09:36:47,931 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400027: (1054, "Unknown column 'is_paid' in 'field list'")
+2024-10-09 09:36:47,931 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400027
+2024-10-09 09:36:47,995 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400024: (1054, "Unknown column 'is_paid' in 'field list'")
+2024-10-09 09:36:47,995 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400024
+2024-10-09 09:36:48,042 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400011: (1054, "Unknown column 'is_paid' in 'field list'")
+2024-10-09 09:36:48,043 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400011
+2024-10-09 09:36:48,089 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400010: (1054, "Unknown column 'is_paid' in 'field list'")
+2024-10-09 09:36:48,089 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400010
+2024-10-09 09:36:48,089 - integracion.integracion.generate_c34_venta - INFO - Archivo local XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xml eliminado después de subirlo a SharePoint
+2024-10-09 09:36:48,090 - integracion.integracion.generate_c34_venta - INFO - Archivo local Excel /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xlsx eliminado después de subirlo a SharePoint

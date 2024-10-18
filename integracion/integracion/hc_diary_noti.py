@@ -58,7 +58,7 @@ def enviar_notificacion_a_asesoria():
             recipients=correos,
             subject="Hojas de Contratación Validadas Hoy",
             message=contenido_html,
-            is_bulk=True  # Enviar a través de la cola de correos
+            delayed=False   # Enviar a través de la cola de correos
         )
         frappe.log_error(f"Notificación enviada correctamente a: {', '.join(correos)}")
     except Exception as e:

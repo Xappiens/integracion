@@ -71,7 +71,7 @@ def change_status_to_remesa_emitida(sales_invoice_name, remesa_name):
         doc.custom_remesa = remesa_name
 
         # Marcar la factura como pagada
-        doc.is_paid = 1
+
 
         # Establecer el modo de pago desde el cliente
         customer_custom_modo_de_cobro = frappe.get_value("Customer", doc.customer, "custom_modo_de_cobro")
@@ -97,8 +97,7 @@ def change_status_to_remesa_emitida(sales_invoice_name, remesa_name):
             # Si la factura está validada, solo marcar los campos personalizados
             doc.db_set('custom_remesa_emitida', 1)
             doc.db_set('custom_remesa', remesa_name)
-            doc.db_set('is_paid', 1)
-            doc.db_set('custom_modo_de_cobro', customer_custom_modo_de_cobro)
+
             if default_account:
                 doc.db_set('cash_bank_account', default_account)
             doc.db_set('paid_amount', doc.outstanding_amount)
@@ -172,8 +171,8 @@ def generate_c34_venta(invoice_data=None):
         try:
             company_clean = remove_accents(company)
             abbr = frappe.get_value("Company", company, "abbr")
-            now = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
-            now_format = datetime.datetime.now().strftime("%Y-%m-%d")
+            now = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+            now_format = datetime.now().strftime("%Y-%m-%d")
             tax_id = frappe.get_value("Company", company, "tax_id")  # Obteniendo el CIF de la empresa
             fichero_id_value = f"C34-{abbr}-{now.replace(':', '')}"
             
@@ -260,8 +259,8 @@ def generate_c34_venta(invoice_data=None):
             # Datos de las transacciones (facturas)
             for invoice in invoices:
                 customer_cif = frappe.get_value("Customer", invoice.customer, "tax_id")
-                ref_mandato = frappe.get_value("Customer", invoice.customer, "custom_ref_mandato") or customer_cif
-                firma_mandato = frappe.get_value("Customer", invoice.customer, "custom_fecha_mandato")     
+                ref_mandato = frappe.get_value("Customer", invoice.customer, "customer_name") or customer_cif
+                firma_mandato = frappe.utils.nowdate()
                 drct_dbt_tx_inf = etree.SubElement(pmt_inf, "DrctDbtTxInf")
                 pmt_id = etree.SubElement(drct_dbt_tx_inf, "PmtId")
                 end_to_end_id = etree.SubElement(pmt_id, "EndToEndId")
@@ -276,7 +275,7 @@ def generate_c34_venta(invoice_data=None):
                 mndt_id.text = ref_mandato # Mandato relacionado con la factura
 
                 dt_of_sgntr = etree.SubElement(mndt_rltd_inf, "DtOfSgntr")
-                dt_of_sgntr.text = firma_mandato or ""  # Fecha de la firma del mandato
+                dt_of_sgntr.text = firma_mandato  # Fecha de la firma del mandato
 
                 dbtr_agt = etree.SubElement(drct_dbt_tx_inf, "DbtrAgt")
                 fin_instn_id = etree.SubElement(dbtr_agt, "FinInstnId")  # No necesita BIC
@@ -319,13 +318,13 @@ def generate_c34_venta(invoice_data=None):
                     fecha_cobro = frappe.utils.getdate(frappe.utils.nowdate()) + timedelta(days=4)
                     customer_cif = frappe.get_value("Customer", invoice.customer, "tax_id")
                     pais = frappe.get_value("Customer", invoice.customer, "custom_pais")
-                    ref_mandato = frappe.get_value("Customer", invoice.customer, "custom_ref_mandato") or customer_cif
+                    ref_mandato = frappe.get_value("Customer", invoice.customer, "customer_name") or customer_cif
                     residente = "Si"
                     if pais:
                         if pais.code == "es":
-                            residente = "Si"
+                            residente = "S"
                         else:
-                            residente = "No"
+                            residente = "N"
 
 
                     data.append({
@@ -342,8 +341,10 @@ def generate_c34_venta(invoice_data=None):
                         "Tipo Transferencia": "SEPA"
                     })
                     logger.debug(f"Datos agregados para la factura {invoice.name} del cliente {invoice.customer_name}")
+                    create_payment_entry_for_invoice(invoice)
                 except Exception as e:
                     logger.error(f"Error al procesar la factura {invoice.name}: {e}")
+            
 
             df = pd.DataFrame(data)
             excel_file_path = f"/home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/{fichero_id_value}.xlsx"
@@ -378,7 +379,7 @@ def generate_c34_venta(invoice_data=None):
 
         except Exception as e:
             logger.error(f"Error al subir el archivo a SharePoint: {e}")
-
+    logger.info("Urls de SharePoint generadas:" + str(sharepoint_urls))
     return sharepoint_urls
 
 def validate_xml_against_xsd(xml_file_path, xsd_file_path):
@@ -500,4 +501,49 @@ def upload_file_to_sharepoint(file_path, company, fichero_id_value):
         logger.error(f"Error al subir archivo a SharePoint: {str(e)}")
         return None
 
+def create_payment_entry_for_invoice(invoice):
+    try:
+        # Obtener la cuenta de débito desde la factura de venta
+        debit_account = invoice.debit_to
+        
+        # Obtener la cuenta de cobro por defecto de la compañía
+        default_receivable_account = frappe.get_value("Company", invoice.company, "default_receivable_account")
+        
+        # Crear el documento de Payment Entry
+        payment_entry = frappe.get_doc({
+            "doctype": "Payment Entry",
+            "payment_type": "Receive",
+            "posting_date": frappe.utils.nowdate(),
+            "party_type": "Customer",
+            "party": invoice.customer,
+            "company": invoice.company,
+            "mode_of_payment": frappe.get_value("Customer", invoice.customer, "custom_modo_de_cobro"),
+            "paid_amount": invoice.grand_total,
+            "received_amount": invoice.grand_total,
+            "paid_from": debit_account,  # Cuenta de origen del débito
+            "paid_to": default_receivable_account,  # Cuenta de cobro
+            "paid_to_account_currency": "EUR",  # Moneda en EUR
+            "bank_account": frappe.get_value("Company", invoice.company, "default_bank_account"),  # Cuenta bancaria por defecto de la empresa
+            "party_bank_account": frappe.get_value("Customer", invoice.customer, "default_bank_account"),  # Cuenta bancaria del cliente
+            "reference_no": invoice.name,
+            "reference_date": invoice.posting_date,
+            "references": [
+                {
+                    "reference_doctype": "Sales Invoice",
+                    "reference_name": invoice.name,
+                    "total_amount": invoice.grand_total,
+                    "outstanding_amount": invoice.outstanding_amount,
+                    "allocated_amount": invoice.grand_total,
+                }
+            ],
+            "currency": "EUR",  # Moneda definida a EUR
+        })
+        
+        # Guardar el Payment Entry
+        payment_entry.insert(ignore_permissions=True)
+        payment_entry.submit()
+        
+        logger.info(f"Payment Entry creado para la factura {invoice.name}: {payment_entry.name}")
 
+    except Exception as e:
+        logger.error(f"Error al crear Payment Entry para la factura {invoice.name}: {e}")

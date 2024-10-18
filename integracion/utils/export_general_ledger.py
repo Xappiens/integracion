@@ -225,7 +225,7 @@ def export_general_ledger(format, filters):
 
             body_html += f"""
             <div class="entry">
-                <span>{entry['posting_date']}</span>
+                <span>{entry['bill_date'] if entry['bill_date'] else entry['posting_date']}</span>
                 <span>{entry['concept']}</span>
                 <span>{entry['voucher_no']}</span>
                 <span style="{debit_style}">{entry['debit']}</span>
@@ -352,7 +352,7 @@ def export_general_ledger(format, filters):
         # Agregar los datos del General Ledger (empezando en la fila 10)
         row_num = header_row + 1
         for entry in general_ledger_data:
-            ws[f"C{row_num}"] = entry['posting_date']
+            ws[f"C{row_num}"] = entry['bill_date'] if entry['bill_date'] else entry['posting_date']
             ws[f"D{row_num}"] = entry['concept']
             ws[f"E{row_num}"] = entry['voucher_no']
 
@@ -438,17 +438,22 @@ def get_general_ledger_data(filters):
     """
     
     data = frappe.db.sql(query, query_filters, as_dict=True)
-    
+
     for entry in data:
+        entry["bill_date"] = None
+
         try:
             # Obtener el tipo de documento del voucher filtrando por voucher_no y account
             voucher_doctype = frappe.db.get_value("GL Entry", {"voucher_no": entry["voucher_no"], "account": entry["account"]}, "voucher_type")
-
 
             if voucher_doctype:
                 # Traducir el nombre del Doctype
                 translated_doctype = _(voucher_doctype)  # No necesitamos get_meta aquí
                 entry["concept"] = translated_doctype
+
+                # Si es factura de compra, usar campo bill_date de Doctype Purchase Invoice
+                if voucher_doctype == "Purchase Invoice":
+                    entry["bill_date"] = frappe.db.get_value("Purchase Invoice", entry["voucher_no"], "bill_date")
             else:
                 entry["concept"] = _("Unknown")
         
@@ -457,6 +462,13 @@ def get_general_ledger_data(filters):
             frappe.log_error(f"Error processing voucher_no {entry['voucher_no']}: {str(e)}", "Voucher Processing Error")
             entry["concept"] = _("Unknown")
 
+
+    # Filtro Fecha f. proveedor
+    if filters.get("bill_date"):
+        data = list(filter(
+            lambda e: e["bill_date"] == datetime.datetime.strptime(filters["bill_date"], "%Y-%m-%d").date(),
+            data
+        ))
 
     return data
 

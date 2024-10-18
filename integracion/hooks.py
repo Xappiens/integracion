@@ -33,7 +33,10 @@ doc_events = {
         "after_insert": "integracion.integracion.metodos_varios.notify_on_assign"
     },
     "Course": {
-        "after_insert": "integracion.integracion.courses_overrides.send_course_to_crm"
+        #"after_insert": "integracion.integracion.courses_overrides.send_course_to_crm"
+    },
+    "Project": {
+        "after_insert": "integracion.integracion.subir_archivo_sp.create_project_folder"
     }
 }
 
@@ -75,6 +78,7 @@ override_doctype_class = {
     "Bank Statement Import": "integracion.integracion.bank_tool_over.CustomBankStatementImport",
     "Account": "integracion.integracion.account_override.CustomAccount",
     "Assignment Rule": "integracion.integracion.assignament_override.AssignmentRuleOverride",
+    "Employee Separation" : "integracion.integracion.employee_sep_over.CustomEmployeeSeparation",
 
 }
 
@@ -91,8 +95,9 @@ scheduler_events = {
         
     },
     "daily": [
-        # "integracion.integracion.employee_status_update.update_employee_status",
-        # "integracion.integracion.employee_status_update.disable_inactive_employee_users"
+        "integracion.integracion.employee_status_update.check_contract_end"
+        "integracion.integracion.employee_status_update.update_employee_status",
+        "integracion.integracion.employee_status_update.disable_inactive_employee_users"
 ]
 }
 
@@ -109,6 +114,7 @@ app_include_js = [
     "/assets/integracion/js/custom_genlibmyr.js",
     "/assets/integracion/js/custom_balanceshote.js",
     "/assets/integracion/js/custom_profit_and_loss_statement.js",
+    "/assets/integracion/js/custom_mte_attendance.js",
 ]
 
 page_js = {
