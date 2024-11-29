@@ -43,24 +43,24 @@ class CustomPurchaseInvoice(PurchaseInvoice):
     def calculate_taxes_and_totals(self):
         # Llamar a la lógica original de la clase base
         super().calculate_taxes_and_totals()
+        if not self.inter_company_invoice_reference:
+            # Calcular el total redondeado basado en el nuevo valor del total
+            self.rounded_total = self.custom_round(self.grand_total)
+            self.base_rounded_total = self.custom_round(self.base_grand_total)
 
-        # Calcular el total redondeado basado en el nuevo valor del total
-        self.rounded_total = self.custom_round(self.grand_total)
-        self.base_rounded_total = self.custom_round(self.base_grand_total)
+            # Ajuste de redondeo calculado como la diferencia entre el total y el total redondeado
+            self.rounding_adjustment = self.rounded_total - self.grand_total
+            self.base_rounding_adjustment = self.base_rounded_total - self.base_grand_total
 
-        # Ajuste de redondeo calculado como la diferencia entre el total y el total redondeado
-        self.rounding_adjustment = self.rounded_total - self.grand_total
-        self.base_rounding_adjustment = self.base_rounded_total - self.base_grand_total
+            # Calcular el monto pendiente basado en el total redondeado menos los pagos anticipados
+            self.outstanding_amount = self.rounded_total - self.total_advance
 
-        # Calcular el monto pendiente basado en el total redondeado menos los pagos anticipados
-        self.outstanding_amount = self.rounded_total - self.total_advance
-
-        # Guardar los valores redondeados y ajustes en la base de datos
-        self.db_set('rounded_total', self.rounded_total)
-        self.db_set('base_rounded_total', self.base_rounded_total)
-        self.db_set('rounding_adjustment', self.rounding_adjustment)
-        self.db_set('base_rounding_adjustment', self.base_rounding_adjustment)
-        self.db_set('outstanding_amount', self.outstanding_amount)
+            # Guardar los valores redondeados y ajustes en la base de datos
+            self.db_set('rounded_total', self.rounded_total)
+            self.db_set('base_rounded_total', self.base_rounded_total)
+            self.db_set('rounding_adjustment', self.rounding_adjustment)
+            self.db_set('base_rounding_adjustment', self.base_rounding_adjustment)
+            self.db_set('outstanding_amount', self.outstanding_amount)
 
     def custom_round(self, value, decimals=2):
         """

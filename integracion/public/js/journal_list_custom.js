@@ -1,5 +1,6 @@
 frappe.listview_settings['Journal Entry'] = {
     onload: function(listview) {
+        logger.info("TEST")
         // Añadir un botón personalizado a la vista de lista de Journal Entry
         listview.page.add_menu_item(__('Importar Asientos Nóminas'), function() {
             frappe.prompt([

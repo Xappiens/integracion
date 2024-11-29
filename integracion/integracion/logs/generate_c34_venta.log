@@ -1,83 +1,1063 @@
-2024-10-09 09:36:39,451 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
-2024-10-09 09:36:39,451 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ATUSL/I/2400010', 'ATUSL/I/2400011', 'ATUSL/I/2400024', 'ATUSL/I/2400027', 'ATUSL/I/2400028', 'ATUSL/I/2400029', 'ATUSL/I/2400031', 'ATUSL/I/2400032', 'ATUSL/I/2400034', 'ATUSL/I/2400035']
-2024-10-09 09:36:39,558 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400035
-2024-10-09 09:36:39,561 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400035 agregada a la empresa Academia Técnica Universitaria SL
-2024-10-09 09:36:39,586 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400034
-2024-10-09 09:36:39,587 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400034 agregada a la empresa Academia Técnica Universitaria SL
-2024-10-09 09:36:39,608 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400032
-2024-10-09 09:36:39,609 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400032 agregada a la empresa Academia Técnica Universitaria SL
-2024-10-09 09:36:39,645 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400031
-2024-10-09 09:36:39,647 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400031 agregada a la empresa Academia Técnica Universitaria SL
-2024-10-09 09:36:39,667 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400029
-2024-10-09 09:36:39,669 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400029 agregada a la empresa Academia Técnica Universitaria SL
-2024-10-09 09:36:39,688 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400028
-2024-10-09 09:36:39,689 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400028 agregada a la empresa Academia Técnica Universitaria SL
-2024-10-09 09:36:39,707 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400027
-2024-10-09 09:36:39,709 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400027 agregada a la empresa Academia Técnica Universitaria SL
-2024-10-09 09:36:39,727 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400024
-2024-10-09 09:36:39,728 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400024 agregada a la empresa Academia Técnica Universitaria SL
-2024-10-09 09:36:39,754 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400011
-2024-10-09 09:36:39,756 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400011 agregada a la empresa Academia Técnica Universitaria SL
-2024-10-09 09:36:39,775 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400010
-2024-10-09 09:36:39,776 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400010 agregada a la empresa Academia Técnica Universitaria SL
-2024-10-09 09:36:39,866 - integracion.integracion.generate_c34_venta - INFO - Archivo XML generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xml
-2024-10-09 09:36:39,871 - integracion.integracion.generate_c34_venta - INFO - El archivo XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xml es válido según el XSD.
-2024-10-09 09:36:39,878 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400035 del cliente LOURDES MARIA COLE DIAZ
-2024-10-09 09:36:39,883 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400034 del cliente LOURDES MARIA COLE DIAZ
-2024-10-09 09:36:39,887 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400032 del cliente LOURDES MARIA COLE DIAZ
-2024-10-09 09:36:39,892 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400031 del cliente LOURDES MARIA COLE DIAZ
-2024-10-09 09:36:39,898 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400029 del cliente LOURDES MARIA COLE DIAZ
-2024-10-09 09:36:39,904 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400028 del cliente LOURDES MARIA COLE DIAZ
-2024-10-09 09:36:39,913 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400027 del cliente LOURDES MARIA COLE DIAZ
-2024-10-09 09:36:39,921 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400024 del cliente LOURDES MARIA COLE DIAZ
-2024-10-09 09:36:39,929 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400011 del cliente LOURDES MARIA COLE DIAZ
-2024-10-09 09:36:39,937 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400010 del cliente LOURDES MARIA COLE DIAZ
-2024-10-09 09:36:40,145 - integracion.integracion.generate_c34_venta - INFO - Archivo Excel generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xlsx
-2024-10-09 09:36:40,145 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xml a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C34-ATUSL-2024-10-09T093639
-2024-10-09 09:36:40,145 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
-2024-10-09 09:36:40,145 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
-2024-10-09 09:36:40,146 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL
-2024-10-09 09:36:41,685 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
-2024-10-09 09:36:42,444 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL
-2024-10-09 09:36:42,444 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639
-2024-10-09 09:36:42,665 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Academia Técnica Universitaria SL
-2024-10-09 09:36:43,189 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL/C34-ATUSL-2024-10-09T093639
-2024-10-09 09:36:43,190 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xml
-2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xml
-2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - DEBUG - Archivo XML subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xml
-2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xlsx a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C34-ATUSL-2024-10-09T093639
-2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
-2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
-2024-10-09 09:36:43,824 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL
-2024-10-09 09:36:45,380 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
-2024-10-09 09:36:46,107 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL
-2024-10-09 09:36:46,108 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639
-2024-10-09 09:36:46,313 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Academia Técnica Universitaria SL
-2024-10-09 09:36:46,556 - integracion.integracion.generate_c34_venta - INFO - La carpeta ya existe: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639
-2024-10-09 09:36:46,557 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xlsx
-2024-10-09 09:36:47,174 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xlsx
-2024-10-09 09:36:47,175 - integracion.integracion.generate_c34_venta - DEBUG - Archivo Excel subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C34-ATUSL-2024-10-09T093639/C34-ATUSL-2024-10-09T093639.xlsx
-2024-10-09 09:36:47,205 - integracion.integracion.generate_c34_venta - INFO - Remesa doc name: None
-2024-10-09 09:36:47,437 - integracion.integracion.generate_c34_venta - INFO - Remesa creada: REM-ATUSL-2024-10-09-0001 para la empresa Academia Técnica Universitaria SL
-2024-10-09 09:36:47,500 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400035: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-10-09 09:36:47,500 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400035
-2024-10-09 09:36:47,559 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400034: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-10-09 09:36:47,559 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400034
-2024-10-09 09:36:47,644 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400032: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-10-09 09:36:47,645 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400032
-2024-10-09 09:36:47,716 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400031: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-10-09 09:36:47,717 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400031
-2024-10-09 09:36:47,797 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400029: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-10-09 09:36:47,797 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400029
-2024-10-09 09:36:47,855 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400028: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-10-09 09:36:47,855 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400028
-2024-10-09 09:36:47,931 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400027: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-10-09 09:36:47,931 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400027
-2024-10-09 09:36:47,995 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400024: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-10-09 09:36:47,995 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400024
-2024-10-09 09:36:48,042 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400011: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-10-09 09:36:48,043 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400011
-2024-10-09 09:36:48,089 - integracion.integracion.generate_c34_venta - ERROR - Error al cambiar el estado de la factura ATUSL/I/2400010: (1054, "Unknown column 'is_paid' in 'field list'")
-2024-10-09 09:36:48,089 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400010
-2024-10-09 09:36:48,089 - integracion.integracion.generate_c34_venta - INFO - Archivo local XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xml eliminado después de subirlo a SharePoint
-2024-10-09 09:36:48,090 - integracion.integracion.generate_c34_venta - INFO - Archivo local Excel /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C34-ATUSL-2024-10-09T093639.xlsx eliminado después de subirlo a SharePoint
+2024-11-27 10:27:59,911 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 10:27:59,911 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['BATU/AL/2400059']
+2024-11-27 10:27:59,954 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura BATU/AL/2400059
+2024-11-27 10:27:59,955 - integracion.integracion.generate_c34_venta - DEBUG - Factura BATU/AL/2400059 agregada a la empresa Burgos atu SL
+2024-11-27 10:27:59,962 - integracion.integracion.generate_c34_venta - DEBUG - IBAN de la empresa Burgos atu SL: ES5321002363802200057840
+2024-11-27 10:27:59,970 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente CARMEN NARCISA PRADO SARMIENTO: ES8321002189230110326207
+2024-11-27 10:27:59,971 - integracion.integracion.generate_c34_venta - INFO - Archivo XML generado para Burgos atu SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T102759.xml
+2024-11-27 10:27:59,976 - integracion.integracion.generate_c34_venta - INFO - El archivo XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T102759.xml es válido según el XSD.
+2024-11-27 10:27:59,983 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura BATU/AL/2400059 del cliente CARMEN NARCISA PRADO SARMIENTO
+2024-11-27 10:27:59,983 - integracion.integracion.generate_c34_venta - INFO - La factura BATU/AL/2400059 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 10:28:00,003 - integracion.integracion.generate_c34_venta - INFO - Archivo Excel generado para Burgos atu SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T102759.xlsx
+2024-11-27 10:28:00,003 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T102759.xml a SharePoint para la compañía Burgos atu SL con Cuaderno C19-BATU-2024-11-27T102759
+2024-11-27 10:28:00,003 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 10:28:00,003 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 10:28:00,003 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 10:28:00,548 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 10:28:00,549 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL
+2024-11-27 10:28:00,723 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 10:28:01,368 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL
+2024-11-27 10:28:01,369 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T102759
+2024-11-27 10:28:01,610 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Burgos atu SL
+2024-11-27 10:28:02,159 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL/C19-BATU-2024-11-27T102759
+2024-11-27 10:28:02,160 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T102759/C19-BATU-2024-11-27T102759.xml
+2024-11-27 10:28:02,728 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T102759/C19-BATU-2024-11-27T102759.xml
+2024-11-27 10:28:02,729 - integracion.integracion.generate_c34_venta - DEBUG - Archivo XML subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T102759/C19-BATU-2024-11-27T102759.xml
+2024-11-27 10:28:02,729 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T102759.xlsx a SharePoint para la compañía Burgos atu SL con Cuaderno C19-BATU-2024-11-27T102759
+2024-11-27 10:28:02,729 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 10:28:02,729 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 10:28:02,729 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 10:28:03,267 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 10:28:03,268 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL
+2024-11-27 10:28:03,440 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 10:28:04,078 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL
+2024-11-27 10:28:04,080 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T102759
+2024-11-27 10:28:04,258 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Burgos atu SL
+2024-11-27 10:28:04,441 - integracion.integracion.generate_c34_venta - INFO - La carpeta ya existe: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T102759
+2024-11-27 10:28:04,441 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T102759/C19-BATU-2024-11-27T102759.xlsx
+2024-11-27 10:28:05,135 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T102759/C19-BATU-2024-11-27T102759.xlsx
+2024-11-27 10:28:05,136 - integracion.integracion.generate_c34_venta - DEBUG - Archivo Excel subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T102759/C19-BATU-2024-11-27T102759.xlsx
+2024-11-27 10:28:05,147 - integracion.integracion.generate_c34_venta - INFO - Remesa doc name: None
+2024-11-27 10:28:05,217 - integracion.integracion.generate_c34_venta - INFO - Remesa creada: REM-BATU-2024-11-27-0002 para la empresa Burgos atu SL
+2024-11-27 10:28:05,271 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura BATU/AL/2400059
+2024-11-27 10:28:05,272 - integracion.integracion.generate_c34_venta - INFO - Archivo local XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T102759.xml eliminado después de subirlo a SharePoint
+2024-11-27 10:28:05,272 - integracion.integracion.generate_c34_venta - INFO - Archivo local Excel /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T102759.xlsx eliminado después de subirlo a SharePoint
+2024-11-27 10:28:05,272 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[{'company': 'Burgos atu SL', 'excel_url': 'https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T102759/C19-BATU-2024-11-27T102759.xlsx'}]
+2024-11-27 10:30:21,733 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 10:30:21,734 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['BATU/AL/2400059']
+2024-11-27 10:30:21,789 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura BATU/AL/2400059
+2024-11-27 10:30:21,791 - integracion.integracion.generate_c34_venta - DEBUG - Factura BATU/AL/2400059 agregada a la empresa Burgos atu SL
+2024-11-27 10:30:21,800 - integracion.integracion.generate_c34_venta - DEBUG - IBAN de la empresa Burgos atu SL: ES5321002363802200057840
+2024-11-27 10:30:21,814 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente CARMEN NARCISA PRADO SARMIENTO: ES8321002189230110326207
+2024-11-27 10:30:21,815 - integracion.integracion.generate_c34_venta - INFO - Archivo XML generado para Burgos atu SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103021.xml
+2024-11-27 10:30:21,821 - integracion.integracion.generate_c34_venta - INFO - El archivo XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103021.xml es válido según el XSD.
+2024-11-27 10:30:21,828 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura BATU/AL/2400059 del cliente CARMEN NARCISA PRADO SARMIENTO
+2024-11-27 10:30:21,828 - integracion.integracion.generate_c34_venta - INFO - La factura BATU/AL/2400059 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 10:30:21,981 - integracion.integracion.generate_c34_venta - INFO - Archivo Excel generado para Burgos atu SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103021.xlsx
+2024-11-27 10:30:21,981 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103021.xml a SharePoint para la compañía Burgos atu SL con Cuaderno C19-BATU-2024-11-27T103021
+2024-11-27 10:30:21,981 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 10:30:21,981 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 10:30:21,981 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 10:30:22,547 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 10:30:22,548 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL
+2024-11-27 10:30:22,750 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 10:30:23,419 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL
+2024-11-27 10:30:23,420 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103021
+2024-11-27 10:30:23,619 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Burgos atu SL
+2024-11-27 10:30:24,169 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL/C19-BATU-2024-11-27T103021
+2024-11-27 10:30:24,171 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103021/C19-BATU-2024-11-27T103021.xml
+2024-11-27 10:30:24,886 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103021/C19-BATU-2024-11-27T103021.xml
+2024-11-27 10:30:24,887 - integracion.integracion.generate_c34_venta - DEBUG - Archivo XML subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103021/C19-BATU-2024-11-27T103021.xml
+2024-11-27 10:30:24,887 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103021.xlsx a SharePoint para la compañía Burgos atu SL con Cuaderno C19-BATU-2024-11-27T103021
+2024-11-27 10:30:24,888 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 10:30:24,888 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 10:30:24,888 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 10:30:25,465 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 10:30:25,466 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL
+2024-11-27 10:30:25,675 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 10:30:26,412 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL
+2024-11-27 10:30:26,413 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103021
+2024-11-27 10:30:26,666 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Burgos atu SL
+2024-11-27 10:30:26,889 - integracion.integracion.generate_c34_venta - INFO - La carpeta ya existe: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103021
+2024-11-27 10:30:26,890 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103021/C19-BATU-2024-11-27T103021.xlsx
+2024-11-27 10:30:27,559 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103021/C19-BATU-2024-11-27T103021.xlsx
+2024-11-27 10:30:27,560 - integracion.integracion.generate_c34_venta - DEBUG - Archivo Excel subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103021/C19-BATU-2024-11-27T103021.xlsx
+2024-11-27 10:30:27,598 - integracion.integracion.generate_c34_venta - INFO - Remesa doc name: None
+2024-11-27 10:30:27,725 - integracion.integracion.generate_c34_venta - INFO - Remesa creada: REM-BATU-2024-11-27-0003 para la empresa Burgos atu SL
+2024-11-27 10:30:27,805 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura BATU/AL/2400059
+2024-11-27 10:30:27,806 - integracion.integracion.generate_c34_venta - INFO - Archivo local XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103021.xml eliminado después de subirlo a SharePoint
+2024-11-27 10:30:27,806 - integracion.integracion.generate_c34_venta - INFO - Archivo local Excel /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103021.xlsx eliminado después de subirlo a SharePoint
+2024-11-27 10:30:27,806 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[{'company': 'Burgos atu SL', 'excel_url': 'https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103021/C19-BATU-2024-11-27T103021.xlsx'}]
+2024-11-27 10:32:34,341 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 10:32:34,341 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['BATU/AL/2400059']
+2024-11-27 10:32:34,402 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura BATU/AL/2400059
+2024-11-27 10:32:34,403 - integracion.integracion.generate_c34_venta - DEBUG - Factura BATU/AL/2400059 agregada a la empresa Burgos atu SL
+2024-11-27 10:32:34,413 - integracion.integracion.generate_c34_venta - DEBUG - IBAN de la empresa Burgos atu SL: ES5321002363802200057840
+2024-11-27 10:32:34,423 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente CARMEN NARCISA PRADO SARMIENTO: ES8321002189230110326207
+2024-11-27 10:32:34,423 - integracion.integracion.generate_c34_venta - INFO - Archivo XML generado para Burgos atu SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103234.xml
+2024-11-27 10:32:34,429 - integracion.integracion.generate_c34_venta - INFO - El archivo XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103234.xml es válido según el XSD.
+2024-11-27 10:32:34,436 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura BATU/AL/2400059 del cliente CARMEN NARCISA PRADO SARMIENTO
+2024-11-27 10:32:34,437 - integracion.integracion.generate_c34_venta - INFO - La factura BATU/AL/2400059 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 10:32:34,463 - integracion.integracion.generate_c34_venta - INFO - Archivo Excel generado para Burgos atu SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103234.xlsx
+2024-11-27 10:32:34,463 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103234.xml a SharePoint para la compañía Burgos atu SL con Cuaderno C19-BATU-2024-11-27T103234
+2024-11-27 10:32:34,463 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 10:32:34,463 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 10:32:34,463 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 10:32:35,109 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 10:32:35,110 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL
+2024-11-27 10:32:35,306 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 10:32:36,023 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL
+2024-11-27 10:32:36,024 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103234
+2024-11-27 10:32:36,240 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Burgos atu SL
+2024-11-27 10:32:36,809 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL/C19-BATU-2024-11-27T103234
+2024-11-27 10:32:36,810 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103234/C19-BATU-2024-11-27T103234.xml
+2024-11-27 10:32:37,506 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103234/C19-BATU-2024-11-27T103234.xml
+2024-11-27 10:32:37,507 - integracion.integracion.generate_c34_venta - DEBUG - Archivo XML subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103234/C19-BATU-2024-11-27T103234.xml
+2024-11-27 10:32:37,508 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103234.xlsx a SharePoint para la compañía Burgos atu SL con Cuaderno C19-BATU-2024-11-27T103234
+2024-11-27 10:32:37,508 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 10:32:37,508 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 10:32:37,508 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 10:32:38,144 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 10:32:38,145 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL
+2024-11-27 10:32:38,352 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 10:32:39,176 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL
+2024-11-27 10:32:39,177 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103234
+2024-11-27 10:32:39,398 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Burgos atu SL
+2024-11-27 10:32:39,636 - integracion.integracion.generate_c34_venta - INFO - La carpeta ya existe: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103234
+2024-11-27 10:32:39,637 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103234/C19-BATU-2024-11-27T103234.xlsx
+2024-11-27 10:32:40,414 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103234/C19-BATU-2024-11-27T103234.xlsx
+2024-11-27 10:32:40,414 - integracion.integracion.generate_c34_venta - DEBUG - Archivo Excel subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103234/C19-BATU-2024-11-27T103234.xlsx
+2024-11-27 10:32:40,423 - integracion.integracion.generate_c34_venta - INFO - Remesa doc name: None
+2024-11-27 10:32:40,486 - integracion.integracion.generate_c34_venta - INFO - Remesa creada: REM-BATU-2024-11-27-0004 para la empresa Burgos atu SL
+2024-11-27 10:32:40,538 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura BATU/AL/2400059
+2024-11-27 10:32:40,538 - integracion.integracion.generate_c34_venta - INFO - Archivo local XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103234.xml eliminado después de subirlo a SharePoint
+2024-11-27 10:32:40,539 - integracion.integracion.generate_c34_venta - INFO - Archivo local Excel /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103234.xlsx eliminado después de subirlo a SharePoint
+2024-11-27 10:32:40,539 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[{'company': 'Burgos atu SL', 'excel_url': 'https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103234/C19-BATU-2024-11-27T103234.xlsx'}]
+2024-11-27 10:34:33,140 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 10:34:33,140 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['BATU/AL/2400059']
+2024-11-27 10:34:33,184 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura BATU/AL/2400059
+2024-11-27 10:34:33,186 - integracion.integracion.generate_c34_venta - DEBUG - Factura BATU/AL/2400059 agregada a la empresa Burgos atu SL
+2024-11-27 10:34:33,201 - integracion.integracion.generate_c34_venta - DEBUG - IBAN de la empresa Burgos atu SL: ES5321002363802200057840
+2024-11-27 10:34:33,213 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente CARMEN NARCISA PRADO SARMIENTO: ES8321002189230110326207
+2024-11-27 10:34:33,214 - integracion.integracion.generate_c34_venta - INFO - Archivo XML generado para Burgos atu SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103433.xml
+2024-11-27 10:34:33,224 - integracion.integracion.generate_c34_venta - INFO - El archivo XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103433.xml es válido según el XSD.
+2024-11-27 10:34:33,233 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura BATU/AL/2400059 del cliente CARMEN NARCISA PRADO SARMIENTO
+2024-11-27 10:34:33,233 - integracion.integracion.generate_c34_venta - INFO - La factura BATU/AL/2400059 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 10:34:33,250 - integracion.integracion.generate_c34_venta - INFO - Archivo Excel generado para Burgos atu SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103433.xlsx
+2024-11-27 10:34:33,250 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103433.xml a SharePoint para la compañía Burgos atu SL con Cuaderno C19-BATU-2024-11-27T103433
+2024-11-27 10:34:33,250 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 10:34:33,250 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 10:34:33,250 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 10:34:33,994 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 10:34:33,995 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL
+2024-11-27 10:34:34,200 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 10:34:34,924 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL
+2024-11-27 10:34:34,925 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103433
+2024-11-27 10:34:35,171 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Burgos atu SL
+2024-11-27 10:34:35,733 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL/C19-BATU-2024-11-27T103433
+2024-11-27 10:34:35,734 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103433/C19-BATU-2024-11-27T103433.xml
+2024-11-27 10:34:36,344 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103433/C19-BATU-2024-11-27T103433.xml
+2024-11-27 10:34:36,345 - integracion.integracion.generate_c34_venta - DEBUG - Archivo XML subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103433/C19-BATU-2024-11-27T103433.xml
+2024-11-27 10:34:36,345 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103433.xlsx a SharePoint para la compañía Burgos atu SL con Cuaderno C19-BATU-2024-11-27T103433
+2024-11-27 10:34:36,345 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 10:34:36,345 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 10:34:36,345 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 10:34:36,950 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 10:34:36,951 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL
+2024-11-27 10:34:37,169 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 10:34:37,942 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Burgos atu SL
+2024-11-27 10:34:37,943 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103433
+2024-11-27 10:34:38,305 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Burgos atu SL
+2024-11-27 10:34:38,533 - integracion.integracion.generate_c34_venta - INFO - La carpeta ya existe: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103433
+2024-11-27 10:34:38,534 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103433/C19-BATU-2024-11-27T103433.xlsx
+2024-11-27 10:34:39,323 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103433/C19-BATU-2024-11-27T103433.xlsx
+2024-11-27 10:34:39,324 - integracion.integracion.generate_c34_venta - DEBUG - Archivo Excel subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103433/C19-BATU-2024-11-27T103433.xlsx
+2024-11-27 10:34:39,330 - integracion.integracion.generate_c34_venta - INFO - Remesa doc name: None
+2024-11-27 10:34:39,405 - integracion.integracion.generate_c34_venta - INFO - Remesa creada: REM-BATU-2024-11-27-0005 para la empresa Burgos atu SL
+2024-11-27 10:34:39,465 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura BATU/AL/2400059
+2024-11-27 10:34:39,465 - integracion.integracion.generate_c34_venta - INFO - Archivo local XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103433.xml eliminado después de subirlo a SharePoint
+2024-11-27 10:34:39,465 - integracion.integracion.generate_c34_venta - INFO - Archivo local Excel /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-BATU-2024-11-27T103433.xlsx eliminado después de subirlo a SharePoint
+2024-11-27 10:34:39,465 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[{'company': 'Burgos atu SL', 'excel_url': 'https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Burgos%20atu%20SL/C19-BATU-2024-11-27T103433/C19-BATU-2024-11-27T103433.xlsx'}]
+2024-11-27 14:47:34,981 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 14:47:34,982 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ASF/O/2400116', 'ASF/O/2400115', 'ASF/O/2400114', 'ASF/O/2400113', 'ASF/O/2400112', 'ASF/O/2400111', 'ASF/O/2400110', 'ASF/O/2400109', 'ASF/O/2400108', 'ASF/O/2400107', 'ASF/O/2400106-1', 'ASF/O/2400105', 'ASF/O/2400104', 'ASF/O/2400103', 'ASF/O/2400102', 'ASF/O/2400101', 'ASF/O/2400100', 'ASF/O/2400099', 'ASF/O/2400098', 'ASF/O/2400097', 'ASF/O/2400096', 'ASF/O/2400095', 'ASF/O/2400094', 'ASF/O/2400093', 'ASF/O/2400092', 'ASF/O/2400091', 'ASF/O/2400090', 'ASF/O/2400089', 'ASF/O/2400088', 'ASF/O/2400087', 'ASF/O/2400086', 'ASF/O/2400085', 'ASF/O/2400084', 'ASF/O/2400083', 'ASF/O/2400082', 'ASF/O/2400081', 'ASF/O/2400080', 'ASF/O/2400079', 'ASF/O/2400048']
+2024-11-27 14:47:35,026 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400116
+2024-11-27 14:47:35,028 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400116 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,053 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400115
+2024-11-27 14:47:35,054 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400115 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,076 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400114
+2024-11-27 14:47:35,077 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400114 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,099 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400113
+2024-11-27 14:47:35,101 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400113 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,123 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400112
+2024-11-27 14:47:35,125 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400112 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,151 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400111
+2024-11-27 14:47:35,153 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400111 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,180 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400110
+2024-11-27 14:47:35,182 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400110 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,203 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400109
+2024-11-27 14:47:35,205 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400109 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,227 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400108
+2024-11-27 14:47:35,229 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400108 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,252 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400107
+2024-11-27 14:47:35,254 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400107 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,276 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400106-1
+2024-11-27 14:47:35,278 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400106-1 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,300 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400105
+2024-11-27 14:47:35,301 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400105 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,323 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400104
+2024-11-27 14:47:35,324 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400104 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,346 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400103
+2024-11-27 14:47:35,348 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400103 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,369 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400102
+2024-11-27 14:47:35,371 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400102 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,393 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400101
+2024-11-27 14:47:35,394 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400101 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,418 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400099
+2024-11-27 14:47:35,420 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400099 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,443 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400100
+2024-11-27 14:47:35,445 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400100 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,468 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400098
+2024-11-27 14:47:35,469 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400098 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,491 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400097
+2024-11-27 14:47:35,493 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400097 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,517 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400096
+2024-11-27 14:47:35,519 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400096 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,542 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400095
+2024-11-27 14:47:35,544 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400095 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,568 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400094
+2024-11-27 14:47:35,569 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400094 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,592 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400048
+2024-11-27 14:47:35,594 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400048 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,618 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400093
+2024-11-27 14:47:35,619 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400093 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,643 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400092
+2024-11-27 14:47:35,645 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400092 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,668 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400091
+2024-11-27 14:47:35,669 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400091 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,692 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400090
+2024-11-27 14:47:35,694 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400090 ignorada por modo de cobro None LUIS SOLIS QUESTIAUX
+2024-11-27 14:47:35,720 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400089
+2024-11-27 14:47:35,722 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400089 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,749 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400088
+2024-11-27 14:47:35,750 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400088 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,774 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400087
+2024-11-27 14:47:35,776 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400087 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,799 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400086
+2024-11-27 14:47:35,800 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400086 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,824 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400085
+2024-11-27 14:47:35,826 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400085 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,849 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400084
+2024-11-27 14:47:35,850 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400084 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,872 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400083
+2024-11-27 14:47:35,874 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400083 ignorada por modo de cobro None CRISTINA GUTIERREZ ANDEREZ
+2024-11-27 14:47:35,896 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400082
+2024-11-27 14:47:35,898 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400082 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,930 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400081
+2024-11-27 14:47:35,931 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400081 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,959 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400080
+2024-11-27 14:47:35,961 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400080 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:35,990 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400079
+2024-11-27 14:47:35,991 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400079 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 14:47:36,000 - integracion.integracion.generate_c34_venta - DEBUG - IBAN de la empresa ATU Asesoría de Formación SL: ES1221002363832200058625
+2024-11-27 14:47:36,010 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente VARGA ORTIZ, ROSA MARIA: ES7120854818150330410933
+2024-11-27 14:47:36,016 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente OLAYA GONZALEZ FERNANDEZ: ES6400812705760003631471
+2024-11-27 14:47:36,021 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PABLO DIAZ MARTIN: ES8021037038180010174064
+2024-11-27 14:47:36,028 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ANA GONZALEZ MARTINEZ: ES2201824823340201563046
+2024-11-27 14:47:36,034 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ALFREDO MARTINEZ ESPINOSA: ES4121002343322100761053
+2024-11-27 14:47:36,040 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PILAR ROJO PEREDA: ES7701821767100201524166
+2024-11-27 14:47:36,046 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente SUSANA SUAREZ PEREZ: ES8400307170430389481273
+2024-11-27 14:47:36,051 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente REBECA FONTECHA DIEZ: ES8021000097330100317151
+2024-11-27 14:47:36,057 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ALBERTO FERNANDEZ PEREZ: ES3820800775693040010297
+2024-11-27 14:47:36,063 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente VERONICA VIOR MARTINEZ: ES9420480107873000025665
+2024-11-27 14:47:36,068 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente SUSANA IGLESIAS GUTIERREZ: ES5721037001690010214666
+2024-11-27 14:47:36,073 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente SILVIA GOMEZ GARCIA: ES2800494824112016059887
+2024-11-27 14:47:36,078 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ROSA ANA GONZALEZ VAZQUEZ: ES8201820608770201594360
+2024-11-27 14:47:36,082 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PRISCILA   RODRIGUEZ VARELA: ES1021006359580200083739
+2024-11-27 14:47:36,087 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PAULA NEIRA GARCIA: ES0800490860382094381700
+2024-11-27 14:47:36,092 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PABLO PEDRO CARUANA ALONSO: ES1621000347820100925172
+2024-11-27 14:47:36,097 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MONICA MERCHAN ALVAREZ: ES9200490134492910413026
+2024-11-27 14:47:36,102 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente NORA REY RODRIGUEZ: ES7730590017413307968226
+2024-11-27 14:47:36,107 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MIQUEL RIBAS LLADÓ: ES4221000107120100758065
+2024-11-27 14:47:36,112 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MAYRA PEREZ PEÑLA: ES9600495525542210521541
+2024-11-27 14:47:36,117 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARLEN BERNAL GONZALEZ: ES4330590112593394512523
+2024-11-27 14:47:36,122 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARIAN GONZALEZ GARCIA: ES2001829465640201405172
+2024-11-27 14:47:36,126 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARIAN GONZALEZ GARCIA: ES2001829465640201405172
+2024-11-27 14:47:36,134 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARIA LANZA ALVAREZ: ES1920480200163000000042
+2024-11-27 14:47:36,141 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARIA ISABEL ALVAREZ CABEZAS: ES0600815664890006202935
+2024-11-27 14:47:36,147 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARCO PORTILLO ARNAIZ: ES2721001529192100363717
+2024-11-27 14:47:36,151 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MAR OTERO BLANCO: ES6914650120382010369132
+2024-11-27 14:47:36,155 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente LIDIA OLALLA HERNANDO: ES9201827924710201559541
+2024-11-27 14:47:36,160 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente LAURA GARCIA FERNANDEZ: ES3620800298603040017455
+2024-11-27 14:47:36,164 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente JEDSALIW SANCHEZ NAVA: ES5900490592312792569776
+2024-11-27 14:47:36,169 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente IRENE SANCHEZ HIDALGO: ES4131901085415821107124
+2024-11-27 14:47:36,173 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ESTHER RODRÍGUEZ RODRIGUEZ: ES7421005459790200068649
+2024-11-27 14:47:36,178 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente DAVID GUTIERREZ ACEBAL: ES3301820717310201536853
+2024-11-27 14:47:36,182 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente COVADONGA BONDI VALLAURE: ES1421006618250200223072
+2024-11-27 14:47:36,186 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ANA FRANCISCA PEREZ SUAREZ: ES6221037066270030002742
+2024-11-27 14:47:36,190 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ANA BELÉN FERNANDEZ CARBAJALES: ES5130590013691545455212
+2024-11-27 14:47:36,195 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ALFONSO FERNANDEZ GARCIA: ES7100730100500565648863
+2024-11-27 14:47:36,196 - integracion.integracion.generate_c34_venta - INFO - Archivo XML generado para ATU Asesoría de Formación SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T144735.xml
+2024-11-27 14:47:36,202 - integracion.integracion.generate_c34_venta - INFO - El archivo XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T144735.xml es válido según el XSD.
+2024-11-27 14:47:36,209 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400116 del cliente ROSA MARIA VARGA ORTIZ
+2024-11-27 14:47:37,218 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400116: ACC-PAY-2024-01276
+2024-11-27 14:47:37,225 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400115 del cliente OLAYA GONZALEZ FERNANDEZ
+2024-11-27 14:47:37,708 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400115: ACC-PAY-2024-01277
+2024-11-27 14:47:37,713 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400114 del cliente PABLO DIAZ MARTIN
+2024-11-27 14:47:38,199 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400114: ACC-PAY-2024-01278
+2024-11-27 14:47:38,206 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400113 del cliente ANA GONZALEZ MARTINEZ
+2024-11-27 14:47:38,691 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400113: ACC-PAY-2024-01279
+2024-11-27 14:47:38,701 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400112 del cliente ALFREDO MARTINEZ ESPINOSA
+2024-11-27 14:47:39,213 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400112: ACC-PAY-2024-01280
+2024-11-27 14:47:39,219 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400111 del cliente PILAR ROJO PEREDA
+2024-11-27 14:47:39,713 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400111: ACC-PAY-2024-01281
+2024-11-27 14:47:39,719 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400110 del cliente SUSANA SUAREZ GARCIA
+2024-11-27 14:47:40,226 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400110: ACC-PAY-2024-01282
+2024-11-27 14:47:40,232 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400109 del cliente REBECA FONTECHA DIEZ
+2024-11-27 14:47:40,788 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400109: ACC-PAY-2024-01283
+2024-11-27 14:47:40,794 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400108 del cliente ALBERTO FERNANDEZ PEREZ
+2024-11-27 14:47:41,349 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400108: ACC-PAY-2024-01284
+2024-11-27 14:47:41,358 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400107 del cliente VERONICA VIOR MARTINEZ
+2024-11-27 14:47:41,882 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400107: ACC-PAY-2024-01285
+2024-11-27 14:47:41,888 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400106-1 del cliente SUSANA IGLESIAS GUTIERREZ
+2024-11-27 14:47:42,413 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400106-1: ACC-PAY-2024-01286
+2024-11-27 14:47:42,419 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400105 del cliente SILVIA GOMEZ GARCIA
+2024-11-27 14:47:42,989 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400105: ACC-PAY-2024-01287
+2024-11-27 14:47:42,995 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400104 del cliente ROSA ANA GONZALEZ VAZQUEZ
+2024-11-27 14:47:43,608 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400104: ACC-PAY-2024-01288
+2024-11-27 14:47:43,614 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400103 del cliente PRISCILA   RODRIGUEZ VARELA
+2024-11-27 14:47:44,130 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400103: ACC-PAY-2024-01289
+2024-11-27 14:47:44,136 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400102 del cliente PAULA NEIRA GARCIA
+2024-11-27 14:47:44,636 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400102: ACC-PAY-2024-01290
+2024-11-27 14:47:44,642 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400101 del cliente PABLO PEDRO CARUANA ALONSO
+2024-11-27 14:47:45,213 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400101: ACC-PAY-2024-01291
+2024-11-27 14:47:45,222 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400099 del cliente MONICA MERCHAN ALVAREZ
+2024-11-27 14:47:45,712 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400099: ACC-PAY-2024-01292
+2024-11-27 14:47:45,720 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400100 del cliente NORA REY RODRIGUEZ
+2024-11-27 14:47:46,219 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400100: ACC-PAY-2024-01293
+2024-11-27 14:47:46,226 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400098 del cliente MIQUEL RIBAS LLADÓ
+2024-11-27 14:47:46,741 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400098: ACC-PAY-2024-01294
+2024-11-27 14:47:46,748 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400097 del cliente MAYRA PEREZ PEÑA
+2024-11-27 14:47:47,223 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400097: ACC-PAY-2024-01295
+2024-11-27 14:47:47,229 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400096 del cliente MARLEN BERNAL GONZALEZ
+2024-11-27 14:47:47,764 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400096: ACC-PAY-2024-01296
+2024-11-27 14:47:47,771 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400095 del cliente MARIAN GONZALEZ GARCIA
+2024-11-27 14:47:48,285 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400095: ACC-PAY-2024-01297
+2024-11-27 14:47:48,292 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400094 del cliente MARIAN GONZALEZ GARCIA
+2024-11-27 14:47:48,765 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400094: ACC-PAY-2024-01298
+2024-11-27 14:47:48,772 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400048 del cliente MARIA LANZA ALVAREZ
+2024-11-27 14:47:49,287 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400048: ACC-PAY-2024-01299
+2024-11-27 14:47:49,293 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400093 del cliente MARIA ISABEL ALVAREZ CABEZAS
+2024-11-27 14:47:49,801 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400093: ACC-PAY-2024-01300
+2024-11-27 14:47:49,808 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400092 del cliente MARCO PORTILLO ARNAIZ
+2024-11-27 14:47:50,332 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400092: ACC-PAY-2024-01301
+2024-11-27 14:47:50,337 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400091 del cliente MAR OTERO BLANCO
+2024-11-27 14:47:50,809 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400091: ACC-PAY-2024-01302
+2024-11-27 14:47:50,815 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400089 del cliente LIDIA OLALLA HERNANDO
+2024-11-27 14:47:51,283 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400089: ACC-PAY-2024-01303
+2024-11-27 14:47:51,289 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400088 del cliente LAURA GARCIA FERNANDEZ
+2024-11-27 14:47:51,793 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400088: ACC-PAY-2024-01304
+2024-11-27 14:47:51,801 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400087 del cliente JEDSALIW SANCHEZ NAVA
+2024-11-27 14:47:52,344 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400087: ACC-PAY-2024-01305
+2024-11-27 14:47:52,351 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400086 del cliente IRENE SANCHEZ HIDALGO
+2024-11-27 14:47:52,847 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400086: ACC-PAY-2024-01306
+2024-11-27 14:47:52,854 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400085 del cliente ESTHER RODRÍGUEZ RODRIGUEZ
+2024-11-27 14:47:53,410 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400085: ACC-PAY-2024-01307
+2024-11-27 14:47:53,417 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400084 del cliente DAVID GUTIERREZ ACEBAL
+2024-11-27 14:47:53,964 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400084: ACC-PAY-2024-01308
+2024-11-27 14:47:53,970 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400082 del cliente COVADONGA BONDI VALLAURE
+2024-11-27 14:47:54,453 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400082: ACC-PAY-2024-01309
+2024-11-27 14:47:54,460 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400081 del cliente ANA FRANCISCA PEREZ SUAREZ
+2024-11-27 14:47:54,933 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400081: ACC-PAY-2024-01310
+2024-11-27 14:47:54,939 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400080 del cliente ANA BELÉN FERNANDEZ CARBAJALES
+2024-11-27 14:47:55,450 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400080: ACC-PAY-2024-01311
+2024-11-27 14:47:55,456 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400079 del cliente ALFONSO FERNANDEZ GARCIA
+2024-11-27 14:47:55,923 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400079: ACC-PAY-2024-01312
+2024-11-27 14:47:55,956 - integracion.integracion.generate_c34_venta - INFO - Archivo Excel generado para ATU Asesoría de Formación SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T144735.xlsx
+2024-11-27 14:47:55,956 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T144735.xml a SharePoint para la compañía ATU Asesoría de Formación SL con Cuaderno C19-ASF-2024-11-27T144735
+2024-11-27 14:47:55,956 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 14:47:55,957 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 14:47:55,957 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 14:47:56,566 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 14:47:56,567 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL
+2024-11-27 14:47:56,790 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 14:47:57,546 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/ATU Asesoría de Formación SL
+2024-11-27 14:47:57,547 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T144735
+2024-11-27 14:47:57,747 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent ATU Asesoría de Formación SL
+2024-11-27 14:47:58,284 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/ATU Asesoría de Formación SL/C19-ASF-2024-11-27T144735
+2024-11-27 14:47:58,285 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T144735/C19-ASF-2024-11-27T144735.xml
+2024-11-27 14:47:59,017 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T144735/C19-ASF-2024-11-27T144735.xml
+2024-11-27 14:47:59,018 - integracion.integracion.generate_c34_venta - DEBUG - Archivo XML subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T144735/C19-ASF-2024-11-27T144735.xml
+2024-11-27 14:47:59,018 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T144735.xlsx a SharePoint para la compañía ATU Asesoría de Formación SL con Cuaderno C19-ASF-2024-11-27T144735
+2024-11-27 14:47:59,018 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 14:47:59,018 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 14:47:59,018 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 14:47:59,605 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 14:47:59,606 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL
+2024-11-27 14:47:59,805 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 14:48:00,531 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/ATU Asesoría de Formación SL
+2024-11-27 14:48:00,532 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T144735
+2024-11-27 14:48:00,757 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent ATU Asesoría de Formación SL
+2024-11-27 14:48:00,967 - integracion.integracion.generate_c34_venta - INFO - La carpeta ya existe: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T144735
+2024-11-27 14:48:00,967 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T144735/C19-ASF-2024-11-27T144735.xlsx
+2024-11-27 14:48:01,714 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T144735/C19-ASF-2024-11-27T144735.xlsx
+2024-11-27 14:48:01,715 - integracion.integracion.generate_c34_venta - DEBUG - Archivo Excel subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T144735/C19-ASF-2024-11-27T144735.xlsx
+2024-11-27 14:48:01,767 - integracion.integracion.generate_c34_venta - INFO - Remesa doc name: None
+2024-11-27 14:48:01,916 - integracion.integracion.generate_c34_venta - INFO - Remesa creada: REM-ASF-2024-11-27-0001 para la empresa ATU Asesoría de Formación SL
+2024-11-27 14:48:01,989 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400116
+2024-11-27 14:48:02,050 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400115
+2024-11-27 14:48:02,139 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400114
+2024-11-27 14:48:02,196 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400113
+2024-11-27 14:48:02,256 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400112
+2024-11-27 14:48:02,316 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400111
+2024-11-27 14:48:02,371 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400110
+2024-11-27 14:48:02,425 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400109
+2024-11-27 14:48:02,478 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400108
+2024-11-27 14:48:02,542 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400107
+2024-11-27 14:48:02,595 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400106-1
+2024-11-27 14:48:02,646 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400105
+2024-11-27 14:48:02,697 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400104
+2024-11-27 14:48:02,749 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400103
+2024-11-27 14:48:02,801 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400102
+2024-11-27 14:48:02,853 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400101
+2024-11-27 14:48:02,904 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400099
+2024-11-27 14:48:02,965 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400100
+2024-11-27 14:48:03,020 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400098
+2024-11-27 14:48:03,070 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400097
+2024-11-27 14:48:03,117 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400096
+2024-11-27 14:48:03,194 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400095
+2024-11-27 14:48:03,243 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400094
+2024-11-27 14:48:03,304 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400048
+2024-11-27 14:48:03,357 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400093
+2024-11-27 14:48:03,405 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400092
+2024-11-27 14:48:03,454 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400091
+2024-11-27 14:48:03,503 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400089
+2024-11-27 14:48:03,551 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400088
+2024-11-27 14:48:03,615 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400087
+2024-11-27 14:48:03,668 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400086
+2024-11-27 14:48:03,718 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400085
+2024-11-27 14:48:03,766 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400084
+2024-11-27 14:48:03,813 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400082
+2024-11-27 14:48:03,860 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400081
+2024-11-27 14:48:03,907 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400080
+2024-11-27 14:48:03,953 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400079
+2024-11-27 14:48:03,953 - integracion.integracion.generate_c34_venta - INFO - Archivo local XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T144735.xml eliminado después de subirlo a SharePoint
+2024-11-27 14:48:03,953 - integracion.integracion.generate_c34_venta - INFO - Archivo local Excel /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T144735.xlsx eliminado después de subirlo a SharePoint
+2024-11-27 14:48:03,953 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[{'company': 'ATU Asesoría de Formación SL', 'excel_url': 'https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T144735/C19-ASF-2024-11-27T144735.xlsx'}]
+2024-11-27 15:06:15,655 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 15:06:15,656 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ASF/O/2400116', 'ASF/O/2400115', 'ASF/O/2400114', 'ASF/O/2400113', 'ASF/O/2400112', 'ASF/O/2400111', 'ASF/O/2400110', 'ASF/O/2400109', 'ASF/O/2400108', 'ASF/O/2400107', 'ASF/O/2400106-1', 'ASF/O/2400105', 'ASF/O/2400104', 'ASF/O/2400103', 'ASF/O/2400102', 'ASF/O/2400101', 'ASF/O/2400100', 'ASF/O/2400099', 'ASF/O/2400098', 'ASF/O/2400097', 'ASF/O/2400096', 'ASF/O/2400095', 'ASF/O/2400094', 'ASF/O/2400093', 'ASF/O/2400092', 'ASF/O/2400091', 'ASF/O/2400090', 'ASF/O/2400089', 'ASF/O/2400088', 'ASF/O/2400087', 'ASF/O/2400086', 'ASF/O/2400085', 'ASF/O/2400084', 'ASF/O/2400083', 'ASF/O/2400082', 'ASF/O/2400081', 'ASF/O/2400080', 'ASF/O/2400079', 'ASF/O/2400048']
+2024-11-27 15:06:15,738 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400082
+2024-11-27 15:06:15,740 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400082 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:15,766 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400081
+2024-11-27 15:06:15,768 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400081 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:15,794 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400080
+2024-11-27 15:06:15,797 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400080 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:15,820 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400079
+2024-11-27 15:06:15,822 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400079 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:15,845 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400048
+2024-11-27 15:06:15,847 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400048 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:15,873 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400084
+2024-11-27 15:06:15,875 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400084 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:15,899 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400085
+2024-11-27 15:06:15,901 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400085 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:15,924 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400086
+2024-11-27 15:06:15,926 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400086 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:15,949 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400087
+2024-11-27 15:06:15,951 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400087 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:15,978 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400088
+2024-11-27 15:06:15,980 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400088 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,013 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400089
+2024-11-27 15:06:16,015 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400089 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,045 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400091
+2024-11-27 15:06:16,047 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400091 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,085 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400092
+2024-11-27 15:06:16,087 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400092 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,119 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400093
+2024-11-27 15:06:16,121 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400093 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,144 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400094
+2024-11-27 15:06:16,146 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400094 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,169 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400095
+2024-11-27 15:06:16,171 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400095 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,193 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400096
+2024-11-27 15:06:16,195 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400096 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,217 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400097
+2024-11-27 15:06:16,219 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400097 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,243 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400098
+2024-11-27 15:06:16,245 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400098 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,270 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400099
+2024-11-27 15:06:16,272 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400099 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,295 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400100
+2024-11-27 15:06:16,298 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400100 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,337 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400101
+2024-11-27 15:06:16,339 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400101 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,381 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400102
+2024-11-27 15:06:16,383 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400102 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,415 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400103
+2024-11-27 15:06:16,417 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400103 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,439 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400104
+2024-11-27 15:06:16,441 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400104 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,464 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400105
+2024-11-27 15:06:16,465 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400105 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,503 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400111
+2024-11-27 15:06:16,505 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400111 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,543 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400107
+2024-11-27 15:06:16,545 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400107 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,582 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400106-1
+2024-11-27 15:06:16,584 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400106-1 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,621 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400108
+2024-11-27 15:06:16,624 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400108 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,660 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400109
+2024-11-27 15:06:16,663 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400109 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,695 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400110
+2024-11-27 15:06:16,696 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400110 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,734 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400112
+2024-11-27 15:06:16,736 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400112 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,774 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400113
+2024-11-27 15:06:16,776 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400113 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,807 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400114
+2024-11-27 15:06:16,809 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400114 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,842 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400115
+2024-11-27 15:06:16,845 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400115 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,880 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400116
+2024-11-27 15:06:16,882 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400116 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,916 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400090
+2024-11-27 15:06:16,918 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400090 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,952 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400083
+2024-11-27 15:06:16,955 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400083 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:16,968 - integracion.integracion.generate_c34_venta - DEBUG - IBAN de la empresa ATU Asesoría de Formación SL: ES1221002363832200058625
+2024-11-27 15:06:16,981 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente COVADONGA BONDI VALLAURE: ES1421006618250200223072
+2024-11-27 15:06:16,987 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ANA FRANCISCA PEREZ SUAREZ: ES6221037066270030002742
+2024-11-27 15:06:16,992 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ANA BELÉN FERNANDEZ CARBAJALES: ES5130590013691545455212
+2024-11-27 15:06:16,999 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ALFONSO FERNANDEZ GARCIA: ES7100730100500565648863
+2024-11-27 15:06:17,007 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARIA LANZA ALVAREZ: ES1920480200163000000042
+2024-11-27 15:06:17,015 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente DAVID GUTIERREZ ACEBAL: ES3301820717310201536853
+2024-11-27 15:06:17,023 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ESTHER RODRÍGUEZ RODRIGUEZ: ES7421005459790200068649
+2024-11-27 15:06:17,031 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente IRENE SANCHEZ HIDALGO: ES4131901085415821107124
+2024-11-27 15:06:17,040 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente JEDSALIW SANCHEZ NAVA: ES5900490592312792569776
+2024-11-27 15:06:17,048 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente LAURA GARCIA FERNANDEZ: ES3620800298603040017455
+2024-11-27 15:06:17,056 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente LIDIA OLALLA HERNANDO: ES9201827924710201559541
+2024-11-27 15:06:17,064 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MAR OTERO BLANCO: ES6914650120382010369132
+2024-11-27 15:06:17,072 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARCO PORTILLO ARNAIZ: ES2721001529192100363717
+2024-11-27 15:06:17,081 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARIA ISABEL ALVAREZ CABEZAS: ES0600815664890006202935
+2024-11-27 15:06:17,089 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARIAN GONZALEZ GARCIA: ES2001829465640201405172
+2024-11-27 15:06:17,096 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARIAN GONZALEZ GARCIA: ES2001829465640201405172
+2024-11-27 15:06:17,104 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARLEN BERNAL GONZALEZ: ES4330590112593394512523
+2024-11-27 15:06:17,110 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MAYRA PEREZ PEÑLA: ES9600495525542210521541
+2024-11-27 15:06:17,115 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MIQUEL RIBAS LLADÓ: ES4221000107120100758065
+2024-11-27 15:06:17,120 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MONICA MERCHAN ALVAREZ: ES9200490134492910413026
+2024-11-27 15:06:17,125 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente NORA REY RODRIGUEZ: ES7730590017413307968226
+2024-11-27 15:06:17,129 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PABLO PEDRO CARUANA ALONSO: ES1621000347820100925172
+2024-11-27 15:06:17,134 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PAULA NEIRA GARCIA: ES0800490860382094381700
+2024-11-27 15:06:17,139 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PRISCILA   RODRIGUEZ VARELA: ES1021006359580200083739
+2024-11-27 15:06:17,143 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ROSA ANA GONZALEZ VAZQUEZ: ES8201820608770201594360
+2024-11-27 15:06:17,148 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente SILVIA GOMEZ GARCIA: ES2800494824112016059887
+2024-11-27 15:06:17,152 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PILAR ROJO PEREDA: ES7701821767100201524166
+2024-11-27 15:06:17,157 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente VERONICA VIOR MARTINEZ: ES9420480107873000025665
+2024-11-27 15:06:17,162 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente SUSANA IGLESIAS GUTIERREZ: ES5721037001690010214666
+2024-11-27 15:06:17,166 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ALBERTO FERNANDEZ PEREZ: ES3820800775693040010297
+2024-11-27 15:06:17,172 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente REBECA FONTECHA DIEZ: ES8021000097330100317151
+2024-11-27 15:06:17,178 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente SUSANA SUAREZ PEREZ: ES8400307170430389481273
+2024-11-27 15:06:17,184 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ALFREDO MARTINEZ ESPINOSA: ES4121002343322100761053
+2024-11-27 15:06:17,190 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ANA GONZALEZ MARTINEZ: ES2201824823340201563046
+2024-11-27 15:06:17,197 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PABLO DIAZ MARTIN: ES8021037038180010174064
+2024-11-27 15:06:17,203 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente OLAYA GONZALEZ FERNANDEZ: ES6400812705760003631471
+2024-11-27 15:06:17,210 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente VARGA ORTIZ, ROSA MARIA: ES7120854818150330410933
+2024-11-27 15:06:17,216 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente LUIS SOLIS QUESTIAUX: ES8300750017200700101090
+2024-11-27 15:06:17,223 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente CRISTINA GUTIERREZ ANDEREZ: ES2920480076083004004309
+2024-11-27 15:06:17,225 - integracion.integracion.generate_c34_venta - INFO - Archivo XML generado para ATU Asesoría de Formación SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T150616.xml
+2024-11-27 15:06:17,234 - integracion.integracion.generate_c34_venta - INFO - El archivo XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T150616.xml es válido según el XSD.
+2024-11-27 15:06:17,243 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400082 del cliente COVADONGA BONDI VALLAURE
+2024-11-27 15:06:17,244 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400082 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,252 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400081 del cliente ANA FRANCISCA PEREZ SUAREZ
+2024-11-27 15:06:17,252 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400081 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,261 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400080 del cliente ANA BELÉN FERNANDEZ CARBAJALES
+2024-11-27 15:06:17,261 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,269 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400079 del cliente ALFONSO FERNANDEZ GARCIA
+2024-11-27 15:06:17,269 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400079 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,277 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400048 del cliente MARIA LANZA ALVAREZ
+2024-11-27 15:06:17,278 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400048 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,285 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400084 del cliente DAVID GUTIERREZ ACEBAL
+2024-11-27 15:06:17,285 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400084 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,293 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400085 del cliente ESTHER RODRÍGUEZ RODRIGUEZ
+2024-11-27 15:06:17,294 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400085 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,302 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400086 del cliente IRENE SANCHEZ HIDALGO
+2024-11-27 15:06:17,302 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400086 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,310 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400087 del cliente JEDSALIW SANCHEZ NAVA
+2024-11-27 15:06:17,310 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400087 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,318 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400088 del cliente LAURA GARCIA FERNANDEZ
+2024-11-27 15:06:17,318 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400088 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,324 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400089 del cliente LIDIA OLALLA HERNANDO
+2024-11-27 15:06:17,324 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400089 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,330 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400091 del cliente MAR OTERO BLANCO
+2024-11-27 15:06:17,330 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,336 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400092 del cliente MARCO PORTILLO ARNAIZ
+2024-11-27 15:06:17,336 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400092 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,342 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400093 del cliente MARIA ISABEL ALVAREZ CABEZAS
+2024-11-27 15:06:17,342 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400093 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,348 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400094 del cliente MARIAN GONZALEZ GARCIA
+2024-11-27 15:06:17,348 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400094 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,353 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400095 del cliente MARIAN GONZALEZ GARCIA
+2024-11-27 15:06:17,353 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,359 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400096 del cliente MARLEN BERNAL GONZALEZ
+2024-11-27 15:06:17,359 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400096 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,365 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400097 del cliente MAYRA PEREZ PEÑA
+2024-11-27 15:06:17,365 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,371 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400098 del cliente MIQUEL RIBAS LLADÓ
+2024-11-27 15:06:17,372 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,377 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400099 del cliente MONICA MERCHAN ALVAREZ
+2024-11-27 15:06:17,377 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,383 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400100 del cliente NORA REY RODRIGUEZ
+2024-11-27 15:06:17,383 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400100 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,390 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400101 del cliente PABLO PEDRO CARUANA ALONSO
+2024-11-27 15:06:17,390 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400101 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,396 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400102 del cliente PAULA NEIRA GARCIA
+2024-11-27 15:06:17,396 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400102 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,402 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400103 del cliente PRISCILA   RODRIGUEZ VARELA
+2024-11-27 15:06:17,402 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400103 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,410 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400104 del cliente ROSA ANA GONZALEZ VAZQUEZ
+2024-11-27 15:06:17,410 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400104 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,418 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400105 del cliente SILVIA GOMEZ GARCIA
+2024-11-27 15:06:17,418 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400105 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,426 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400111 del cliente PILAR ROJO PEREDA
+2024-11-27 15:06:17,426 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400111 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,434 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400107 del cliente VERONICA VIOR MARTINEZ
+2024-11-27 15:06:17,434 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400107 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,441 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400106-1 del cliente SUSANA IGLESIAS GUTIERREZ
+2024-11-27 15:06:17,441 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400106-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,449 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400108 del cliente ALBERTO FERNANDEZ PEREZ
+2024-11-27 15:06:17,449 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400108 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,456 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400109 del cliente REBECA FONTECHA DIEZ
+2024-11-27 15:06:17,457 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400109 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,464 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400110 del cliente SUSANA SUAREZ GARCIA
+2024-11-27 15:06:17,464 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400110 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,472 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400112 del cliente ALFREDO MARTINEZ ESPINOSA
+2024-11-27 15:06:17,472 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400112 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,479 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400113 del cliente ANA GONZALEZ MARTINEZ
+2024-11-27 15:06:17,479 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400113 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,485 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400114 del cliente PABLO DIAZ MARTIN
+2024-11-27 15:06:17,485 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400114 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,492 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400115 del cliente OLAYA GONZALEZ FERNANDEZ
+2024-11-27 15:06:17,492 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400115 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,497 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400116 del cliente ROSA MARIA VARGA ORTIZ
+2024-11-27 15:06:17,497 - integracion.integracion.generate_c34_venta - INFO - La factura ASF/O/2400116 ya está completamente pagada. No se requiere un Payment Entry.
+2024-11-27 15:06:17,503 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400090 del cliente LUIS SOLIS QUESTIAUX
+2024-11-27 15:06:18,376 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400090: ACC-PAY-2024-01314
+2024-11-27 15:06:18,382 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400083 del cliente CRISTINA GUTIERREZ ANDEREZ
+2024-11-27 15:06:18,869 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400083: ACC-PAY-2024-01315
+2024-11-27 15:06:19,031 - integracion.integracion.generate_c34_venta - INFO - Archivo Excel generado para ATU Asesoría de Formación SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T150616.xlsx
+2024-11-27 15:06:19,031 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T150616.xml a SharePoint para la compañía ATU Asesoría de Formación SL con Cuaderno C19-ASF-2024-11-27T150616
+2024-11-27 15:06:19,031 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 15:06:19,031 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 15:06:19,031 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 15:06:19,745 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 15:06:19,746 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL
+2024-11-27 15:06:19,916 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 15:06:20,514 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/ATU Asesoría de Formación SL
+2024-11-27 15:06:20,514 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T150616
+2024-11-27 15:06:20,686 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent ATU Asesoría de Formación SL
+2024-11-27 15:06:21,159 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/ATU Asesoría de Formación SL/C19-ASF-2024-11-27T150616
+2024-11-27 15:06:21,159 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T150616/C19-ASF-2024-11-27T150616.xml
+2024-11-27 15:06:21,672 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T150616/C19-ASF-2024-11-27T150616.xml
+2024-11-27 15:06:21,673 - integracion.integracion.generate_c34_venta - DEBUG - Archivo XML subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T150616/C19-ASF-2024-11-27T150616.xml
+2024-11-27 15:06:21,673 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T150616.xlsx a SharePoint para la compañía ATU Asesoría de Formación SL con Cuaderno C19-ASF-2024-11-27T150616
+2024-11-27 15:06:21,674 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 15:06:21,674 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 15:06:21,674 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 15:06:22,840 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 15:06:22,841 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL
+2024-11-27 15:06:23,016 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 15:06:23,653 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/ATU Asesoría de Formación SL
+2024-11-27 15:06:23,653 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T150616
+2024-11-27 15:06:23,863 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent ATU Asesoría de Formación SL
+2024-11-27 15:06:24,050 - integracion.integracion.generate_c34_venta - INFO - La carpeta ya existe: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T150616
+2024-11-27 15:06:24,050 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T150616/C19-ASF-2024-11-27T150616.xlsx
+2024-11-27 15:06:24,662 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T150616/C19-ASF-2024-11-27T150616.xlsx
+2024-11-27 15:06:24,663 - integracion.integracion.generate_c34_venta - DEBUG - Archivo Excel subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T150616/C19-ASF-2024-11-27T150616.xlsx
+2024-11-27 15:06:24,678 - integracion.integracion.generate_c34_venta - INFO - Remesa doc name: None
+2024-11-27 15:06:24,831 - integracion.integracion.generate_c34_venta - INFO - Remesa creada: REM-ASF-2024-11-27-0002 para la empresa ATU Asesoría de Formación SL
+2024-11-27 15:06:24,916 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400082
+2024-11-27 15:06:24,979 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400081
+2024-11-27 15:06:25,051 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400080
+2024-11-27 15:06:25,113 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400079
+2024-11-27 15:06:25,166 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400048
+2024-11-27 15:06:25,215 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400084
+2024-11-27 15:06:25,267 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400085
+2024-11-27 15:06:25,318 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400086
+2024-11-27 15:06:25,384 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400087
+2024-11-27 15:06:25,434 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400088
+2024-11-27 15:06:25,490 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400089
+2024-11-27 15:06:25,598 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400091
+2024-11-27 15:06:25,658 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400092
+2024-11-27 15:06:25,707 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400093
+2024-11-27 15:06:25,754 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400094
+2024-11-27 15:06:25,805 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400095
+2024-11-27 15:06:25,869 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400096
+2024-11-27 15:06:25,936 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400097
+2024-11-27 15:06:26,005 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400098
+2024-11-27 15:06:26,078 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400099
+2024-11-27 15:06:26,127 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400100
+2024-11-27 15:06:26,196 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400101
+2024-11-27 15:06:26,245 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400102
+2024-11-27 15:06:26,297 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400103
+2024-11-27 15:06:26,347 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400104
+2024-11-27 15:06:26,398 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400105
+2024-11-27 15:06:26,449 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400111
+2024-11-27 15:06:26,506 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400107
+2024-11-27 15:06:26,564 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400106-1
+2024-11-27 15:06:26,615 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400108
+2024-11-27 15:06:26,669 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400109
+2024-11-27 15:06:26,722 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400110
+2024-11-27 15:06:26,774 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400112
+2024-11-27 15:06:26,825 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400113
+2024-11-27 15:06:26,877 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400114
+2024-11-27 15:06:26,928 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400115
+2024-11-27 15:06:26,981 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400116
+2024-11-27 15:06:27,043 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400090
+2024-11-27 15:06:27,095 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400083
+2024-11-27 15:06:27,096 - integracion.integracion.generate_c34_venta - INFO - Archivo local XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T150616.xml eliminado después de subirlo a SharePoint
+2024-11-27 15:06:27,096 - integracion.integracion.generate_c34_venta - INFO - Archivo local Excel /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-27T150616.xlsx eliminado después de subirlo a SharePoint
+2024-11-27 15:06:27,096 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[{'company': 'ATU Asesoría de Formación SL', 'excel_url': 'https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-27T150616/C19-ASF-2024-11-27T150616.xlsx'}]
+2024-11-27 17:42:18,839 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 17:42:18,839 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ATUSL/I/2400052']
+2024-11-27 17:42:18,877 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400052
+2024-11-27 17:42:18,878 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400052 ignorada por modo de cobro None Cristina Villanuva Romero
+2024-11-27 17:42:18,878 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[]
+2024-11-27 17:42:54,600 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 17:42:54,601 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ATUSL/I/2400052']
+2024-11-27 17:42:54,645 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400052
+2024-11-27 17:42:54,646 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400052 ignorada por modo de cobro None Cristina Villanuva Romero
+2024-11-27 17:42:54,647 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[]
+2024-11-27 17:43:33,320 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 17:43:33,321 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ATUSL/I/2400051']
+2024-11-27 17:43:33,360 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400051
+2024-11-27 17:43:33,361 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400051 ignorada por modo de cobro None Genoveva Arranz Hernán
+2024-11-27 17:43:33,362 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[]
+2024-11-27 17:47:11,620 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 17:47:11,620 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ATUSL/I/2400030']
+2024-11-27 17:47:11,662 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400030
+2024-11-27 17:47:11,664 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400030 ignorada por modo de cobro None Jorge Macías Mateos
+2024-11-27 17:47:11,664 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[]
+2024-11-27 17:47:20,575 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 17:47:20,575 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ASF/B/2400008', 'ATUSL/I/2400030']
+2024-11-27 17:47:20,616 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/B/2400008
+2024-11-27 17:47:20,618 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/B/2400008 ignorada por modo de cobro None BAGLIETTO REFORMAS Y REVESTIMIENTOS S.L.
+2024-11-27 17:47:20,640 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400030
+2024-11-27 17:47:20,641 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400030 ignorada por modo de cobro None Jorge Macías Mateos
+2024-11-27 17:47:20,641 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[]
+2024-11-27 17:48:12,382 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 17:48:12,383 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ATUSL/I/2400033']
+2024-11-27 17:48:12,423 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400033
+2024-11-27 17:48:12,424 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400033 ignorada por modo de cobro None SERGIO  GARCIA REGUERA
+2024-11-27 17:48:12,424 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[]
+2024-11-27 17:48:25,798 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-27 17:48:25,798 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ATUSL/I/2400049']
+2024-11-27 17:48:25,835 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ATUSL/I/2400049
+2024-11-27 17:48:25,836 - integracion.integracion.generate_c34_venta - DEBUG - Factura ATUSL/I/2400049 agregada a la empresa Academia Técnica Universitaria SL
+2024-11-27 17:48:25,850 - integracion.integracion.generate_c34_venta - DEBUG - IBAN de la empresa Academia Técnica Universitaria SL: ES5721002363882200102869
+2024-11-27 17:48:25,858 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente LOURDES MARIA COLE DIAZ: ES4601860071880508750522
+2024-11-27 17:48:25,860 - integracion.integracion.generate_c34_venta - INFO - Archivo XML generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-2024-11-27T174825.xml
+2024-11-27 17:48:25,866 - integracion.integracion.generate_c34_venta - INFO - El archivo XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-2024-11-27T174825.xml es válido según el XSD.
+2024-11-27 17:48:25,873 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ATUSL/I/2400049 del cliente LOURDES MARIA COLE DIAZ
+2024-11-27 17:48:26,035 - integracion.integracion.generate_c34_venta - ERROR - Error al crear Payment Entry para la factura ATUSL/I/2400049: Factura de Venta ATUSL/I/2400049 debe ser presentado
+2024-11-27 17:48:26,265 - integracion.integracion.generate_c34_venta - INFO - Archivo Excel generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-2024-11-27T174825.xlsx
+2024-11-27 17:48:26,266 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-2024-11-27T174825.xml a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C19-ATUSL-2024-11-27T174825
+2024-11-27 17:48:26,266 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 17:48:26,266 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 17:48:26,266 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 17:48:26,863 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 17:48:26,863 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL
+2024-11-27 17:48:27,029 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 17:48:27,634 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL
+2024-11-27 17:48:27,635 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-2024-11-27T174825
+2024-11-27 17:48:27,810 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Academia Técnica Universitaria SL
+2024-11-27 17:48:28,273 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL/C19-ATUSL-2024-11-27T174825
+2024-11-27 17:48:28,273 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-2024-11-27T174825/C19-ATUSL-2024-11-27T174825.xml
+2024-11-27 17:48:28,859 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-2024-11-27T174825/C19-ATUSL-2024-11-27T174825.xml
+2024-11-27 17:48:28,859 - integracion.integracion.generate_c34_venta - DEBUG - Archivo XML subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-2024-11-27T174825/C19-ATUSL-2024-11-27T174825.xml
+2024-11-27 17:48:28,859 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-2024-11-27T174825.xlsx a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C19-ATUSL-2024-11-27T174825
+2024-11-27 17:48:28,859 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-27 17:48:28,859 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-27 17:48:28,859 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-27 17:48:29,429 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-27 17:48:29,430 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL
+2024-11-27 17:48:29,603 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-27 17:48:30,181 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/Academia Técnica Universitaria SL
+2024-11-27 17:48:30,182 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-2024-11-27T174825
+2024-11-27 17:48:30,358 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Academia Técnica Universitaria SL
+2024-11-27 17:48:30,526 - integracion.integracion.generate_c34_venta - INFO - La carpeta ya existe: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-2024-11-27T174825
+2024-11-27 17:48:30,527 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-2024-11-27T174825/C19-ATUSL-2024-11-27T174825.xlsx
+2024-11-27 17:48:31,149 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-2024-11-27T174825/C19-ATUSL-2024-11-27T174825.xlsx
+2024-11-27 17:48:31,150 - integracion.integracion.generate_c34_venta - DEBUG - Archivo Excel subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-2024-11-27T174825/C19-ATUSL-2024-11-27T174825.xlsx
+2024-11-27 17:48:31,161 - integracion.integracion.generate_c34_venta - INFO - Remesa doc name: None
+2024-11-27 17:48:31,234 - integracion.integracion.generate_c34_venta - INFO - Remesa creada: REM-ATUSL-2024-11-27-0002 para la empresa Academia Técnica Universitaria SL
+2024-11-27 17:48:32,100 - integracion.integracion.generate_c34_venta - INFO - Estado de la factura ATUSL/I/2400049 cambiado a 'Remesa Emitida'
+2024-11-27 17:48:32,101 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ATUSL/I/2400049
+2024-11-27 17:48:32,101 - integracion.integracion.generate_c34_venta - INFO - Archivo local XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-2024-11-27T174825.xml eliminado después de subirlo a SharePoint
+2024-11-27 17:48:32,101 - integracion.integracion.generate_c34_venta - INFO - Archivo local Excel /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-2024-11-27T174825.xlsx eliminado después de subirlo a SharePoint
+2024-11-27 17:48:32,101 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[{'company': 'Academia Técnica Universitaria SL', 'excel_url': 'https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-2024-11-27T174825/C19-ATUSL-2024-11-27T174825.xlsx'}]
+2024-11-28 11:08:24,117 - integracion.integracion.generate_c34_venta - INFO - Inicio de la generación de Cuaderno 34
+2024-11-28 11:08:24,117 - integracion.integracion.generate_c34_venta - DEBUG - Procesando facturas específicas: ['ASF/O/2400157', 'ASF/O/2400155', 'ASF/O/2400153', 'ASF/O/2400152', 'ASF/O/2400151', 'ASF/O/2400150', 'ASF/O/2400149', 'ASF/O/2400148', 'ASF/O/2400147', 'ASF/O/2400146', 'ASF/O/2400145', 'ASF/O/2400144', 'ASF/O/2400143', 'ASF/O/2400142', 'ASF/O/2400141', 'ASF/O/2400140', 'ASF/O/2400139', 'ASF/O/2400138', 'ASF/O/2400137', 'ASF/O/2400136', 'ASF/O/2400135', 'ASF/O/2400134', 'ASF/O/2400133', 'ASF/O/2400132', 'ASF/O/2400131', 'ASF/O/2400130', 'ASF/O/2400129', 'ASF/O/2400128', 'ASF/O/2400127', 'ASF/O/2400126', 'ASF/O/2400125', 'ASF/O/2400124', 'ASF/O/2400123', 'ASF/O/2400122', 'ASF/O/2400121', 'ASF/O/2400120', 'ASF/O/2400119', 'ASF/O/2400118']
+2024-11-28 11:08:24,200 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400157
+2024-11-28 11:08:24,202 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400157 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,224 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400155
+2024-11-28 11:08:24,226 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400155 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,252 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400153
+2024-11-28 11:08:24,255 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400153 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,289 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400152
+2024-11-28 11:08:24,292 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400152 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,315 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400151
+2024-11-28 11:08:24,317 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400151 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,341 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400150
+2024-11-28 11:08:24,343 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400150 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,364 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400149
+2024-11-28 11:08:24,366 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400149 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,403 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400148
+2024-11-28 11:08:24,404 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400148 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,425 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400147
+2024-11-28 11:08:24,426 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400147 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,447 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400146
+2024-11-28 11:08:24,448 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400146 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,470 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400145
+2024-11-28 11:08:24,471 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400145 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,491 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400144
+2024-11-28 11:08:24,493 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400144 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,516 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400143
+2024-11-28 11:08:24,518 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400143 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,545 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400142
+2024-11-28 11:08:24,547 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400142 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,569 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400141
+2024-11-28 11:08:24,571 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400141 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,600 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400140
+2024-11-28 11:08:24,603 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400140 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,626 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400139
+2024-11-28 11:08:24,628 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400139 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,650 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400138
+2024-11-28 11:08:24,651 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400138 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,674 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400137
+2024-11-28 11:08:24,676 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400137 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,704 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400136
+2024-11-28 11:08:24,705 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400136 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,726 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400135
+2024-11-28 11:08:24,728 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400135 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,750 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400134
+2024-11-28 11:08:24,752 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400134 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,773 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400133
+2024-11-28 11:08:24,775 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400133 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,796 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400132
+2024-11-28 11:08:24,798 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400132 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,820 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400131
+2024-11-28 11:08:24,822 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400131 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,844 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400130
+2024-11-28 11:08:24,846 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400130 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,868 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400129
+2024-11-28 11:08:24,870 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400129 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,894 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400128
+2024-11-28 11:08:24,896 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400128 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,919 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400127
+2024-11-28 11:08:24,921 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400127 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,944 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400126
+2024-11-28 11:08:24,947 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400126 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,969 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400125
+2024-11-28 11:08:24,971 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400125 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:24,994 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400124
+2024-11-28 11:08:24,996 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400124 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:25,018 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400123
+2024-11-28 11:08:25,021 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400123 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:25,042 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400122
+2024-11-28 11:08:25,044 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400122 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:25,066 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400121
+2024-11-28 11:08:25,068 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400121 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:25,089 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400120
+2024-11-28 11:08:25,091 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400120 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:25,112 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400119
+2024-11-28 11:08:25,114 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400119 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:25,137 - integracion.integracion.generate_c34_venta - DEBUG - Procesando factura ASF/O/2400118
+2024-11-28 11:08:25,139 - integracion.integracion.generate_c34_venta - DEBUG - Factura ASF/O/2400118 agregada a la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:25,146 - integracion.integracion.generate_c34_venta - DEBUG - IBAN de la empresa ATU Asesoría de Formación SL: ES1221002363832200058625
+2024-11-28 11:08:25,153 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ELENA ESTRADA BERNARDO DE QUIROS: ES9800493709202994731901
+2024-11-28 11:08:25,158 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente SILVIA RODRIGUEZ GONZALEZ: ES5100494461032890008439
+2024-11-28 11:08:25,162 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente VARGA ORTIZ, ROSA MARIA: ES7120854818150330410933
+2024-11-28 11:08:25,167 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente OLAYA GONZALEZ FERNANDEZ: ES6400812705760003631471
+2024-11-28 11:08:25,171 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PABLO DIAZ MARTIN: ES8021037038180010174064
+2024-11-28 11:08:25,176 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ANA GONZALEZ MARTINEZ: ES2201824823340201563046
+2024-11-28 11:08:25,180 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PILAR ROJO PEREDA: ES7701821767100201524166
+2024-11-28 11:08:25,185 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente REBECA FONTECHA DIEZ: ES8021000097330100317151
+2024-11-28 11:08:25,190 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ALBERTO FERNANDEZ PEREZ: ES3820800775693040010297
+2024-11-28 11:08:25,195 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente VERONICA VIOR MARTINEZ: ES9420480107873000025665
+2024-11-28 11:08:25,200 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente SUSANA IGLESIAS GUTIERREZ: ES5721037001690010214666
+2024-11-28 11:08:25,209 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente SILVIA GOMEZ GARCIA: ES2800494824112016059887
+2024-11-28 11:08:25,214 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ROSA ANA GONZALEZ VAZQUEZ: ES8201820608770201594360
+2024-11-28 11:08:25,218 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PRISCILA   RODRIGUEZ VARELA: ES1021006359580200083739
+2024-11-28 11:08:25,223 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PAULA NEIRA GARCIA: ES0800490860382094381700
+2024-11-28 11:08:25,227 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente PABLO PEDRO CARUANA ALONSO: ES1621000347820100925172
+2024-11-28 11:08:25,232 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente NORA REY RODRIGUEZ: ES7730590017413307968226
+2024-11-28 11:08:25,237 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MONICA MERCHAN ALVAREZ: ES9200490134492910413026
+2024-11-28 11:08:25,242 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MIQUEL RIBAS LLADÓ: ES4221000107120100758065
+2024-11-28 11:08:25,246 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MAYRA PEREZ PEÑLA: ES9600495525542210521541
+2024-11-28 11:08:25,251 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARLEN BERNAL GONZALEZ: ES4330590112593394512523
+2024-11-28 11:08:25,256 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARIAN GONZALEZ GARCIA: ES2001829465640201405172
+2024-11-28 11:08:25,261 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARIAN GONZALEZ GARCIA: ES2001829465640201405172
+2024-11-28 11:08:25,265 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARIA ISABEL ALVAREZ CABEZAS: ES0600815664890006202935
+2024-11-28 11:08:25,270 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MARCO PORTILLO ARNAIZ: ES2721001529192100363717
+2024-11-28 11:08:25,274 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente MAR OTERO BLANCO: ES6914650120382010369132
+2024-11-28 11:08:25,278 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente LUIS SOLIS QUESTIAUX: ES8300750017200700101090
+2024-11-28 11:08:25,283 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente LIDIA OLALLA HERNANDO: ES9201827924710201559541
+2024-11-28 11:08:25,287 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente LAURA GARCIA FERNANDEZ: ES3620800298603040017455
+2024-11-28 11:08:25,292 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente JEDSALIW SANCHEZ NAVA: ES5900490592312792569776
+2024-11-28 11:08:25,297 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente IRENE SANCHEZ HIDALGO: ES4131901085415821107124
+2024-11-28 11:08:25,301 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ESTHER RODRÍGUEZ RODRIGUEZ: ES7421005459790200068649
+2024-11-28 11:08:25,306 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente DAVID GUTIERREZ ACEBAL: ES3301820717310201536853
+2024-11-28 11:08:25,311 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente CRISTINA GUTIERREZ ANDEREZ: ES2920480076083004004309
+2024-11-28 11:08:25,315 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente COVADONGA BONDI VALLAURE: ES1421006618250200223072
+2024-11-28 11:08:25,320 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ANA FRANCISCA PEREZ SUAREZ: ES6221037066270030002742
+2024-11-28 11:08:25,325 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ANA BELÉN FERNANDEZ CARBAJALES: ES5130590013691545455212
+2024-11-28 11:08:25,329 - integracion.integracion.generate_c34_venta - DEBUG - IBAN del cliente ALFONSO FERNANDEZ GARCIA: ES7100730100500565648863
+2024-11-28 11:08:25,330 - integracion.integracion.generate_c34_venta - INFO - Archivo XML generado para ATU Asesoría de Formación SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-28T110825.xml
+2024-11-28 11:08:25,336 - integracion.integracion.generate_c34_venta - INFO - El archivo XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-28T110825.xml es válido según el XSD.
+2024-11-28 11:08:25,343 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400157 del cliente ELENA ESTRADA BERNALDO DE QUIROS
+2024-11-28 11:08:26,088 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400157: ACC-PAY-2024-01366
+2024-11-28 11:08:26,094 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400155 del cliente SILVIA RODRIGUEZ GONZALEZ
+2024-11-28 11:08:26,602 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400155: ACC-PAY-2024-01367
+2024-11-28 11:08:26,608 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400153 del cliente ROSA MARIA VARGA ORTIZ
+2024-11-28 11:08:27,093 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400153: ACC-PAY-2024-01368
+2024-11-28 11:08:27,099 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400152 del cliente OLAYA GONZALEZ FERNANDEZ
+2024-11-28 11:08:27,582 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400152: ACC-PAY-2024-01369
+2024-11-28 11:08:27,588 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400151 del cliente PABLO DIAZ MARTIN
+2024-11-28 11:08:28,060 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400151: ACC-PAY-2024-01370
+2024-11-28 11:08:28,066 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400150 del cliente ANA GONZALEZ MARTINEZ
+2024-11-28 11:08:28,549 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400150: ACC-PAY-2024-01371
+2024-11-28 11:08:28,556 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400149 del cliente PILAR ROJO PEREDA
+2024-11-28 11:08:29,049 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400149: ACC-PAY-2024-01372
+2024-11-28 11:08:29,055 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400148 del cliente REBECA FONTECHA DIEZ
+2024-11-28 11:08:29,566 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400148: ACC-PAY-2024-01373
+2024-11-28 11:08:29,571 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400147 del cliente ALBERTO FERNANDEZ PEREZ
+2024-11-28 11:08:30,133 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400147: ACC-PAY-2024-01374
+2024-11-28 11:08:30,141 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400146 del cliente VERONICA VIOR MARTINEZ
+2024-11-28 11:08:30,774 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400146: ACC-PAY-2024-01375
+2024-11-28 11:08:30,781 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400145 del cliente SUSANA IGLESIAS GUTIERREZ
+2024-11-28 11:08:31,326 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400145: ACC-PAY-2024-01376
+2024-11-28 11:08:31,331 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400144 del cliente SILVIA GOMEZ GARCIA
+2024-11-28 11:08:31,834 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400144: ACC-PAY-2024-01377
+2024-11-28 11:08:31,840 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400143 del cliente ROSA ANA GONZALEZ VAZQUEZ
+2024-11-28 11:08:32,406 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400143: ACC-PAY-2024-01378
+2024-11-28 11:08:32,413 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400142 del cliente PRISCILA   RODRIGUEZ VARELA
+2024-11-28 11:08:32,906 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400142: ACC-PAY-2024-01379
+2024-11-28 11:08:32,913 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400141 del cliente PAULA NEIRA GARCIA
+2024-11-28 11:08:33,431 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400141: ACC-PAY-2024-01380
+2024-11-28 11:08:33,438 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400140 del cliente PABLO PEDRO CARUANA ALONSO
+2024-11-28 11:08:33,949 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400140: ACC-PAY-2024-01381
+2024-11-28 11:08:33,955 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400139 del cliente NORA REY RODRIGUEZ
+2024-11-28 11:08:34,503 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400139: ACC-PAY-2024-01382
+2024-11-28 11:08:34,510 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400138 del cliente MONICA MERCHAN ALVAREZ
+2024-11-28 11:08:35,054 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400138: ACC-PAY-2024-01383
+2024-11-28 11:08:35,060 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400137 del cliente MIQUEL RIBAS LLADÓ
+2024-11-28 11:08:35,647 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400137: ACC-PAY-2024-01384
+2024-11-28 11:08:35,653 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400136 del cliente MAYRA PEREZ PEÑA
+2024-11-28 11:08:36,231 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400136: ACC-PAY-2024-01385
+2024-11-28 11:08:36,238 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400135 del cliente MARLEN BERNAL GONZALEZ
+2024-11-28 11:08:36,756 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400135: ACC-PAY-2024-01386
+2024-11-28 11:08:36,765 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400134 del cliente MARIAN GONZALEZ GARCIA
+2024-11-28 11:08:37,389 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400134: ACC-PAY-2024-01387
+2024-11-28 11:08:37,396 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400133 del cliente MARIAN GONZALEZ GARCIA
+2024-11-28 11:08:37,896 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400133: ACC-PAY-2024-01388
+2024-11-28 11:08:37,902 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400132 del cliente MARIA ISABEL ALVAREZ CABEZAS
+2024-11-28 11:08:38,447 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400132: ACC-PAY-2024-01389
+2024-11-28 11:08:38,454 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400131 del cliente MARCO PORTILLO ARNAIZ
+2024-11-28 11:08:38,993 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400131: ACC-PAY-2024-01390
+2024-11-28 11:08:39,000 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400130 del cliente MAR OTERO BLANCO
+2024-11-28 11:08:39,564 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400130: ACC-PAY-2024-01391
+2024-11-28 11:08:39,571 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400129 del cliente LUIS SOLIS QUESTIAUX
+2024-11-28 11:08:40,206 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400129: ACC-PAY-2024-01392
+2024-11-28 11:08:40,213 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400128 del cliente LIDIA OLALLA HERNANDO
+2024-11-28 11:08:40,740 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400128: ACC-PAY-2024-01393
+2024-11-28 11:08:40,747 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400127 del cliente LAURA GARCIA FERNANDEZ
+2024-11-28 11:08:41,446 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400127: ACC-PAY-2024-01394
+2024-11-28 11:08:41,453 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400126 del cliente JEDSALIW SANCHEZ NAVA
+2024-11-28 11:08:42,115 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400126: ACC-PAY-2024-01395
+2024-11-28 11:08:42,122 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400125 del cliente IRENE SANCHEZ HIDALGO
+2024-11-28 11:08:42,614 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400125: ACC-PAY-2024-01396
+2024-11-28 11:08:42,620 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400124 del cliente ESTHER RODRÍGUEZ RODRIGUEZ
+2024-11-28 11:08:43,112 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400124: ACC-PAY-2024-01397
+2024-11-28 11:08:43,118 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400123 del cliente DAVID GUTIERREZ ACEBAL
+2024-11-28 11:08:43,638 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400123: ACC-PAY-2024-01398
+2024-11-28 11:08:43,644 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400122 del cliente CRISTINA GUTIERREZ ANDEREZ
+2024-11-28 11:08:44,152 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400122: ACC-PAY-2024-01399
+2024-11-28 11:08:44,158 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400121 del cliente COVADONGA BONDI VALLAURE
+2024-11-28 11:08:44,659 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400121: ACC-PAY-2024-01400
+2024-11-28 11:08:44,665 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400120 del cliente ANA FRANCISCA PEREZ SUAREZ
+2024-11-28 11:08:45,315 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400120: ACC-PAY-2024-01401
+2024-11-28 11:08:45,325 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400119 del cliente ANA BELÉN FERNANDEZ CARBAJALES
+2024-11-28 11:08:45,973 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400119: ACC-PAY-2024-01402
+2024-11-28 11:08:45,979 - integracion.integracion.generate_c34_venta - DEBUG - Datos agregados para la factura ASF/O/2400118 del cliente ALFONSO FERNANDEZ GARCIA
+2024-11-28 11:08:46,476 - integracion.integracion.generate_c34_venta - INFO - Payment Entry creado para la factura ASF/O/2400118: ACC-PAY-2024-01403
+2024-11-28 11:08:46,506 - integracion.integracion.generate_c34_venta - INFO - Archivo Excel generado para ATU Asesoría de Formación SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-28T110825.xlsx
+2024-11-28 11:08:46,506 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-28T110825.xml a SharePoint para la compañía ATU Asesoría de Formación SL con Cuaderno C19-ASF-2024-11-28T110825
+2024-11-28 11:08:46,506 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-28 11:08:46,506 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-28 11:08:46,507 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-28 11:08:47,231 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-28 11:08:47,232 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL
+2024-11-28 11:08:47,395 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-28 11:08:48,016 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/ATU Asesoría de Formación SL
+2024-11-28 11:08:48,017 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-28T110825
+2024-11-28 11:08:48,219 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent ATU Asesoría de Formación SL
+2024-11-28 11:08:48,680 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/ATU Asesoría de Formación SL/C19-ASF-2024-11-28T110825
+2024-11-28 11:08:48,680 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-28T110825/C19-ASF-2024-11-28T110825.xml
+2024-11-28 11:08:49,294 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-28T110825/C19-ASF-2024-11-28T110825.xml
+2024-11-28 11:08:49,294 - integracion.integracion.generate_c34_venta - DEBUG - Archivo XML subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-28T110825/C19-ASF-2024-11-28T110825.xml
+2024-11-28 11:08:49,294 - integracion.integracion.generate_c34_venta - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-28T110825.xlsx a SharePoint para la compañía ATU Asesoría de Formación SL con Cuaderno C19-ASF-2024-11-28T110825
+2024-11-28 11:08:49,294 - integracion.integracion.generate_c34_venta - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta
+2024-11-28 11:08:49,295 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-11-28 11:08:49,295 - integracion.integracion.generate_c34_venta - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-11-28 11:08:49,818 - integracion.integracion.generate_c34_venta - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-11-28 11:08:49,819 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL
+2024-11-28 11:08:49,986 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent Cuaderno34 - Facturas de Venta
+2024-11-28 11:08:50,570 - integracion.integracion.generate_c34_venta - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Venta/ATU Asesoría de Formación SL
+2024-11-28 11:08:50,570 - integracion.integracion.generate_c34_venta - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-28T110825
+2024-11-28 11:08:50,731 - integracion.integracion.generate_c34_venta - INFO - Conectado a parent ATU Asesoría de Formación SL
+2024-11-28 11:08:50,905 - integracion.integracion.generate_c34_venta - INFO - La carpeta ya existe: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-28T110825
+2024-11-28 11:08:50,906 - integracion.integracion.generate_c34_venta - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-28T110825/C19-ASF-2024-11-28T110825.xlsx
+2024-11-28 11:08:51,511 - integracion.integracion.generate_c34_venta - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-28T110825/C19-ASF-2024-11-28T110825.xlsx
+2024-11-28 11:08:51,512 - integracion.integracion.generate_c34_venta - DEBUG - Archivo Excel subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-28T110825/C19-ASF-2024-11-28T110825.xlsx
+2024-11-28 11:08:51,547 - integracion.integracion.generate_c34_venta - INFO - Remesa doc name: None
+2024-11-28 11:08:51,684 - integracion.integracion.generate_c34_venta - INFO - Remesa creada: REM-ASF-2024-11-28-0001 para la empresa ATU Asesoría de Formación SL
+2024-11-28 11:08:51,744 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400157
+2024-11-28 11:08:51,798 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400155
+2024-11-28 11:08:51,862 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400153
+2024-11-28 11:08:51,921 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400152
+2024-11-28 11:08:51,976 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400151
+2024-11-28 11:08:52,029 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400150
+2024-11-28 11:08:52,080 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400149
+2024-11-28 11:08:52,130 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400148
+2024-11-28 11:08:52,184 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400147
+2024-11-28 11:08:52,247 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400146
+2024-11-28 11:08:52,316 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400145
+2024-11-28 11:08:52,366 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400144
+2024-11-28 11:08:52,417 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400143
+2024-11-28 11:08:52,468 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400142
+2024-11-28 11:08:52,520 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400141
+2024-11-28 11:08:52,571 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400140
+2024-11-28 11:08:52,650 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400139
+2024-11-28 11:08:52,702 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400138
+2024-11-28 11:08:52,752 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400137
+2024-11-28 11:08:52,807 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400136
+2024-11-28 11:08:52,864 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400135
+2024-11-28 11:08:52,922 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400134
+2024-11-28 11:08:52,980 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400133
+2024-11-28 11:08:53,033 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400132
+2024-11-28 11:08:53,087 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400131
+2024-11-28 11:08:53,142 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400130
+2024-11-28 11:08:53,195 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400129
+2024-11-28 11:08:53,252 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400128
+2024-11-28 11:08:53,307 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400127
+2024-11-28 11:08:53,363 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400126
+2024-11-28 11:08:53,419 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400125
+2024-11-28 11:08:53,474 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400124
+2024-11-28 11:08:53,529 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400123
+2024-11-28 11:08:53,581 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400122
+2024-11-28 11:08:53,633 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400121
+2024-11-28 11:08:53,687 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400120
+2024-11-28 11:08:53,775 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400119
+2024-11-28 11:08:53,826 - integracion.integracion.generate_c34_venta - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ASF/O/2400118
+2024-11-28 11:08:53,826 - integracion.integracion.generate_c34_venta - INFO - Archivo local XML /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-28T110825.xml eliminado después de subirlo a SharePoint
+2024-11-28 11:08:53,826 - integracion.integracion.generate_c34_venta - INFO - Archivo local Excel /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASF-2024-11-28T110825.xlsx eliminado después de subirlo a SharePoint
+2024-11-28 11:08:53,826 - integracion.integracion.generate_c34_venta - INFO - Urls de SharePoint generadas:[{'company': 'ATU Asesoría de Formación SL', 'excel_url': 'https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta/ATU%20Asesor%C3%ADa%20de%20Formaci%C3%B3n%20SL/C19-ASF-2024-11-28T110825/C19-ASF-2024-11-28T110825.xlsx'}]

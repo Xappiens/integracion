@@ -1,0 +1,332 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "HR-ANX-.YYYY.-.#######",
+ "creation": "2024-10-23 11:23:07.436522",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "employee",
+  "custom_tipo_de_contrato",
+  "custom_tipo_de_contrato_old",
+  "tipo_actualizacion",
+  "custom_estado_de_tramitacion",
+  "column_break_mcam",
+  "designation",
+  "curso",
+  "expediente",
+  "centro_formacion",
+  "custom_provincia",
+  "column_break_beob",
+  "start_date",
+  "end_date",
+  "status",
+  "fecha_validacion",
+  "section_break_iim3",
+  "objeto",
+  "observaciones",
+  "column_break_ssre",
+  "job_offer",
+  "amended_from",
+  "applicant_name",
+  "dni",
+  "section_break_wclj",
+  "registro_horas",
+  "template_terms",
+  "offer_terms",
+  "section_break_iqpg",
+  "letter_head",
+  "owner_email",
+  "validator_email",
+  "validated_by",
+  "column_break_addz"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_iim3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Modificaciones RRHH",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "job_offer",
+   "fieldtype": "Link",
+   "label": "Hoja de contrataci\u00f3n",
+   "options": "Job Offer"
+  },
+  {
+   "fieldname": "tipo_actualizacion",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tipo de actualizacion",
+   "options": "\nLlamamiento\nAmpliacion\nReduccion\nAnexo\nAnexo Modificacion de Horario\nModificacion Fecha Fin\nBaja",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Empresa",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Empleado",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mcam",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Puesto",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "curso",
+   "fieldtype": "Link",
+   "label": "Accion/Curso",
+   "options": "Course"
+  },
+  {
+   "fieldname": "expediente",
+   "fieldtype": "Link",
+   "label": "Expediente",
+   "options": "Program"
+  },
+  {
+   "fieldname": "centro_formacion",
+   "fieldtype": "Link",
+   "label": "Centro de Impartici\u00f3n",
+   "options": "Room"
+  },
+  {
+   "fieldname": "column_break_beob",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha Inicio",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "Fecha Fin"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Estado",
+   "options": "Esperando Respuesta\nAccepted\nRejected"
+  },
+  {
+   "fieldname": "column_break_ssre",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "objeto",
+   "fieldtype": "Data",
+   "label": "Objeto del Anexo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "observaciones",
+   "fieldtype": "Small Text",
+   "label": "Observaciones"
+  },
+  {
+   "fetch_from": "job_offer.applicant_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Applicant_name"
+  },
+  {
+   "fetch_from": "job_offer.custom_dninie",
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "DNI"
+  },
+  {
+   "default": "Solicitado",
+   "fieldname": "custom_estado_de_tramitacion",
+   "fieldtype": "Select",
+   "label": "Estado de la Tramitacion",
+   "options": "\nSolicitado\nTramitado"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "custom_tipo_de_contrato",
+   "fieldtype": "Select",
+   "label": "Tipo de Contrato",
+   "options": "\nIndefinido ordinario\nIndefinido Fijo Discont.\nTemporal por sust.\nTemporal por circunstancias de la produc.\nForm.\nPr\u00e1cticas",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_wclj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "template_terms",
+   "fieldtype": "Link",
+   "label": "Plantilla de T\u00e9rminos",
+   "options": "Job Offer Term Template"
+  },
+  {
+   "fieldname": "offer_terms",
+   "fieldtype": "Table",
+   "label": "T\u00e9rminos de la Oferta",
+   "options": "Job Offer Term"
+  },
+  {
+   "fieldname": "custom_provincia",
+   "fieldtype": "Link",
+   "label": "Provincia",
+   "options": "Provincias"
+  },
+  {
+   "fieldname": "registro_horas",
+   "fieldtype": "Table",
+   "label": "Registro de Horas",
+   "options": "Hoja de Contratacion Horas"
+  },
+  {
+   "fieldname": "section_break_iqpg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Membrete",
+   "options": "Letter Head"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "owner_email",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Email Creador"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "validator_email",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Email Validador"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "validated_by",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Validador",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_addz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.fecha_validacion",
+   "fieldname": "fecha_validacion",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Fecha de Validacion",
+   "read_only": 1
+  },
+  {
+   "fieldname": "custom_tipo_de_contrato_old",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Tipo de Contrato",
+   "options": "Employment Type"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-21 08:09:41.096106",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Modificaciones RRHH",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Asesor\u00eda",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Light Blue",
+   "title": "Borrador"
+  },
+  {
+   "color": "Green",
+   "title": "Validado"
+  },
+  {
+   "color": "Yellow",
+   "title": "Baja"
+  },
+  {
+   "color": "Red",
+   "title": "Anulado"
+  }
+ ]
+}

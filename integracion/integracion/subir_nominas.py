@@ -99,10 +99,15 @@ def subir_nominas(company, xml_file):
         
         empleado_name = ""
 
-        if frappe.db.exists("Employee", {"custom_dninie_id": nif}) or frappe.db.exists("Employee", {"custom_dninie": nif}):
+        if frappe.db.exists("Employee", {"custom_dninie_id": nif}):
             empleado = frappe.get_doc("Employee", {"custom_dninie_id": nif})
-            empleado_name = empleado.employee_name
+        elif frappe.db.exists("Employee", {"custom_dninie": nif}):
+            empleado = frappe.get_doc("Employee", {"custom_dninie": nif})
+        else:
+            empleado = None
 
+        if empleado:
+            empleado_name = empleado.employee_name
 
         with open(error_log_path, 'a') as f:
             f.write(f"Empleado {nif} {empleado_name} {motivo}\n")
@@ -151,8 +156,11 @@ def subir_nominas(company, xml_file):
         if frappe.db.exists('Employee', {'custom_dninie_id': nif}):
             # Si existe, obtiene el empleado
             employee = frappe.get_all('Employee', filters={'custom_dninie_id': nif}, fields=['name'])
-        elif frappe.db.exists('Employee', {'name': nif}):
+        elif frappe.db.exists('Employee', {'custom_dninie': nif}):
             # Si no existe en 'custom_dninie_id', verifica si existe con 'custom_dninie'
+            employee = frappe.get_all('Employee', filters={'custom_dninie': nif}, fields=['name'])
+        elif frappe.db.exists('Employee', {'name': nif}):
+            # Verificar si existe el empleado con el nombre (nif)
             employee = frappe.get_all('Employee', filters={'name': nif}, fields=['name'])
         else:
             # Si no existe en ninguno de los campos, devuelve None
@@ -230,6 +238,7 @@ def subir_nominas(company, xml_file):
 
     for asiento in root.findall("./Empresa/Asientos/Asiento"):
         progreso += 1
+        frappe.cache().hset('nominas_progreso', 'progreso', progreso)
         frappe.publish_realtime(
             "subir_nominas_progress", {"progress": [progreso, total_asientos], "message": f"Procesando asiento {progreso} de {total_asientos-1}"}, user=frappe.session.user
         )
@@ -241,7 +250,8 @@ def subir_nominas(company, xml_file):
         try:
             # Verificar si el empleado existe antes de crear el asiento
             employee = frappe.get_value("Employee", {"custom_dninie_id": nif}, "name") or \
-                       frappe.get_value("Employee", {"custom_dninie": nif}, "name")
+                       frappe.get_value("Employee", {"custom_dninie": nif}, "name") or \
+                       frappe.get_value("Employee", {"name": nif}, "name")
 
             if not employee:
                 log_error_and_register_asiento(asiento, nif, "Empleado no encontrado")
@@ -317,6 +327,7 @@ def subir_nominas(company, xml_file):
             log_error_and_register_asiento(asiento, nif, str(e))
 
         # Continuar el procesamiento
+    frappe.cache().hset('nominas_progreso', 'progreso', progreso)
     frappe.publish_realtime(
         "subir_nominas_progress", {"progress": [progreso, total_asientos], "message": "Guardado fallos y registrando en Doctype..."}, user=frappe.session.user
     )
@@ -346,6 +357,8 @@ def subir_nominas(company, xml_file):
     # Devolver las URLs de los archivos generados para que puedan ser descargados en el frontend
     logger.debug("Proceso completado, generando URLs de los archivos.")
 
+    progreso = total_asientos
+    frappe.cache().hset('nominas_progreso', 'progreso', progreso)
     frappe.publish_realtime(
         "subir_nominas_progress", {"progress": [total_asientos, total_asientos], "message": "Proceso completado con éxito."}, user=frappe.session.user
     )

@@ -9,11 +9,21 @@ from lxml import etree
 import frappe
 import pandas as pd
 from frappe import _
+import requests
+from dataclasses import dataclass
 
 # Leer credenciales desde el archivo de configuración del sitio
 site_config = frappe.get_site_config()
 user_email = site_config.get('user_sp')
 user_password = site_config.get('pass_sp')
+id_cliente = site_config.get('id_sp_client')
+secret_sp = site_config.get('secret_sp')
+tenant_id = site_config.get('tenant_sp')
+auth_url = f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
+cert_pass = site_config.get('cert_key')
+cert_path = site_config.get('cert_path')
+cert_finger = site_config.get('cert_finger')  # Huella digital del certificado
+
 sharepoint_base_url = "https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra"
 
 # Configurar el logger
@@ -38,17 +48,19 @@ def get_supplier_iban(supplier_name, company):
             # Obtener el IBAN de la cuenta bancaria predeterminada
             iban = frappe.get_value("Bank Account", default_bank_account, "iban")
             if iban:
-                return iban
-        
-        return ""  # Devolver un valor vacío si no se encuentra el IBAN en ninguna parte
+                # Devolver siempre un diccionario, incluso si solo tienes el IBAN
+                return {"iban": iban}
+
+        return None  # Devolver None si no se encuentra el IBAN en ninguna parte
 
     # Filtrar cuentas bancarias por la empresa específica
     filtered_accounts = [account for account in bank_accounts if account.get("company") == company]
 
     if filtered_accounts:
-        return filtered_accounts[0]
+        return filtered_accounts[0]  # Retornar el diccionario completo de la cuenta bancaria
     else:
-        return bank_accounts[0] # Si no hay coincidencia con la empresa, devolver el primero disponible
+        return bank_accounts[0]  # Si no hay coincidencia con la empresa, devolver el primer diccionario disponible
+
 
 
 def change_status_to_remesa_emitida(purchase_invoice_name, remesa_name):
@@ -56,87 +68,39 @@ def change_status_to_remesa_emitida(purchase_invoice_name, remesa_name):
         # Obtener el documento de la factura de compra
         doc = frappe.get_doc("Purchase Invoice", purchase_invoice_name)
 
-        # Establecer el campo custom_remesa_emitida a True
+        # Establecer el campo custom_remesa_emitida a True y enlazar la remesa
         doc.custom_remesa_emitida = 1
-
-        # Establecer el enlace a la remesa
         doc.custom_remesa = remesa_name
 
-        # Marcar la factura como pagada
-        doc.is_paid = 1
-
-        # Establecer el modo de pago desde el proveedor
-        supplier_mode_of_payment = frappe.get_value("Supplier", doc.supplier, "mode_of_payment")
-        doc.mode_of_payment = supplier_mode_of_payment
-
-        # Obtener la cuenta bancaria predeterminada para el modo de pago
-        default_account = frappe.get_value("Mode of Payment Account", {
-            "parent": supplier_mode_of_payment,
-            "company": doc.company
-        }, "default_account")
-
-        # Asignar la cuenta bancaria predeterminada si está disponible
-        if default_account:
-            doc.cash_bank_account = default_account
-
-        doc.paid_amount = doc.outstanding_amount
-
         if doc.docstatus == 0:
-            # Guardar el documento para desencadenar el cambio de estado
+            # Si el documento está en borrador, también marca como pagado y asigna campos relacionados
+            # if doc.is_paid == 0:
+            #     doc.is_paid = 1
+            #     supplier_mode_of_payment = frappe.get_value("Supplier", doc.supplier, "mode_of_payment")
+            #     doc.mode_of_payment = supplier_mode_of_payment
+            #     default_account = frappe.get_value("Mode of Payment Account", {
+            #         "parent": supplier_mode_of_payment,
+            #         "company": doc.company
+            #     }, "default_account")
+            #     if default_account:
+            #         doc.cash_bank_account = default_account
+            #     doc.paid_amount = doc.outstanding_amount
+            
+            # Guardar el documento si está en borrador
             doc.save()
-            logger.info(f"Estado de la factura {purchase_invoice_name} cambiado a 'Remesa Emitida'")
+            logger.info(f"Estado de la factura {purchase_invoice_name} cambiado a 'Remesa Emitida' en borrador")
+
         elif doc.docstatus == 1:
-            # Si la factura está validada, solo marcar los campos personalizados
+            # Si el documento ya está validado, solo actualiza los campos personalizados
             doc.db_set('custom_remesa_emitida', 1)
             doc.db_set('custom_remesa', remesa_name)
-            doc.db_set('is_paid', 1)
-            doc.db_set('mode_of_payment', supplier_mode_of_payment)
-            if default_account:
-                doc.db_set('cash_bank_account', default_account)
-            doc.db_set('paid_amount', doc.outstanding_amount)
+            logger.info(f"Campos personalizados de la factura {purchase_invoice_name} actualizados en estado validado")
 
     except Exception as e:
         logger.error(f"Error al cambiar el estado de la factura {purchase_invoice_name}: {e}")
 
-def create_payment_entry_for_invoice(company, invoice):
-    try:
-        # Obtener la cuenta bancaria del proveedor utilizando get_supplier_iban
-        bank_account_info = get_supplier_iban(invoice.supplier, company)
-        bank_account = bank_account_info.get('iban') if bank_account_info else None
 
-        # Crear un nuevo documento de Payment Entry
-        payment_entry_doc = frappe.get_doc({
-            "doctype": "Payment Entry",
-            "payment_type": "Pay",
-            "party_type": "Supplier",
-            "company": company,
-            "party": invoice.supplier,
-            "posting_date": frappe.utils.nowdate(),
-            "paid_from": frappe.get_value("Company", company, "default_payable_account"),
-            "paid_to": bank_account,
-            "paid_amount": invoice.outstanding_amount,
-            "received_amount": invoice.outstanding_amount,
-            "references": [
-                {
-                    "reference_doctype": "Purchase Invoice",
-                    "reference_name": invoice.name,
-                    "due_date": invoice.due_date,
-                    "total_amount": invoice.grand_total,
-                    "outstanding_amount": invoice.outstanding_amount,
-                    "allocated_amount": invoice.outstanding_amount
-                }
-            ],
-        })
 
-        # Insertar y guardar el documento de Payment Entry
-        payment_entry_doc.insert(ignore_permissions=True)
-        payment_entry_doc.submit()
-        logger.info(f"Payment Entry creado: {payment_entry_doc.name} para la empresa {company}")
-        return payment_entry_doc.name
-    except Exception as e:
-        frappe.log_error(message=frappe.get_traceback(), title="Error al crear Payment Entry")
-        logger.error(f"Error al crear el documento de Payment Entry para {company}: {e}")
-        return None
 
 @frappe.whitelist()
 def generate_c34_compra(invoice_data=None):
@@ -203,7 +167,7 @@ def generate_c34_compra(invoice_data=None):
         try:
             abbr = frappe.get_value("Company", company, "abbr")
             now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-            fichero_id_value = f"C34-{abbr}-{now}"
+            fichero_id_value = f"C19-{abbr}-{now}"
             
             # Crear el elemento principal del XML conforme al estándar SEPA
             root = etree.Element("Document", xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03")
@@ -279,12 +243,15 @@ def generate_c34_compra(invoice_data=None):
             # dbtr_bic = etree.SubElement(dbtr_fin_instn_id, "BIC")
             # dbtr_bic.text = frappe.get_value("Company", company, "bic")
 
+            # generar excel
+            total_factura = 0
             data = []
             for invoice in invoices:
                 try:
                     supplier_bank = get_supplier_iban(invoice.supplier,company)
                     supplier_iban = supplier_bank.get('iban') if supplier_bank else None
                     supplier_cif = frappe.get_value("Supplier", invoice.supplier, "tax_id")
+
                     
                     data.append({
                         "Nº Factura Proveedor": invoice.bill_no,
@@ -296,9 +263,22 @@ def generate_c34_compra(invoice_data=None):
                         "Fecha de factura": invoice.bill_date.strftime('%Y-%m-%d'),
                         "Tipo Transferencia" : "SEPA" 
                     })
+
                     logger.debug(f"Datos agregados para la factura {invoice.name} del proveedor {invoice.supplier_name}")
+                    total_factura = total_factura + float(invoice.outstanding_amount)
                 except Exception as e:
                     logger.error(f"Error al procesar la factura {invoice.name}: {e}")
+
+            # data.append({
+            #             "Nº Factura Proveedor": "",
+            #             "Nombre proveedor": "",
+            #             "CIF Proveedor": "",
+            #             "IBAN Proveedor": "TOTAL",
+            #             "Importe Factura": total_factura,
+            #             "Objeto de la Factura": "",
+            #             "Fecha de factura": "",
+            #             "Tipo Transferencia" : "" 
+            #         })
 
             df = pd.DataFrame(data)
             file_path = f"/home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/{fichero_id_value}.xlsx"
@@ -315,7 +295,7 @@ def generate_c34_compra(invoice_data=None):
                     change_status_to_remesa_emitida(invoice.name, remesa_name)
                     logger.debug(f"Estado cambiado a 'Remesa Emitida' para la factura {invoice.name}")
 
-                    create_payment_entry_for_purchase_invoice(invoice)
+                    create_payment_entry_for_purchase_invoice(invoice, supplier_iban)
                     # Crear el registro de Payment Entry para cada factura
                     # payment_entry_name = create_payment_entry_for_invoice(company, invoice)
                     # if payment_entry_name:
@@ -397,9 +377,31 @@ def upload_file_to_sharepoint(file_path, company, fichero_id_value):
         logger.info(f"Ruta relativa calculada: {relative_path}")
         logger.info(f"Conectando al contexto del sitio: {site_url}")
 
-        credentials = UserCredential(user_email, user_password)
-        ctx = ClientContext(site_url).with_credentials(credentials)
+        def connect_to_sharepoint_with_token(site_url):
+            try:
+                # Usar el certificado y la huella digital para autenticarse directamente
+                logger.info(f"Conectando al contexto del sitio: {site_url} con huella digital: {cert_finger} y ruta de certificado: {cert_path}")
 
+                # Configurar el contexto de cliente con el certificado
+                ctx = ClientContext(site_url).with_client_certificate(
+                    client_id=id_cliente,
+                    thumbprint=cert_finger.replace(":", "").upper(),
+                    cert_path=cert_path,
+                    tenant=tenant_id
+                )
+                
+                # Probar la conexión accediendo a algún recurso básico
+                web = ctx.web.get().execute_query()
+                logger.info(f"Conexión exitosa al sitio SharePoint: {web.properties['Title']}")
+                
+                return ctx
+            except Exception as e:
+                logger.error(f"Error al conectar a SharePoint con certificado: {e}")
+                return None
+
+        # credentials = UserCredential(user_email, user_password)
+        # ctx = ClientContext(site_url).with_credentials(credentials)
+        ctx = connect_to_sharepoint_with_token(site_url)
         company_folder_name = quote(company)
         cuaderno_folder_name = quote(fichero_id_value)
 
@@ -436,14 +438,41 @@ def upload_file_to_sharepoint(file_path, company, fichero_id_value):
         logger.error(f"Error al subir archivo a SharePoint: {str(e)}")
         return None
 
-def create_payment_entry_for_purchase_invoice(invoice):
+def create_payment_entry_for_purchase_invoice(invoice, supplier_iban):
     try:
-        # Obtener la cuenta de débito desde la factura de compra
-        debit_account = frappe.get_value("Company", invoice.company, "default_payable_account")
-        
-        # Obtener la cuenta de pago por defecto de la compañía
-        default_payment_account = frappe.get_value("Company", invoice.company, "default_payable_account")
-        
+        # Verificar si la factura ya ha sido pagada
+        if invoice.outstanding_amount == 0:
+            logger.info(f"La factura {invoice.name} ya está completamente pagada. No se requiere un Payment Entry.")
+            return  # Salir de la función sin crear el Payment Entry
+
+        # Obtener la cuenta por pagar del proveedor desde la factura de compra
+        credit_account = invoice.credit_to
+
+        # Verificar que la cuenta 'debit_account' esté configurada como "Payable"
+        if frappe.db.get_value("Account", credit_account, "account_type") != "Payable":
+            frappe.throw(_("La cuenta de débito asignada no es de tipo 'Payable'. Verifique la configuración de la cuenta."))
+
+        # Obtener la cuenta bancaria de la empresa (para `paid_to`)
+        company_bank_account = frappe.get_value("Company", invoice.company, "default_bank_account")
+
+
+        # Validar que la cuenta bancaria de la empresa esté configurada
+        if not company_bank_account:
+            frappe.throw(_("No se ha configurado una cuenta bancaria por defecto para la empresa."))
+
+        # Obtener la cuenta bancaria del proveedor usando el IBAN
+        supplier_bank = frappe.get_value("Bank Account", {"iban": supplier_iban}, "name")
+        if not supplier_bank:
+            frappe.throw(_("No se encontró una cuenta bancaria con el IBAN especificado."))
+
+        # Obtener el tipo de cambio
+        source_exchange_rate = 1.0
+        company_currency = frappe.get_value("Company", invoice.company, "default_currency")
+        if invoice.currency != company_currency:
+            source_exchange_rate = frappe.get_value("Currency Exchange", {"from_currency": invoice.currency, "to_currency": company_currency}, "exchange_rate")
+            if not source_exchange_rate:
+                frappe.throw(_("El tipo de cambio no está definido para {0} a {1}").format(invoice.currency, company_currency))
+
         # Crear el documento de Payment Entry
         payment_entry = frappe.get_doc({
             "doctype": "Payment Entry",
@@ -453,13 +482,12 @@ def create_payment_entry_for_purchase_invoice(invoice):
             "party": invoice.supplier,
             "company": invoice.company,
             "mode_of_payment": frappe.get_value("Supplier", invoice.supplier, "mode_of_payment"),
-            "paid_amount": invoice.grand_total,
-            "received_amount": invoice.grand_total,
-            "paid_from": debit_account,  # Cuenta de origen del pago
-            "paid_to": default_payment_account,  # Cuenta de pago
-            "paid_to_account_currency": "EUR",  # Moneda en EUR
-            "bank_account": frappe.get_value("Company", invoice.company, "default_bank_account"),  # Cuenta bancaria por defecto de la empresa
-            "party_bank_account": frappe.get_value("Supplier", invoice.supplier, "default_bank_account"),  # Cuenta bancaria del proveedor
+            "paid_amount": invoice.rounded_total,  # Ajuste de paid_amount a outstanding_amount válido
+            "received_amount": invoice.rounded_total,  # Ajuste de received_amount a outstanding_amount válido
+            "paid_from": company_bank_account or "",  # Cuenta por pagar del proveedor (cuenta del proveedor en la factura)
+            "paid_from_account_currency": frappe.get_value("Account", company_bank_account, "account_currency") if company_bank_account else None,
+            "paid_to": credit_account,  # Cuenta bancaria de la empresa para pagos
+            "paid_to_account_currency": frappe.get_value("Account", credit_account, "account_currency"),
             "reference_no": invoice.name,
             "reference_date": invoice.posting_date,
             "references": [
@@ -468,16 +496,16 @@ def create_payment_entry_for_purchase_invoice(invoice):
                     "reference_name": invoice.name,
                     "total_amount": invoice.grand_total,
                     "outstanding_amount": invoice.outstanding_amount,
-                    "allocated_amount": invoice.grand_total,
+                    "allocated_amount": invoice.outstanding_amount,
                 }
             ],
-            "currency": "EUR",  # Moneda definida a EUR
+            "currency": invoice.currency,
+            "source_exchange_rate": source_exchange_rate
         })
         
-        # Guardar el Payment Entry
+        # Guardar y enviar el Payment Entry
         payment_entry.insert(ignore_permissions=True)
-        payment_entry.submit()
-        
+
         logger.info(f"Payment Entry creado para la factura {invoice.name}: {payment_entry.name}")
 
     except Exception as e:

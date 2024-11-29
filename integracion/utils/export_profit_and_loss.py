@@ -1,3 +1,4 @@
+from erpnext.accounts.doctype.account import account
 import frappe
 from frappe import _
 from frappe.utils import flt
@@ -8,6 +9,8 @@ import json
 import logging
 
 from erpnext.accounts.report.financial_statements import get_data, get_period_list
+
+from erpnext.accounts.utils import get_account_balances, get_balance_on
 from integracion.utils.export_balance_sheet import account_div, set_accounts, calculate_totals, accounts_html, decimal, account_div
 
 # Configurar el logger
@@ -48,52 +51,71 @@ def get_net_profit_loss(income, expense, period_list, company, currency=None, co
 		return net_profit_loss
 
 def get_profit_and_loss_data(filters):
-    period_list = get_period_list(
-        filters.from_fiscal_year, filters.to_fiscal_year, filters.period_start_date, filters.period_end_date,
-        filters.filter_based_on, filters.periodicity, company=filters.company,
-    )
-
-    income = get_data(
-        filters.company, "Income", "Credit", period_list, filters=filters, accumulated_values=filters.accumulated_values,
-        ignore_closing_entries=True, ignore_accumulated_values_for_fy=True,
-    )
-
-    expense = get_data(
-        filters.company, "Expense", "Debit", period_list, filters=filters, accumulated_values=filters.accumulated_values,
-        ignore_closing_entries=True, ignore_accumulated_values_for_fy=True,
-    )
-
-    net_profit_loss = get_net_profit_loss(
-        income, expense, period_list, filters.company, filters.presentation_currency
-    )
-
-    data = []
-    data.extend(income or [])
-    data.extend(expense or [])
-
-    if net_profit_loss:
-        data.append(net_profit_loss)
-
-    data = sorted(
-        [{"balance": e["total"], "account": e["account"], "account_number": 0} for e in data if e],
-        key=lambda a: a["account"]
-    )
-
     # Búsqueda de número de cuenta con query
-    account_query = f"""
-    SELECT account_number, name
-    FROM `tabAccount`
-    WHERE company = "{filters.company}"
+    # account_query = f"""
+    # SELECT account_number, name
+    # FROM `tabAccount`
+    # WHERE company = "{filters.company}" AND report_type = "Profit and Loss"
+    # ORDER BY account_number
+    # """
+
+    # tabAccounts = frappe.db.sql(account_query, as_dict=True)
+
+    # data = sorted(
+    #     [{
+    #         "balance": get_balance_on(
+    #             start_date=filters.period_start_date,
+    #             date=filters.period_end_date,
+    #             account=e["name"],
+    #             company=filters.company
+    #         ) or 0,
+    #         "account": e["name"],
+    #         "account_number": int(e["account_number"] or 0),
+    #     } for e in tabAccounts],
+    #     key=lambda a: a["account"]
+    # )
+
+    # logger.info(data)
+    acc_query = f"""
+    SELECT
+        account_number, name, lft, rgt
+    FROM
+        `tabAccount`
+    WHERE
+        company = "{filters.company}" AND report_type = "Profit and Loss"
     ORDER BY account_number
     """
 
-    tabAccounts = frappe.db.sql(account_query, as_dict=True)
+    Accounts = frappe.db.sql(acc_query, as_dict=True)
 
-    for entry in data:
-        account_number = list(filter(lambda a: a["name"] == entry["account"], tabAccounts))
+    gl_query = f"""
+    SELECT
+        account.name, (SUM(gl_entry.debit) - SUM(gl_entry.credit)) AS balance, account.lft
+    FROM
+        `tabGL Entry` gl_entry
+    LEFT JOIN
+        `tabAccount` account ON account.name = gl_entry.account
+    WHERE
+        gl_entry.company = "{filters.company}"
+        AND account.company = "{filters.company}"
+        AND account.report_type = "Profit and Loss"
+        AND gl_entry.posting_date >= "{filters.period_start_date}"
+        AND gl_entry.posting_date <= "{filters.period_end_date}"
+    GROUP BY account.name
+    """
 
-        if len(account_number):
-            entry.update({"account_number": account_number[0]["account_number"]})
+    GLEntries = frappe.db.sql(gl_query, as_dict=True)
+
+    data = []
+
+    for entry in Accounts:
+        account_gl_entries = list(filter(lambda gl: gl["lft"] >= entry["lft"] and gl["lft"] <= entry["rgt"], GLEntries))
+        if account_gl_entries:
+            data.append({
+                "balance": sum(a["balance"] for a in account_gl_entries),
+                "account": entry["name"],
+                "account_number": entry["account_number"]
+            })
 
     return data
 
@@ -133,7 +155,7 @@ def export_pdf(filters):
                     {
                         "parent": "4. Aprovisionamientos.",
                         "children": [
-                            {"parent": "a) Consumo de mercaderías.", "accounts": ("600", 6060, 6080, 6090, "610*")},
+                            {"parent": "a) Consumo de mercaderías.", "accounts": ("600", 6060, 6090, 6080, "610*")},
                             {
                                 "parent": "b) Consumo de materias primas y otras materias consumibles.", "accounts": (
                                     "601", "602", 6061, 6062, 6081, 6082, 6091, 6092, "611*", "612*"
@@ -167,15 +189,15 @@ def export_pdf(filters):
                         ]
                     },
                     {
-                        "parent": "5. Otros gastos de explotación.",
+                        "parent": "7. Otros gastos de explotación.",
                         "children": [
-                            {"parent": "a) Servicios exteriores.", "accounts": (62, )},
+                            {"parent": "a) Servicios exteriores.", "accounts": ("62", )},
                             {"parent": "b) Tributos.", "accounts": ("631", "634", 636, 639)},
                             {
                                 "parent": "c) Pérdidas, deterioro y variación de provisiones por operaciones comerciales.",
                                 "accounts": ("650", "694", "695", 794, 7954)
                             },
-                            {"parent": "d) Otros gastos de gestión corriente.", "accounts": ("651", "659")},
+                            {"parent": "d) Otros gastos de gestión corriente.", "accounts": ("651", "659")}
                         ]
                     },
                     {
@@ -195,6 +217,12 @@ def export_pdf(filters):
                                 "parent": "b) Resultados por enajenaciones y otras.",
                                 "accounts": ("670", "671", "672", 770, 771, 772)
                             }
+                        ]
+                    },
+                    {
+                        "parent": "13. Otros resultados",
+                        "children": [
+                            {"parent": "a) Ingresos excepcionales.", "accounts": ("678" ,778,)},
                         ]
                     },
                     {
@@ -238,18 +266,18 @@ def export_pdf(filters):
                             {
                                 "parent": "a) Por deudas con empresas del grupo y asociadas.",
                                 "accounts": (
-                                    "6610", "6611", "6615", "6616", "6620", "6621",
+                                    "662","6610", "6611", "6615", "6616",
                                     "6640", "6641", "6650", "6651", "6654", "6655"
                                 )
                             },
                             {
                                 "parent": "b) Por deudas con terceros.",
                                 "accounts": (
-                                    "6612", "6613", "6617", "6618", "6622", "6623", "6624", "6642", "6643",
-                                    "6652", "6653", "6656", "6657", "669"
+                                    "6612", "6613", "6617", "6618", "6642", "6643",
+                                    "6652", "6653", "6656", "6657", "669",
                                 )
                             },
-                            {"parent": "c) Por actualización de provisiones.", "accounts": ("660", )}
+                            {"parent": "c) Por actualización de provisiones.", "accounts": ("660", )},
                         ]
                     },
                     {
@@ -437,7 +465,7 @@ def export_pdf(filters):
         <table style="width: 100%;">
             <tr>
                 <th style="text-align: left;">B) OPERACIONES INTERRUMPIDAS</th>
-                <th style="text-align: right;">0</th>
+                <th style="text-align: right;">{decimal(0)}</th>
             </tr>
         </table>
     </div>
@@ -445,7 +473,7 @@ def export_pdf(filters):
         <div class="container">
             <table style="width: 100%;">
                 <td><b>18. Resultado del ejercicio procedente de operaciones interrumpidas neto de impuestos.</b></td>
-                <td style="text-align: right; padding-left: 20px;"><b>0</b></td>
+                <td style="text-align: right; padding-left: 20px;"><b>{decimal(0)}</b></td>
             </table>
         </div>
     </div>

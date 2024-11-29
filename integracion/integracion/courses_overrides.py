@@ -31,7 +31,7 @@ def send_course_to_crm(doc, method):
 
         # Verificar el estado de la solicitud
         if response.status_code == 200 or response.status_code == 201:
-            frappe.msgprint(f"Curso creado con éxito en el CRM: {response.json()}")
+            pass  # NADA: Todo salió bien
         else:
             frappe.throw(f"Error al crear el curso en el CRM: {response.text}")
     except Exception as e:

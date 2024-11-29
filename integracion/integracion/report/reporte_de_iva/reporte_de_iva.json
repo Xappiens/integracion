@@ -61,22 +61,6 @@
    "wildcard_filter": 0
   },
   {
-    "fieldname": "iva_type",
-    "label": "Tipo de IVA",
-    "fieldtype": "Select",
-    "options": "\n21\n10\n4",
-    "mandatory": 0,
-    "default": "21"
-},
-{
-    "fieldname": "valor",
-    "label": "Tipo de Valor",
-    "fieldtype": "Select",
-    "options": "\nPositiva\nNegativa",
-    "mandatory": 0,
-    "default": "Positiva"
-},
-  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Empresa",
@@ -85,11 +69,11 @@
    "wildcard_filter": 0
   }
  ],
- "idx": 0,
+ "idx": 2,
  "is_standard": "Yes",
  "letter_head": "",
  "letterhead": null,
- "modified": "2024-10-18 08:55:02.468964",
+ "modified": "2024-10-22 09:00:11.481215",
  "modified_by": "Administrator",
  "module": "Integracion",
  "name": "Reporte de IVA",
@@ -98,5 +82,9 @@
  "ref_doctype": "Purchase Invoice",
  "report_name": "Reporte de IVA",
  "report_type": "Script Report",
- "roles": []
+ "roles": [
+  {
+   "role": "Accounts Manager"
+  }
+ ]
 }

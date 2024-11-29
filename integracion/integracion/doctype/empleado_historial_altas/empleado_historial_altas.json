@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-12 11:33:08.457956",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "documento",
+  "hoja_anexo",
+  "company",
+  "column_break_qdpl",
+  "accion",
+  "fecha",
+  "puesto"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "documento",
+   "fieldtype": "Link",
+   "label": "Documento",
+   "options": "DocType"
+  },
+  {
+   "columns": 2,
+   "fieldname": "hoja_anexo",
+   "fieldtype": "Dynamic Link",
+   "label": "Hoja/Llamamiento",
+   "options": "documento"
+  },
+  {
+   "fieldname": "column_break_qdpl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "accion",
+   "fieldtype": "Data",
+   "label": "Accion"
+  },
+  {
+   "columns": 1,
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha A/B"
+  },
+  {
+   "columns": 2,
+   "fieldname": "puesto",
+   "fieldtype": "Data",
+   "label": "Puesto"
+  },
+  {
+   "columns": 2,
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Empresa"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-20 08:51:06.238631",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Empleado Historial Altas",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-04 08:35:50.387583",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nacimiento",
+  "column_break_xdod",
+  "discapacidad",
+  "reducida",
+  "convivencia"
+ ],
+ "fields": [
+  {
+   "fieldname": "nacimiento",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "A\u00f1o de nacimiento"
+  },
+  {
+   "fieldname": "column_break_xdod",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discapacidad",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Grado de discapacidad",
+   "options": "SIN DISCAPACIDAD\nIGUAL O SUPERIOR AL 33% E INFERIOR AL 65%\nIGUAL O SUPERIOR AL 65%"
+  },
+  {
+   "default": "0",
+   "description": "Adem\u00e1s, tiene acreditada la necesidad de ayuda de terceras personas o movilidad reducida",
+   "fieldname": "reducida",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Terceras personas/Mov reducida"
+  },
+  {
+   "default": "0",
+   "description": "Si alguno de los ascendientes convive tambi\u00e9n, al menos durante la mitad del a\u00f1o, con otros descendientes del mismo grado que Vd., indique en esta casilla el n\u00famero total de descendientes con los que convive, incluido Vd. (Si los ascendientes s\u00f3lo conviven con Vd., no rellene esta casilla).",
+   "fieldname": "convivencia",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Convivencia con otros descendientes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-21 11:08:04.397478",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Ascendientes Modelo 145",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

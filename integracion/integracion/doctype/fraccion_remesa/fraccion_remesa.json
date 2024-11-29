@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-15 08:28:14.184119",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha",
+  "pagado",
+  "column_break_lbkk",
+  "cantidad",
+  "remesa"
+ ],
+ "fields": [
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "default": "0",
+   "fieldname": "pagado",
+   "fieldtype": "Check",
+   "label": "Pagado"
+  },
+  {
+   "fieldname": "column_break_lbkk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cantidad",
+   "fieldtype": "Currency",
+   "label": "Cantidad a pagar",
+   "options": "currency"
+  },
+  {
+   "fieldname": "remesa",
+   "fieldtype": "Link",
+   "label": "Remesa",
+   "options": "Remesa Registro"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-15 08:29:54.277400",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Fraccion Remesa",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

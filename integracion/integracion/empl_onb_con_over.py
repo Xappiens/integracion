@@ -20,7 +20,6 @@ class CustomEmployeeBoardingController(Document):
 
     def on_submit(self):
         # Crear el proyecto basado solo en 'employee', eliminando 'job_applicant'
-        frappe.log_error("CustomEmployeeBoardingController")
         project_name = _(self.doctype) + " : "
         if self.doctype == "Employee Onboarding":
             project_name += self.employee
@@ -28,7 +27,8 @@ class CustomEmployeeBoardingController(Document):
             project_name += self.employee_name
         else:
             project_name += self.employee
-
+        project_without_date = project_name
+        project_name += " - " + self.date_of_joining
                     # Tipo de proyecto según el tipo de documento
         if self.doctype == "Employee Separation":
             project_type = "Separacion Empleado"
@@ -36,6 +36,8 @@ class CustomEmployeeBoardingController(Document):
             project_type = "Onboarding Empleado"
         else:
             project_type = None  # Puedes ajustar este valor según tu lógica
+        if frappe.db.exists("Project", {"project_name": project_name}):
+            project_name = project_without_date + " - " + self.creation
 
         project = frappe.get_doc({
             "doctype": "Project",
@@ -50,7 +52,6 @@ class CustomEmployeeBoardingController(Document):
 
         # Establecer los valores del proyecto en el documento
         self.db_set("project", project.name)
-        frappe.log_error(f"Project: {project.name}")
         self.db_set("boarding_status", "Pending")
         self.reload()
 

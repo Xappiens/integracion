@@ -47,7 +47,8 @@ def make_employee(source_name, target_doc=None):
                     "custom_fecha_inicio": "date_of_joining",  # Nuevo mapeo de fecha de inicio
                     "custom_fecha_fin": "contract_end_date",  # Nuevo mapeo de fecha de fin de contrato
                     "designation": "designation",  # Mapeo del campo designación
-                    "offer_date": "scheduled_confirmation_date"
+                    "offer_date": "scheduled_confirmation_date",
+                    "name": "custom_ultima_hoja"
                 },
             }
         },

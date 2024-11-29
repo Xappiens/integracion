@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-31 08:15:28.104345",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha_nac",
+  "fecha_adop",
+  "discapacidad",
+  "terceras",
+  "computo"
+ ],
+ "fields": [
+  {
+   "fieldname": "fecha_nac",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "A\u00f1o de Nacimieno"
+  },
+  {
+   "fieldname": "fecha_adop",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "A\u00f1o de adopcion"
+  },
+  {
+   "fieldname": "discapacidad",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Grado de discapacidad"
+  },
+  {
+   "default": "0",
+   "fieldname": "terceras",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Ayuda terceras personas/movildiad reducida"
+  },
+  {
+   "default": "0",
+   "description": "En caso de hijos que convivan \u00fanicamente con Vd., sin convivir tambi\u00e9n con el otro progenitor (padre o madre), o de nietos que convivan \u00fanicamente con Vd., sin convivir tambi\u00e9n con ning\u00fan otro de sus abuelos, ind\u00edquelo marcando con una \"X\" esta casilla.",
+   "fieldname": "computo",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Computo por entero de hijos o desc"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-21 10:49:37.823234",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Hijos Modelo 145",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

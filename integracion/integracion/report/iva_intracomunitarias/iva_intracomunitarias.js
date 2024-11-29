@@ -21,7 +21,8 @@ frappe.query_reports["IVA Intracomunitarias"] = {
             fieldname: "to_date",
             label: "Hasta",
             fieldtype: "Date",
-            mandatory: 1
+            mandatory: 1,
+            default: frappe.datetime.get_today()
         },
 
 	],

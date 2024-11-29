@@ -9,6 +9,8 @@ from lxml import etree
 import frappe
 import pandas as pd
 from frappe import _
+import requests
+from dataclasses import dataclass
 import unicodedata
 import re
 
@@ -19,9 +21,17 @@ def remove_accents(input_str):
     return "".join([c for c in nfkd_form if not unicodedata.combining(c)])
 
 # Leer credenciales desde el archivo de configuración del sitio
+# Leer credenciales desde el archivo de configuración del sitio
 site_config = frappe.get_site_config()
 user_email = site_config.get('user_sp')
 user_password = site_config.get('pass_sp')
+id_cliente = site_config.get('id_sp_client')
+secret_sp = site_config.get('secret_sp')
+tenant_id = site_config.get('tenant_sp')
+auth_url = f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
+cert_pass = site_config.get('cert_key')
+cert_path = site_config.get('cert_path')
+cert_finger = site_config.get('cert_finger')  # Huella digital del certificado
 sharepoint_base_url = "https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Venta"
 
 # Configurar el logger
@@ -46,7 +56,7 @@ def get_customer_iban(client_name, company):
             # Obtener el IBAN de la cuenta bancaria predeterminada
             iban = frappe.get_value("Bank Account", default_bank_account, "iban")
             if iban:
-                return iban
+                return {"iban": iban}
         
         return ""  # Devolver un valor vacío si no se encuentra el IBAN en ninguna parte
 
@@ -172,9 +182,9 @@ def generate_c34_venta(invoice_data=None):
             company_clean = remove_accents(company)
             abbr = frappe.get_value("Company", company, "abbr")
             now = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
-            now_format = datetime.now().strftime("%Y-%m-%d")
+            now_format = datetime.now().strftime("%d-%m-%Y")
             tax_id = frappe.get_value("Company", company, "tax_id")  # Obteniendo el CIF de la empresa
-            fichero_id_value = f"C34-{abbr}-{now.replace(':', '')}"
+            fichero_id_value = f"C19-{abbr}-{now.replace(':', '')}"
             
             # Crear el elemento principal del XML conforme al estándar SEPA
             root = etree.Element("Document", xmlns="urn:iso:std:iso:20022:tech:xsd:pain.008.001.02")
@@ -200,7 +210,7 @@ def generate_c34_venta(invoice_data=None):
             othr_id.text = frappe.get_value("Company", company, "tax_id")
             schme_nm = etree.SubElement(othr, "SchmeNm")
             prtry = etree.SubElement(schme_nm, "Prtry")
-            prtry.text = "SEPA"
+            prtry.text = "ES"
 
             # Información de pago
             pmt_inf = etree.SubElement(cstmr_drct_dbt_initn, "PmtInf")
@@ -235,6 +245,7 @@ def generate_c34_venta(invoice_data=None):
             cdtr_acct_iban = etree.SubElement(cdtr_acct_id, "IBAN")
             default_bank_account = frappe.get_value("Company", company, "default_bank_account")
             iban = frappe.get_value("Bank Account", {"account": default_bank_account}, "iban")
+            logger.debug(f"IBAN de la empresa {company}: {iban}")
             cdtr_acct_iban.text = iban.upper()
 
             # Agente del acreedor (CdtrAgt)
@@ -254,7 +265,7 @@ def generate_c34_venta(invoice_data=None):
             othr_id.text = frappe.get_value("Company", company, "tax_id")
             schme_nm = etree.SubElement(othr, "SchmeNm")
             prtry = etree.SubElement(schme_nm, "Prtry")
-            prtry.text = "SEPA"
+            prtry.text = "ES"
 
             # Datos de las transacciones (facturas)
             for invoice in invoices:
@@ -287,7 +298,9 @@ def generate_c34_venta(invoice_data=None):
                 dbtr_acct = etree.SubElement(drct_dbt_tx_inf, "DbtrAcct")
                 dbtr_acct_id = etree.SubElement(dbtr_acct, "Id")
                 iban_elem = etree.SubElement(dbtr_acct_id, "IBAN")
-                iban_elem.text = get_customer_iban(invoice.customer, invoice.company).upper()
+                iban_customer = get_customer_iban(invoice.customer, invoice.company).upper()
+                logger.debug(f"IBAN del cliente {invoice.customer}: {iban_customer}")
+                iban_elem.text = iban_customer
 
 
                 rmt_inf = etree.SubElement(drct_dbt_tx_inf, "RmtInf")
@@ -311,6 +324,7 @@ def generate_c34_venta(invoice_data=None):
                 return {"error": "XML validation failed", "details": validation_errors}
 
             # Generar el archivo Excel
+            data_total = 0
             data = []
             for invoice in invoices:
                 try:
@@ -319,32 +333,42 @@ def generate_c34_venta(invoice_data=None):
                     customer_cif = frappe.get_value("Customer", invoice.customer, "tax_id")
                     pais = frappe.get_value("Customer", invoice.customer, "custom_pais")
                     ref_mandato = frappe.get_value("Customer", invoice.customer, "customer_name") or customer_cif
-                    residente = "Si"
-                    if pais:
-                        if pais.code == "es":
-                            residente = "S"
-                        else:
-                            residente = "N"
-
+                    residente = "S" if pais and pais.lower() == "es" else "N"
 
                     data.append({
                         "Nombre cliente": invoice.customer_name,
                         "CIF Cliente": customer_cif,
                         "IBAN Cliente": customer_iban,
-                        "Importe Factura": invoice.outstanding_amount,
+                        "Importe Factura": invoice.grand_total,
                         "Objeto de la Factura": invoice.remarks or "Pago de factura",
-                        "Fecha de factura": invoice.posting_date.strftime('%Y-%m-%d'),
+                        "Fecha de factura": invoice.posting_date.strftime('%d-%m-%Y'),
                         "Residente": residente,
                         "Referencia de Mandato": ref_mandato,
                         "Referencia Adeudo": invoice.name,
-                        "Fecha de Cobro": fecha_cobro.strftime('%Y-%m-%d'),
+                        "Fecha de Cobro": fecha_cobro.strftime('%d-%m-%Y'),
+                        "Tipo de Adeudo": "RCUR",
                         "Tipo Transferencia": "SEPA"
                     })
                     logger.debug(f"Datos agregados para la factura {invoice.name} del cliente {invoice.customer_name}")
                     create_payment_entry_for_invoice(invoice)
+                    data_total = data_total + float(invoice.grand_total)
                 except Exception as e:
                     logger.error(f"Error al procesar la factura {invoice.name}: {e}")
             
+            # data.append({ 
+            #             "Nombre cliente": "",
+            #             "CIF Cliente": "",
+            #             "IBAN Cliente": "TOTAL" ,
+            #             "Importe Factura": data_total,
+            #             "Objeto de la Factura": "",
+            #             "Fecha de factura": "",
+            #             "Residente": "",
+            #             "Referencia de Mandato": "",
+            #             "Referencia Adeudo": "",
+            #             "Fecha de Cobro": "",
+            #             "Tipo de Adeudo": "",
+            #             "Tipo Transferencia": ""
+            #         })
 
             df = pd.DataFrame(data)
             excel_file_path = f"/home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/{fichero_id_value}.xlsx"
@@ -354,16 +378,17 @@ def generate_c34_venta(invoice_data=None):
             # Subir el XML a SharePoint
             xml_sharepoint_url = upload_file_to_sharepoint(xml_file_path, company, fichero_id_value)
             if xml_sharepoint_url:
-                sharepoint_urls.append({"company": company, "xml_url": xml_sharepoint_url})
+                #sharepoint_urls.append({"company": company, "xml_url": xml_sharepoint_url})
                 logger.debug(f"Archivo XML subido a SharePoint: {xml_sharepoint_url}")
 
             # Subir el Excel a SharePoint
             excel_sharepoint_url = upload_file_to_sharepoint(excel_file_path, company, fichero_id_value)
             if excel_sharepoint_url:
+                sharepoint_urls.append({"company": company, "excel_url": excel_sharepoint_url})
                 logger.debug(f"Archivo Excel subido a SharePoint: {excel_sharepoint_url}")
 
             # Crear la remesa y actualizar el estado de las facturas
-            remesa_name = create_remesa(company, invoices, xml_sharepoint_url)
+            remesa_name = create_remesa(company, invoices, excel_sharepoint_url)
             for invoice in invoices:
                 change_status_to_remesa_emitida(invoice.name, remesa_name)
                 logger.debug(f"Estado cambiado a 'Remesa Emitida' para la factura {invoice.name}")
@@ -406,7 +431,7 @@ def create_remesa(company, invoices, sharepoint_url):
             "company_abbr": frappe.get_value("Company", company, "abbr"),
             "fecha": frappe.utils.nowdate(),
             "url": sharepoint_url,
-            "facturas": [{"factura": inv.name, "importe": inv.outstanding_amount} for inv in invoices],
+            "facturas": [{"factura": inv.name, "importe": inv.grand_total} for inv in invoices],
             "naming_series": "REM-.{company_abbr}.-.{fecha}.-.####.",
         })
         
@@ -462,8 +487,32 @@ def upload_file_to_sharepoint(file_path, company, fichero_id_value):
         logger.info(f"Ruta relativa calculada: {relative_path}")
         logger.info(f"Conectando al contexto del sitio: {site_url}")
 
-        credentials = UserCredential(user_email, user_password)
-        ctx = ClientContext(site_url).with_credentials(credentials)
+        def connect_to_sharepoint_with_token(site_url):
+            try:
+                # Usar el certificado y la huella digital para autenticarse directamente
+                logger.info(f"Conectando al contexto del sitio: {site_url} con huella digital: {cert_finger} y ruta de certificado: {cert_path}")
+
+                # Configurar el contexto de cliente con el certificado
+                ctx = ClientContext(site_url).with_client_certificate(
+                    client_id=id_cliente,
+                    thumbprint=cert_finger.replace(":", "").upper(),
+                    cert_path=cert_path,
+                    tenant=tenant_id
+                )
+                
+                # Probar la conexión accediendo a algún recurso básico
+                web = ctx.web.get().execute_query()
+                logger.info(f"Conexión exitosa al sitio SharePoint: {web.properties['Title']}")
+                
+                return ctx
+            except Exception as e:
+                logger.error(f"Error al conectar a SharePoint con certificado: {e}")
+                return None
+
+
+        # credentials = UserCredential(user_email, user_password)
+        # ctx = ClientContext(site_url).with_credentials(credentials)
+        ctx = connect_to_sharepoint_with_token(site_url)
 
         company_folder_name = quote(company)
         cuaderno_folder_name = quote(fichero_id_value)
@@ -503,12 +552,25 @@ def upload_file_to_sharepoint(file_path, company, fichero_id_value):
 
 def create_payment_entry_for_invoice(invoice):
     try:
-        # Obtener la cuenta de débito desde la factura de venta
-        debit_account = invoice.debit_to
+        # Verificar si la factura ya ha sido pagada
+        if invoice.outstanding_amount == 0:
+            logger.info(f"La factura {invoice.name} ya está completamente pagada. No se requiere un Payment Entry.")
+            return  # Salir de la función sin crear el Payment Entry
+
+        # Obtener la cuenta por cobrar (debit_to) desde la factura de venta
+        receivable_account = invoice.debit_to
         
-        # Obtener la cuenta de cobro por defecto de la compañía
-        default_receivable_account = frappe.get_value("Company", invoice.company, "default_receivable_account")
-        
+        # Verificar que la cuenta 'receivable_account' esté configurada como "Receivable"
+        if frappe.db.get_value("Account", receivable_account, "account_type") != "Receivable":
+            frappe.throw(_("La cuenta asignada no es de tipo 'Receivable'. Verifique la configuración de la cuenta."))
+
+        # Obtener la cuenta bancaria de la empresa para el cobro
+        company_bank_account = frappe.get_value("Company", invoice.company, "default_bank_account")
+
+        # Validar que la cuenta bancaria de la empresa esté configurada
+        if not company_bank_account:
+            frappe.throw(_("No se ha configurado una cuenta bancaria por defecto para la empresa."))
+
         # Crear el documento de Payment Entry
         payment_entry = frappe.get_doc({
             "doctype": "Payment Entry",
@@ -520,11 +582,10 @@ def create_payment_entry_for_invoice(invoice):
             "mode_of_payment": frappe.get_value("Customer", invoice.customer, "custom_modo_de_cobro"),
             "paid_amount": invoice.grand_total,
             "received_amount": invoice.grand_total,
-            "paid_from": debit_account,  # Cuenta de origen del débito
-            "paid_to": default_receivable_account,  # Cuenta de cobro
-            "paid_to_account_currency": "EUR",  # Moneda en EUR
-            "bank_account": frappe.get_value("Company", invoice.company, "default_bank_account"),  # Cuenta bancaria por defecto de la empresa
-            "party_bank_account": frappe.get_value("Customer", invoice.customer, "default_bank_account"),  # Cuenta bancaria del cliente
+            "paid_from": receivable_account,  # Cuenta de origen del débito (cuenta por cobrar)
+            "paid_from_account_currency": frappe.get_value("Account", receivable_account, "account_currency"),
+            "paid_to": company_bank_account,  # Cuenta bancaria de la empresa para recibir el pago
+            "paid_to_account_currency": frappe.get_value("Account", company_bank_account, "account_currency"),
             "reference_no": invoice.name,
             "reference_date": invoice.posting_date,
             "references": [
@@ -533,16 +594,16 @@ def create_payment_entry_for_invoice(invoice):
                     "reference_name": invoice.name,
                     "total_amount": invoice.grand_total,
                     "outstanding_amount": invoice.outstanding_amount,
-                    "allocated_amount": invoice.grand_total,
+                    "allocated_amount": invoice.outstanding_amount,
                 }
             ],
-            "currency": "EUR",  # Moneda definida a EUR
+            "currency": invoice.currency,
         })
         
-        # Guardar el Payment Entry
+        # Guardar y enviar el Payment Entry
         payment_entry.insert(ignore_permissions=True)
         payment_entry.submit()
-        
+
         logger.info(f"Payment Entry creado para la factura {invoice.name}: {payment_entry.name}")
 
     except Exception as e:

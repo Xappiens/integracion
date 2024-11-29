@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.custom_contrato == 1",
+ "creation": "2024-11-18 13:46:52.084163",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Job Offer",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Contrato no firmado ha sido adjuntado en la hoja de contrataci\u00f3n {{doc.name}}\nEmpleado: {{doc.applicant_name}}",
+ "message_type": "Markdown",
+ "modified": "2024-11-19 08:56:54.939288",
+ "modified_by": "developer@xappiens.com",
+ "module": "Integracion",
+ "name": "Contrato No firmado Adjuntado",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "Contrato no firmado adjuntado en hoja de contrataci\u00f3n{{ doc.name}}",
+ "value_changed": "custom_contrato"
+}

@@ -5,7 +5,6 @@ from frappe.utils.pdf import get_pdf
 from frappe import _
 import json
 import datetime
-
 import logging 
 
 from erpnext.accounts.report.financial_statements import get_data, get_period_list
@@ -52,8 +51,11 @@ def accounts_html(balance_structure, title_format, body_html):
                 body_html += f"</{title_format}>"
 
             if has_accounts(parent):
-                for account in parent["accounts"]:
-                    body_html += account_div(account)
+                if parent["parent"] == "VII. Resultado del ejercicio.":
+                    body_html += account_div({"account": "129 - Resultado del ejercicio", "balance": parent["total"]})
+                else:
+                    for account in parent["accounts"]:
+                        body_html += account_div(account)
 
             elif has_children(parent):
                 body_html = accounts_html(
@@ -83,14 +85,35 @@ def set_accounts(balance_structure, balance_sheet_data):
         if has_accounts(parent):
             parent_accounts = filter_accounts(parent["accounts"], balance_sheet_data)
             balance_total = sum(ia['balance'] for ia in parent_accounts)
-            parent["accounts"] = parent_accounts
-            parent["total"] = balance_total
+
+            parent.update({"accounts": parent_accounts, "total": balance_total})
 
         elif has_children(parent):
             set_accounts(parent["children"], balance_sheet_data)
 
 def calculate_totals(balance_structure):
     for parent in balance_structure:
+        if parent["parent"] == "5. Otros pasivos financieros.":
+            total = 0
+            new_accounts = []
+
+            for account in parent["accounts"]:
+                new_accounts.append(account.copy())
+
+            for account in new_accounts:
+                if account["balance_pasivo"]:
+                    account.update({"balance": account["balance_pasivo"]})
+
+                total += account["balance"]
+
+            parent["accounts"] = new_accounts
+                # if account["balance_pasivo"]:
+                #     account.update({"balance": account["balance_pasivo"], "time":datetime.datetime.now()}) 
+
+                #     total += account["balance"]
+
+            parent["total"] = total
+
         if 'children' in parent:
             calculate_totals(parent['children'])
 
@@ -156,7 +179,7 @@ def get_balance_sheet_data(filters):
     FROM
         `tabAccount`
     WHERE
-        company = "{filters.company}" AND report_type = "Balance Sheet"
+        company = "{filters.company}" AND report_type IN ("Balance Sheet", "Profit and Loss")
     ORDER BY account_number
     """
 
@@ -164,41 +187,118 @@ def get_balance_sheet_data(filters):
 
     gl_query = f"""
     SELECT
-        account.name, (SUM(gl_entry.debit) - SUM(gl_entry.credit)) AS balance, account.lft
+        account.name, (SUM(gl_entry.debit) - SUM(gl_entry.credit)) AS balance, account.lft, parent.account_number
     FROM
         `tabGL Entry` gl_entry
     LEFT JOIN
         `tabAccount` account ON account.name = gl_entry.account
+    LEFT JOIN
+        `tabAccount` parent ON parent.name = account.parent_account
     WHERE
         gl_entry.company = "{filters.company}"
         AND account.company = "{filters.company}"
-        AND account.report_type = "Balance Sheet"
+        AND account.report_type IN ("Balance Sheet", "Profit and Loss")
+        AND gl_entry.posting_date >= "{filters.period_start_date}"
+        AND gl_entry.posting_date <= "{filters.period_end_date}"
+        AND account.account_number != 551
+        AND parent.account_number != 551
     GROUP BY account.name
     """
 
     GLEntries = frappe.db.sql(gl_query, as_dict=True)
 
+    pasivo_activo = list(filter(lambda a: a["account_number"] == "551", Accounts))
+
+    if len(pasivo_activo):
+        activo_query = f"""
+        SELECT
+            SUM(gl_entry.debit) - SUM(gl_entry.credit) AS balance
+        FROM
+            `tabGL Entry` gl_entry
+        LEFT JOIN
+            `tabAccount` account ON account.name = gl_entry.account
+        LEFT JOIN
+            `tabAccount` parent ON parent.name = account.parent_account
+        WHERE
+            gl_entry.company = "{filters.company}"
+            AND gl_entry.posting_date >= "{filters.period_start_date}"
+            AND gl_entry.posting_date <= "{filters.period_end_date}"
+            AND parent.account_number = 551
+            AND account.account_number IN (551000600)
+        """
+        pasivo_query = f"""
+        SELECT
+            SUM(gl_entry.credit) - SUM(gl_entry.debit) AS balance
+        FROM
+            `tabGL Entry` gl_entry
+        LEFT JOIN
+            `tabAccount` account ON account.name = gl_entry.account
+        LEFT JOIN
+            `tabAccount` parent ON parent.name = account.parent_account
+        WHERE
+            gl_entry.company = "{filters.company}"
+            AND gl_entry.posting_date >= "{filters.period_start_date}"
+            AND gl_entry.posting_date <= "{filters.period_end_date}"
+            AND parent.account_number = 551
+            AND account.account_number IN (551000000,551000001,551000900)
+        """
+        activo_total = frappe.db.sql(activo_query, as_dict=True)
+        pasivo_total = frappe.db.sql(pasivo_query, as_dict=True)
+
+        if len(activo_total) and len(pasivo_total):
+            GLEntries.append({
+                "lft": pasivo_activo[0]["lft"] + 5,
+                "balance": activo_total[0]["balance"],
+                "balance_pasivo": pasivo_total[0]["balance"]
+            })
+
     data = []
 
     for entry in Accounts:
         account_gl_entries = list(filter(lambda gl: gl["lft"] >= entry["lft"] and gl["lft"] <= entry["rgt"], GLEntries))
+        
         if account_gl_entries:
             data.append({
-                "balance": sum(a["balance"] for a in account_gl_entries),
+                "balance": sum(a["balance"] or 0 for a in account_gl_entries),
+                "balance_pasivo": sum(a["balance_pasivo"] or 0 for a in account_gl_entries if a.get("balance_pasivo")),
                 "account": entry["name"],
                 "account_number": entry["account_number"]
             })
 
-    logger.info(data)
-
     return data
 
 def filter_accounts(account_numbers, balance_data):
-    indistinct_accounts = list(filter(lambda an: type(an) == str and an.endswith("*"), account_numbers))
-    negative_accounts = list(filter(lambda an: type(an) == str and an not in indistinct_accounts, account_numbers))
-    account_numbers = list(map(lambda a: int(str(a).removesuffix("*")), account_numbers))
+    activo_pasivo = ("551", )
+    # activo_pasivo_entries = list(filter(lambda a: a in activo_pasivo, account_numbers))
+    # activo_pasivo_gle = None
 
-    res = tuple(filter(
+    # if len(activo_pasivo_entries):
+    #     for entry in activo_pasivo_entries:
+    #         gle = list(filter(
+    #             lambda bd: bd["account_number"] == entry.removesuffix("a").removesuffix("p"),
+    #             sorted(balance_data, key=lambda bd: int(bd["account_number"]))
+    #         ))
+
+    #         if len(gle):
+    #             if entry.endswith("p"):
+    #                 gle[0]["balance"] = gle[0]["balance_pasivo"]
+
+            # activo_pasivo_gle = gle[0]
+
+    indistinct_accounts = list(filter(
+        lambda an: type(an) == str and an.endswith("*") and an not in activo_pasivo,
+        account_numbers
+    ))
+    negative_accounts = list(filter(
+        lambda an: type(an) == str and an not in indistinct_accounts and an not in activo_pasivo,
+        account_numbers
+    ))
+    account_numbers = list(map(
+        lambda a: int(str(a).removesuffix("*")),
+        list(filter(lambda an: an not in activo_pasivo, account_numbers))
+    ))
+
+    res = list(filter(
         lambda bd: int(bd["account_number"]) in account_numbers,
         sorted(balance_data, key=lambda bd: int(bd["account_number"]))
     ))
@@ -207,13 +307,14 @@ def filter_accounts(account_numbers, balance_data):
         if str(entry["account_number"]) in negative_accounts:
             if entry["balance"] > 0:
                 entry["balance"] = -entry["balance"]
-        elif str(entry) + "*" not in indistinct_accounts:
+
+        elif str(entry["account_number"]) + "*" not in indistinct_accounts:
             entry["balance"] = abs(entry["balance"])
 
     return res
 
 def decimal(number):
-    return format_decimal(round(number, 2), locale="es_ES")
+    return format_decimal(round(number, 2), "#,###.00##", locale="es_ES")
 
 @frappe.whitelist()
 def export_balance_sheet(format, filters):
@@ -348,11 +449,11 @@ def export_balance_sheet(format, filters):
                                 "accounts": (433, 434, "4933", "4934")
                             },
                             {"parent": "3. Deudores varios.", "accounts": (44,)},
-                            {"parent": "4. Personal", "accounts": (460, 544)},
+                            {"parent": "4. Personal", "accounts": ("460*", 544)},
                             {"parent": "5. Activos por impuesto corriente.", "accounts": (4709, )},
                             {
                                 "parent": "6. Otros créditos con las Administraciones Públicas.",
-                                "accounts": (4700, 4708, 471, 472)
+                                "accounts": (4700, 4708, "471*", 472, "473*")
                             },
                             {"parent": "7. Accionistas (socios) por desembolsos exigidos.", "accounts": (5580, )},
                         ]
@@ -364,7 +465,7 @@ def export_balance_sheet(format, filters):
                                 "parent": "1. Instrumentos de patrimonio.",
                                 "accounts": (5303, 5304, "5393", "5394", "5933", "5934")
                             },
-                            {"parent": "2. Créditos a empresas.", "accounts": (5323, 5324, 5343, 5344, "5953", "5954")},
+                            {"parent": "2. Créditos a empresas.", "accounts": (5343, 5344, "5953", "5954", 532)},
                             {
                                 "parent": "3. Valores representativos de deuda.",
                                 "accounts": (5313, 5314, 5333, 5334, "5943", "5944")
@@ -380,13 +481,13 @@ def export_balance_sheet(format, filters):
                                 "parent": "1. Instrumentos del patrimonio.",
                                 "accounts": (5305, 540, "5395", "549", "5935", "5936")
                             },
-                            {"parent": "2, Créditos a empresas.", "accounts": (5325, 5345, 542, 543, 547, "5955", "598")},
+                            {"parent": "2, Créditos a empresas.", "accounts": (5345, 542, 543, "547*", "5955", "598")},
                             {
                                 "parent": "3. Valores representativos de deuda.",
                                 "accounts": (5315, 5335, 541, 546, "5945", "597")
                             },
                             {"parent": "4. Derivados.", "accounts": (5590, 5593)},
-                            {"parent": "5. Otros activos financieros.", "accounts": (5355, 545, 548, 551, 5525, 565, 566)},
+                            {"parent": "5. Otros activos financieros.", "accounts": (5355, 545, 548, 5525, 565, 566, 551)},
                         ]
                     },
                     {
@@ -395,7 +496,7 @@ def export_balance_sheet(format, filters):
                     {
                         "parent": "VII. Efectivo y otros activos líquidos equivalentes.",
                         "children": [
-                            {"parent": "1. Tesorería.", "accounts": (570, 571, 572, 573, 574, 575)},
+                            {"parent": "1. Tesorería.", "accounts": (570, 571, "572*", 573, 574, 575)},
                             {"parent": "2. Otros activos líquidos equivalentes.", "accounts": (576, )}
                         ]
                     }
@@ -446,11 +547,27 @@ def export_balance_sheet(format, filters):
                             },
                             {
                                 "parent": "VI. Otras aportaciones de socios.",
-                                "accounts": (118, )
+                                "accounts": ("118", )
                             },
                             {
                                 "parent": "VII. Resultado del ejercicio.",
-                                "accounts": (129, )
+                                # HACK puestas todas las cuentas de PYG hasta conseguir una forma prolija de traspasar
+                                # los saldos de las cuentas de otros reportes
+                                "accounts": (
+                                    700,701,702,703,704,"706","708","709", 705, "6930", "71*", 7930, 73, "600", 6060,
+                                    6090, 6080, "610*","601", "602", 6061, 6062, 6081, 6082, 6091, 6092, "611*", "612*",
+                                    "607", "6931", "6932", "6933", 7931, 7932, 7933, 75, 740, 747,"640","641","6450",
+                                    "642","643","649","644", "6457", 7950, 7957, "62", "631", "634", 636, 639, "650",
+                                    "694", "695", 794, 7954, "651", "659", "68",746,7951, 7952, 7955, 7956, "690","691",
+                                    "692", 790, 791, 792, "670", "671", "672", 770, 771, 772,"678" ,778, "6300*",
+                                    "6301*", "633", 638,7600, 7601,7602, 7603,7610, 7611, 76200, 76201, 76210, 76211,
+                                    7612, 7613, 76202, 76203, 76212, 76213, 767, 769, "662","6610", "6611", "6615",
+                                    "6616", "6640", "6641", "6650", "6651", "6654", "6655", "6612", "6613", "6617",
+                                    "6618", "6642", "6643", "6652", "6653", "6656", "6657", "669", "660", "6630",
+                                    "6631", "6633", "6634", 7630, 7631, 7633, 7634, "6632",7632, "668", 768, "696",
+                                    "697", "698", "699", 796, 797, 798, 799, "666", "667", "673", "675", 766, 773, 775,
+                                    "6300*", "6301*", "633" ,638
+                               )
                             },
                             {
                                 "parent": "VIII. (Dividendo a cuenta).",
@@ -538,15 +655,15 @@ def export_balance_sheet(format, filters):
                             {
                                 "parent": "5. Otros pasivos financieros.",
                                 "accounts": (
-                                    "1034", "1044", "190", "192", 194, 509, 5115, 5135, 5145, 521, 522, 523, 525, 526,
-                                    528, 551, 5525, 555, 5565, 5566, 560, 561, 569
+                                    "1034", "1044", "190", "192", 194, 509, 5115, 5135, 5145, 521, 522, 523, 525, "526",
+                                    528, 5525, "555", 551, 5565, 5566, 560, 561, 569
                                 )
                             },
                         ]
                     },
                     {
                         "parent": "IV. Deudas con empresas del grupo y asociadas a corto plazo.",
-                        "accounts": (5103, 5104, 5113, 5114, 5123, 5124, 5133, 5134, 5143, 5144, 5523, 5524, 5563, 5564)
+                        "accounts": (5103, 5104, 5113, 5114, 5123, 5124, 5133, 5134, 5143, 5144, 552, 5563, 5564)
                     },
                     {
                         "parent": "V. Acreedores comerciales y otras cuentas a pagar.",
@@ -556,7 +673,7 @@ def export_balance_sheet(format, filters):
                                 "parent": "2. Proveedores, empresas del grupo y asociadas",
                                 "accounts": (403, 404)
                             },
-                            {"parent": "3. Acreedores varios.", "accounts": (41, )},
+                            {"parent": "3. Acreedores varios.", "accounts": (410, )},
                             {"parent": "4. Personal (remuneraciones pendientes de pago).", "accounts": (465, 466)},
                             {"parent": "5. Pasivos por impuesto corriente.", "accounts": (4752, )},
                             {
@@ -697,7 +814,7 @@ def export_balance_sheet(format, filters):
                     </table>
                 </div>
             """
-
+        
         # Combinar el contenido del encabezado y el cuerpo
         html_content = header_html + body_html
 

@@ -1,0 +1,327 @@
+import frappe
+
+import openpyxl
+from openpyxl import load_workbook
+
+import os
+from datetime import datetime
+import logging
+
+# Configurar el logger
+logger = logging.getLogger(__name__)
+
+handler = logging.FileHandler(
+    '/home/frappe/frappe-bench/apps/integracion/integracion/integracion/logs/import_journal_entries.log'
+)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+logger.setLevel(logging.DEBUG)
+
+@frappe.whitelist()
+def import_journal_entries(excel_file, company: str):
+	file_doc = frappe.get_doc("File", {"file_url": excel_file})
+	wb = load_workbook(file_doc.get_full_path(), data_only=True)
+
+	data = []
+	errors_header = []
+	errors_rows = []
+
+	for row in list(wb.active.iter_rows())[:7]:
+		errors_header.append([c.value for c in row])
+
+	# Limpieza de datos y recolección de errores
+	for ws in wb.worksheets:
+		ws_rows = list(ws.iter_rows())[7:]
+		ws_rows = list(filter(lambda r: r[2].value != None, ws_rows))
+		date = None
+		next_journal_entry = False
+		numero_asiento = None
+		journal_entry = {"lines": [], "errors": False}
+
+		total_debit = 0
+		total_credit = 0
+
+		logger.info(f"HOJA: {ws}")
+		logger.info("-"*50)
+
+		for row in ws_rows:
+			cells = [cell.value for cell in row[:9]]
+
+			# Agregar Party como celdas extra, por defecto None
+			cells.extend([None, None])
+
+			numero_asiento = cells[1]
+			numero_apunte = cells[2]
+			cuenta = cells[5]
+			debit = cells[7]
+			credit = cells[8]
+
+			logger.info(f"Asiento: {numero_asiento} Apunte: {numero_apunte}")
+
+			if numero_asiento and next_journal_entry:
+				if round(total_credit, 2) != round(total_debit, 2):
+					journal_entry["lines"][0].append("Total debe y total haber no coinciden.")
+					journal_entry["errors"] = True
+
+				if journal_entry["errors"]:
+					errors_rows.append(journal_entry["lines"])
+				else:
+					data.extend(journal_entry["lines"])
+
+				journal_entry["errors"] = False
+
+				next_journal_entry = False
+
+			if cells[0] != None:
+				if type(cells[0]) == datetime:
+					date = cells[0]
+				else:
+					try:
+						cells[0] = datetime.strptime(cells[0], "%d-%b.-%y")
+						date = cells[0]
+					except Exception as e:					
+						cells.append(f"Error al formatear fecha | {e}")
+						journal_entry["lines"].append(cells)
+						journal_entry["errors"] = True
+
+			account_doc = frappe.db.get_value("Account", {"account_number": cuenta, "company": company}, "name")
+
+			if account_doc:
+				cells[5] = account_doc
+			else:
+				account_doc = frappe.db.get_value("Account", cuenta, "name")
+
+				if account_doc:
+					cells[5] = account_doc
+				else:
+					cells.append(
+						f"""Cuenta "{cuenta}" no existe en compañía "{company}". Verificar el plan contable."""
+					)
+					journal_entry["errors"] = True
+
+			if account_doc:
+				account_name, cuenta_numero, padre = frappe.db.get_value(
+					"Account", account_doc, ["account_name", "account_number", "parent_account"]
+				)
+				padre_numero = None
+
+				if padre:
+					padre_numero = frappe.db.get_value("Account", padre, "account_number")
+
+				if cuenta_numero == "40000000":
+					party_type = "Supplier"
+
+					supplier = frappe.db.get_value(party_type, {"name": "Movimientos Importados"})
+
+					if supplier:
+						cells[9] = party_type
+						cells[10] = supplier
+					else:
+						cells.append(
+							f"""No se ha encontrado el proveedor "Movimientos Importados" en compañía {company}."""
+						)
+						journal_entry["errors"] = True
+
+				if cuenta_numero == "46500000":
+					employee = frappe.db.get_value(
+						"Employee", {"employee_name": "Movimientos Importados", "company": company}
+					)
+
+					if employee:
+						cells[9] = "Employee"
+						cells[10] = employee
+					else:
+						cells.append(
+							f"""No se ha encontrado el empleado "Movimientos Importados" en compañía {company}."""
+						)
+
+				if padre_numero == "4100":
+					party_type = "Supplier"
+
+					if cuenta_numero == "41000000" or cuenta_numero == "410000000":
+						supplier = frappe.db.get_value(party_type, {"name": "Movimientos Importados"})
+
+						if supplier:
+							cells[9] = party_type
+							cells[10] = supplier
+						else:
+							cells.append(
+								f"""No se ha encontrado el proveedor "Movimientos Importados" en compañía {company}."""
+							)
+							journal_entry["errors"] = True
+
+					else:
+						supplier_name = account_name
+
+						if account_name.find(" - ") != -1:
+							supplier_name = account_name.split(" - ")[1]
+							supplier_name = account_name.rstrip()
+
+						supplier = frappe.db.get_value(
+							party_type, {"name": ("like", f"%{supplier_name}%")}
+						)
+
+						if not supplier:
+							supplier = frappe.db.get_value("Party Account", {"account": account_name}, "parent")
+
+							if not supplier:
+								supplier = frappe.db.get_value(party_type, {"name": "Movimientos Importados"})
+
+						if supplier:
+							cells[9] = party_type
+							cells[10] = supplier
+						else:
+							cells.append(
+								f"""No se ha encontrado el proveedor "{account_name}" para la cuenta "{account_doc}". """
+							)
+							journal_entry["errors"] = True
+
+			if date:
+				if numero_asiento:
+					total_credit = credit
+					total_debit = debit
+
+					journal_entry["lines"] = [cells]
+				else:
+					next_journal_entry = True
+
+					total_credit += credit
+					total_debit += debit
+
+					journal_entry["lines"].append(cells)
+
+					if row == ws_rows[-1]:
+						if round(total_credit, 2) != round(total_debit, 2):
+							journal_entry["lines"][0].append("Total debe y total haber no coinciden.")
+							journal_entry["errors"] = True
+
+						if journal_entry["errors"]:
+							errors_rows.append(journal_entry["lines"])
+						else:
+							data.extend(journal_entry["lines"])
+
+						journal_entry["errors"] = False
+
+			else:
+				if numero_asiento:
+					cells.append("Fecha no especificada.")
+					journal_entry["errors"] = True 
+
+			logger.info(f"""Tiene errores {journal_entry["errors"]}""")
+			logger.info("*"*50)
+
+	commit_journal_entry = False
+	journal_entry = None
+
+	for cells in data:
+		# Mapeo campos de fila
+		date = cells[0]
+		numero_asiento = cells[1]
+		concepto = cells[3]
+		documento = cells[4]
+		cuenta = cells[5]
+		debit = cells[7]
+		credit = cells[8]
+		party_type = cells[9]
+		party = cells[10]
+
+		# Check si es apertura
+
+		apertura = False
+
+		if documento and documento.lower() == "apertura":
+			apertura = True
+
+		# Si tiene número asiento es cabecera
+		if numero_asiento != None:
+			# Check si tiene que guardar Journal Entry anterior
+			if commit_journal_entry:
+				journal_entry.insert(ignore_permissions=True)
+				frappe.db.commit()
+				commit_journal_entry = False
+
+			# Crear cabecera con primera línea
+			journal_entry = frappe.get_doc({
+				"doctype": "Journal Entry",
+				"voucher_type": "Opening Entry" if apertura else "Journal Entry",
+				"title": f"""Asiento {date.strftime("%d/%m/%Y")} {concepto}""",
+				"company": company,
+				"posting_date": date,
+				"is_opening": apertura,
+				"accounts": [{
+					"account": cuenta,
+					"party_type": party_type,
+					"party": party,
+					"debit_in_account_currency": debit,
+					"credit_in_account_currency": credit,
+				}]
+			})
+
+		else:
+			# Agregar línea a cabecera anteriormente creada
+			journal_entry.append("accounts", {
+				"account": cuenta,
+				"party_type": party_type,
+				"party": party,
+				"debit_in_account_currency": debit,
+				"credit_in_account_currency": credit,
+			})
+
+			if cells == data[-1]:
+				journal_entry.insert(ignore_permissions=True)
+				frappe.db.commit()
+			else:
+				commit_journal_entry = True
+
+
+	if errors_rows:
+		return gen_errors_excel(errors_header, errors_rows)
+
+def gen_errors_excel(header: list, data: list) -> str:
+	# Crear un archivo Excel
+	wb = openpyxl.Workbook()
+	ws = wb.active
+	title = "correccion_cuentas_importar"
+	ws.title = title
+
+	if header[0][1] != title:
+		header[0][1] = title
+		header[6].extend(["Tipo de entidad", "Tercero", "Corregir"])
+
+	row = 0
+
+	for header_row in header:
+		row += 1
+		column = 0
+
+		for cell in header_row:
+			column += 1
+			ws.cell(row=row, column=column, value=cell)
+
+	for row_data in data:
+		for line in row_data:
+			row += 1
+			column = 0
+
+			for cell in line:
+				column += 1
+				ws.cell(row=row, column=column, value=cell)
+
+	# Generar nombre del archivo Excel
+
+	file_name = "correcciones_importacion_cuentas.xlsx"
+	file_path = os.path.join(frappe.utils.get_site_path(), 'private', 'files', file_name)
+	wb.save(file_path)
+
+	# Guardar el archivo en la base de datos de Frappe
+	file_doc = frappe.get_doc({
+		"doctype": "File",
+		"file_name": file_name,
+		"is_private": 1,
+		"file_url": f"/private/files/{file_name}"
+	})
+
+	file_doc.save(ignore_permissions=True)
+
+	return file_doc.file_url

@@ -218,6 +218,14 @@ def adjust_for_item_tax_templates(data, iva_type_filter, valor_filter):
         base_amount = row.get("base_net_amount", 0)
         tax_rate = row.get("tax_rate", 0)
 
+        # Ajustar el porcentaje de impuestos si se proporciona una plantilla de impuestos
+        if row.get("item_tax_template"):
+            tax_template = frappe.get_doc("Item Tax Template", row["item_tax_template"])
+            for tax in tax_template.taxes:
+                tax_rate = tax.tax_rate
+
+        if abs(int(tax_rate)) == 0:
+            continue
         # Asegurarse de que el tipo de IVA coincida con el filtro, incluyendo casos con IVA negativo
         if iva_type_filter is not None and abs(int(tax_rate)) != int(iva_type_filter):
             continue
@@ -228,19 +236,9 @@ def adjust_for_item_tax_templates(data, iva_type_filter, valor_filter):
         elif valor_filter == "Negativa" and base_amount >= 0:
             continue
 
-        # Si se proporciona una plantilla de impuestos, ajustar el porcentaje de impuestos
-        if row.get("item_tax_template"):
-            tax_template = frappe.get_doc("Item Tax Template", row["item_tax_template"])
-            for tax in tax_template.taxes:
-                tax_rate = tax.tax_rate
-
-        # Volver a verificar el tipo de IVA después de ajustar con la plantilla de impuestos
-        if iva_type_filter is not None and abs(int(tax_rate)) != int(iva_type_filter):
-            continue
-
         # Crear una clave única basada en proveedor, CIF y porcentaje de IVA
         key = (row["supplier"], row["cif"], tax_rate)
-        
+
         # Agregar datos ajustados a la estructura resultante
         if key not in adjusted_data:
             adjusted_data[key] = {
@@ -252,9 +250,15 @@ def adjust_for_item_tax_templates(data, iva_type_filter, valor_filter):
             }
         adjusted_data[key]["total_base"] += base_amount
         adjusted_data[key]["total_iva"] += (base_amount * tax_rate) / 100
-    
+
+        if valor_filter == "Negativa" and adjusted_data[key]["total_iva"] > 0:
+            adjusted_data[key]["total_iva"] = -adjusted_data[key]["total_iva"]
+        if valor_filter == "Negativa" and adjusted_data[key]["porcentaje"] < 0:
+            adjusted_data[key]["porcentaje"] = abs(adjusted_data[key]["porcentaje"])
+
     # Devolver los datos ajustados como una lista de diccionarios
     return list(adjusted_data.values())
+
 
 def get_columns():
     """

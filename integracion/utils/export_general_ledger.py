@@ -8,6 +8,18 @@ import datetime
 import openpyxl
 from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
+import logging
+
+# Configurar el logger
+logger = logging.getLogger(__name__)
+
+handler = logging.FileHandler(
+    '/home/frappe/frappe-bench/apps/integracion/integracion/integracion/logs/export_general_ledger.log'
+)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+logger.setLevel(logging.DEBUG)
 
 
 @frappe.whitelist()
@@ -56,57 +68,57 @@ def export_general_ledger(format, filters):
             <style>
                 body {{
                     font-family: 'Arial', sans-serif;
-                    font-size: 12px;
+                    font-size: 10px;
                     margin: 0;
                     padding: 0;
                     position: relative;
                 }}
                 .header {{
-                    margin-bottom: 15px;
-
+                    margin-bottom: 5px;
                 }}
                 .header h1 {{
-                    font-size: 20px;
+                    font-size: 16px;
                     text-align: left;
+                    margin: 0;
+                    padding-bottom: 5px;
                 }}
                 .company-info {{
                     display: flex;
                     justify-content: space-between;
-                    margin-top: 5px;
-                    font-size: 12px;
+                    font-size: 10px;
+                    font-weight: bold;
                 }}
                 .company-info .left {{
-                    padding-left: 20px;
-                    font-weight: bold;
+                    padding-left: 10px;
                     text-align: left;
-                    font-size: 12px;
                 }}
                 .company-info .right {{
                     text-align: right;
-                    font-weight: bold;
-                    font-size: 12px;
+                    padding-right: 10px;
                 }}
                 .page-info {{
                     display: flex;
                     justify-content: space-between;
-                    font-size: 12px;
+                    font-size: 10px;
                     font-weight: bold;
-                    margin-top: 10px;
+                    margin-top: 5px;
                 }}
                 .page-info .left {{
                     text-align: left;
+                    padding-left: 10px;
                 }}
                 .page-info .right {{
                     text-align: right;
+                    padding-right: 10px;
                 }}
                 .divider {{
-                    border-top: 2px solid black;
-                    margin: 10px 0;
+                    border-top: 1px solid black;
+                    margin: 5px 0;
                 }}
                 .observations {{
-                    font-size: 14px;
+                    font-size: 10px;
                     text-align: center;
-                    margin-bottom: 10px;
+                    margin: 5px 10px;
                     padding: 5px;
                     background-color: #f2f2f2;
                     border: 1px solid black;
@@ -116,23 +128,23 @@ def export_general_ledger(format, filters):
                     font-weight: bold;
                     display: flex;
                     justify-content: space-between;
-                    font-size: 12px;
-                    padding-bottom: 10px;
+                    font-size: 10px;
+                    padding: 3px 0;
                 }}
                 .table-header span {{
                     display: inline-block;
                     text-align: center;
-                    width: 16%;
+                    width: 12%;  /* Ajustado para mejorar el espaciado */
                 }}
-                .footer{{
+                .footer {{
                     position: absolute;
-                    bottom: 50px;
+                    bottom: 20px;
                     left: 0;
                     right: 0;
                     text-align: center;
-                    font-size: 10px;
-                    margin-top: 10px;  /* Espacio adicional entre la línea y el texto */
-                    padding-top: 5px;  /* Espacio adicional entre la línea y el texto */
+                    font-size: 8px;
+                    margin-top: 10px;
+                    padding-top: 5px;
                 }}
             </style>
         </head>
@@ -142,9 +154,6 @@ def export_general_ledger(format, filters):
                 <div class="divider"></div>
                 <div class="company-info">
                     <div class="left">Empresa: {company_name}</div>
-                    <!--<div class="right">Página: [page] de [toPage] </div>
-                    pag on header
-                    -->
                 </div>
                 <div class="page-info">
                     <div class="left">Observaciones</div>
@@ -158,17 +167,20 @@ def export_general_ledger(format, filters):
                     {document_name}
                 </div>
                 <div class="table-header">
-                    <span>Fecha</span>
+                    <span>Fecha Reg.</span>
+                    <span>Fecha Fac.</span>
                     <span>Concepto</span>
                     <span>Documento</span>
                     <span>Importe Debe</span>
                     <span>Importe Haber</span>
                     <span>Saldo Contrapar.</span>
+                    <span>Contra cuenta</span>
                 </div>
             </div>
         </body>
         </html>
         """
+
 
         # Contenido del cuerpo directamente en el .py
         body_html = """
@@ -180,7 +192,7 @@ def export_general_ledger(format, filters):
             <style>
                 body {
                     font-family: 'Arial', sans-serif;
-                    font-size: 12px;
+                    font-size: 10px;
                 }
                 .entry {
                     margin-bottom: 2px;
@@ -190,7 +202,7 @@ def export_general_ledger(format, filters):
                 .entry span {
                     display: inline-block;
                     text-align: center;
-                    width: 16%;
+                    width: 12%;
                 }
                 .totals {
                     margin-top: 10px;
@@ -203,7 +215,7 @@ def export_general_ledger(format, filters):
                     margin-top: 10px;
                     display: inline-block;
                     text-align:center;
-                    width: 16%;
+                    width: 12%;
                 }
             </style>
         </head>
@@ -215,6 +227,9 @@ def export_general_ledger(format, filters):
         credit_style = ''
         balance_style = ''
 
+        # Saldo acumulado
+        acum_balance = 0
+
         # Añadir las entradas de la tabla
         for entry in general_ledger_data:
             
@@ -225,18 +240,23 @@ def export_general_ledger(format, filters):
 
             body_html += f"""
             <div class="entry">
-                <span>{entry['bill_date'] if entry['bill_date'] else entry['posting_date']}</span>
+                <span>{entry['posting_date']}</span>
+                <span>{entry['bill_date'] if entry['bill_date'] else ""}</span>
                 <span>{entry['concept']}</span>
-                <span>{entry['voucher_no']}</span>
+                <span>{entry['bill_no']}</span>
                 <span style="{debit_style}">{entry['debit']}</span>
                 <span style="{credit_style}">{entry['credit']}</span>
-                <span style="{balance_style}">{entry['balance']}</span>
+                <span style="{balance_style}">{round(entry['balance'] + acum_balance, 3)}</span>
+                <span>{entry["against"]}</span>
             </div>
             """
+
+            acum_balance += round(entry["balance"], 3)
 
         # Añadir los totales al final del cuerpo
         body_html += f"""
         <div class="totals">
+            <span class="total"></span>
             <span class="total"></span>
             <span class="total"></span>
             <span class="total">Total cuenta</span>
@@ -262,7 +282,11 @@ def export_general_ledger(format, filters):
 
 
         # Generar nombre del archivo PDF
-        file_name = f"{document_name}_Libro_Mayor.pdf".replace(" ", "_")
+        document_name = document_name.replace(".", "_")
+        document_name = document_name.replace(" ", "_")
+        document_name = document_name.replace("%", "_")
+
+        file_name = f"{document_name}_Libro_Mayor.pdf"
         file_path = os.path.join(frappe.utils.get_site_path(), 'private', 'files', file_name)
 
         # Guardar el archivo PDF
@@ -270,7 +294,7 @@ def export_general_ledger(format, filters):
             "doctype": "File",
             "file_name": file_name,
             "is_private": 1,
-            "content": pdf_content
+            "content": pdf_content,
         })
         file_doc.save(ignore_permissions=True)
 
@@ -295,7 +319,7 @@ def export_general_ledger(format, filters):
             for row in range(start_row, end_row + 1):
                 for col in range(start_col, end_col + 1):
                     ws.cell(row=row, column=col).border = border
-        
+
 
         def apply_alignment_to_range(ws, start_row, start_col, end_row, end_col, alignment):
             for row in range(start_row, end_row + 1):
@@ -303,42 +327,42 @@ def export_general_ledger(format, filters):
                     ws.cell(row=row, column=col).alignment = alignment
 
         # Configurar encabezado simulado
-        ws.merge_cells(start_row=start_row, start_column=start_col, end_row=start_row, end_column=start_col + 5)
+        ws.merge_cells(start_row=start_row, start_column=start_col, end_row=start_row, end_column=start_col + 7)
         ws.cell(row=start_row, column=start_col, value="Listado de Cuentas Corrientes")
         ws[f"C{start_row}"].font = Font(size=14, bold=True)
         ws[f"C{start_row}"].alignment = Alignment(horizontal='center')
         ws[f"C{start_row}"].fill = gray_fill
-        apply_border_to_range(ws, start_row, start_col, start_row, start_col + 5, thin_border)
+        apply_border_to_range(ws, start_row, start_col, start_row, start_col + 7, thin_border)
 
-        ws.merge_cells(start_row=start_row + 1, start_column=start_col, end_row=start_row + 1, end_column=start_col + 5)
+        ws.merge_cells(start_row=start_row + 1, start_column=start_col, end_row=start_row + 1, end_column=start_col + 7)
         ws.cell(row=start_row + 1, column=start_col, value=f"Empresa: {filters.get('company')}")
         ws[f"C{start_row + 1}"].font = Font(size=12, bold=True)
         ws[f"C{start_row + 1}"].alignment = Alignment(horizontal='left')
 
-        ws.merge_cells(start_row=start_row + 2, start_column=start_col, end_row=start_row + 2, end_column=start_col + 2)
+        ws.merge_cells(start_row=start_row + 2, start_column=start_col, end_row=start_row + 2, end_column=start_col + 3)
         ws.cell(row=start_row + 2, column=start_col, value=f"Fecha listado: {formatted_today}")
-        apply_alignment_to_range(ws, start_row + 2, start_col, start_row + 2, start_col + 2, Alignment(horizontal='left'))
+        apply_alignment_to_range(ws, start_row + 2, start_col, start_row + 2, start_col + 3, Alignment(horizontal='left'))
 
-        ws.merge_cells(start_row=start_row + 2, start_column=start_col + 3, end_row=start_row + 2, end_column=start_col + 5)
-        ws.cell(row=start_row + 2, column=start_col + 3, value=f"Periodo: {formatted_period}")
-        apply_alignment_to_range(ws, start_row + 2, start_col + 3, start_row + 2, start_col + 5, Alignment(horizontal='right'))
+        ws.merge_cells(start_row=start_row + 2, start_column=start_col + 4, end_row=start_row + 2, end_column=start_col + 7)
+        ws.cell(row=start_row + 2, column=start_col + 4, value=f"Periodo: {formatted_period}")
+        apply_alignment_to_range(ws, start_row + 2, start_col + 4, start_row + 2, start_col + 7, Alignment(horizontal='right'))
 
-        ws.merge_cells(start_row=start_row + 3, start_column=start_col, end_row=start_row + 3, end_column=start_col + 5)
+        ws.merge_cells(start_row=start_row + 3, start_column=start_col, end_row=start_row + 3, end_column=start_col + 7)
         ws.cell(row=start_row + 3, column=start_col, value=f"Proveedor: {filters.get('party_name')}")
         ws[f"C{start_row + 3}"].font = Font(size=12, bold=True)
         ws[f"C{start_row + 3}"].alignment = Alignment(horizontal='right')
 
         # Celda con el account o party
-        ws.merge_cells(start_row=start_row + 4, start_column=start_col, end_row=start_row + 4, end_column=start_col + 5)
+        ws.merge_cells(start_row=start_row + 4, start_column=start_col, end_row=start_row + 4, end_column=start_col + 7)
         account_info = f"{filters.get('account')[0] if filters.get('account') else filters.get('party_name', filters.get('company'))}"
         ws.cell(row=start_row + 4, column=start_col, value=account_info)
         ws[f"C{start_row + 4}"].font = Font(size=14, bold=True)
         ws[f"C{start_row + 4}"].alignment = Alignment(horizontal='center')
         ws[f"C{start_row + 4}"].fill = gray_fill
-        apply_border_to_range(ws, start_row + 4, start_col, start_row + 4, start_col + 5, thin_border)
+        apply_border_to_range(ws, start_row + 4, start_col, start_row + 4, start_col + 7, thin_border)
 
         # Encabezado de la tabla (ajustamos fila)
-        headers = ["Fecha", "Concepto", "Documento", "Debe", "Haber", "Saldo"]
+        headers = ["Fecha Reg.", "Fecha Fac.", "Concepto", "Documento", "Debe", "Haber", "Saldo", "Contra cuenta"]
         header_row = start_row + 6
         for col_num, header in enumerate(headers, start_col):
             col_letter = get_column_letter(col_num)
@@ -351,50 +375,68 @@ def export_general_ledger(format, filters):
 
         # Agregar los datos del General Ledger (empezando en la fila 10)
         row_num = header_row + 1
+
+        # Saldo acumulado
+        acum_balance = 0
+
         for entry in general_ledger_data:
-            ws[f"C{row_num}"] = entry['bill_date'] if entry['bill_date'] else entry['posting_date']
-            ws[f"D{row_num}"] = entry['concept']
-            ws[f"E{row_num}"] = entry['voucher_no']
+            ws[f"C{row_num}"] = entry['posting_date']
+            ws[f"D{row_num}"] = entry['bill_date'] if entry['bill_date'] else ""
+            ws[f"E{row_num}"] = entry['concept']
+            
+            # Columna Documento con condición de Purchase Invoice
+            if entry['concept'] == _("Purchase Invoice") and entry.get("bill_no"):
+                ws[f"F{row_num}"] = entry["bill_no"]
+            else:
+                ws[f"F{row_num}"] = entry['voucher_no']
 
             # Columna Debit
-            ws[f"F{row_num}"] = entry['debit']
+            ws[f"G{row_num}"] = entry['debit']
             if entry['debit'] < 0:
-                ws[f"F{row_num}"].font = negative_font  # Aplicar el estilo si es negativo
-
-            # Columna Credit
-            ws[f"G{row_num}"] = entry['credit']
-            if entry['credit'] < 0:
                 ws[f"G{row_num}"].font = negative_font  # Aplicar el estilo si es negativo
 
-            # Columna Balance
-            ws[f"H{row_num}"] = entry['balance']
-            if entry['balance'] < 0:
+            # Columna Credit
+            ws[f"H{row_num}"] = entry['credit']
+            if entry['credit'] < 0:
                 ws[f"H{row_num}"].font = negative_font  # Aplicar el estilo si es negativo
 
+            # Columna Balance
+            ws[f"I{row_num}"] = round(entry['balance'] + acum_balance, 3)
+            if entry['balance'] < 0:
+                ws[f"I{row_num}"].font = negative_font  # Aplicar el estilo si es negativo
+
+            ws[f"J{row_num}"] = entry["against"]
+
+            acum_balance += round(entry['balance'], 3)
             row_num += 1
 
         # Agregar Totales
         ws[f"C{row_num}"] = "Total"
         ws[f"C{row_num}"].font = Font(bold=True)
 
-        ws[f"F{row_num}"] = total_debit
-        if ws[f"F{row_num}"].value < 0:
-            ws[f"F{row_num}"].font = negative_font
-        
-        ws[f"G{row_num}"] = total_credit
+        ws[f"G{row_num}"] = total_debit
         if ws[f"G{row_num}"].value < 0:
             ws[f"G{row_num}"].font = negative_font
-        
-        ws[f"H{row_num}"] = total_balance
+
+        ws[f"H{row_num}"] = total_credit
         if ws[f"H{row_num}"].value < 0:
             ws[f"H{row_num}"].font = negative_font
 
+        ws[f"I{row_num}"] = total_balance
+        if ws[f"I{row_num}"].value < 0:
+            ws[f"I{row_num}"].font = negative_font
+
         # Ajustar ancho de columnas
-        for col in range(start_col, start_col + 6):
+        for col in range(start_col, start_col + 7):
             ws.column_dimensions[get_column_letter(col)].width = 15
 
         # Generar nombre del archivo Excel
-        file_name = f"Libro_Mayor_{filters.get('account')[0] if filters.get('account') else filters.get('party_name', filters.get('company'))}.xlsx".replace(" ", "_")
+        document_name = f"Libro_Mayor_{filters.get('account')[0] if filters.get('account') else filters.get('party_name', filters.get('company'))}"
+        document_name = document_name.replace(".", "_")
+        document_name = document_name.replace(" ", "_")
+        document_name = document_name.replace("%", "_")
+
+        file_name = f"{document_name}.xlsx"
         file_path = os.path.join(frappe.utils.get_site_path(), 'private', 'files', file_name)
         wb.save(file_path)
 
@@ -420,7 +462,7 @@ def get_general_ledger_data(filters):
     
     query_conditions.append("company = %(company)s")
     query_conditions.append("posting_date BETWEEN %(from_date)s AND %(to_date)s")
-    
+
     if filters.get("party"):
         query_conditions.append("party IN %(party)s")
         query_filters["party"] = tuple(filters.get("party"))
@@ -431,46 +473,62 @@ def get_general_ledger_data(filters):
     
     query = f"""
         SELECT posting_date, account, voucher_no, party_type, party, debit, credit,
-               (debit - credit) AS balance
+               (debit - credit) AS balance, against
         FROM `tabGL Entry`
         WHERE {" AND ".join(query_conditions)}
         ORDER BY posting_date ASC
     """
     
-    data = frappe.db.sql(query, query_filters, as_dict=True)
+    # Ejecutar la consulta
+    raw_data = frappe.db.sql(query, query_filters, as_dict=True)
+    
+    # Crear una nueva lista para almacenar solo las entradas válidas
+    filtered_data = []
 
-    for entry in data:
+    for entry in raw_data:
         entry["bill_date"] = None
+        entry["bill_no"] = entry["voucher_no"]  # Default to voucher_no if not Purchase Invoice
 
         try:
             # Obtener el tipo de documento del voucher filtrando por voucher_no y account
             voucher_doctype = frappe.db.get_value("GL Entry", {"voucher_no": entry["voucher_no"], "account": entry["account"]}, "voucher_type")
 
             if voucher_doctype:
-                # Traducir el nombre del Doctype
-                translated_doctype = _(voucher_doctype)  # No necesitamos get_meta aquí
-                entry["concept"] = translated_doctype
+                # Verificar docstatus del documento en el Doctype específico
+                docstatus = frappe.db.get_value(voucher_doctype, entry["voucher_no"], "docstatus")
+                
+                # Solo incluir si docstatus es 1 (enviado/aprobado)
+                if docstatus == 1:
+                    # Traducir el nombre del Doctype
+                    translated_doctype = _(voucher_doctype)
+                    entry["concept"] = translated_doctype
 
-                # Si es factura de compra, usar campo bill_date de Doctype Purchase Invoice
-                if voucher_doctype == "Purchase Invoice":
-                    entry["bill_date"] = frappe.db.get_value("Purchase Invoice", entry["voucher_no"], "bill_date")
+                    # Si es factura de compra, obtener bill_date y bill_no
+                    if voucher_doctype == "Purchase Invoice":
+                        entry["bill_date"] = frappe.db.get_value("Purchase Invoice", entry["voucher_no"], "bill_date")
+                        entry["bill_no"] = frappe.db.get_value("Purchase Invoice", entry["voucher_no"], "bill_no") or entry["voucher_no"]
+
+                    # Agregar entrada a la lista final si pasa todas las condiciones
+                    filtered_data.append(entry)
+                # Si el docstatus no es 1, se ignora la entrada (no se agrega a filtered_data)
             else:
                 entry["concept"] = _("Unknown")
-        
+                entry["bill_no"] = entry["voucher_no"]
+                # Si no se encuentra un Doctype válido, también se ignora la entrada
         except Exception as e:
             # Loguear cualquier excepción que ocurra en este bloque
             frappe.log_error(f"Error processing voucher_no {entry['voucher_no']}: {str(e)}", "Voucher Processing Error")
             entry["concept"] = _("Unknown")
 
-
-    # Filtro Fecha f. proveedor
+    # Filtro por Fecha Factura
     if filters.get("bill_date"):
-        data = list(filter(
+        filtered_data = list(filter(
             lambda e: e["bill_date"] == datetime.datetime.strptime(filters["bill_date"], "%Y-%m-%d").date(),
-            data
+            filtered_data
         ))
 
-    return data
+    return filtered_data
+
 
 def get_default_account_for_party(party_name, company_name):
     """

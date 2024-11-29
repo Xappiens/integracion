@@ -33,10 +33,16 @@ doc_events = {
         "after_insert": "integracion.integracion.metodos_varios.notify_on_assign"
     },
     "Course": {
-        #"after_insert": "integracion.integracion.courses_overrides.send_course_to_crm"
+        "after_insert": "integracion.integracion.courses_overrides.send_course_to_crm"
     },
     "Project": {
         "after_insert": "integracion.integracion.subir_archivo_sp.create_project_folder"
+    },
+    "Task": {
+        "on_update": "integracion.integracion.task_update.update_activity_state"
+    },
+    "Modificaciones RRHH": {
+        "on_submit": "integracion.integracion.renombrar_hoja.update_job_offer_and_employee"
     }
 }
 
@@ -54,7 +60,13 @@ override_whitelisted_methods = {
     "integracion.invoice_from_email": "integracion.integracion.invoice_from_email.invoice_from_email",
     "integracion.make_employee": "integracion.integracion.make_employee.make_employee",
     "integracion.subir_nominas": "integracion.integracion.subir_nominas.subir_nominas",
+    "integracion.import_journal_entries": "integracion.integracion.import_journal_entries.import_journal_entries",
     "hrms.hr.doctype.employee_onboarding.employee_onboarding.make_employee": "integracion.integracion.employee_onboarding_overr.make_employee",
+    "integracion.chage_state_to_baja": "integracion.integracion.renombrar_hoja.change_state_to_baja",
+    "integracion.export_expense_claim_summary": "integracion.integracion.export_excel.export_expense_claim_summary",
+    "integracion.get_reconciled_transaction_count": "integracion.integracion.number_card_scripts.get_reconciled_transaction_count",
+    "integracion.get_prom_reconciled_transaction": "integracion.integracion.number_card_scripts.get_prom_reconciled_transaction"
+
     #"erpnext.accounts.doctype.bank_transaction.bank_transaction.reconcile_vouchers": "integracion.integracion.bank_tool_over.reconcile_vouchers"
 
     #"erpnext.selling.doctype.sales_order.sales_order.make_sales_invoice": "integracion.integracion.metodos_varios.make_sales_invoice",
@@ -64,6 +76,9 @@ override_whitelisted_methods = {
 permission_query_conditions = {
     "Job Offer": "integracion.integracion.permissions.job_offer_query",
     "User": "integracion.integracion.permissions.user_query",
+    "Project": "integracion.integracion.permissions.project_query",
+    "Attendance": "integracion.integracion.permissions.attendance_query",
+    #"Course": "integracion.integracion.permissions.course_query"
 }
 
 
@@ -90,7 +105,7 @@ override_doctype_dashboards = {
 scheduler_events = {
     "cron": {
         "0 16 * * *":[
-            "integracion.integracion.hc_diary_noti.enviar_notificacion_a_asesoria"
+            #"integracion.integracion.hc_diary_noti.enviar_notificacion_a_asesoria"
         ],
         
     },
@@ -103,7 +118,8 @@ scheduler_events = {
 
 # Añadir el enlace de Font Awesome al encabezado de HTML
 app_include_css = [
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
+    "/assets/integracion/css/custom_styles.css"
 ]
 
 app_include_js = [
@@ -115,6 +131,7 @@ app_include_js = [
     "/assets/integracion/js/custom_balanceshote.js",
     "/assets/integracion/js/custom_profit_and_loss_statement.js",
     "/assets/integracion/js/custom_mte_attendance.js",
+    "/assets/integracion/js/custom_indicator.js"
 ]
 
 page_js = {
