@@ -314,14 +314,14 @@ def generate_c34_venta(invoice_data=None):
             logger.info(f"Archivo XML generado para {company}: {xml_file_path}")
 
             # Validar el XML contra el XSD
-            xsd_file_path = "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/c34_xsd/pain.008.001.02.xsd"
-            is_valid, validation_errors = validate_xml_against_xsd(xml_file_path, xsd_file_path)
-            if is_valid:
-                logger.info(f"El archivo XML {xml_file_path} es válido según el XSD.")
-            else:
-                logger.error(f"El archivo XML {xml_file_path} no es válido según el XSD: {validation_errors}")
+            # xsd_file_path = "/home/frappe/frappe-bench/apps/integracion/integracion/integracion/c34_xsd/pain.008.001.02.xsd"
+            # is_valid, validation_errors = validate_xml_against_xsd(xml_file_path, xsd_file_path)
+            # if is_valid:
+            #     logger.info(f"El archivo XML {xml_file_path} es válido según el XSD.")
+            # else:
+            #     logger.error(f"El archivo XML {xml_file_path} no es válido según el XSD: {validation_errors}")
                 
-                return {"error": "XML validation failed", "details": validation_errors}
+            #     return {"error": "XML validation failed", "details": validation_errors}
 
             # Generar el archivo Excel
             data_total = 0

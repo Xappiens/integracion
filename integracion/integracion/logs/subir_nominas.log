@@ -281,3 +281,86 @@
 2024-11-13 14:03:39,396 - integracion.integracion.subir_nominas - ERROR - 21486987L Luz Maria Dolera Lozano - Balance con diferencia de 3350.52
 2024-11-13 14:03:39,591 - integracion.integracion.subir_nominas - ERROR - 25690166V MARIA GARCIA MELERO - Balance con diferencia de 1537.98
 2024-11-13 14:03:39,810 - integracion.integracion.subir_nominas - ERROR - 54313974A MOHAMED ALI AMGHAR ZIANI - Balance con diferencia de 556.32
+2024-11-29 11:50:07,471 - integracion.integracion.subir_nominas - ERROR - 9310484S  - Empleado no encontrado
+2024-11-29 11:50:17,003 - integracion.integracion.subir_nominas - ERROR - 78957975X IRATXE NARVION GONZALEZ - Balance con diferencia de -336.0
+2024-11-29 11:50:18,247 - integracion.integracion.subir_nominas - ERROR - 71732472A ALBA RODRIGUEZ ALVAREZ - Balance con diferencia de -25.88
+2024-11-29 12:22:28,488 - integracion.integracion.subir_nominas - ERROR - 78957975X IRATXE NARVION GONZALEZ - Balance con diferencia de -336.0
+2024-11-29 12:22:28,676 - integracion.integracion.subir_nominas - ERROR - 71732472A ALBA RODRIGUEZ ALVAREZ - Balance con diferencia de -25.88
+2024-11-29 12:47:30,051 - integracion.integracion.subir_nominas - ERROR - 7989527V MARÍAISABEL GARCÍA VICENTE - No se encontró cuenta para el empleado
+2024-11-29 12:47:35,279 - integracion.integracion.subir_nominas - ERROR - 12761265Z MARÍA PILAR ROLDÁN RUIZ - No se encontró cuenta para el empleado
+2024-11-29 12:47:44,057 - integracion.integracion.subir_nominas - ERROR - 9813189D Patricia Suárez Rodríguez - Balance con diferencia de -516.07
+2024-11-29 12:56:13,781 - integracion.integracion.subir_nominas - ERROR - 9813189D Patricia Suárez Rodríguez - Balance con diferencia de -516.07
+2024-12-01 15:56:17,505 - integracion.integracion.subir_nominas - ERROR - 45595251M MIGUEL ANGEL CAMPOY LOPEZ - No se encontró cuenta para el empleado
+2024-12-01 15:56:21,170 - integracion.integracion.subir_nominas - ERROR - 71294752L Susana Barga  Cascón - No se encontró cuenta para el empleado
+2024-12-01 15:56:24,176 - integracion.integracion.subir_nominas - ERROR - 25720506C GEMA  BARBA  ANDREU - No se encontró cuenta para el empleado
+2024-12-01 15:56:24,608 - integracion.integracion.subir_nominas - ERROR - 27306527F MARIA DE LA SALUD  BERNÁLDEZ LARA - No se encontró cuenta para el empleado
+2024-12-01 16:28:46,927 - integracion.integracion.subir_nominas - ERROR - 74841755P FRANCISCO JAVIER JODA BARBA - No se encontró cuenta para el empleado
+2024-12-01 16:28:47,185 - integracion.integracion.subir_nominas - ERROR - 77365464L DAVID GARCIA RODRIGUEZ - No se encontró cuenta para el empleado
+2024-12-01 16:28:47,239 - integracion.integracion.subir_nominas - ERROR - 15405125R MARIA CARMEN ROMERO OVIEDO - No se encontró cuenta para el empleado
+2024-12-01 16:28:47,244 - integracion.integracion.subir_nominas - ERROR - 09419083P  - Empleado no encontrado
+2024-12-01 16:44:23,358 - integracion.integracion.subir_nominas - ERROR - 18541303Z  - Empleado no encontrado
+2024-12-01 16:44:23,366 - integracion.integracion.subir_nominas - ERROR - Y8071107F  - Empleado no encontrado
+2024-12-01 16:44:23,371 - integracion.integracion.subir_nominas - ERROR - 8977676V  - Empleado no encontrado
+2024-12-01 16:50:11,694 - integracion.integracion.subir_nominas - ERROR - 11403161Z  - Empleado no encontrado
+2024-12-01 16:50:12,033 - integracion.integracion.subir_nominas - ERROR - Y3367196X  - Empleado no encontrado
+2024-12-01 16:50:12,038 - integracion.integracion.subir_nominas - ERROR - 27459353K  - Empleado no encontrado
+2024-12-01 16:50:12,043 - integracion.integracion.subir_nominas - ERROR - 75225867C  - Empleado no encontrado
+2024-12-01 16:50:12,049 - integracion.integracion.subir_nominas - ERROR - 24417195G  - Empleado no encontrado
+2024-12-01 16:50:12,672 - integracion.integracion.subir_nominas - ERROR - 07048630G  - Empleado no encontrado
+2024-12-01 16:50:12,678 - integracion.integracion.subir_nominas - ERROR - 60234225P  - Empleado no encontrado
+2024-12-01 16:50:12,683 - integracion.integracion.subir_nominas - ERROR - 71751110B  - Empleado no encontrado
+2024-12-01 16:50:12,733 - integracion.integracion.subir_nominas - ERROR - 71639946Y LYDIA CANTELI ALVAREZ - No se encontró cuenta para el empleado
+2024-12-01 16:50:12,780 - integracion.integracion.subir_nominas - ERROR - 13151080W JESÚS RUIZ GONZÁLEZ - No se encontró cuenta para el empleado
+2024-12-01 16:55:21,873 - integracion.integracion.subir_nominas - ERROR - 76631155P JALIKA DEMBA JATTA - No se encontró cuenta para el empleado
+2024-12-01 16:55:21,919 - integracion.integracion.subir_nominas - ERROR - Y7806358B Ingrid Yovanna Rojas Garzon - No se encontró cuenta para el empleado
+2024-12-01 17:07:48,711 - integracion.integracion.subir_nominas - ERROR - 71899297D Verónica Menéndez Suarez - No se encontró cuenta para el empleado
+2024-12-01 17:07:48,758 - integracion.integracion.subir_nominas - ERROR - 71280231B Goretti Calvo Tobar - No se encontró cuenta para el empleado
+2024-12-01 17:07:48,811 - integracion.integracion.subir_nominas - ERROR - 71267275G GLORIA LARA PUENTE - No se encontró cuenta para el empleado
+2024-12-02 09:24:33,401 - integracion.integracion.subir_nominas - ERROR - 7248190Q  - Empleado no encontrado
+2024-12-02 09:24:36,769 - integracion.integracion.subir_nominas - ERROR - 71926276D MARÍA CONSUELO CEINOS JATO - No se encontró cuenta para el empleado
+2024-12-02 09:24:36,925 - integracion.integracion.subir_nominas - ERROR - 07985740W  - Empleado no encontrado
+2024-12-02 09:24:36,987 - integracion.integracion.subir_nominas - ERROR - 71702933L ROCIO CORCHETE RUBIO - No se encontró cuenta para el empleado
+2024-12-02 09:24:39,522 - integracion.integracion.subir_nominas - ERROR - 36153602V Alexandre Hermida Mondelo - Balance con diferencia de -66.94
+2024-12-02 09:34:22,499 - integracion.integracion.subir_nominas - ERROR - 71926276D MARÍA CONSUELO CEINOS JATO - No se encontró cuenta para el empleado
+2024-12-02 09:34:25,267 - integracion.integracion.subir_nominas - ERROR - 36153602V Alexandre Hermida Mondelo - Balance con diferencia de -66.94
+2024-12-02 09:35:37,683 - integracion.integracion.subir_nominas - ERROR - 36153602V Alexandre Hermida Mondelo - Balance con diferencia de -66.94
+2024-12-02 13:41:52,988 - integracion.integracion.subir_nominas - ERROR - 9011139S  - Empleado no encontrado
+2024-12-02 13:41:58,033 - integracion.integracion.subir_nominas - ERROR - 7966691C  - Empleado no encontrado
+2024-12-02 13:42:09,964 - integracion.integracion.subir_nominas - ERROR - 9337249P  - Empleado no encontrado
+2024-12-02 13:42:13,520 - integracion.integracion.subir_nominas - ERROR - 3456191G Aurora Iglesias - No se encontró cuenta para el empleado
+2024-12-02 13:42:19,140 - integracion.integracion.subir_nominas - ERROR - 9419083P  - Empleado no encontrado
+2024-12-02 13:42:21,974 - integracion.integracion.subir_nominas - ERROR - 9326950J  - Empleado no encontrado
+2024-12-02 13:42:45,330 - integracion.integracion.subir_nominas - ERROR - 76949897Q Silvia Maria Escobedo  López - No se encontró cuenta para el empleado
+2024-12-02 13:42:45,338 - integracion.integracion.subir_nominas - ERROR - 7486491Z  - Empleado no encontrado
+2024-12-02 13:42:46,831 - integracion.integracion.subir_nominas - ERROR - 19101787B Óscar Francés Graciá - No se encontró cuenta para el empleado
+2024-12-02 13:42:46,838 - integracion.integracion.subir_nominas - ERROR - 28760739K  - Empleado no encontrado
+2024-12-02 13:42:46,905 - integracion.integracion.subir_nominas - ERROR - 70893985G MARÍA DEL ROCÍO GARCÍA SIERRA - No se encontró cuenta para el empleado
+2024-12-02 13:42:46,961 - integracion.integracion.subir_nominas - ERROR - 48050706A Sergi Melcion Nicuesa - No se encontró cuenta para el empleado
+2024-12-02 13:42:47,019 - integracion.integracion.subir_nominas - ERROR - 9289306C CARLOS JAVIER MARTIN ARRANZ - No se encontró cuenta para el empleado
+2024-12-02 13:42:47,199 - integracion.integracion.subir_nominas - ERROR - 28597900E  - Empleado no encontrado
+2024-12-02 13:42:51,509 - integracion.integracion.subir_nominas - ERROR - 13751246Y JESUS ALVAREZ GOMEZ - Balance con diferencia de 1212.12
+2024-12-02 13:43:06,257 - integracion.integracion.subir_nominas - ERROR - 13164136V Sergio Esteban Fernández - Balance con diferencia de 916.02
+2024-12-02 13:43:25,580 - integracion.integracion.subir_nominas - ERROR - 71264165E Gonzalo Bahamonde Pascual - Balance con diferencia de 3685.56
+2024-12-02 13:43:46,324 - integracion.integracion.subir_nominas - ERROR - 71271783G Ester Fernández Santamarina - Balance con diferencia de 1413.69
+2024-12-02 13:43:50,859 - integracion.integracion.subir_nominas - ERROR - 25690166V MARIA GARCIA MELERO - Balance con diferencia de 1613.25
+2024-12-03 08:27:30,029 - integracion.integracion.subir_nominas - ERROR - 28760739K Josefa Pérez Velasco - No se encontró cuenta para el empleado
+2024-12-03 08:27:30,356 - integracion.integracion.subir_nominas - ERROR - 9289306C  - Empleado no encontrado
+2024-12-03 08:27:30,405 - integracion.integracion.subir_nominas - ERROR - 28597900E Isabel María Morán Pérez - No se encontró cuenta para el empleado
+2024-12-03 08:27:36,188 - integracion.integracion.subir_nominas - ERROR - 13751246Y JESUS ALVAREZ GOMEZ - Balance con diferencia de 1212.12
+2024-12-03 08:27:36,425 - integracion.integracion.subir_nominas - ERROR - 13164136V Sergio Esteban Fernández - Balance con diferencia de 916.02
+2024-12-03 08:27:36,715 - integracion.integracion.subir_nominas - ERROR - 71264165E Gonzalo Bahamonde Pascual - Balance con diferencia de 3685.56
+2024-12-03 08:27:37,001 - integracion.integracion.subir_nominas - ERROR - 71271783G Ester Fernández Santamarina - Balance con diferencia de 1413.69
+2024-12-03 08:27:37,184 - integracion.integracion.subir_nominas - ERROR - 25690166V MARIA GARCIA MELERO - Balance con diferencia de 1613.25
+2024-12-03 08:34:14,294 - integracion.integracion.subir_nominas - ERROR - 13751246Y JESUS ALVAREZ GOMEZ - Balance con diferencia de 1212.12
+2024-12-03 08:34:14,504 - integracion.integracion.subir_nominas - ERROR - 13164136V Sergio Esteban Fernández - Balance con diferencia de 916.02
+2024-12-03 08:34:14,786 - integracion.integracion.subir_nominas - ERROR - 71264165E Gonzalo Bahamonde Pascual - Balance con diferencia de 3685.56
+2024-12-03 08:34:15,085 - integracion.integracion.subir_nominas - ERROR - 71271783G Ester Fernández Santamarina - Balance con diferencia de 1413.69
+2024-12-03 08:34:15,284 - integracion.integracion.subir_nominas - ERROR - 25690166V MARIA GARCIA MELERO - Balance con diferencia de 1613.25
+2024-12-13 12:35:12,272 - integracion.integracion.subir_nominas - ERROR - 11403161Z Ramón Gonzalo Penela Gutiérrez - No se encontró cuenta para el empleado
+2024-12-13 12:35:12,333 - integracion.integracion.subir_nominas - ERROR - Y3367196X Yure Da Silveira Gama - No se encontró cuenta para el empleado
+2024-12-13 12:35:12,392 - integracion.integracion.subir_nominas - ERROR - 27459353K Juan José Marín López - No se encontró cuenta para el empleado
+2024-12-13 12:35:12,453 - integracion.integracion.subir_nominas - ERROR - 75225867C María del Carmen Sánchez Ruiz - No se encontró cuenta para el empleado
+2024-12-13 12:35:12,507 - integracion.integracion.subir_nominas - ERROR - 24417195G Andrea Rodríguez Martínez - No se encontró cuenta para el empleado
+2024-12-13 12:35:12,577 - integracion.integracion.subir_nominas - ERROR - 07048630G María Noemí Patricio Torrens - No se encontró cuenta para el empleado
+2024-12-13 12:35:12,658 - integracion.integracion.subir_nominas - ERROR - 60234225P Gilber Alexander Castillo Cobo - No se encontró cuenta para el empleado
+2024-12-13 12:35:12,726 - integracion.integracion.subir_nominas - ERROR - 71751110B Victoria Stephanie Andreoletti Laguna - No se encontró cuenta para el empleado

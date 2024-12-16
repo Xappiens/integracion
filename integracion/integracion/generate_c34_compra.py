@@ -107,32 +107,22 @@ def generate_c34_compra(invoice_data=None):
     logger.info("Inicio de la generación de Cuaderno 34")
 
     try:
-        # Deserializar el JSON recibido
-        invoice_names = json.loads(invoice_data) if invoice_data else []
+        # Filtros de búsqueda de facturas
+        filters = {
+            "custom_aprobado_para_pago": 1,
+            "custom_remesa_emitida": 0,
+            "docstatus": ["!=", 2]
+        }
 
-        if invoice_names:
-            logger.debug(f"Procesando facturas específicas: {invoice_names}")
+        # Si hay facturas seleccionadas desde el frontend, añadirlas al filtroo
+        if invoice_data:
+            invoice_names = [i["name"] for i in json.loads(invoice_data)]
+            logger.info(invoice_names)
+            filters.update({"name": ["in", invoice_names]})
 
-            # Aplicar el filtro solo a las facturas seleccionadas
-            filtered_invoices = frappe.get_all("Purchase Invoice", filters={
-                "name": ["in", invoice_names],
-                "custom_aprobado_para_pago": 1,
-                "custom_remesa_emitida": 0,
-                "docstatus": ["!=", 2]
-            }, fields=["name"])
+        filtered_invoices = frappe.get_all("Purchase Invoice", filters=filters, fields=["name"])
 
-            # Si no se encuentran facturas después del filtro, no hacer nada
-            if not filtered_invoices:
-                logger.warning("No se encontraron facturas que cumplan los criterios.")
-                return
-        else:
-            # Si no se seleccionan facturas, obtener todas las facturas aprobadas
-            filtered_invoices = frappe.get_all("Purchase Invoice", filters={
-                "custom_aprobado_para_pago": 1,
-                "custom_remesa_emitida": 0,
-                "docstatus": ["!=", 2]
-            }, fields=["name"])
-            logger.debug(f"Total facturas encontradas: {len(filtered_invoices)}")
+        logger.debug(f"Total facturas encontradas: {len(filtered_invoices)}")
 
     except Exception as e:
         logger.error(f"Error al obtener facturas: {e}")
@@ -295,14 +285,30 @@ def generate_c34_compra(invoice_data=None):
                     change_status_to_remesa_emitida(invoice.name, remesa_name)
                     logger.debug(f"Estado cambiado a 'Remesa Emitida' para la factura {invoice.name}")
 
-                    create_payment_entry_for_purchase_invoice(invoice, supplier_iban)
+                    payment_name = create_payment_entry_for_purchase_invoice(invoice, supplier_iban)
+
+                    if not payment_name:
+                        payment_name = frappe.get_value(
+                            "Payment Entry Reference",
+                            {"reference_doctype": "Purchase Invoice", "reference_name": invoice.name, "docstatus": 1},
+                            "parent"
+                        )
                     # Crear el registro de Payment Entry para cada factura
                     # payment_entry_name = create_payment_entry_for_invoice(company, invoice)
                     # if payment_entry_name:
                     #     logger.info(f"Payment Entry creado exitosamente: {payment_entry_name} para la factura {invoice.name}")
                     # else:
                     #     logger.error(f"No se pudo crear el Payment Entry para la factura {invoice.name}")
-                
+
+                    # Insertar pago en línea de remesa creada (Remesa Factura)
+                    remesa_factura =  frappe.get_all("Remesa Factura", {"factura": invoice.name, "parent": remesa_name})
+
+                    if payment_name and len(remesa_factura):
+                        remesa_factura_doc = frappe.get_doc("Remesa Factura", remesa_factura[0].get("name"))
+
+                        if remesa_factura_doc:
+                            remesa_factura_doc.db_set("pago", payment_name)
+
             if os.path.exists(file_path):
                 os.remove(file_path)
                 logger.info(f"Archivo local {file_path} eliminado después de subirlo a SharePoint")
@@ -322,13 +328,35 @@ def create_remesa(company, invoices, sharepoint_url):
             "company_abbr": frappe.get_value("Company", company, "abbr"),
             "fecha": frappe.utils.nowdate(),
             "url": sharepoint_url,
-            "facturas": [{"factura": inv.name, "importe": inv.outstanding_amount} for inv in invoices],
+            "facturas": [],
             "naming_series": "REM-.{company_abbr}.-.{fecha}.-.####.",
         })
         logger.info(f"Remesa doc name: {remesa_doc.name}")
         # Insertar el documento en la base de datos
         remesa_doc.save(ignore_permissions=True)  # Esto validará y guardará el documento en vez de insertarlo directamente.
-        
+
+        for inv in invoices:
+
+            # Si es una factura de pagos fraccionados, recorrer pagos fraccionados
+            if inv.custom_varios_pagos:
+                try:
+                    total_importe = 0
+
+                    # Solo recorrer las que no están pagas
+                    for pago in filter(lambda i: not i.pagado, inv.custom_pagos):
+                        total_importe += pago.monto
+
+                        pago.db_set("pagado", True)
+                        pago.db_set("remesa", remesa_doc.name)
+
+                    remesa_doc.append("facturas", {"factura": inv.name, "importe": total_importe})
+
+                except Exception as e:
+                    logger.error(f"Error al conseguir importe de pagos fraccionados, tomando total. {e}")
+                    remesa_doc.append("facturas", {"factura": inv.name, "importe": inv.grand_total})
+            else:
+                remesa_doc.append("facturas", {"factura": inv.name, "importe": inv.grand_total})
+
         logger.info(f"Remesa creada: {remesa_doc.name} para la empresa {company}")
         return remesa_doc.name
     except Exception as e:

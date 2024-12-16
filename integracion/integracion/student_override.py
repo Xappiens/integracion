@@ -35,14 +35,36 @@ class CustomStudent(Student):
                 # Agregar más campos aquí si es necesario
             }).insert()
 
+            # Crea la dirección para el cliente recién creado
+            address = frappe.get_doc({
+                "doctype": "Address",
+                "address_title": self.student_name,
+                "address_type": "Billing",  # O "Shipping" según sea necesario
+                "address_line1": self.address_line_1,
+                "address_line2": self.address_line_2 if hasattr(self, 'address_line_2') else None,
+                "city": self.city,
+                "state": self.state,
+                "pincode": self.postcode,
+                "country": self.country,
+                "email_id": self.student_email_id,  # Email asociado a la dirección
+                "phone": self.student_mobile_number if hasattr(self, 'student_mobile_number') else None,
+                "links": [
+                    {
+                        "link_doctype": "Customer",
+                        "link_name": customer.name
+                    }
+                ]
+            }).insert()
+
             # Vincula el cliente recién creado al estudiante
             frappe.db.set_value("Student", self.name, "customer", customer.name)
 
             # Mensaje de éxito
             frappe.msgprint(
-                _("Customer {0} created and linked to Student").format(customer.name),
+                _("Customer {0} and Address {1} created and linked to Student").format(customer.name, address.name),
                 alert=True
             )
+
 
     def set_missing_customer_details(self):
         """Sobreescribimos para usar nuestro método create_customer"""

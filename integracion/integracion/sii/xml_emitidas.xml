@@ -13,14 +13,14 @@
       <siiLR:RegistroLRFacturasEmitidas>
         <sii:PeriodoLiquidacion>
           <sii:Ejercicio>2024</sii:Ejercicio>
-          <sii:Periodo>11</sii:Periodo>
+          <sii:Periodo>12</sii:Periodo>
         </sii:PeriodoLiquidacion>
         <siiLR:IDFactura>
           <sii:IDEmisorFactura>
             <sii:NIF>B09318916</sii:NIF>
           </sii:IDEmisorFactura>
-          <sii:NumSerieFacturaEmisor>ATUSL/AR/2400280</sii:NumSerieFacturaEmisor>
-          <sii:FechaExpedicionFacturaEmisor>28-11-2024</sii:FechaExpedicionFacturaEmisor>
+          <sii:NumSerieFacturaEmisor>ATUSL/AR/2400350</sii:NumSerieFacturaEmisor>
+          <sii:FechaExpedicionFacturaEmisor>13-12-2024</sii:FechaExpedicionFacturaEmisor>
         </siiLR:IDFactura>
         <siiLR:FacturaExpedida>
           <sii:TipoFactura>F1</sii:TipoFactura>
@@ -28,11 +28,11 @@
           <sii:ImporteTotal>1000.00</sii:ImporteTotal>
           <sii:DescripcionOperacion>Venta de Producto/Servicio</sii:DescripcionOperacion>
           <sii:Contraparte>
-            <sii:NombreRazon>EL MAHJOUB ZAYD</sii:NombreRazon>
+            <sii:NombreRazon>HICHAM ELHARCHI</sii:NombreRazon>
             <sii:IDOtro>
               <sii:CodigoPais>MA</sii:CodigoPais>
               <sii:IDType>04</sii:IDType>
-              <sii:ID>Z1469694E</sii:ID>
+              <sii:ID>Y9111235Y</sii:ID>
             </sii:IDOtro>
           </sii:Contraparte>
           <sii:TipoDesglose>

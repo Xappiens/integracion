@@ -4,8 +4,9 @@
 import frappe
 from frappe.model.document import Document
 
+
 class RemesaRegistro(Document):
-	def after_insert(self):
+	def on_update(self):
 		self.set_total_importe()
 
 	@frappe.whitelist()

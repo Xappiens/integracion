@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-02 13:06:49.994058",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "detalles_section",
+  "date",
+  "linea_aval",
+  "empresa",
+  "entidad",
+  "provincia",
+  "naming_series",
+  "column_break_hdqf",
+  "amount",
+  "accion_formativa",
+  "expediente",
+  "plan",
+  "fecha_aval",
+  "fecha_renovacion",
+  "fecha_vencimiento"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_hdqf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Fecha de Emisi\u00f3n"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Importe"
+  },
+  {
+   "fieldname": "detalles_section",
+   "fieldtype": "Section Break",
+   "label": "Detalles"
+  },
+  {
+   "fieldname": "linea_aval",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "L\u00ednea de Aval",
+   "options": "Linea de Aval",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accion_formativa",
+   "fieldtype": "Link",
+   "label": "Curso",
+   "options": "Course"
+  },
+  {
+   "fieldname": "expediente",
+   "fieldtype": "Link",
+   "label": "Expediente",
+   "options": "Program"
+  },
+  {
+   "fetch_from": "expediente.custom_plan",
+   "fetch_if_empty": 1,
+   "fieldname": "plan",
+   "fieldtype": "Link",
+   "label": "Plan",
+   "options": "Planes Formativos",
+   "read_only": 1
+  },
+  {
+   "fieldname": "empresa",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "entidad",
+   "fieldtype": "Data",
+   "label": "Entidad",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fecha_aval",
+   "fieldtype": "Date",
+   "label": "Fecha Aval"
+  },
+  {
+   "fieldname": "fecha_renovacion",
+   "fieldtype": "Date",
+   "label": "Fecha Renovacion"
+  },
+  {
+   "fieldname": "fecha_vencimiento",
+   "fieldtype": "Date",
+   "label": "Fecha Vencimiento"
+  },
+  {
+   "fieldname": "provincia",
+   "fieldtype": "Link",
+   "label": "Provincia",
+   "options": "Provincias"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "naming_series"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-03 12:24:02.448485",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Aval",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -65,7 +65,11 @@ override_whitelisted_methods = {
     "integracion.chage_state_to_baja": "integracion.integracion.renombrar_hoja.change_state_to_baja",
     "integracion.export_expense_claim_summary": "integracion.integracion.export_excel.export_expense_claim_summary",
     "integracion.get_reconciled_transaction_count": "integracion.integracion.number_card_scripts.get_reconciled_transaction_count",
-    "integracion.get_prom_reconciled_transaction": "integracion.integracion.number_card_scripts.get_prom_reconciled_transaction"
+    "integracion.get_prom_reconciled_transaction": "integracion.integracion.number_card_scripts.get_prom_reconciled_transaction",
+    "integracion.generate_invoices": "integracion.integracion.generate_invoice.generate_invoices",
+    "erpnext.accounts.doctype.bank_statement_import.bank_statement_import.get_preview_from_template": "integracion.integracion.custom_bank_statment_import.get_preview_from_template",
+    "erpnext.accounts.doctype.bank_transaction.bank_transaction.get_doctypes_for_bank_reconciliation": "integracion.integracion.custom_bank_transaction.custom_get_doctypes_for_bank_reconciliation",
+    "erpnext.accounts.doctype.bank_reconciliation_tool.bank_reconciliation_tool.reconcile_vouchers": "integracion.integracion.custom_bank_transaction.reconcile_vouchers_override",
 
     #"erpnext.accounts.doctype.bank_transaction.bank_transaction.reconcile_vouchers": "integracion.integracion.bank_tool_over.reconcile_vouchers"
 
@@ -90,11 +94,11 @@ override_doctype_class = {
     "Employee Onboarding": "integracion.integracion.employee_onboarding_overr.CustomEmployeeOnboarding",
     "Employee Onboarding Controller": "integracion.integracion.empl_onb_con_over.CustomEmployeeBoardingController",
     "Program Enrollment": "integracion.integracion.program_override.CustomProgramEnrollment",
-    "Bank Statement Import": "integracion.integracion.bank_tool_over.CustomBankStatementImport",
+    "Bank Statement Import": "integracion.integracion.custom_bank_statment_import.CustomBankStatementImport",
     "Account": "integracion.integracion.account_override.CustomAccount",
     "Assignment Rule": "integracion.integracion.assignament_override.AssignmentRuleOverride",
     "Employee Separation" : "integracion.integracion.employee_sep_over.CustomEmployeeSeparation",
-
+    "Bank Transaction": "integracion.integracion.custom_bank_transaction.CustomBankTransaction",
 }
 
 override_doctype_dashboards = {
@@ -145,6 +149,7 @@ doctype_js = {
     "Opportunity": "public/js/custom_opportunity.js",
     "Program Enrollment": "public/js/program_enrollment.js",
     "Student Applicant": "public/js/student_applicant.js",
+    "Bank Reconciliation Tool": "public/js/custom_bank_reconciliation_tool.js",
 }
 
 
@@ -303,6 +308,7 @@ doctype_js = {
 # Overriding Methods
 # ------------------------------
 #
+get_matching_queries = "integracion.integracion.custom_bank_transaction.custom_get_matching_queries"
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "integracion.event.get_events"
 # }

@@ -101,10 +101,14 @@ def calculate_totals(balance_structure):
                 new_accounts.append(account.copy())
 
             for account in new_accounts:
-                if account["balance_pasivo"]:
-                    account.update({"balance": account["balance_pasivo"]})
+                logger.info(account)
+                if account["account_number"] == "551":
+                    if account["balance_pasivo"]:
+                        account.update({"balance": account["balance_pasivo"]})
+                    else:
+                        new_accounts.remove(account)
 
-                total += account["balance"]
+            total += sum(a["balance"] for a in new_accounts)
 
             parent["accounts"] = new_accounts
                 # if account["balance_pasivo"]:
@@ -223,8 +227,7 @@ def get_balance_sheet_data(filters):
             gl_entry.company = "{filters.company}"
             AND gl_entry.posting_date >= "{filters.period_start_date}"
             AND gl_entry.posting_date <= "{filters.period_end_date}"
-            AND parent.account_number = 551
-            AND account.account_number IN (551000600)
+            AND account.account_number IN (551000600, 55100000)
         """
         pasivo_query = f"""
         SELECT
@@ -239,15 +242,16 @@ def get_balance_sheet_data(filters):
             gl_entry.company = "{filters.company}"
             AND gl_entry.posting_date >= "{filters.period_start_date}"
             AND gl_entry.posting_date <= "{filters.period_end_date}"
-            AND parent.account_number = 551
             AND account.account_number IN (551000000,551000001,551000900)
         """
         activo_total = frappe.db.sql(activo_query, as_dict=True)
         pasivo_total = frappe.db.sql(pasivo_query, as_dict=True)
 
-        if len(activo_total) and len(pasivo_total):
+        logger.info(pasivo_total)
+
+        if activo_total[0]["balance"] or pasivo_total[0]["balance"]:
             GLEntries.append({
-                "lft": pasivo_activo[0]["lft"] + 5,
+                "lft": pasivo_activo[0]["rgt"] - 1,
                 "balance": activo_total[0]["balance"],
                 "balance_pasivo": pasivo_total[0]["balance"]
             })
@@ -554,8 +558,8 @@ def export_balance_sheet(format, filters):
                                 # HACK puestas todas las cuentas de PYG hasta conseguir una forma prolija de traspasar
                                 # los saldos de las cuentas de otros reportes
                                 "accounts": (
-                                    700,701,702,703,704,"706","708","709", 705, "6930", "71*", 7930, 73, "600", 6060,
-                                    6090, 6080, "610*","601", "602", 6061, 6062, 6081, 6082, 6091, 6092, "611*", "612*",
+                                    700,701,702,703,704,"706","708","709", 705, "6930", "71*", 7930, 73, "600", 608,
+                                    6060, 6090, 6080, "610*","601", "602", 6061, 6062, 6081, 6082, 6091, 6092, "611*", "612*",
                                     "607", "6931", "6932", "6933", 7931, 7932, 7933, 75, 740, 747,"640","641","6450",
                                     "642","643","649","644", "6457", 7950, 7957, "62", "631", "634", 636, 639, "650",
                                     "694", "695", 794, 7954, "651", "659", "68",746,7951, 7952, 7955, 7956, "690","691",
@@ -656,7 +660,7 @@ def export_balance_sheet(format, filters):
                                 "parent": "5. Otros pasivos financieros.",
                                 "accounts": (
                                     "1034", "1044", "190", "192", 194, 509, 5115, 5135, 5145, 521, 522, 523, 525, "526",
-                                    528, 5525, "555", 551, 5565, 5566, 560, 561, 569
+                                    528, 5525, 555, 551, 5565, 5566, 560, 561, 569
                                 )
                             },
                         ]
@@ -675,7 +679,7 @@ def export_balance_sheet(format, filters):
                             },
                             {"parent": "3. Acreedores varios.", "accounts": (410, )},
                             {"parent": "4. Personal (remuneraciones pendientes de pago).", "accounts": (465, 466)},
-                            {"parent": "5. Pasivos por impuesto corriente.", "accounts": (4752, )},
+                            {"parent": "5. Pasivos por impuesto corriente.", "accounts": ("4752", )},
                             {
                                 "parent": "6. Otras deudas con las Administraciones Públicas.",
                                 "accounts": (4750, 4751, 4758, 476, 477)

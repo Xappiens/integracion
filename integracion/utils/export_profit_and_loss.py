@@ -155,7 +155,7 @@ def export_pdf(filters):
                     {
                         "parent": "4. Aprovisionamientos.",
                         "children": [
-                            {"parent": "a) Consumo de mercaderías.", "accounts": ("600", 6060, 6090, 6080, "610*")},
+                            {"parent": "a) Consumo de mercaderías.", "accounts": ("600", 608, 6060, 6090, 6080, "610*")},
                             {
                                 "parent": "b) Consumo de materias primas y otras materias consumibles.", "accounts": (
                                     "601", "602", 6061, 6062, 6081, 6082, 6091, 6092, "611*", "612*"

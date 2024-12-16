@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-02 10:00:57.293480",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "detalles_section",
+  "title",
+  "type",
+  "issuer_type",
+  "amount",
+  "importe_dispuesto",
+  "importe_restante",
+  "column_break_tvsc",
+  "company",
+  "status",
+  "issuer",
+  "issue_date",
+  "expiration_date",
+  "fecha_renovacion",
+  "section_break_owmk",
+  "coste_formalizacion",
+  "coste_renovacion",
+  "company_abbr",
+  "column_break_pgst",
+  "modalidad_prima",
+  "prima",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Titulo del Aval"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Tipo de Aval",
+   "options": "\nBancario\nPersonal\nDe Cumplimiento\nGarantia\nOtros"
+  },
+  {
+   "fieldname": "issuer_type",
+   "fieldtype": "Link",
+   "label": "Tipo de Emisor",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_tvsc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Estado",
+   "options": "Borrador\nActivo\nVencido\nCompletado\nCancelado"
+  },
+  {
+   "depends_on": "eval:doc.issuer_type",
+   "fieldname": "issuer",
+   "fieldtype": "Dynamic Link",
+   "label": "Emisor",
+   "options": "issuer_type"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Importe total"
+  },
+  {
+   "fieldname": "issue_date",
+   "fieldtype": "Date",
+   "label": "Fecha de emisi\u00f3n"
+  },
+  {
+   "fieldname": "expiration_date",
+   "fieldtype": "Date",
+   "label": "Fecha de vencimiento"
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fetch_if_empty": 1,
+   "fieldname": "company_abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abreviatura de Empresa"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "naming_series"
+  },
+  {
+   "fieldname": "section_break_owmk",
+   "fieldtype": "Section Break",
+   "label": "Costes"
+  },
+  {
+   "fieldname": "column_break_pgst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "coste_formalizacion",
+   "fieldtype": "Data",
+   "label": "Coste Formalizaci\u00f3n"
+  },
+  {
+   "fieldname": "modalidad_prima",
+   "fieldtype": "Select",
+   "label": "Modalidad Prima",
+   "options": "Mensual\nTrimestral\nAnual"
+  },
+  {
+   "fieldname": "prima",
+   "fieldtype": "Data",
+   "label": "Prima"
+  },
+  {
+   "fieldname": "coste_renovacion",
+   "fieldtype": "Data",
+   "label": "Coste Renovacion"
+  },
+  {
+   "fieldname": "detalles_section",
+   "fieldtype": "Section Break",
+   "label": "Detalles"
+  },
+  {
+   "fieldname": "fecha_renovacion",
+   "fieldtype": "Date",
+   "label": "Fecha de Renovacion"
+  },
+  {
+   "depends_on": "eval:doc.importe_dispuesto",
+   "fieldname": "importe_dispuesto",
+   "fieldtype": "Currency",
+   "label": "Importe dispuesto"
+  },
+  {
+   "depends_on": "eval:doc.importe_restante",
+   "fieldname": "importe_restante",
+   "fieldtype": "Currency",
+   "label": "Importe restante"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Avales",
+   "link_doctype": "Aval",
+   "link_fieldname": "linea_aval"
+  }
+ ],
+ "modified": "2024-12-03 10:02:34.088327",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Linea de Aval",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
