@@ -70,6 +70,7 @@ override_whitelisted_methods = {
     "erpnext.accounts.doctype.bank_statement_import.bank_statement_import.get_preview_from_template": "integracion.integracion.custom_bank_statment_import.get_preview_from_template",
     "erpnext.accounts.doctype.bank_transaction.bank_transaction.get_doctypes_for_bank_reconciliation": "integracion.integracion.custom_bank_transaction.custom_get_doctypes_for_bank_reconciliation",
     "erpnext.accounts.doctype.bank_reconciliation_tool.bank_reconciliation_tool.reconcile_vouchers": "integracion.integracion.custom_bank_transaction.reconcile_vouchers_override",
+    "integracion.renumerar_asientos": "integracion.integracion.renumerar_asientos.renumerar_asientos",
 
     #"erpnext.accounts.doctype.bank_transaction.bank_transaction.reconcile_vouchers": "integracion.integracion.bank_tool_over.reconcile_vouchers"
 
@@ -142,14 +143,16 @@ page_js = {
     "user-profile": "public/js/custom_user_p.js"
 }
 
-
+list_js = {
+    "Journal Entry": "public/js/journal_list_custom.js"
+}
 
 
 doctype_js = {
     "Opportunity": "public/js/custom_opportunity.js",
     "Program Enrollment": "public/js/program_enrollment.js",
     "Student Applicant": "public/js/student_applicant.js",
-    "Bank Reconciliation Tool": "public/js/custom_bank_reconciliation_tool.js",
+    "Bank Reconciliation Tool": "public/js/custom_bank_reconciliation_tool.js"
 }
 
 
