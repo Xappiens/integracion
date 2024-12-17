@@ -69,12 +69,17 @@ class RemesaRegistro(Document):
     def cargar_campos_factura_pago(self):
         # TODO Agregar lógica para remesas pagadas parcialmente
         purchase_invoices = frappe.db.get_all(
-            "Purchase Invoice", {"custom_remesa": self.name, "custom_remesa_emitida": 1, "docstatus": 1}
+            "Purchase Invoice",
+            filters={
+                "custom_remesa": self.name,
+                "custom_remesa_emitida": 1,
+                "docstatus": ['in', [0, 1]]
+            }
         )
 
         self.facturas = []
         self.save()
-
+        mensajes = []
         for purchase_invoice in purchase_invoices:
             purchase_invoice_doc = frappe.get_doc("Purchase Invoice", purchase_invoice.name)
             payment_entry = frappe.db.get_value(
@@ -94,14 +99,15 @@ class RemesaRegistro(Document):
 
                 if payment_entry:
                     payment_entry_doc = frappe.get_doc("Payment Entry", payment_entry)
-
+            mensajes.append(f"Payment Entry created for {purchase_invoice_doc.name}")
             self.append("facturas", {
-                "factura": purchase_invoice_doc,
-                "pago": payment_entry_doc,
+                "factura": purchase_invoice_doc.name,
+                "pago": payment_entry_doc.name if payment_entry_doc else None,
                 "importe": payment_entry_doc.paid_amount if payment_entry_doc else purchase_invoice_doc.grand_total
             })
-            self.save()
-            frappe.db.commit()
+        frappe.log_error(message=mensajes, title="Remesa Registro")
+        self.save()
+        frappe.db.commit()
 
 @frappe.whitelist()
 def calcular_totales(names):
