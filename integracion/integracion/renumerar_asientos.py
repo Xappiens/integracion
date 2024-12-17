@@ -28,7 +28,8 @@ def renumerar_asientos(company, year):
             "Journal Entry",
             filters={
                 "company": company,
-                "posting_date": ["between", [f"{year}-01-01", f"{year}-12-31"]]
+                "posting_date": ["between", [f"{year}-01-01", f"{year}-12-31"]],
+                "docstatus": 1
             },
             fields=["name", "posting_date", "creation"],
             order_by="posting_date ASC, creation ASC"  # Primero ordenar por posting_date, luego por creation
