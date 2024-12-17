@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-17 09:33:38.312767",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "monto",
+  "pagado",
+  "remesa"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "monto",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monto a pagar",
+   "non_negative": 1,
+   "options": "currency",
+   "precision": "3",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "pagado",
+   "fieldtype": "Check",
+   "label": "Pagado",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remesa",
+   "fieldtype": "Link",
+   "label": "Remesa",
+   "options": "Remesa Registro"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-17 09:36:00.032480",
+ "modified_by": "Administrator",
+ "module": "Integracion",
+ "name": "Pago Parcial",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

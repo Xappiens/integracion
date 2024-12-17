@@ -5,7 +5,7 @@ from frappe.utils.pdf import get_pdf
 from frappe import _
 import json
 import datetime
-import logging 
+import logging
 
 from erpnext.accounts.report.financial_statements import get_data, get_period_list
 from babel.numbers import format_decimal
@@ -112,7 +112,7 @@ def calculate_totals(balance_structure):
 
             parent["accounts"] = new_accounts
                 # if account["balance_pasivo"]:
-                #     account.update({"balance": account["balance_pasivo"], "time":datetime.datetime.now()}) 
+                #     account.update({"balance": account["balance_pasivo"], "time":datetime.datetime.now()})
 
                 #     total += account["balance"]
 
@@ -260,7 +260,7 @@ def get_balance_sheet_data(filters):
 
     for entry in Accounts:
         account_gl_entries = list(filter(lambda gl: gl["lft"] >= entry["lft"] and gl["lft"] <= entry["rgt"], GLEntries))
-        
+
         if account_gl_entries:
             data.append({
                 "balance": sum(a["balance"] or 0 for a in account_gl_entries),
@@ -457,7 +457,7 @@ def export_balance_sheet(format, filters):
                             {"parent": "5. Activos por impuesto corriente.", "accounts": (4709, )},
                             {
                                 "parent": "6. Otros créditos con las Administraciones Públicas.",
-                                "accounts": (4700, 4708, "471*", 472, "473*")
+                                "accounts": ("470*", 4700, 4708, "471*", 472, "473*")
                             },
                             {"parent": "7. Accionistas (socios) por desembolsos exigidos.", "accounts": (5580, )},
                         ]
@@ -500,7 +500,7 @@ def export_balance_sheet(format, filters):
                     {
                         "parent": "VII. Efectivo y otros activos líquidos equivalentes.",
                         "children": [
-                            {"parent": "1. Tesorería.", "accounts": (570, 571, "572*", 573, 574, 575)},
+                            {"parent": "1. Tesorería.", "accounts": ("570*", 571, "572*", 573, 574, 575)},
                             {"parent": "2. Otros activos líquidos equivalentes.", "accounts": (576, )}
                         ]
                     }
@@ -660,7 +660,7 @@ def export_balance_sheet(format, filters):
                                 "parent": "5. Otros pasivos financieros.",
                                 "accounts": (
                                     "1034", "1044", "190", "192", 194, 509, 5115, 5135, 5145, 521, 522, 523, 525, "526",
-                                    528, 5525, 555, 551, 5565, 5566, 560, 561, 569
+                                    528, 5525, 553, "555", 551, 5565, 5566, 560, 561, 569
                                 )
                             },
                         ]
@@ -751,14 +751,14 @@ def export_balance_sheet(format, filters):
                 }}
                 .account {{
                     width: 98%;
-                    margin-left: auto; 
+                    margin-left: auto;
                     margin-right: 0;
                     font-size: 10px;
                     text-transform: uppercase;
                 }}
                 .container {{
                     width: 98%;
-                    margin-left: auto; 
+                    margin-left: auto;
                     margin-right: 0;
                 }}
             </style>
@@ -818,7 +818,7 @@ def export_balance_sheet(format, filters):
                     </table>
                 </div>
             """
-        
+
         # Combinar el contenido del encabezado y el cuerpo
         html_content = header_html + body_html
 

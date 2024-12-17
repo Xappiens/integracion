@@ -12332,4 +12332,405 @@
 }
 2024-12-12 14:43:23,835 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFRecibidasType'>
 2024-12-12 14:43:23,835 - integracion.integracion.sii.method.facturas_recibidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasRecibidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '10'}, 'IDFactura': {'IDEmisorFactura': {'NIF': 'B09422049'}, 'NumSerieFacturaEmisor': '243702', 'FechaExpedicionFacturaEmisor': '22-10-2024'}, 'FacturaRecibida': {'TipoFactura': 'F1', 'ClaveRegimenEspecialOTrascendencia': '01', 'DescripcionOperacion': 'CURSO: IFCT137PO COMO POSICIONAR PAGINAS WEB CON EXITO 2023/976 E-2023-300803. EXPEDIENTE FPE NC23/24 ', 'FechaOperacion': '22-10-2024', 'CuotaDeducible': '11.34', 'FechaRegContable': '12-12-2024', 'Contraparte': {'NombreRazon': 'SERCOTEC-SOLUCIONES DIGITALES', 'NIF': 'B09422049'}, 'DesgloseFactura': {'InversionSujetoPasivo': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '54.00', 'CuotaSoportada': '11.34'}]}, 'DesgloseIVA': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '54.00', 'CuotaSoportada': '11.34'}]}}}}]}
-2024-12-12 14:43:23,835 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta convertida: OrderedDict([('CSV', 'XPL4GDXJETZM7DYX'), ('DatosPresentacion', OrderedDict([('NIFPresentador', 'B09318916'), ('TimestampPresentacion', '12-12-2024 15:43:23')])), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Correcto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', 'B09422049'), ('IDOtro', None)])), ('NumSerieFacturaEmisor', '243702'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '22-10-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Correcto'), ('CodigoErrorRegistro', None), ('DescripcionErrorRegistro', None), ('CSV', None), ('RegistroDuplicado', None)])])])
+2024-12-12 14:43:23,835 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta convertida: OrderedDict([('CSV', 'XPL4GDXJETZM7DYX'), ('DatosPresentacion', OrderedDict([('NIFPresentador', 'B09318916'), ('TimestampPresentacion', '12-12-2024 15:43:23')])), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Correcto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', 'B09422049'), ('IDOtro', None)])), ('NumSerieFacturaEmisor', '243702'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '22-10-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Correcto'), ('CodigoErrorRegistro', None), ('DescripcionErrorRegistro', None), ('CSV', None), ('RegistroDuplicado', None)])])])2024-12-16 13:14:39,095 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-12-16 13:14:39,304 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-12-16 13:14:39,309 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-12-16 13:14:39,309 - integracion.integracion.sii.method.facturas_recibidas - INFO - Impuesto 21.0%: Base Imponible: 11020.0, Cuota Soportada: 2314.2 para items sin plantilla
+2024-12-16 13:14:39,309 - integracion.integracion.sii.method.facturas_recibidas - INFO - Procesando impuesto 21.0%: Base Imponible: 11020.0, Cuota Soportada: 2314.2
+2024-12-16 13:14:39,310 - integracion.integracion.sii.method.facturas_recibidas - INFO - Desglose de IVA completado
+2024-12-16 13:14:39,310 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-12-16 13:14:39,310 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-12-16 13:14:39,316 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-12-16 13:14:39,317 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-12-16 13:14:39,317 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-12-16 13:14:39,373 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-12-16 13:14:39,373 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-12-16 13:14:39,426 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-12-16 13:14:39,426 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en facturas_recibidas.xml
+2024-12-16 13:14:39,426 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-12-16 13:14:39,426 - integracion.integracion.sii.method.facturas_recibidas - INFO - Enviando XML firmado a la AEAT
+2024-12-16 13:14:40,003 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML enviado con éxito
+2024-12-16 13:14:40,004 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT: {
+    'CSV': 'H9P5LEFRKQFSEPAV',
+    'DatosPresentacion': {
+        'NIFPresentador': 'B09318916',
+        'TimestampPresentacion': '16-12-2024 14:14:39'
+    },
+    'Cabecera': {
+        'IDVersionSii': '1.1',
+        'Titular': {
+            'NombreRazon': 'Academia Técnica Universitaria SL',
+            'NIFRepresentante': None,
+            'NIF': 'B09318916'
+        },
+        'TipoComunicacion': 'A0'
+    },
+    'EstadoEnvio': 'Correcto',
+    'RespuestaLinea': [
+        {
+            'IDFactura': {
+                'IDEmisorFactura': {
+                    'NIF': 'B09313370',
+                    'IDOtro': None
+                },
+                'NumSerieFacturaEmisor': 'BATU/V/2400281',
+                'NumSerieFacturaEmisorResumenFin': None,
+                'FechaExpedicionFacturaEmisor': '16-12-2024'
+            },
+            'RefExterna': None,
+            'EstadoRegistro': 'Correcto',
+            'CodigoErrorRegistro': None,
+            'DescripcionErrorRegistro': None,
+            'CSV': None,
+            'RegistroDuplicado': None
+        }
+    ]
+}
+2024-12-16 13:14:40,004 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFRecibidasType'>
+2024-12-16 13:14:40,004 - integracion.integracion.sii.method.facturas_recibidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasRecibidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '12'}, 'IDFactura': {'IDEmisorFactura': {'NIF': 'B09313370'}, 'NumSerieFacturaEmisor': 'BATU/V/2400281', 'FechaExpedicionFacturaEmisor': '16-12-2024'}, 'FacturaRecibida': {'TipoFactura': 'F1', 'ClaveRegimenEspecialOTrascendencia': '01', 'DescripcionOperacion': 'Factura de Compra', 'FechaOperacion': '16-12-2024', 'CuotaDeducible': '2314.2', 'FechaRegContable': '16-12-2024', 'Contraparte': {'NombreRazon': 'BURGOS ATU, S.L.', 'NIF': 'B09313370'}, 'DesgloseFactura': {'InversionSujetoPasivo': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '11020.00', 'CuotaSoportada': '2314.20'}]}, 'DesgloseIVA': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '11020.00', 'CuotaSoportada': '2314.20'}]}}}}]}
+2024-12-16 13:14:40,004 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta convertida: OrderedDict([('CSV', 'H9P5LEFRKQFSEPAV'), ('DatosPresentacion', OrderedDict([('NIFPresentador', 'B09318916'), ('TimestampPresentacion', '16-12-2024 14:14:39')])), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Correcto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', 'B09313370'), ('IDOtro', None)])), ('NumSerieFacturaEmisor', 'BATU/V/2400281'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '16-12-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Correcto'), ('CodigoErrorRegistro', None), ('DescripcionErrorRegistro', None), ('CSV', None), ('RegistroDuplicado', None)])])])
+2024-12-16 13:26:28,453 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-12-16 13:26:28,492 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-12-16 13:26:28,498 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-12-16 13:26:28,498 - integracion.integracion.sii.method.facturas_recibidas - INFO - Impuesto 21.0%: Base Imponible: 7500.0, Cuota Soportada: 1575.0 para items sin plantilla
+2024-12-16 13:26:28,498 - integracion.integracion.sii.method.facturas_recibidas - INFO - Procesando impuesto 21.0%: Base Imponible: 7500.0, Cuota Soportada: 1575.0
+2024-12-16 13:26:28,498 - integracion.integracion.sii.method.facturas_recibidas - INFO - Desglose de IVA completado
+2024-12-16 13:26:28,498 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-12-16 13:26:28,498 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-12-16 13:26:28,504 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-12-16 13:26:28,505 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-12-16 13:26:28,505 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-12-16 13:26:28,560 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-12-16 13:26:28,560 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-12-16 13:26:28,612 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-12-16 13:26:28,612 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en facturas_recibidas.xml
+2024-12-16 13:26:28,613 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-12-16 13:26:28,613 - integracion.integracion.sii.method.facturas_recibidas - INFO - Enviando XML firmado a la AEAT
+2024-12-16 13:26:29,201 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML enviado con éxito
+2024-12-16 13:26:29,202 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT: {
+    'CSV': 'BUHH6SYM8XGKJ3UD',
+    'DatosPresentacion': {
+        'NIFPresentador': 'B09318916',
+        'TimestampPresentacion': '16-12-2024 14:26:29'
+    },
+    'Cabecera': {
+        'IDVersionSii': '1.1',
+        'Titular': {
+            'NombreRazon': 'Academia Técnica Universitaria SL',
+            'NIFRepresentante': None,
+            'NIF': 'B09318916'
+        },
+        'TipoComunicacion': 'A0'
+    },
+    'EstadoEnvio': 'Correcto',
+    'RespuestaLinea': [
+        {
+            'IDFactura': {
+                'IDEmisorFactura': {
+                    'NIF': 'B09313370',
+                    'IDOtro': None
+                },
+                'NumSerieFacturaEmisor': 'BATU/V/2400282',
+                'NumSerieFacturaEmisorResumenFin': None,
+                'FechaExpedicionFacturaEmisor': '16-12-2024'
+            },
+            'RefExterna': None,
+            'EstadoRegistro': 'Correcto',
+            'CodigoErrorRegistro': None,
+            'DescripcionErrorRegistro': None,
+            'CSV': None,
+            'RegistroDuplicado': None
+        }
+    ]
+}
+2024-12-16 13:26:29,202 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFRecibidasType'>
+2024-12-16 13:26:29,202 - integracion.integracion.sii.method.facturas_recibidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasRecibidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '12'}, 'IDFactura': {'IDEmisorFactura': {'NIF': 'B09313370'}, 'NumSerieFacturaEmisor': 'BATU/V/2400282', 'FechaExpedicionFacturaEmisor': '16-12-2024'}, 'FacturaRecibida': {'TipoFactura': 'F1', 'ClaveRegimenEspecialOTrascendencia': '01', 'DescripcionOperacion': 'Factura de Compra', 'FechaOperacion': '16-12-2024', 'CuotaDeducible': '1575.0', 'FechaRegContable': '16-12-2024', 'Contraparte': {'NombreRazon': 'BURGOS ATU, S.L.', 'NIF': 'B09313370'}, 'DesgloseFactura': {'InversionSujetoPasivo': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '7500.00', 'CuotaSoportada': '1575.00'}]}, 'DesgloseIVA': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '7500.00', 'CuotaSoportada': '1575.00'}]}}}}]}
+2024-12-16 13:26:29,202 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta convertida: OrderedDict([('CSV', 'BUHH6SYM8XGKJ3UD'), ('DatosPresentacion', OrderedDict([('NIFPresentador', 'B09318916'), ('TimestampPresentacion', '16-12-2024 14:26:29')])), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Correcto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', 'B09313370'), ('IDOtro', None)])), ('NumSerieFacturaEmisor', 'BATU/V/2400282'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '16-12-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Correcto'), ('CodigoErrorRegistro', None), ('DescripcionErrorRegistro', None), ('CSV', None), ('RegistroDuplicado', None)])])])
+2024-12-16 14:32:22,943 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-12-16 14:32:22,975 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-12-16 14:32:22,990 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-12-16 14:32:22,991 - integracion.integracion.sii.method.facturas_recibidas - INFO - Impuesto 21.0%: Base Imponible: 7800.0, Cuota Soportada: 1638.0 para items sin plantilla
+2024-12-16 14:32:22,991 - integracion.integracion.sii.method.facturas_recibidas - INFO - Procesando impuesto 21.0%: Base Imponible: 7800.0, Cuota Soportada: 1638.0
+2024-12-16 14:32:22,991 - integracion.integracion.sii.method.facturas_recibidas - INFO - Desglose de IVA completado
+2024-12-16 14:32:22,991 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-12-16 14:32:22,991 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-12-16 14:32:22,997 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-12-16 14:32:22,999 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-12-16 14:32:22,999 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-12-16 14:32:23,058 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-12-16 14:32:23,059 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-12-16 14:32:23,113 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-12-16 14:32:23,113 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en facturas_recibidas.xml
+2024-12-16 14:32:23,114 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-12-16 14:32:23,114 - integracion.integracion.sii.method.facturas_recibidas - INFO - Enviando XML firmado a la AEAT
+2024-12-16 14:32:23,671 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML enviado con éxito
+2024-12-16 14:32:23,672 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT: {
+    'CSV': 'G5N6ZHCBU5G7D6GG',
+    'DatosPresentacion': {
+        'NIFPresentador': 'B09318916',
+        'TimestampPresentacion': '16-12-2024 15:32:23'
+    },
+    'Cabecera': {
+        'IDVersionSii': '1.1',
+        'Titular': {
+            'NombreRazon': 'Academia Técnica Universitaria SL',
+            'NIFRepresentante': None,
+            'NIF': 'B09318916'
+        },
+        'TipoComunicacion': 'A0'
+    },
+    'EstadoEnvio': 'Correcto',
+    'RespuestaLinea': [
+        {
+            'IDFactura': {
+                'IDEmisorFactura': {
+                    'NIF': 'B09313370',
+                    'IDOtro': None
+                },
+                'NumSerieFacturaEmisor': 'BATU/V/2400282-1',
+                'NumSerieFacturaEmisorResumenFin': None,
+                'FechaExpedicionFacturaEmisor': '16-12-2024'
+            },
+            'RefExterna': None,
+            'EstadoRegistro': 'Correcto',
+            'CodigoErrorRegistro': None,
+            'DescripcionErrorRegistro': None,
+            'CSV': None,
+            'RegistroDuplicado': None
+        }
+    ]
+}
+2024-12-16 14:32:23,672 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFRecibidasType'>
+2024-12-16 14:32:23,672 - integracion.integracion.sii.method.facturas_recibidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasRecibidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '12'}, 'IDFactura': {'IDEmisorFactura': {'NIF': 'B09313370'}, 'NumSerieFacturaEmisor': 'BATU/V/2400282-1', 'FechaExpedicionFacturaEmisor': '16-12-2024'}, 'FacturaRecibida': {'TipoFactura': 'F1', 'ClaveRegimenEspecialOTrascendencia': '01', 'DescripcionOperacion': 'Factura de Compra', 'FechaOperacion': '16-12-2024', 'CuotaDeducible': '1638.0', 'FechaRegContable': '16-12-2024', 'Contraparte': {'NombreRazon': 'BURGOS ATU, S.L.', 'NIF': 'B09313370'}, 'DesgloseFactura': {'InversionSujetoPasivo': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '7800.00', 'CuotaSoportada': '1638.00'}]}, 'DesgloseIVA': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '7800.00', 'CuotaSoportada': '1638.00'}]}}}}]}
+2024-12-16 14:32:23,672 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta convertida: OrderedDict([('CSV', 'G5N6ZHCBU5G7D6GG'), ('DatosPresentacion', OrderedDict([('NIFPresentador', 'B09318916'), ('TimestampPresentacion', '16-12-2024 15:32:23')])), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Correcto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', 'B09313370'), ('IDOtro', None)])), ('NumSerieFacturaEmisor', 'BATU/V/2400282-1'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '16-12-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Correcto'), ('CodigoErrorRegistro', None), ('DescripcionErrorRegistro', None), ('CSV', None), ('RegistroDuplicado', None)])])])
+2024-12-17 08:10:34,857 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-12-17 08:10:35,073 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-12-17 08:10:35,078 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-12-17 08:10:35,141 - integracion.integracion.sii.method.facturas_recibidas - INFO - Impuesto 21.0%: Base Imponible: 354.32, Cuota Soportada: 74.40719999999999 en producto Servicios
+2024-12-17 08:10:35,144 - integracion.integracion.sii.method.facturas_recibidas - INFO - Impuesto 21.0%: Base Imponible: 3.61, Cuota Soportada: 0.7581 en producto Servicios
+2024-12-17 08:10:35,144 - integracion.integracion.sii.method.facturas_recibidas - INFO - Impuesto 0.0%: Base Imponible: 0.18, Cuota Soportada: 0.0 para items sin plantilla
+2024-12-17 08:10:35,144 - integracion.integracion.sii.method.facturas_recibidas - INFO - Procesando impuesto 21.0%: Base Imponible: 357.93, Cuota Soportada: 75.16529999999999
+2024-12-17 08:10:35,144 - integracion.integracion.sii.method.facturas_recibidas - INFO - Procesando impuesto 0.0%: Base Imponible: 0.18, Cuota Soportada: 0.0
+2024-12-17 08:10:35,145 - integracion.integracion.sii.method.facturas_recibidas - INFO - Desglose de IVA completado
+2024-12-17 08:10:35,145 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-12-17 08:10:35,145 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-12-17 08:10:35,152 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-12-17 08:10:35,153 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-12-17 08:10:35,154 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-12-17 08:10:35,207 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-12-17 08:10:35,208 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-12-17 08:10:35,260 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-12-17 08:10:35,261 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en facturas_recibidas.xml
+2024-12-17 08:10:35,262 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-12-17 08:10:35,262 - integracion.integracion.sii.method.facturas_recibidas - INFO - Enviando XML firmado a la AEAT
+2024-12-17 08:10:35,899 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML enviado con éxito
+2024-12-17 08:10:35,900 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT: {
+    'CSV': '25D5D9E2P6VCY9GC',
+    'DatosPresentacion': {
+        'NIFPresentador': 'B09318916',
+        'TimestampPresentacion': '17-12-2024 09:10:35'
+    },
+    'Cabecera': {
+        'IDVersionSii': '1.1',
+        'Titular': {
+            'NombreRazon': 'Academia Técnica Universitaria SL',
+            'NIFRepresentante': None,
+            'NIF': 'B09318916'
+        },
+        'TipoComunicacion': 'A0'
+    },
+    'EstadoEnvio': 'Correcto',
+    'RespuestaLinea': [
+        {
+            'IDFactura': {
+                'IDEmisorFactura': {
+                    'NIF': '45066396N',
+                    'IDOtro': None
+                },
+                'NumSerieFacturaEmisor': '42400005-C',
+                'NumSerieFacturaEmisorResumenFin': None,
+                'FechaExpedicionFacturaEmisor': '08-01-2024'
+            },
+            'RefExterna': None,
+            'EstadoRegistro': 'Correcto',
+            'CodigoErrorRegistro': None,
+            'DescripcionErrorRegistro': None,
+            'CSV': None,
+            'RegistroDuplicado': None
+        }
+    ]
+}
+2024-12-17 08:10:35,900 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFRecibidasType'>
+2024-12-17 08:10:35,900 - integracion.integracion.sii.method.facturas_recibidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasRecibidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '01'}, 'IDFactura': {'IDEmisorFactura': {'NIF': '45066396N'}, 'NumSerieFacturaEmisor': '42400005-C', 'FechaExpedicionFacturaEmisor': '08-01-2024'}, 'FacturaRecibida': {'TipoFactura': 'F1', 'ClaveRegimenEspecialOTrascendencia': '01', 'DescripcionOperacion': 'Factura de Compra', 'FechaOperacion': '08-01-2024', 'CuotaDeducible': '75.17', 'FechaRegContable': '16-12-2024', 'Contraparte': {'NombreRazon': 'JESÚS MARÍA REGUERO, NOTARIO', 'NIF': '45066396N'}, 'DesgloseFactura': {'InversionSujetoPasivo': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '357.93', 'CuotaSoportada': '75.17'}, {'TipoImpositivo': '0.0', 'BaseImponible': '0.18', 'CuotaSoportada': '0.00'}]}, 'DesgloseIVA': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '357.93', 'CuotaSoportada': '75.17'}, {'TipoImpositivo': '0.0', 'BaseImponible': '0.18', 'CuotaSoportada': '0.00'}]}}}}]}
+2024-12-17 08:10:35,900 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta convertida: OrderedDict([('CSV', '25D5D9E2P6VCY9GC'), ('DatosPresentacion', OrderedDict([('NIFPresentador', 'B09318916'), ('TimestampPresentacion', '17-12-2024 09:10:35')])), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Correcto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', '45066396N'), ('IDOtro', None)])), ('NumSerieFacturaEmisor', '42400005-C'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '08-01-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Correcto'), ('CodigoErrorRegistro', None), ('DescripcionErrorRegistro', None), ('CSV', None), ('RegistroDuplicado', None)])])])
+2024-12-17 08:22:25,665 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-12-17 08:22:25,702 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-12-17 08:22:25,711 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-12-17 08:22:25,712 - integracion.integracion.sii.method.facturas_recibidas - INFO - Impuesto 21.0%: Base Imponible: 206.61, Cuota Soportada: 43.3881 para items sin plantilla
+2024-12-17 08:22:25,712 - integracion.integracion.sii.method.facturas_recibidas - INFO - Procesando impuesto 21.0%: Base Imponible: 206.61, Cuota Soportada: 43.3881
+2024-12-17 08:22:25,712 - integracion.integracion.sii.method.facturas_recibidas - INFO - Desglose de IVA completado
+2024-12-17 08:22:25,713 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-12-17 08:22:25,713 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-12-17 08:22:25,723 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-12-17 08:22:25,725 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-12-17 08:22:25,725 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-12-17 08:22:25,785 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-12-17 08:22:25,785 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-12-17 08:22:25,838 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-12-17 08:22:25,838 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en facturas_recibidas.xml
+2024-12-17 08:22:25,838 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-12-17 08:22:25,838 - integracion.integracion.sii.method.facturas_recibidas - INFO - Enviando XML firmado a la AEAT
+2024-12-17 08:22:26,495 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML enviado con éxito
+2024-12-17 08:22:26,495 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT: {
+    'CSV': 'MM8WHVVK9Z7TT2T5',
+    'DatosPresentacion': {
+        'NIFPresentador': 'B09318916',
+        'TimestampPresentacion': '17-12-2024 09:22:26'
+    },
+    'Cabecera': {
+        'IDVersionSii': '1.1',
+        'Titular': {
+            'NombreRazon': 'Academia Técnica Universitaria SL',
+            'NIFRepresentante': None,
+            'NIF': 'B09318916'
+        },
+        'TipoComunicacion': 'A0'
+    },
+    'EstadoEnvio': 'Correcto',
+    'RespuestaLinea': [
+        {
+            'IDFactura': {
+                'IDEmisorFactura': {
+                    'NIF': 'F94182912',
+                    'IDOtro': None
+                },
+                'NumSerieFacturaEmisor': '75/2024',
+                'NumSerieFacturaEmisorResumenFin': None,
+                'FechaExpedicionFacturaEmisor': '26-11-2024'
+            },
+            'RefExterna': None,
+            'EstadoRegistro': 'Correcto',
+            'CodigoErrorRegistro': None,
+            'DescripcionErrorRegistro': None,
+            'CSV': None,
+            'RegistroDuplicado': None
+        }
+    ]
+}
+2024-12-17 08:22:26,496 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFRecibidasType'>
+2024-12-17 08:22:26,496 - integracion.integracion.sii.method.facturas_recibidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasRecibidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '11'}, 'IDFactura': {'IDEmisorFactura': {'NIF': 'F94182912'}, 'NumSerieFacturaEmisor': '75/2024', 'FechaExpedicionFacturaEmisor': '26-11-2024'}, 'FacturaRecibida': {'TipoFactura': 'F1', 'ClaveRegimenEspecialOTrascendencia': '01', 'DescripcionOperacion': 'Factura de Compra', 'FechaOperacion': '26-11-2024', 'CuotaDeducible': '43.39', 'FechaRegContable': '17-12-2024', 'Contraparte': {'NombreRazon': 'FORMA CONSULTORA S.COOP GALEGA', 'NIF': 'F94182912'}, 'DesgloseFactura': {'InversionSujetoPasivo': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '206.61', 'CuotaSoportada': '43.39'}]}, 'DesgloseIVA': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '206.61', 'CuotaSoportada': '43.39'}]}}}}]}
+2024-12-17 08:22:26,496 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta convertida: OrderedDict([('CSV', 'MM8WHVVK9Z7TT2T5'), ('DatosPresentacion', OrderedDict([('NIFPresentador', 'B09318916'), ('TimestampPresentacion', '17-12-2024 09:22:26')])), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Correcto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', 'F94182912'), ('IDOtro', None)])), ('NumSerieFacturaEmisor', '75/2024'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '26-11-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Correcto'), ('CodigoErrorRegistro', None), ('DescripcionErrorRegistro', None), ('CSV', None), ('RegistroDuplicado', None)])])])
+2024-12-17 08:46:27,282 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-12-17 08:46:27,313 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-12-17 08:46:27,322 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-12-17 08:46:27,328 - integracion.integracion.sii.method.facturas_recibidas - INFO - Impuesto 21.0%: Base Imponible: 1.215, Cuota Soportada: 0.25515 en producto Material de Oficina
+2024-12-17 08:46:27,328 - integracion.integracion.sii.method.facturas_recibidas - INFO - Procesando impuesto 21.0%: Base Imponible: 1.215, Cuota Soportada: 0.25515
+2024-12-17 08:46:27,328 - integracion.integracion.sii.method.facturas_recibidas - INFO - Desglose de IVA completado
+2024-12-17 08:46:27,328 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-12-17 08:46:27,328 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-12-17 08:46:27,335 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-12-17 08:46:27,336 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-12-17 08:46:27,337 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-12-17 08:46:27,391 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-12-17 08:46:27,392 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-12-17 08:46:27,445 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-12-17 08:46:27,446 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en facturas_recibidas.xml
+2024-12-17 08:46:27,446 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-12-17 08:46:27,446 - integracion.integracion.sii.method.facturas_recibidas - INFO - Enviando XML firmado a la AEAT
+2024-12-17 08:46:28,071 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML enviado con éxito
+2024-12-17 08:46:28,071 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT: {
+    'CSV': 'QLHVW69SYFRMTEDK',
+    'DatosPresentacion': {
+        'NIFPresentador': 'B09318916',
+        'TimestampPresentacion': '17-12-2024 09:46:28'
+    },
+    'Cabecera': {
+        'IDVersionSii': '1.1',
+        'Titular': {
+            'NombreRazon': 'Academia Técnica Universitaria SL',
+            'NIFRepresentante': None,
+            'NIF': 'B09318916'
+        },
+        'TipoComunicacion': 'A0'
+    },
+    'EstadoEnvio': 'Correcto',
+    'RespuestaLinea': [
+        {
+            'IDFactura': {
+                'IDEmisorFactura': {
+                    'NIF': '48538035P',
+                    'IDOtro': None
+                },
+                'NumSerieFacturaEmisor': '2024F624',
+                'NumSerieFacturaEmisorResumenFin': None,
+                'FechaExpedicionFacturaEmisor': '03-07-2024'
+            },
+            'RefExterna': None,
+            'EstadoRegistro': 'Correcto',
+            'CodigoErrorRegistro': None,
+            'DescripcionErrorRegistro': None,
+            'CSV': None,
+            'RegistroDuplicado': None
+        }
+    ]
+}
+2024-12-17 08:46:28,071 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFRecibidasType'>
+2024-12-17 08:46:28,071 - integracion.integracion.sii.method.facturas_recibidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasRecibidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '07'}, 'IDFactura': {'IDEmisorFactura': {'NIF': '48538035P'}, 'NumSerieFacturaEmisor': '2024F624', 'FechaExpedicionFacturaEmisor': '03-07-2024'}, 'FacturaRecibida': {'TipoFactura': 'F1', 'ClaveRegimenEspecialOTrascendencia': '01', 'DescripcionOperacion': 'Factura de Compra', 'FechaOperacion': '03-07-2024', 'CuotaDeducible': '0.26', 'FechaRegContable': '17-12-2024', 'Contraparte': {'NombreRazon': 'ALVARO SAYAGO RAMON', 'NIF': '48538035P'}, 'DesgloseFactura': {'InversionSujetoPasivo': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '1.22', 'CuotaSoportada': '0.26'}]}, 'DesgloseIVA': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '1.22', 'CuotaSoportada': '0.26'}]}}}}]}
+2024-12-17 08:46:28,071 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta convertida: OrderedDict([('CSV', 'QLHVW69SYFRMTEDK'), ('DatosPresentacion', OrderedDict([('NIFPresentador', 'B09318916'), ('TimestampPresentacion', '17-12-2024 09:46:28')])), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Correcto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', '48538035P'), ('IDOtro', None)])), ('NumSerieFacturaEmisor', '2024F624'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '03-07-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Correcto'), ('CodigoErrorRegistro', None), ('DescripcionErrorRegistro', None), ('CSV', None), ('RegistroDuplicado', None)])])])
+2024-12-17 08:49:06,600 - integracion.integracion.sii.method.facturas_recibidas - INFO - Iniciando el proceso de envío de facturas recibidas
+2024-12-17 08:49:06,634 - integracion.integracion.sii.method.facturas_recibidas - INFO - Construyendo el XML de las facturas recibidas
+2024-12-17 08:49:06,641 - integracion.integracion.sii.method.facturas_recibidas - INFO - NIF del titular: B09318916
+2024-12-17 08:49:06,655 - integracion.integracion.sii.method.facturas_recibidas - INFO - Impuesto 21.0%: Base Imponible: 1.215, Cuota Soportada: 0.25515 en producto Material de Oficina
+2024-12-17 08:49:06,656 - integracion.integracion.sii.method.facturas_recibidas - INFO - Procesando impuesto 21.0%: Base Imponible: 1.215, Cuota Soportada: 0.25515
+2024-12-17 08:49:06,656 - integracion.integracion.sii.method.facturas_recibidas - INFO - Desglose de IVA completado
+2024-12-17 08:49:06,656 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML construido con éxito
+2024-12-17 08:49:06,656 - integracion.integracion.sii.method.facturas_recibidas - INFO - Validando el XML contra el esquema XSD
+2024-12-17 08:49:06,664 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML válido según el esquema XSD
+2024-12-17 08:49:06,665 - integracion.integracion.sii.method.facturas_recibidas - INFO - Empresa detectada: Academia Técnica Universitaria SL
+2024-12-17 08:49:06,666 - integracion.integracion.sii.method.facturas_recibidas - INFO - Cargando el certificado desde /home/frappe/frappe-bench/apps/integracion/integracion/integracion/sii/certificate/ACADEMIA TECNICA.pfx
+2024-12-17 08:49:06,722 - integracion.integracion.sii.method.facturas_recibidas - INFO - Certificado cargado con éxito
+2024-12-17 08:49:06,722 - integracion.integracion.sii.method.facturas_recibidas - INFO - Firmando el XML
+2024-12-17 08:49:06,776 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML firmado con éxito
+2024-12-17 08:49:06,777 - integracion.integracion.sii.method.facturas_recibidas - INFO - Guardando el XML firmado en facturas_recibidas.xml
+2024-12-17 08:49:06,777 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML guardado con éxito
+2024-12-17 08:49:06,777 - integracion.integracion.sii.method.facturas_recibidas - INFO - Enviando XML firmado a la AEAT
+2024-12-17 08:49:07,328 - integracion.integracion.sii.method.facturas_recibidas - INFO - XML enviado con éxito
+2024-12-17 08:49:07,329 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT: {
+    'CSV': 'BKYCF96P6PL23R5W',
+    'DatosPresentacion': {
+        'NIFPresentador': 'B09318916',
+        'TimestampPresentacion': '17-12-2024 09:49:07'
+    },
+    'Cabecera': {
+        'IDVersionSii': '1.1',
+        'Titular': {
+            'NombreRazon': 'Academia Técnica Universitaria SL',
+            'NIFRepresentante': None,
+            'NIF': 'B09318916'
+        },
+        'TipoComunicacion': 'A0'
+    },
+    'EstadoEnvio': 'Correcto',
+    'RespuestaLinea': [
+        {
+            'IDFactura': {
+                'IDEmisorFactura': {
+                    'NIF': '48538035P',
+                    'IDOtro': None
+                },
+                'NumSerieFacturaEmisor': '2024F625',
+                'NumSerieFacturaEmisorResumenFin': None,
+                'FechaExpedicionFacturaEmisor': '03-07-2024'
+            },
+            'RefExterna': None,
+            'EstadoRegistro': 'Correcto',
+            'CodigoErrorRegistro': None,
+            'DescripcionErrorRegistro': None,
+            'CSV': None,
+            'RegistroDuplicado': None
+        }
+    ]
+}
+2024-12-17 08:49:07,329 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta de la AEAT (tipo): <class 'zeep.objects.RespuestaLRFRecibidasType'>
+2024-12-17 08:49:07,329 - integracion.integracion.sii.method.facturas_recibidas - INFO - Datos enviados: {'Cabecera': {'IDVersionSii': '1.1', 'Titular': {'NombreRazon': 'Academia Técnica Universitaria SL', 'NIF': 'B09318916'}, 'TipoComunicacion': 'A0'}, 'RegistroLRFacturasRecibidas': [{'PeriodoLiquidacion': {'Ejercicio': '2024', 'Periodo': '07'}, 'IDFactura': {'IDEmisorFactura': {'NIF': '48538035P'}, 'NumSerieFacturaEmisor': '2024F625', 'FechaExpedicionFacturaEmisor': '03-07-2024'}, 'FacturaRecibida': {'TipoFactura': 'F1', 'ClaveRegimenEspecialOTrascendencia': '01', 'DescripcionOperacion': 'Factura de Compra', 'FechaOperacion': '03-07-2024', 'CuotaDeducible': '0.26', 'FechaRegContable': '17-12-2024', 'Contraparte': {'NombreRazon': 'ALVARO SAYAGO RAMON', 'NIF': '48538035P'}, 'DesgloseFactura': {'InversionSujetoPasivo': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '1.22', 'CuotaSoportada': '0.26'}]}, 'DesgloseIVA': {'DetalleIVA': [{'TipoImpositivo': '21.0', 'BaseImponible': '1.22', 'CuotaSoportada': '0.26'}]}}}}]}
+2024-12-17 08:49:07,329 - integracion.integracion.sii.method.facturas_recibidas - INFO - Respuesta convertida: OrderedDict([('CSV', 'BKYCF96P6PL23R5W'), ('DatosPresentacion', OrderedDict([('NIFPresentador', 'B09318916'), ('TimestampPresentacion', '17-12-2024 09:49:07')])), ('Cabecera', OrderedDict([('IDVersionSii', '1.1'), ('Titular', OrderedDict([('NombreRazon', 'Academia Técnica Universitaria SL'), ('NIFRepresentante', None), ('NIF', 'B09318916')])), ('TipoComunicacion', 'A0')])), ('EstadoEnvio', 'Correcto'), ('RespuestaLinea', [OrderedDict([('IDFactura', OrderedDict([('IDEmisorFactura', OrderedDict([('NIF', '48538035P'), ('IDOtro', None)])), ('NumSerieFacturaEmisor', '2024F625'), ('NumSerieFacturaEmisorResumenFin', None), ('FechaExpedicionFacturaEmisor', '03-07-2024')])), ('RefExterna', None), ('EstadoRegistro', 'Correcto'), ('CodigoErrorRegistro', None), ('DescripcionErrorRegistro', None), ('CSV', None), ('RegistroDuplicado', None)])])])

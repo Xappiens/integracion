@@ -3666,3 +3666,475 @@
 2024-12-05 16:14:51,030 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03530
 2024-12-05 16:14:51,032 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03530: No se ha configurado una cuenta bancaria por defecto para la empresa.
 2024-12-05 16:14:51,032 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-TME-20241205161448.xlsx eliminado después de subirlo a SharePoint
+2024-12-16 15:31:16,018 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
+2024-12-16 15:31:16,018 - integracion.integracion.generate_c34_compra - ERROR - Error al obtener facturas: string indices must be integers
+2024-12-16 15:32:04,898 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
+2024-12-16 15:32:04,899 - integracion.integracion.generate_c34_compra - ERROR - Error al obtener facturas: string indices must be integers
+2024-12-16 15:35:15,989 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
+2024-12-16 15:35:15,989 - integracion.integracion.generate_c34_compra - ERROR - Error al obtener facturas: string indices must be integers
+2024-12-16 15:35:25,914 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
+2024-12-16 15:35:25,915 - integracion.integracion.generate_c34_compra - ERROR - Error al obtener facturas: string indices must be integers
+2024-12-16 15:36:43,820 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
+2024-12-16 15:36:43,821 - integracion.integracion.generate_c34_compra - ERROR - Error al obtener facturas: string indices must be integers
+2024-12-16 18:33:00,780 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
+2024-12-16 18:33:00,780 - integracion.integracion.generate_c34_compra - INFO - ['ACC-PINV-2024-03836', 'ACC-PINV-2024-03834', 'ACC-PINV-2024-03833', 'ACC-PINV-2024-03832', 'ACC-PINV-2024-03826-1', 'ACC-PINV-2024-03830', 'ACC-PINV-2024-03828', 'ACC-PINV-2024-03827', 'ACC-PINV-2024-03825', 'ACC-PINV-2024-03818', 'ACC-PINV-2024-03816', 'ACC-PINV-2024-03814', 'ACC-PINV-2024-03810', 'ACC-PINV-2024-03807', 'ACC-PINV-2024-03798-1', 'ACC-PINV-2024-03801', 'ACC-PINV-2024-03800', 'ACC-PINV-2024-03792', 'ACC-PINV-2024-03791', 'ACC-PINV-2024-03790', 'ACC-PINV-2024-03789', 'ACC-PINV-2024-03788', 'ACC-PINV-2024-03741']
+2024-12-16 18:33:00,794 - integracion.integracion.generate_c34_compra - DEBUG - Total facturas encontradas: 23
+2024-12-16 18:33:00,839 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03836
+2024-12-16 18:33:00,840 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03836 agregada a la empresa ATU Seguridad y Salud SL
+2024-12-16 18:33:00,864 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03834
+2024-12-16 18:33:00,865 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03834 agregada a la empresa ATU Tecnología Digital SL
+2024-12-16 18:33:00,889 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03833
+2024-12-16 18:33:00,890 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03833 agregada a la empresa ATU Tecnología Digital SL
+2024-12-16 18:33:00,918 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03832
+2024-12-16 18:33:00,919 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03832 agregada a la empresa ATU Seguridad y Salud SL
+2024-12-16 18:33:00,940 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03826-1
+2024-12-16 18:33:00,941 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03826-1 agregada a la empresa Academia Técnica Universitaria SL
+2024-12-16 18:33:00,986 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03830
+2024-12-16 18:33:00,987 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03830 agregada a la empresa ATU Seguridad y Salud SL
+2024-12-16 18:33:01,034 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03828
+2024-12-16 18:33:01,035 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03828 agregada a la empresa ATU Seguridad y Salud SL
+2024-12-16 18:33:01,082 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03827
+2024-12-16 18:33:01,083 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03827 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 18:33:01,106 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03825
+2024-12-16 18:33:01,108 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03825 agregada a la empresa Academia Técnica Universitaria SL
+2024-12-16 18:33:01,132 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03818
+2024-12-16 18:33:01,133 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03818 agregada a la empresa Academia Técnica Universitaria SL
+2024-12-16 18:33:01,155 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03816
+2024-12-16 18:33:01,156 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03816 agregada a la empresa Academia Técnica Universitaria SL
+2024-12-16 18:33:01,180 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03814
+2024-12-16 18:33:01,181 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03814 agregada a la empresa Academia Técnica Universitaria SL
+2024-12-16 18:33:01,217 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03810
+2024-12-16 18:33:01,219 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03810 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 18:33:01,247 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03807
+2024-12-16 18:33:01,248 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03807 agregada a la empresa ATU Seguridad y Salud SL
+2024-12-16 18:33:01,274 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03798-1
+2024-12-16 18:33:01,276 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03798-1 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 18:33:01,316 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03801
+2024-12-16 18:33:01,318 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03801 agregada a la empresa Grupo Almería Formación SL
+2024-12-16 18:33:01,347 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03800
+2024-12-16 18:33:01,349 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03800 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 18:33:01,387 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03792
+2024-12-16 18:33:01,390 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03792 agregada a la empresa Grupo Almería Formación SL
+2024-12-16 18:33:01,424 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03791
+2024-12-16 18:33:01,426 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03791 agregada a la empresa Grupo Almería Formación SL
+2024-12-16 18:33:01,458 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03790
+2024-12-16 18:33:01,460 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03790 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 18:33:01,494 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03789
+2024-12-16 18:33:01,496 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03789 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 18:33:01,520 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03788
+2024-12-16 18:33:01,522 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03788 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 18:33:01,546 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03741
+2024-12-16 18:33:01,548 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03741 agregada a la empresa Grupo Almería Formación SL
+2024-12-16 18:33:01,571 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03836 del proveedor BURGOS ATU, S.L.
+2024-12-16 18:33:01,577 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03832 del proveedor BURGOS ATU, S.L.
+2024-12-16 18:33:01,582 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03830 del proveedor BURGOS ATU, S.L.
+2024-12-16 18:33:01,588 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03828 del proveedor BURGOS ATU, S.L.
+2024-12-16 18:33:01,593 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03807 del proveedor UNIVERSO BACTERIA, S.L.
+2024-12-16 18:33:01,800 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para ATU Seguridad y Salud SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASS-20241216183301.xlsx
+2024-12-16 18:33:01,800 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASS-20241216183301.xlsx a SharePoint para la compañía ATU Seguridad y Salud SL con Cuaderno C19-ASS-20241216183301
+2024-12-16 18:33:01,800 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-12-16 18:33:01,801 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-12-16 18:33:01,801 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-12-16 18:33:02,680 - integracion.integracion.generate_c34_compra - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-12-16 18:33:02,681 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Seguridad%20y%20Salud%20SL
+2024-12-16 18:33:02,878 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-12-16 18:33:03,491 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/ATU Seguridad y Salud SL
+2024-12-16 18:33:03,492 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Seguridad%20y%20Salud%20SL/C19-ASS-20241216183301
+2024-12-16 18:33:03,676 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent ATU Seguridad y Salud SL
+2024-12-16 18:33:04,381 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/ATU Seguridad y Salud SL/C19-ASS-20241216183301
+2024-12-16 18:33:04,382 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Seguridad%20y%20Salud%20SL/C19-ASS-20241216183301/C19-ASS-20241216183301.xlsx
+2024-12-16 18:33:05,431 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Seguridad%20y%20Salud%20SL/C19-ASS-20241216183301/C19-ASS-20241216183301.xlsx
+2024-12-16 18:33:05,432 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Seguridad%20y%20Salud%20SL/C19-ASS-20241216183301/C19-ASS-20241216183301.xlsx
+2024-12-16 18:33:05,439 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-12-16 18:33:05,598 - integracion.integracion.generate_c34_compra - ERROR - Error al crear el documento de remesa para ATU Seguridad y Salud SL: 'CustomPurchaseInvoice' object has no attribute 'custom_varios_pagos'
+2024-12-16 18:33:05,659 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03836 actualizados en estado validado
+2024-12-16 18:33:05,659 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03836
+2024-12-16 18:33:05,662 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03836: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:05,735 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03832 actualizados en estado validado
+2024-12-16 18:33:05,735 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03832
+2024-12-16 18:33:05,738 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03832: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:05,837 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03830 actualizados en estado validado
+2024-12-16 18:33:05,837 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03830
+2024-12-16 18:33:05,840 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03830: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:05,971 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03828 actualizados en estado validado
+2024-12-16 18:33:05,972 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03828
+2024-12-16 18:33:05,974 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03828: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:06,027 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03807 actualizados en estado validado
+2024-12-16 18:33:06,027 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03807
+2024-12-16 18:33:06,030 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03807: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:06,033 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASS-20241216183301.xlsx eliminado después de subirlo a SharePoint
+2024-12-16 18:33:06,042 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03834 del proveedor BURGOS ATU, S.L.
+2024-12-16 18:33:06,046 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03833 del proveedor BURGOS ATU, S.L.
+2024-12-16 18:33:06,059 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para ATU Tecnología Digital SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATD-20241216183306.xlsx
+2024-12-16 18:33:06,059 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATD-20241216183306.xlsx a SharePoint para la compañía ATU Tecnología Digital SL con Cuaderno C19-ATD-20241216183306
+2024-12-16 18:33:06,059 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-12-16 18:33:06,059 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-12-16 18:33:06,059 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-12-16 18:33:06,898 - integracion.integracion.generate_c34_compra - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-12-16 18:33:06,899 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Tecnolog%C3%ADa%20Digital%20SL
+2024-12-16 18:33:07,160 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-12-16 18:33:07,775 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/ATU Tecnología Digital SL
+2024-12-16 18:33:07,777 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Tecnolog%C3%ADa%20Digital%20SL/C19-ATD-20241216183306
+2024-12-16 18:33:08,094 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent ATU Tecnología Digital SL
+2024-12-16 18:33:08,573 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/ATU Tecnología Digital SL/C19-ATD-20241216183306
+2024-12-16 18:33:08,574 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Tecnolog%C3%ADa%20Digital%20SL/C19-ATD-20241216183306/C19-ATD-20241216183306.xlsx
+2024-12-16 18:33:09,255 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Tecnolog%C3%ADa%20Digital%20SL/C19-ATD-20241216183306/C19-ATD-20241216183306.xlsx
+2024-12-16 18:33:09,255 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Tecnolog%C3%ADa%20Digital%20SL/C19-ATD-20241216183306/C19-ATD-20241216183306.xlsx
+2024-12-16 18:33:09,258 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-12-16 18:33:09,334 - integracion.integracion.generate_c34_compra - ERROR - Error al crear el documento de remesa para ATU Tecnología Digital SL: 'CustomPurchaseInvoice' object has no attribute 'custom_varios_pagos'
+2024-12-16 18:33:09,381 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03834 actualizados en estado validado
+2024-12-16 18:33:09,382 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03834
+2024-12-16 18:33:09,760 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03834: ACC-PAY-2024-02282
+2024-12-16 18:33:09,814 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03833 actualizados en estado validado
+2024-12-16 18:33:09,814 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03833
+2024-12-16 18:33:09,987 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03833: ACC-PAY-2024-02283
+2024-12-16 18:33:09,991 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATD-20241216183306.xlsx eliminado después de subirlo a SharePoint
+2024-12-16 18:33:09,998 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03826-1 del proveedor BURGOS ATU, S.L.
+2024-12-16 18:33:10,001 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03825 del proveedor BURGOS ATU, S.L.
+2024-12-16 18:33:10,007 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03818 del proveedor TAKIN Business Consulting SL
+2024-12-16 18:33:10,013 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03816 del proveedor TAKIN Business Consulting SL
+2024-12-16 18:33:10,018 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03814 del proveedor TAKIN Business Consulting SL
+2024-12-16 18:33:10,031 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-20241216183309.xlsx
+2024-12-16 18:33:10,031 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-20241216183309.xlsx a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C19-ATUSL-20241216183309
+2024-12-16 18:33:10,031 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-12-16 18:33:10,031 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-12-16 18:33:10,031 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-12-16 18:33:10,618 - integracion.integracion.generate_c34_compra - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-12-16 18:33:10,619 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL
+2024-12-16 18:33:10,986 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-12-16 18:33:11,610 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL
+2024-12-16 18:33:11,611 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-20241216183309
+2024-12-16 18:33:11,789 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Academia Técnica Universitaria SL
+2024-12-16 18:33:12,256 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL/C19-ATUSL-20241216183309
+2024-12-16 18:33:12,257 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-20241216183309/C19-ATUSL-20241216183309.xlsx
+2024-12-16 18:33:13,118 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-20241216183309/C19-ATUSL-20241216183309.xlsx
+2024-12-16 18:33:13,119 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-20241216183309/C19-ATUSL-20241216183309.xlsx
+2024-12-16 18:33:13,121 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-12-16 18:33:13,197 - integracion.integracion.generate_c34_compra - ERROR - Error al crear el documento de remesa para Academia Técnica Universitaria SL: 'CustomPurchaseInvoice' object has no attribute 'custom_varios_pagos'
+2024-12-16 18:33:13,245 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03826-1 actualizados en estado validado
+2024-12-16 18:33:13,246 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03826-1
+2024-12-16 18:33:13,451 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03826-1: ACC-PAY-2024-02284
+2024-12-16 18:33:13,501 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03825 actualizados en estado validado
+2024-12-16 18:33:13,501 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03825
+2024-12-16 18:33:13,678 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03825: ACC-PAY-2024-02285
+2024-12-16 18:33:13,730 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03818 actualizados en estado validado
+2024-12-16 18:33:13,731 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03818
+2024-12-16 18:33:13,964 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03818: ACC-PAY-2024-02286
+2024-12-16 18:33:14,011 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03816 actualizados en estado validado
+2024-12-16 18:33:14,012 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03816
+2024-12-16 18:33:14,172 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03816: ACC-PAY-2024-02287
+2024-12-16 18:33:14,221 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03814 actualizados en estado validado
+2024-12-16 18:33:14,222 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03814
+2024-12-16 18:33:14,397 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03814: ACC-PAY-2024-02288
+2024-12-16 18:33:14,402 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-20241216183309.xlsx eliminado después de subirlo a SharePoint
+2024-12-16 18:33:14,411 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03827 del proveedor BURGOS ATU, S.L.
+2024-12-16 18:33:14,414 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03810 del proveedor UNIVERSO BACTERIA, S.L.
+2024-12-16 18:33:14,417 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03798-1 del proveedor Xappiens BI SLU
+2024-12-16 18:33:14,423 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03800 del proveedor TAKIN Business Consulting SL
+2024-12-16 18:33:14,426 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03790 del proveedor T.NIC AUDITORES S.L.
+2024-12-16 18:33:14,429 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03789 del proveedor T.NIC AUDITORES S.L.
+2024-12-16 18:33:14,433 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03788 del proveedor T.NIC AUDITORES S.L.
+2024-12-16 18:33:14,448 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Tierra más ecológica S COOP: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-TME-20241216183314.xlsx
+2024-12-16 18:33:14,449 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-TME-20241216183314.xlsx a SharePoint para la compañía Tierra más ecológica S COOP con Cuaderno C19-TME-20241216183314
+2024-12-16 18:33:14,449 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-12-16 18:33:14,449 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-12-16 18:33:14,450 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-12-16 18:33:15,046 - integracion.integracion.generate_c34_compra - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-12-16 18:33:15,047 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Tierra%20m%C3%A1s%20ecol%C3%B3gica%20S%20COOP
+2024-12-16 18:33:15,247 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-12-16 18:33:15,867 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Tierra más ecológica S COOP
+2024-12-16 18:33:15,868 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Tierra%20m%C3%A1s%20ecol%C3%B3gica%20S%20COOP/C19-TME-20241216183314
+2024-12-16 18:33:16,045 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Tierra más ecológica S COOP
+2024-12-16 18:33:16,730 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Tierra más ecológica S COOP/C19-TME-20241216183314
+2024-12-16 18:33:16,731 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Tierra%20m%C3%A1s%20ecol%C3%B3gica%20S%20COOP/C19-TME-20241216183314/C19-TME-20241216183314.xlsx
+2024-12-16 18:33:17,360 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Tierra%20m%C3%A1s%20ecol%C3%B3gica%20S%20COOP/C19-TME-20241216183314/C19-TME-20241216183314.xlsx
+2024-12-16 18:33:17,361 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Tierra%20m%C3%A1s%20ecol%C3%B3gica%20S%20COOP/C19-TME-20241216183314/C19-TME-20241216183314.xlsx
+2024-12-16 18:33:17,364 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-12-16 18:33:17,443 - integracion.integracion.generate_c34_compra - ERROR - Error al crear el documento de remesa para Tierra más ecológica S COOP: 'CustomPurchaseInvoice' object has no attribute 'custom_varios_pagos'
+2024-12-16 18:33:17,542 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03827 actualizados en estado validado
+2024-12-16 18:33:17,543 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03827
+2024-12-16 18:33:17,546 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03827: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:17,594 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03810 actualizados en estado validado
+2024-12-16 18:33:17,594 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03810
+2024-12-16 18:33:17,596 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03810: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:17,640 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03798-1 actualizados en estado validado
+2024-12-16 18:33:17,641 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03798-1
+2024-12-16 18:33:17,643 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03798-1: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:17,690 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03800 actualizados en estado validado
+2024-12-16 18:33:17,691 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03800
+2024-12-16 18:33:17,693 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03800: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:17,737 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03790 actualizados en estado validado
+2024-12-16 18:33:17,737 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03790
+2024-12-16 18:33:17,739 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03790: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:17,785 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03789 actualizados en estado validado
+2024-12-16 18:33:17,785 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03789
+2024-12-16 18:33:17,787 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03789: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:17,833 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03788 actualizados en estado validado
+2024-12-16 18:33:17,833 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03788
+2024-12-16 18:33:17,835 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03788: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:17,839 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-TME-20241216183314.xlsx eliminado después de subirlo a SharePoint
+2024-12-16 18:33:17,849 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03801 del proveedor TAKIN Business Consulting SL
+2024-12-16 18:33:17,852 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03792 del proveedor T.NIC AUDITORES S.L.
+2024-12-16 18:33:17,855 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03791 del proveedor T.NIC AUDITORES S.L.
+2024-12-16 18:33:17,858 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03741 del proveedor GROUPERS INTELLIGENCE SL
+2024-12-16 18:33:17,871 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Grupo Almería Formación SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-GAF-20241216183317.xlsx
+2024-12-16 18:33:17,871 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-GAF-20241216183317.xlsx a SharePoint para la compañía Grupo Almería Formación SL con Cuaderno C19-GAF-20241216183317
+2024-12-16 18:33:17,871 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-12-16 18:33:17,872 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-12-16 18:33:17,872 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-12-16 18:33:18,696 - integracion.integracion.generate_c34_compra - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-12-16 18:33:18,697 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL
+2024-12-16 18:33:19,081 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-12-16 18:33:19,886 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Grupo Almería Formación SL
+2024-12-16 18:33:19,887 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C19-GAF-20241216183317
+2024-12-16 18:33:20,315 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Grupo Almería Formación SL
+2024-12-16 18:33:20,770 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Grupo Almería Formación SL/C19-GAF-20241216183317
+2024-12-16 18:33:20,771 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C19-GAF-20241216183317/C19-GAF-20241216183317.xlsx
+2024-12-16 18:33:21,399 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C19-GAF-20241216183317/C19-GAF-20241216183317.xlsx
+2024-12-16 18:33:21,400 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C19-GAF-20241216183317/C19-GAF-20241216183317.xlsx
+2024-12-16 18:33:21,402 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-12-16 18:33:21,481 - integracion.integracion.generate_c34_compra - ERROR - Error al crear el documento de remesa para Grupo Almería Formación SL: 'CustomPurchaseInvoice' object has no attribute 'custom_varios_pagos'
+2024-12-16 18:33:21,544 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03801 actualizados en estado validado
+2024-12-16 18:33:21,545 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03801
+2024-12-16 18:33:21,548 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03801: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:21,613 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03792 actualizados en estado validado
+2024-12-16 18:33:21,614 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03792
+2024-12-16 18:33:21,616 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03792: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:21,662 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03791 actualizados en estado validado
+2024-12-16 18:33:21,662 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03791
+2024-12-16 18:33:21,665 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03791: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:21,712 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03741 actualizados en estado validado
+2024-12-16 18:33:21,713 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03741
+2024-12-16 18:33:21,715 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03741: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 18:33:21,719 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-GAF-20241216183317.xlsx eliminado después de subirlo a SharePoint
+2024-12-16 19:42:14,701 - integracion.integracion.generate_c34_compra - INFO - Inicio de la generación de Cuaderno 34
+2024-12-16 19:42:14,705 - integracion.integracion.generate_c34_compra - INFO - ['ACC-PINV-2024-03834-1', 'ACC-PINV-2024-03836', 'ACC-PINV-2024-03833', 'ACC-PINV-2024-03832', 'ACC-PINV-2024-03826-1', 'ACC-PINV-2024-03830', 'ACC-PINV-2024-03828', 'ACC-PINV-2024-03827', 'ACC-PINV-2024-03825', 'ACC-PINV-2024-03818', 'ACC-PINV-2024-03816', 'ACC-PINV-2024-03814', 'ACC-PINV-2024-03810', 'ACC-PINV-2024-03807', 'ACC-PINV-2024-03798-1', 'ACC-PINV-2024-03801', 'ACC-PINV-2024-03800', 'ACC-PINV-2024-03792', 'ACC-PINV-2024-03791', 'ACC-PINV-2024-03790', 'ACC-PINV-2024-03789', 'ACC-PINV-2024-03788', 'ACC-PINV-2024-03741']
+2024-12-16 19:42:14,719 - integracion.integracion.generate_c34_compra - DEBUG - Total facturas encontradas: 23
+2024-12-16 19:42:14,753 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03832
+2024-12-16 19:42:14,755 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03832 agregada a la empresa ATU Seguridad y Salud SL
+2024-12-16 19:42:14,776 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03826-1
+2024-12-16 19:42:14,777 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03826-1 agregada a la empresa Academia Técnica Universitaria SL
+2024-12-16 19:42:14,821 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03830
+2024-12-16 19:42:14,822 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03830 agregada a la empresa ATU Seguridad y Salud SL
+2024-12-16 19:42:14,863 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03828
+2024-12-16 19:42:14,864 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03828 agregada a la empresa ATU Seguridad y Salud SL
+2024-12-16 19:42:14,904 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03827
+2024-12-16 19:42:14,905 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03827 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 19:42:14,926 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03825
+2024-12-16 19:42:14,927 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03825 agregada a la empresa Academia Técnica Universitaria SL
+2024-12-16 19:42:14,947 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03818
+2024-12-16 19:42:14,949 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03818 agregada a la empresa Academia Técnica Universitaria SL
+2024-12-16 19:42:14,967 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03816
+2024-12-16 19:42:14,969 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03816 agregada a la empresa Academia Técnica Universitaria SL
+2024-12-16 19:42:14,989 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03814
+2024-12-16 19:42:14,990 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03814 agregada a la empresa Academia Técnica Universitaria SL
+2024-12-16 19:42:15,009 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03810
+2024-12-16 19:42:15,011 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03810 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 19:42:15,029 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03807
+2024-12-16 19:42:15,031 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03807 agregada a la empresa ATU Seguridad y Salud SL
+2024-12-16 19:42:15,051 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03798-1
+2024-12-16 19:42:15,053 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03798-1 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 19:42:15,074 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03801
+2024-12-16 19:42:15,076 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03801 agregada a la empresa Grupo Almería Formación SL
+2024-12-16 19:42:15,096 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03800
+2024-12-16 19:42:15,097 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03800 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 19:42:15,118 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03792
+2024-12-16 19:42:15,119 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03792 agregada a la empresa Grupo Almería Formación SL
+2024-12-16 19:42:15,140 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03791
+2024-12-16 19:42:15,142 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03791 agregada a la empresa Grupo Almería Formación SL
+2024-12-16 19:42:15,162 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03790
+2024-12-16 19:42:15,164 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03790 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 19:42:15,186 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03789
+2024-12-16 19:42:15,188 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03789 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 19:42:15,213 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03788
+2024-12-16 19:42:15,215 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03788 agregada a la empresa Tierra más ecológica S COOP
+2024-12-16 19:42:15,236 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03741
+2024-12-16 19:42:15,238 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03741 agregada a la empresa Grupo Almería Formación SL
+2024-12-16 19:42:15,263 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03833
+2024-12-16 19:42:15,264 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03833 agregada a la empresa ATU Tecnología Digital SL
+2024-12-16 19:42:15,286 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03836
+2024-12-16 19:42:15,287 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03836 agregada a la empresa ATU Seguridad y Salud SL
+2024-12-16 19:42:15,310 - integracion.integracion.generate_c34_compra - DEBUG - Procesando factura ACC-PINV-2024-03834-1
+2024-12-16 19:42:15,311 - integracion.integracion.generate_c34_compra - DEBUG - Factura ACC-PINV-2024-03834-1 agregada a la empresa ATU Tecnología Digital SL
+2024-12-16 19:42:15,323 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03832 del proveedor BURGOS ATU, S.L.
+2024-12-16 19:42:15,326 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03830 del proveedor BURGOS ATU, S.L.
+2024-12-16 19:42:15,330 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03828 del proveedor BURGOS ATU, S.L.
+2024-12-16 19:42:15,333 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03807 del proveedor UNIVERSO BACTERIA, S.L.
+2024-12-16 19:42:15,336 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03836 del proveedor BURGOS ATU, S.L.
+2024-12-16 19:42:15,504 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para ATU Seguridad y Salud SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASS-20241216194215.xlsx
+2024-12-16 19:42:15,504 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASS-20241216194215.xlsx a SharePoint para la compañía ATU Seguridad y Salud SL con Cuaderno C19-ASS-20241216194215
+2024-12-16 19:42:15,504 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-12-16 19:42:15,504 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-12-16 19:42:15,504 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-12-16 19:42:16,244 - integracion.integracion.generate_c34_compra - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-12-16 19:42:16,245 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Seguridad%20y%20Salud%20SL
+2024-12-16 19:42:16,453 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-12-16 19:42:17,137 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/ATU Seguridad y Salud SL
+2024-12-16 19:42:17,137 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Seguridad%20y%20Salud%20SL/C19-ASS-20241216194215
+2024-12-16 19:42:17,308 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent ATU Seguridad y Salud SL
+2024-12-16 19:42:17,868 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/ATU Seguridad y Salud SL/C19-ASS-20241216194215
+2024-12-16 19:42:17,869 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Seguridad%20y%20Salud%20SL/C19-ASS-20241216194215/C19-ASS-20241216194215.xlsx
+2024-12-16 19:42:18,710 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Seguridad%20y%20Salud%20SL/C19-ASS-20241216194215/C19-ASS-20241216194215.xlsx
+2024-12-16 19:42:18,710 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Seguridad%20y%20Salud%20SL/C19-ASS-20241216194215/C19-ASS-20241216194215.xlsx
+2024-12-16 19:42:18,717 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-12-16 19:42:18,825 - integracion.integracion.generate_c34_compra - ERROR - Error al crear el documento de remesa para ATU Seguridad y Salud SL: 'CustomPurchaseInvoice' object has no attribute 'custom_varios_pagos'
+2024-12-16 19:42:18,880 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03832 actualizados en estado validado
+2024-12-16 19:42:18,881 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03832
+2024-12-16 19:42:18,883 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03832: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:18,981 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03830 actualizados en estado validado
+2024-12-16 19:42:18,982 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03830
+2024-12-16 19:42:18,984 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03830: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:19,074 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03828 actualizados en estado validado
+2024-12-16 19:42:19,075 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03828
+2024-12-16 19:42:19,077 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03828: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:19,125 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03807 actualizados en estado validado
+2024-12-16 19:42:19,125 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03807
+2024-12-16 19:42:19,128 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03807: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:19,181 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03836 actualizados en estado validado
+2024-12-16 19:42:19,181 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03836
+2024-12-16 19:42:19,183 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03836: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:19,188 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ASS-20241216194215.xlsx eliminado después de subirlo a SharePoint
+2024-12-16 19:42:19,198 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03826-1 del proveedor BURGOS ATU, S.L.
+2024-12-16 19:42:19,204 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03825 del proveedor BURGOS ATU, S.L.
+2024-12-16 19:42:19,211 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03818 del proveedor TAKIN Business Consulting SL
+2024-12-16 19:42:19,218 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03816 del proveedor TAKIN Business Consulting SL
+2024-12-16 19:42:19,225 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03814 del proveedor TAKIN Business Consulting SL
+2024-12-16 19:42:19,244 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Academia Técnica Universitaria SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-20241216194219.xlsx
+2024-12-16 19:42:19,244 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-20241216194219.xlsx a SharePoint para la compañía Academia Técnica Universitaria SL con Cuaderno C19-ATUSL-20241216194219
+2024-12-16 19:42:19,245 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-12-16 19:42:19,245 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-12-16 19:42:19,245 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-12-16 19:42:19,791 - integracion.integracion.generate_c34_compra - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-12-16 19:42:19,791 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL
+2024-12-16 19:42:19,954 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-12-16 19:42:20,569 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL
+2024-12-16 19:42:20,572 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-20241216194219
+2024-12-16 19:42:20,798 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Academia Técnica Universitaria SL
+2024-12-16 19:42:21,267 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Academia Técnica Universitaria SL/C19-ATUSL-20241216194219
+2024-12-16 19:42:21,267 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-20241216194219/C19-ATUSL-20241216194219.xlsx
+2024-12-16 19:42:21,930 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-20241216194219/C19-ATUSL-20241216194219.xlsx
+2024-12-16 19:42:21,931 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Academia%20T%C3%A9cnica%20Universitaria%20SL/C19-ATUSL-20241216194219/C19-ATUSL-20241216194219.xlsx
+2024-12-16 19:42:21,933 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-12-16 19:42:21,967 - integracion.integracion.generate_c34_compra - ERROR - Error al crear el documento de remesa para Academia Técnica Universitaria SL: 'CustomPurchaseInvoice' object has no attribute 'custom_varios_pagos'
+2024-12-16 19:42:22,011 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03826-1 actualizados en estado validado
+2024-12-16 19:42:22,011 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03826-1
+2024-12-16 19:42:22,294 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03826-1: ACC-PAY-2024-02290
+2024-12-16 19:42:22,345 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03825 actualizados en estado validado
+2024-12-16 19:42:22,346 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03825
+2024-12-16 19:42:22,540 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03825: ACC-PAY-2024-02291
+2024-12-16 19:42:22,591 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03818 actualizados en estado validado
+2024-12-16 19:42:22,592 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03818
+2024-12-16 19:42:22,823 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03818: ACC-PAY-2024-02292
+2024-12-16 19:42:22,872 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03816 actualizados en estado validado
+2024-12-16 19:42:22,873 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03816
+2024-12-16 19:42:23,041 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03816: ACC-PAY-2024-02293
+2024-12-16 19:42:23,090 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03814 actualizados en estado validado
+2024-12-16 19:42:23,090 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03814
+2024-12-16 19:42:23,257 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03814: ACC-PAY-2024-02294
+2024-12-16 19:42:23,263 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATUSL-20241216194219.xlsx eliminado después de subirlo a SharePoint
+2024-12-16 19:42:23,273 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03827 del proveedor BURGOS ATU, S.L.
+2024-12-16 19:42:23,276 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03810 del proveedor UNIVERSO BACTERIA, S.L.
+2024-12-16 19:42:23,279 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03798-1 del proveedor Xappiens BI SLU
+2024-12-16 19:42:23,285 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03800 del proveedor TAKIN Business Consulting SL
+2024-12-16 19:42:23,288 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03790 del proveedor T.NIC AUDITORES S.L.
+2024-12-16 19:42:23,291 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03789 del proveedor T.NIC AUDITORES S.L.
+2024-12-16 19:42:23,294 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03788 del proveedor T.NIC AUDITORES S.L.
+2024-12-16 19:42:23,310 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Tierra más ecológica S COOP: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-TME-20241216194223.xlsx
+2024-12-16 19:42:23,310 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-TME-20241216194223.xlsx a SharePoint para la compañía Tierra más ecológica S COOP con Cuaderno C19-TME-20241216194223
+2024-12-16 19:42:23,310 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-12-16 19:42:23,310 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-12-16 19:42:23,310 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-12-16 19:42:23,994 - integracion.integracion.generate_c34_compra - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-12-16 19:42:23,995 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Tierra%20m%C3%A1s%20ecol%C3%B3gica%20S%20COOP
+2024-12-16 19:42:24,158 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-12-16 19:42:24,852 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Tierra más ecológica S COOP
+2024-12-16 19:42:24,852 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Tierra%20m%C3%A1s%20ecol%C3%B3gica%20S%20COOP/C19-TME-20241216194223
+2024-12-16 19:42:25,148 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Tierra más ecológica S COOP
+2024-12-16 19:42:25,635 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Tierra más ecológica S COOP/C19-TME-20241216194223
+2024-12-16 19:42:25,636 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Tierra%20m%C3%A1s%20ecol%C3%B3gica%20S%20COOP/C19-TME-20241216194223/C19-TME-20241216194223.xlsx
+2024-12-16 19:42:26,445 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Tierra%20m%C3%A1s%20ecol%C3%B3gica%20S%20COOP/C19-TME-20241216194223/C19-TME-20241216194223.xlsx
+2024-12-16 19:42:26,445 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Tierra%20m%C3%A1s%20ecol%C3%B3gica%20S%20COOP/C19-TME-20241216194223/C19-TME-20241216194223.xlsx
+2024-12-16 19:42:26,449 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-12-16 19:42:26,494 - integracion.integracion.generate_c34_compra - ERROR - Error al crear el documento de remesa para Tierra más ecológica S COOP: 'CustomPurchaseInvoice' object has no attribute 'custom_varios_pagos'
+2024-12-16 19:42:26,590 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03827 actualizados en estado validado
+2024-12-16 19:42:26,591 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03827
+2024-12-16 19:42:26,593 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03827: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:26,641 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03810 actualizados en estado validado
+2024-12-16 19:42:26,641 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03810
+2024-12-16 19:42:26,645 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03810: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:26,694 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03798-1 actualizados en estado validado
+2024-12-16 19:42:26,695 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03798-1
+2024-12-16 19:42:26,698 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03798-1: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:26,748 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03800 actualizados en estado validado
+2024-12-16 19:42:26,748 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03800
+2024-12-16 19:42:26,751 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03800: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:26,798 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03790 actualizados en estado validado
+2024-12-16 19:42:26,799 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03790
+2024-12-16 19:42:26,802 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03790: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:26,848 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03789 actualizados en estado validado
+2024-12-16 19:42:26,848 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03789
+2024-12-16 19:42:26,851 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03789: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:26,897 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03788 actualizados en estado validado
+2024-12-16 19:42:26,898 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03788
+2024-12-16 19:42:26,900 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03788: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:26,904 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-TME-20241216194223.xlsx eliminado después de subirlo a SharePoint
+2024-12-16 19:42:26,914 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03801 del proveedor TAKIN Business Consulting SL
+2024-12-16 19:42:26,917 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03792 del proveedor T.NIC AUDITORES S.L.
+2024-12-16 19:42:26,921 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03791 del proveedor T.NIC AUDITORES S.L.
+2024-12-16 19:42:26,925 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03741 del proveedor GROUPERS INTELLIGENCE SL
+2024-12-16 19:42:26,938 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para Grupo Almería Formación SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-GAF-20241216194226.xlsx
+2024-12-16 19:42:26,938 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-GAF-20241216194226.xlsx a SharePoint para la compañía Grupo Almería Formación SL con Cuaderno C19-GAF-20241216194226
+2024-12-16 19:42:26,938 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-12-16 19:42:26,938 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-12-16 19:42:26,938 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-12-16 19:42:27,436 - integracion.integracion.generate_c34_compra - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-12-16 19:42:27,437 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL
+2024-12-16 19:42:27,605 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-12-16 19:42:28,423 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Grupo Almería Formación SL
+2024-12-16 19:42:28,424 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C19-GAF-20241216194226
+2024-12-16 19:42:28,613 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Grupo Almería Formación SL
+2024-12-16 19:42:29,063 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/Grupo Almería Formación SL/C19-GAF-20241216194226
+2024-12-16 19:42:29,065 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C19-GAF-20241216194226/C19-GAF-20241216194226.xlsx
+2024-12-16 19:42:29,870 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C19-GAF-20241216194226/C19-GAF-20241216194226.xlsx
+2024-12-16 19:42:29,873 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/Grupo%20Almer%C3%ADa%20Formaci%C3%B3n%20SL/C19-GAF-20241216194226/C19-GAF-20241216194226.xlsx
+2024-12-16 19:42:29,876 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-12-16 19:42:29,909 - integracion.integracion.generate_c34_compra - ERROR - Error al crear el documento de remesa para Grupo Almería Formación SL: 'CustomPurchaseInvoice' object has no attribute 'custom_varios_pagos'
+2024-12-16 19:42:29,957 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03801 actualizados en estado validado
+2024-12-16 19:42:29,959 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03801
+2024-12-16 19:42:29,964 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03801: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:30,027 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03792 actualizados en estado validado
+2024-12-16 19:42:30,027 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03792
+2024-12-16 19:42:30,030 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03792: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:30,076 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03791 actualizados en estado validado
+2024-12-16 19:42:30,076 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03791
+2024-12-16 19:42:30,079 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03791: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:30,124 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03741 actualizados en estado validado
+2024-12-16 19:42:30,124 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03741
+2024-12-16 19:42:30,127 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-03741: No se ha configurado una cuenta bancaria por defecto para la empresa.
+2024-12-16 19:42:30,131 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-GAF-20241216194226.xlsx eliminado después de subirlo a SharePoint
+2024-12-16 19:42:30,139 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03833 del proveedor BURGOS ATU, S.L.
+2024-12-16 19:42:30,142 - integracion.integracion.generate_c34_compra - DEBUG - Datos agregados para la factura ACC-PINV-2024-03834-1 del proveedor BURGOS ATU, S.L.
+2024-12-16 19:42:30,165 - integracion.integracion.generate_c34_compra - INFO - Archivo Excel generado para ATU Tecnología Digital SL: /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATD-20241216194230.xlsx
+2024-12-16 19:42:30,165 - integracion.integracion.generate_c34_compra - INFO - Subiendo archivo /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATD-20241216194230.xlsx a SharePoint para la compañía ATU Tecnología Digital SL con Cuaderno C19-ATD-20241216194230
+2024-12-16 19:42:30,165 - integracion.integracion.generate_c34_compra - INFO - Ruta relativa calculada: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra
+2024-12-16 19:42:30,166 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad
+2024-12-16 19:42:30,166 - integracion.integracion.generate_c34_compra - INFO - Conectando al contexto del sitio: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad con huella digital: B0:6A:FA:76:97:7D:28:22:C2:D2:DD:0E:F6:84:B9:69:82:86:52:93 y ruta de certificado: /home/frappe/frappe-bench/certificate/certificate.pem
+2024-12-16 19:42:30,748 - integracion.integracion.generate_c34_compra - INFO - Conexión exitosa al sitio SharePoint: Departamento de Administración - Contabilidad
+2024-12-16 19:42:30,749 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Tecnolog%C3%ADa%20Digital%20SL
+2024-12-16 19:42:30,912 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent Cuaderno34 - Facturas de Compra
+2024-12-16 19:42:31,558 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/ATU Tecnología Digital SL
+2024-12-16 19:42:31,559 - integracion.integracion.generate_c34_compra - INFO - Comprobando existencia de carpeta en la ruta: /Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Tecnolog%C3%ADa%20Digital%20SL/C19-ATD-20241216194230
+2024-12-16 19:42:31,745 - integracion.integracion.generate_c34_compra - INFO - Conectado a parent ATU Tecnología Digital SL
+2024-12-16 19:42:32,189 - integracion.integracion.generate_c34_compra - INFO - Carpeta creada: /sites/DepartamentodeAdministracin2-Contabilidad/Shared Documents/Contabilidad/Cuaderno34 - Facturas de Compra/ATU Tecnología Digital SL/C19-ATD-20241216194230
+2024-12-16 19:42:32,189 - integracion.integracion.generate_c34_compra - INFO - Intentando subir archivo a: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Tecnolog%C3%ADa%20Digital%20SL/C19-ATD-20241216194230/C19-ATD-20241216194230.xlsx
+2024-12-16 19:42:33,093 - integracion.integracion.generate_c34_compra - INFO - Archivo subido: Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Tecnolog%C3%ADa%20Digital%20SL/C19-ATD-20241216194230/C19-ATD-20241216194230.xlsx
+2024-12-16 19:42:33,094 - integracion.integracion.generate_c34_compra - DEBUG - Archivo subido a SharePoint: https://grupoatu365.sharepoint.com/sites/DepartamentodeAdministracin2-Contabilidad/Shared%20Documents/Contabilidad/Cuaderno34%20-%20Facturas%20de%20Compra/ATU%20Tecnolog%C3%ADa%20Digital%20SL/C19-ATD-20241216194230/C19-ATD-20241216194230.xlsx
+2024-12-16 19:42:33,096 - integracion.integracion.generate_c34_compra - INFO - Remesa doc name: None
+2024-12-16 19:42:33,129 - integracion.integracion.generate_c34_compra - ERROR - Error al crear el documento de remesa para ATU Tecnología Digital SL: 'CustomPurchaseInvoice' object has no attribute 'custom_varios_pagos'
+2024-12-16 19:42:33,180 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03833 actualizados en estado validado
+2024-12-16 19:42:33,181 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03833
+2024-12-16 19:42:33,384 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03833: ACC-PAY-2024-02295
+2024-12-16 19:42:33,444 - integracion.integracion.generate_c34_compra - INFO - Campos personalizados de la factura ACC-PINV-2024-03834-1 actualizados en estado validado
+2024-12-16 19:42:33,445 - integracion.integracion.generate_c34_compra - DEBUG - Estado cambiado a 'Remesa Emitida' para la factura ACC-PINV-2024-03834-1
+2024-12-16 19:42:33,624 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-03834-1: ACC-PAY-2024-02296
+2024-12-16 19:42:33,629 - integracion.integracion.generate_c34_compra - INFO - Archivo local /home/frappe/frappe-bench/sites/erp.grupoatu.com/private/cuaderno/C19-ATD-20241216194230.xlsx eliminado después de subirlo a SharePoint

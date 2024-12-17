@@ -112,7 +112,7 @@ scheduler_events = {
         "0 16 * * *":[
             #"integracion.integracion.hc_diary_noti.enviar_notificacion_a_asesoria"
         ],
-        
+
     },
     "daily": [
         "integracion.integracion.employee_status_update.check_contract_end"
@@ -143,8 +143,9 @@ page_js = {
     "user-profile": "public/js/custom_user_p.js"
 }
 
-list_js = {
-    "Journal Entry": "public/js/journal_list_custom.js"
+doctype_list_js = {
+    "Journal Entry": "public/js/journal_list_custom.js",
+    "Remesa Registro": "public/js/remesa_registro_list.js"
 }
 
 
@@ -379,4 +380,3 @@ get_matching_queries = "integracion.integracion.custom_bank_transaction.custom_g
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
