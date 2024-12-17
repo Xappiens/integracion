@@ -467,91 +467,90 @@ def upload_file_to_sharepoint(file_path, company, fichero_id_value):
         return None
 
 def create_payment_entry_for_purchase_invoice(invoice, supplier_iban):
-    try:
-        # Verificar si la factura ya ha sido pagada
-        if invoice.outstanding_amount == 0:
-            logger.info(f"La factura {invoice.name} ya está completamente pagada. No se requiere un Payment Entry.")
-            return  # Salir de la función sin crear el Payment Entry
+   try:
+       # Verificar si la factura ya ha sido pagada
+       if invoice.outstanding_amount == 0:
+           logger.info(f"La factura {invoice.name} ya está completamente pagada. No se requiere un Payment Entry.")
+           return  # Salir de la función sin crear el Payment Entry
 
-        # Verificar si ya existe un Payment Entry para esta factura con el mismo monto
-        existing_payment = frappe.db.exists(
-            "Payment Entry",
-            {
-                "docstatus": ["!=", 2],  # No cancelado
-                "references": {
-                    "reference_doctype": "Purchase Invoice",
-                    "reference_name": invoice.name,
-                    "allocated_amount": invoice.outstanding_amount
-                }
-            }
-        )
+       # Verificar si ya existe un Payment Entry para esta factura con el mismo monto
+       existing_payments = frappe.get_all(
+           "Payment Entry Reference",
+           filters={
+               "reference_doctype": "Purchase Invoice",
+               "reference_name": invoice.name,
+               "allocated_amount": invoice.outstanding_amount,
+               "parent": ["in", frappe.get_all("Payment Entry", filters={"docstatus": ["!=", 2]}, pluck="name")]
+           },
+           fields=["parent"]
+       )
 
-        if existing_payment:
-            logger.info(f"Ya existe un Payment Entry activo para la factura {invoice.name} con el mismo monto.")
-            return  # Salir de la función sin crear un nuevo Payment Entry
+       if existing_payments:
+           logger.info(f"Ya existe un Payment Entry activo para la factura {invoice.name} con el mismo monto.")
+           return  # Salir de la función sin crear un nuevo Payment Entry
 
-        # Obtener la cuenta por pagar del proveedor desde la factura de compra
-        credit_account = invoice.credit_to
+       # Obtener la cuenta por pagar del proveedor desde la factura de compra
+       credit_account = invoice.credit_to
 
-        # Verificar que la cuenta 'debit_account' esté configurada como "Payable"
-        if frappe.db.get_value("Account", credit_account, "account_type") != "Payable":
-            frappe.throw(_("La cuenta de débito asignada no es de tipo 'Payable'. Verifique la configuración de la cuenta."))
+       # Verificar que la cuenta 'debit_account' esté configurada como "Payable"
+       if frappe.db.get_value("Account", credit_account, "account_type") != "Payable":
+           frappe.throw(_("La cuenta de débito asignada no es de tipo 'Payable'. Verifique la configuración de la cuenta."))
 
-        # Obtener la cuenta bancaria de la empresa (para `paid_to`)
-        company_bank_account = frappe.get_value("Company", invoice.company, "default_bank_account")
+       # Obtener la cuenta bancaria de la empresa (para `paid_to`)
+       company_bank_account = frappe.get_value("Company", invoice.company, "default_bank_account")
 
-        # Validar que la cuenta bancaria de la empresa esté configurada
-        if not company_bank_account:
-            frappe.throw(_("No se ha configurado una cuenta bancaria por defecto para la empresa."))
+       # Validar que la cuenta bancaria de la empresa esté configurada
+       if not company_bank_account:
+           frappe.throw(_("No se ha configurado una cuenta bancaria por defecto para la empresa."))
 
-        # Obtener la cuenta bancaria del proveedor usando el IBAN
-        supplier_bank = frappe.get_value("Bank Account", {"iban": supplier_iban}, "name")
-        if not supplier_bank:
-            frappe.throw(_("No se encontró una cuenta bancaria con el IBAN especificado."))
+       # Obtener la cuenta bancaria del proveedor usando el IBAN
+       supplier_bank = frappe.get_value("Bank Account", {"iban": supplier_iban}, "name")
+       if not supplier_bank:
+           frappe.throw(_("No se encontró una cuenta bancaria con el IBAN especificado."))
 
-        # Obtener el tipo de cambio
-        source_exchange_rate = 1.0
-        company_currency = frappe.get_value("Company", invoice.company, "default_currency")
-        if invoice.currency != company_currency:
-            source_exchange_rate = frappe.get_value("Currency Exchange", {"from_currency": invoice.currency, "to_currency": company_currency}, "exchange_rate")
-            if not source_exchange_rate:
-                frappe.throw(_("El tipo de cambio no está definido para {0} a {1}").format(invoice.currency, company_currency))
+       # Obtener el tipo de cambio
+       source_exchange_rate = 1.0
+       company_currency = frappe.get_value("Company", invoice.company, "default_currency")
+       if invoice.currency != company_currency:
+           source_exchange_rate = frappe.get_value("Currency Exchange", {"from_currency": invoice.currency, "to_currency": company_currency}, "exchange_rate")
+           if not source_exchange_rate:
+               frappe.throw(_("El tipo de cambio no está definido para {0} a {1}").format(invoice.currency, company_currency))
 
-        # Crear el documento de Payment Entry
-        payment_entry = frappe.get_doc({
-            "doctype": "Payment Entry",
-            "payment_type": "Pay",
-            "posting_date": frappe.utils.nowdate(),
-            "party_type": "Supplier",
-            "party": invoice.supplier,
-            "company": invoice.company,
-            "mode_of_payment": frappe.get_value("Supplier", invoice.supplier, "mode_of_payment"),
-            "paid_amount": invoice.rounded_total,  # Ajuste de paid_amount a outstanding_amount válido
-            "received_amount": invoice.rounded_total,  # Ajuste de received_amount a outstanding_amount válido
-            "paid_from": company_bank_account or "",  # Cuenta por pagar del proveedor (cuenta del proveedor en la factura)
-            "paid_from_account_currency": frappe.get_value("Account", company_bank_account, "account_currency") if company_bank_account else None,
-            "paid_to": credit_account,  # Cuenta bancaria de la empresa para pagos
-            "paid_to_account_currency": frappe.get_value("Account", credit_account, "account_currency"),
-            "reference_no": invoice.name,
-            "reference_date": invoice.posting_date,
-            "references": [
-                {
-                    "reference_doctype": "Purchase Invoice",
-                    "reference_name": invoice.name,
-                    "total_amount": invoice.grand_total,
-                    "outstanding_amount": invoice.outstanding_amount,
-                    "allocated_amount": invoice.outstanding_amount,
-                }
-            ],
-            "currency": invoice.currency,
-            "source_exchange_rate": source_exchange_rate
-        })
+       # Crear el documento de Payment Entry
+       payment_entry = frappe.get_doc({
+           "doctype": "Payment Entry",
+           "payment_type": "Pay",
+           "posting_date": frappe.utils.nowdate(),
+           "party_type": "Supplier",
+           "party": invoice.supplier,
+           "company": invoice.company,
+           "mode_of_payment": frappe.get_value("Supplier", invoice.supplier, "mode_of_payment"),
+           "paid_amount": invoice.rounded_total,  # Ajuste de paid_amount a outstanding_amount válido
+           "received_amount": invoice.rounded_total,  # Ajuste de received_amount a outstanding_amount válido
+           "paid_from": company_bank_account or "",  # Cuenta por pagar del proveedor (cuenta del proveedor en la factura)
+           "paid_from_account_currency": frappe.get_value("Account", company_bank_account, "account_currency") if company_bank_account else None,
+           "paid_to": credit_account,  # Cuenta bancaria de la empresa para pagos
+           "paid_to_account_currency": frappe.get_value("Account", credit_account, "account_currency"),
+           "reference_no": invoice.name,
+           "reference_date": invoice.posting_date,
+           "references": [
+               {
+                   "reference_doctype": "Purchase Invoice",
+                   "reference_name": invoice.name,
+                   "total_amount": invoice.grand_total,
+                   "outstanding_amount": invoice.outstanding_amount,
+                   "allocated_amount": invoice.outstanding_amount,
+               }
+           ],
+           "currency": invoice.currency,
+           "source_exchange_rate": source_exchange_rate
+       })
 
-        # Guardar y enviar el Payment Entry
-        payment_entry.insert(ignore_permissions=True)
-        payment_entry.submit()
+       # Guardar y enviar el Payment Entry
+       payment_entry.insert(ignore_permissions=True)
+       payment_entry.submit()
 
-        logger.info(f"Payment Entry creado para la factura {invoice.name}: {payment_entry.name}")
+       logger.info(f"Payment Entry creado para la factura {invoice.name}: {payment_entry.name}")
 
-    except Exception as e:
-        logger.error(f"Error al crear Payment Entry para la factura {invoice.name}: {e}")
+   except Exception as e:
+       logger.error(f"Error al crear Payment Entry para la factura {invoice.name}: {e}")
