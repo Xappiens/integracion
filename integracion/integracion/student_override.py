@@ -5,66 +5,134 @@ from education.education.doctype.student.student import Student
 
 class CustomStudent(Student):
     def create_customer(self):
-        # Verifica si ya existe un cliente con el nombre del estudiante o el DNI (tax_id)
-        customer_name = frappe.db.get_value("Customer", {"customer_name": self.student_name}, "name")
-        customer_dni = frappe.db.get_value("Customer", {"tax_id": self.dni}, "name")
-        
-        # Si el cliente ya existe por nombre o DNI, usa ese cliente
-        if customer_name or customer_dni:
-            existing_customer = customer_name or customer_dni
-            frappe.db.set_value("Student", self.name, "customer", existing_customer)
+        try:
+            frappe.log_error("Inicio de creación de cliente")
             
-            # Mensaje informando que se vinculó el estudiante al cliente existente
+            # Intentar vincular a cliente existente
+            if customer := self._get_existing_customer():
+                self._link_to_existing_customer(customer)
+                return
+            
+            # Crear nuevo cliente
+            customer = self._create_new_customer()
+            
+            # Crear dirección si es posible
+            address = self._create_customer_address(customer)
+            
+            # Vincular cliente al estudiante
+            self._link_customer_to_student(customer)
+            
+            # Mostrar mensaje de éxito apropiado
+            self._show_success_message(customer, address)
+            
+        except Exception as e:
+            frappe.log_error(f"Error en create_customer: {str(e)}\nTraza completa: {frappe.get_traceback()}")
+            raise
+
+    def _get_existing_customer(self):
+        """Busca si existe un cliente con el mismo nombre o DNI"""
+        return (
+            frappe.db.get_value("Customer", {"customer_name": self.student_name}, "name") or 
+            frappe.db.get_value("Customer", {"tax_id": self.dni}, "name")
+        )
+
+    def _link_to_existing_customer(self, customer_name):
+        """Vincula el estudiante a un cliente existente"""
+        frappe.db.set_value("Student", self.name, "customer", customer_name)
+        frappe.msgprint(
+            _("Student linked to existing Customer {0}").format(customer_name),
+            alert=True
+        )
+
+    def _create_new_customer(self):
+        """Crea un nuevo cliente basado en los datos del estudiante"""
+        customer_data = {
+            "doctype": "Customer",
+            "customer_name": self.student_name,
+            "customer_group": self.customer_group or frappe.db.get_single_value("Selling Settings", "customer_group"),
+            "customer_type": "Individual",
+            "custom_tipo_de_identificacion": "DNI",
+            "tax_id": self.dni,
+            "email_id": self.student_email_id
+        }
+        
+        # Añadir campos opcionales
+        optional_fields = {
+            'image': 'image',
+            'mobile_no': 'student_mobile_number'
+        }
+        
+        for customer_field, student_field in optional_fields.items():
+            if value := getattr(self, student_field, None):
+                customer_data[customer_field] = value
+        
+        customer = frappe.get_doc(customer_data)
+        customer.insert(ignore_permissions=True)
+        frappe.log_error(f"Cliente creado: {customer.name}", "Customer Creation")
+        return customer
+
+    def _create_customer_address(self, customer):
+        """Crea una dirección para el cliente si hay suficientes datos"""
+        if not (hasattr(self, 'address_line_1') and self.address_line_1):
+            frappe.log_error("No se creó dirección: Falta address_line_1", "Address Creation Skipped")
+            return None
+
+        address_data = {
+            "doctype": "Address",
+            "address_title": self.student_name,
+            "address_type": "Billing",
+            "address_line1": self.address_line_1,
+            "city": getattr(self, 'city', ''),
+            "country": getattr(self, 'country', ''),
+            "email_id": self.student_email_id,
+            "is_primary_address": 1,
+            "is_shipping_address": 1,
+            "links": [{"link_doctype": "Customer", "link_name": customer.name}]
+        }
+
+        # Añadir campos opcionales
+        optional_fields = {
+            'address_line2': 'address_line_2',
+            'state': 'state',
+            'pincode': 'postcode',
+            'phone': 'student_mobile_number'
+        }
+
+        for address_field, student_field in optional_fields.items():
+            if value := getattr(self, student_field, None):
+                address_data[address_field] = value
+
+        try:
+            address = frappe.get_doc(address_data)
+            address.insert(ignore_permissions=True)
+            frappe.log_error(f"Dirección creada: {address.name}", "Address Creation Success")
+            return address
+        except Exception as e:
+            frappe.log_error(
+                f"Error al crear dirección: {str(e)}\nDatos: {address_data}", 
+                "Address Creation Error"
+            )
+            # No propagamos el error para que al menos se cree el cliente
+            return None
+
+    def _link_customer_to_student(self, customer):
+        """Vincula el cliente creado al estudiante"""
+        frappe.db.set_value("Student", self.name, "customer", customer.name)
+
+    def _show_success_message(self, customer, address=None):
+        """Muestra el mensaje de éxito apropiado"""
+        if address:
             frappe.msgprint(
-                _("Student linked to existing Customer {0}").format(existing_customer),
+                _("Customer {0} and Address {1} created and linked to Student").format(
+                    customer.name, address.name
+                ),
                 alert=True
             )
         else:
-            # Si no existe el cliente, créalo
-            customer = frappe.get_doc({
-                "doctype": "Customer",
-                "customer_name": self.student_name,
-                "customer_group": self.customer_group or frappe.db.get_single_value("Selling Settings", "customer_group"),
-                "customer_type": "Individual",
-                "image": self.image,
-                # Campos adicionales personalizados
-                "custom_tipo_de_identificacion": "DNI",  # Ejemplo de campo adicional predeterminado
-                "tax_id": self.dni,  # Relacionar el tax_id del estudiante
-                "email_id": self.student_email_id,  # Relacionar el email del estudiante
-                "mobile_no": self.student_mobile_number if hasattr(self, 'student_mobile_number') else None,  # Si tienes el campo mobile_no
-                # Agregar más campos aquí si es necesario
-            }).insert()
-
-            # Crea la dirección para el cliente recién creado
-            address = frappe.get_doc({
-                "doctype": "Address",
-                "address_title": self.student_name,
-                "address_type": "Billing",  # O "Shipping" según sea necesario
-                "address_line1": self.address_line_1,
-                "address_line2": self.address_line_2 if hasattr(self, 'address_line_2') else None,
-                "city": self.city,
-                "state": self.state,
-                "pincode": self.postcode,
-                "country": self.country,
-                "email_id": self.student_email_id,  # Email asociado a la dirección
-                "phone": self.student_mobile_number if hasattr(self, 'student_mobile_number') else None,
-                "links": [
-                    {
-                        "link_doctype": "Customer",
-                        "link_name": customer.name
-                    }
-                ]
-            }).insert()
-
-            # Vincula el cliente recién creado al estudiante
-            frappe.db.set_value("Student", self.name, "customer", customer.name)
-
-            # Mensaje de éxito
             frappe.msgprint(
-                _("Customer {0} and Address {1} created and linked to Student").format(customer.name, address.name),
+                _("Customer {0} created and linked to Student").format(customer.name),
                 alert=True
             )
-
 
     def set_missing_customer_details(self):
         """Sobreescribimos para usar nuestro método create_customer"""
@@ -72,9 +140,7 @@ class CustomStudent(Student):
         if self.customer:
             self.update_linked_customer()
         else:
-            # Usamos el método `create_customer` que hemos sobreescrito
             self.create_customer()
-
 
 def get_program_enrollment(
     academic_year,
