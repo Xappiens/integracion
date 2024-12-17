@@ -548,6 +548,7 @@ def create_payment_entry_for_purchase_invoice(invoice, supplier_iban):
 
        # Guardar y enviar el Payment Entry
        payment_entry.insert(ignore_permissions=True)
+       payment_entry.submit()
 
        logger.info(f"Payment Entry creado para la factura {invoice.name}: {payment_entry.name}")
 
