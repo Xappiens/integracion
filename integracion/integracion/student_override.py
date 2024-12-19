@@ -4,14 +4,45 @@ from frappe import _
 from education.education.doctype.student.student import Student
 
 class CustomStudent(Student):
+
+    def update_linked_customer(self):
+     try:
+        customer = frappe.get_doc("Customer", self.customer)
+        if self.customer_group:
+            customer.customer_group = self.customer_group
+        customer.customer_name = self.student_name
+        customer.image = self.image
+        customer.save()
+
+        frappe.msgprint(_("Customer {0} updated").format(customer.name), alert=True)
+
+        address = self._create_customer_address(customer)
+        if address:
+             frappe.msgprint(_("Address {0} processed").format(address.name), alert=True)
+        else:
+             frappe.msgprint(_("No address processed"), alert=True)
+     except Exception as e:
+        frappe.log_error(f"Error al actualizar cliente y dirección: {str(e)}", "Update Linked Customer Error")
+        raise
+            
+
+        
+        
     def create_customer(self):
         try:
             frappe.log_error("Inicio de creación de cliente")
+             # Buscar si existe un cliente
+            customer = self._get_existing_customer()
             
             # Intentar vincular a cliente existente
-            if customer := self._get_existing_customer():
-                self._link_to_existing_customer(customer)
-                return
+            if customer:
+              frappe.log_error(f"Cliente existente encontrado: {customer}")
+              self._link_to_existing_customer(customer)
+
+               # Actualizar o crear dirección para clientes existentes
+              address = self._create_customer_address(customer)
+              frappe.log_error(f"Dirección procesada: {address.name if address else 'Ninguna'}")
+              return
             
             # Crear nuevo cliente
             customer = self._create_new_customer()
@@ -55,7 +86,8 @@ class CustomStudent(Student):
             "tax_id": self.dni,
             "email_id": self.student_email_id
         }
-        
+     
+
         # Añadir campos opcionales
         optional_fields = {
             'image': 'image',
@@ -73,47 +105,73 @@ class CustomStudent(Student):
 
     def _create_customer_address(self, customer):
         """Crea una dirección para el cliente si hay suficientes datos"""
+        frappe.log_error(message=f"Datos del estudiante: {self.student_name}, {self.address_line_1}, {self.city}, {self.country}, {self.student_email_id}", title="Datos del estudiante")
         if not (hasattr(self, 'address_line_1') and self.address_line_1):
             frappe.log_error("No se creó dirección: Falta address_line_1", "Address Creation Skipped")
             return None
-
-        address_data = {
-            "doctype": "Address",
-            "address_title": self.student_name,
-            "address_type": "Billing",
-            "address_line1": self.address_line_1,
-            "city": getattr(self, 'city', ''),
-            "country": getattr(self, 'country', ''),
-            "email_id": self.student_email_id,
-            "is_primary_address": 1,
-            "is_shipping_address": 1,
-            "links": [{"link_doctype": "Customer", "link_name": customer.name}]
-        }
-
-        # Añadir campos opcionales
-        optional_fields = {
-            'address_line2': 'address_line_2',
-            'state': 'state',
-            'pincode': 'postcode',
-            'phone': 'student_mobile_number'
-        }
-
-        for address_field, student_field in optional_fields.items():
-            if value := getattr(self, student_field, None):
-                address_data[address_field] = value
-
         try:
-            address = frappe.get_doc(address_data)
-            address.insert(ignore_permissions=True)
-            frappe.log_error(f"Dirección creada: {address.name}", "Address Creation Success")
+            existing_address_name = frappe.db.sql("""
+                SELECT addr.name
+                FROM `tabAddress` addr
+                JOIN `tabDynamic Link` dl ON dl.parent = addr.name
+                WHERE dl.link_doctype = %s AND dl.link_name = %s
+                LIMIT 1
+            """, ("Customer", customer.name), as_dict=True)
+            # Extraer el nombre de la dirección existente si se encuentra
+            if existing_address_name:
+                existing_address_name = existing_address_name[0].get("name")
+
+  
+            address_data = {
+                "doctype": "Address",
+                "address_title": self.student_name,
+                "address_type": "Billing",
+                "address_line1": self.address_line_1,
+                "city": getattr(self, 'city', ''),
+                "country": getattr(self, 'country', ''),
+                "email_id": self.student_email_id,
+                "is_primary_address": 1,
+                "is_shipping_address": 1,
+                "links": [{"link_doctype": "Customer", "link_name": customer.name}]
+            }
+
+            # Añadir campos opcionales
+            optional_fields = {
+                'address_line2': 'address_line_2',
+                'state': 'state',
+                'pincode': 'postcode',
+                'phone': 'student_mobile_number'
+            }
+
+            for address_field, student_field in optional_fields.items():
+                if value := getattr(self, student_field, None):
+                    address_data[address_field] = value
+                    
+            if existing_address_name:
+                # Actualizar dirección existente
+                address = frappe.get_doc("Address", existing_address_name)
+                address.update(address_data)
+
+                # Verificar y agregar enlace si no existe
+                if not any(link.get("link_name") == customer.name for link in address.links):
+                    address.append("links", {"link_doctype": "Customer", "link_name": customer.name})
+
+                address.save(ignore_permissions=True)
+                frappe.log_error(f"Dirección actualizada: {address.name}", "Address Update Success")
+            else:
+                # Crear una nueva dirección
+                address = frappe.get_doc(address_data)
+                address.insert(ignore_permissions=True)
+                frappe.log_error(f"Dirección creada: {address.name}", "Address Creation Success")
+            
             return address
+    
         except Exception as e:
-            frappe.log_error(
-                f"Error al crear dirección: {str(e)}\nDatos: {address_data}", 
-                "Address Creation Error"
-            )
-            # No propagamos el error para que al menos se cree el cliente
-            return None
+            frappe.log_error(f"Error al crear/actualizar dirección: {str(e)}", "Address Error")
+            return None    
+
+
+       
 
     def _link_customer_to_student(self, customer):
         """Vincula el cliente creado al estudiante"""

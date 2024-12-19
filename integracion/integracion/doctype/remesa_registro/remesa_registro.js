@@ -1,6 +1,3 @@
-// Copyright (c) 2024, Xappiens and contributors
-// For license information, please see license.txt
-
 frappe.ui.form.on("Remesa Registro", {
     update_totals: function (frm) {
         console.log("Actualizando total");
@@ -20,10 +17,32 @@ frappe.ui.form.on("Remesa Registro", {
                 __("Herramientas"),
             );
             frm.add_custom_button(
-                __("Cargar campos de factura y pago"),
+                __("Actualizar campos de factura y pago"),
                 () => {
-                    frm.call("cargar_campos_factura_pago").then(() =>
-                        frm.refresh(),
+                    frappe.prompt(
+                        [
+                            {
+                                fieldname: "date",
+                                label: __("Date"),
+                                fieldtype: "Date",
+                                reqd: 1,
+                            },
+                            {
+                                fieldname: "bank_account",
+                                label: __("Bank Account"),
+                                fieldtype: "Link",
+                                options: "Bank Account",
+                                reqd: 1,
+                            }
+                        ],
+                        (values) => {
+                            frm.call("cargar_campos_factura_pago", {
+                                date: values.date,
+                                bank_account: values.bank_account
+                            }).then(() => frm.refresh());
+                        },
+                        __("Actualizar campos de factura y pago"),
+                        __("Aceptar"),
                     );
                 },
                 __("Herramientas"),
@@ -43,6 +62,5 @@ frappe.ui.form.on("Remesa Registro", {
 
 frappe.ui.form.on("Remesa Factura", "importe", function (frm, cdt, cdn) {
     console.log("cambiado importe");
-
     frm.trigger("update_totals");
 });

@@ -43,6 +43,9 @@ doc_events = {
     },
     "Modificaciones RRHH": {
         "on_submit": "integracion.integracion.renombrar_hoja.update_job_offer_and_employee"
+    },
+    "Employee": {
+        "after_insert": "integracion.integracion.update_employee_historial.insert_historial_altas"
     }
 }
 

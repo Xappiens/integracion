@@ -466,7 +466,7 @@ def upload_file_to_sharepoint(file_path, company, fichero_id_value):
         logger.error(f"Error al subir archivo a SharePoint: {str(e)}")
         return None
 
-def create_payment_entry_for_purchase_invoice(invoice, supplier_iban):
+def create_payment_entry_for_purchase_invoice(invoice, supplier_iban, company_account=None):
    try:
        # Verificar si la factura ya ha sido pagada
        if invoice.outstanding_amount == 0:
@@ -497,7 +497,9 @@ def create_payment_entry_for_purchase_invoice(invoice, supplier_iban):
            frappe.throw(_("La cuenta de débito asignada no es de tipo 'Payable'. Verifique la configuración de la cuenta."))
 
        # Obtener la cuenta bancaria de la empresa (para `paid_to`)
-       company_bank_account = frappe.get_value("Company", invoice.company, "default_bank_account")
+       company_bank_account = company_account or frappe.get_value("Company", invoice.company, "default_bank_account")
+       bank_account_name = frappe.get_value("Bank Account", {"account": company_bank_account}, "name")
+       bank_account = frappe.get_doc("Bank Account", bank_account_name)
 
        # Validar que la cuenta bancaria de la empresa esté configurada
        if not company_bank_account:
@@ -532,6 +534,7 @@ def create_payment_entry_for_purchase_invoice(invoice, supplier_iban):
            "paid_to": credit_account,  # Cuenta bancaria de la empresa para pagos
            "paid_to_account_currency": frappe.get_value("Account", credit_account, "account_currency"),
            "reference_no": invoice.name,
+           "bank_account": bank_account,
            "reference_date": invoice.posting_date,
            "references": [
                {
@@ -548,7 +551,6 @@ def create_payment_entry_for_purchase_invoice(invoice, supplier_iban):
 
        # Guardar y enviar el Payment Entry
        payment_entry.insert(ignore_permissions=True)
-       payment_entry.submit()
 
        logger.info(f"Payment Entry creado para la factura {invoice.name}: {payment_entry.name}")
 

@@ -482,3 +482,898 @@
 2024-12-17 12:35:55,861 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00178 ya está completamente pagada. No se requiere un Payment Entry.
 2024-12-17 12:35:55,901 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00182 ya está completamente pagada. No se requiere un Payment Entry.
 2024-12-17 12:35:55,962 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00183 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,223 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,255 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,286 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,317 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,348 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,379 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,412 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,445 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,477 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,509 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,543 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,575 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00074 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,608 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00262-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,641 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00073 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,672 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00077 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,703 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00096 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,736 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00122 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,768 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00102 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,798 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00110 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,829 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00118 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,862 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00093 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,893 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00106-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,924 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00124 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,956 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00104 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:48,987 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00179 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,028 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00101 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,060 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00129 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,092 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00119 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,122 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00128-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,157 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00112 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,192 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00109-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,228 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00103 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,263 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00115 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,296 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00111 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,333 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00084 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,367 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00177 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,398 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00089 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,430 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00075 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,463 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00072 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,495 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00071 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,531 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00257 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,562 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00269 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,594 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00185 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,626 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00258-2 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,683 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00259-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,714 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00078 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,746 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00088 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,776 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00105 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,805 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00107 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,835 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00108 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,866 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00113 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,898 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00114 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,928 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00116 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,956 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00117 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:49,986 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00121 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:50,018 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00123 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:50,053 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00125 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:50,085 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00126 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:50,117 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00127 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:50,148 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00130 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:50,179 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00132 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:50,211 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00176 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:50,242 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00178 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:50,276 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00182 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:50,309 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00183 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,014 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,052 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,111 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,143 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,177 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,208 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,240 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,273 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,305 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,336 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,369 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,407 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00074 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,437 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00262-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,467 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00073 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,498 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00077 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,529 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00096 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,561 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00122 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,592 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00102 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,623 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00110 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,654 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00118 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,685 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00093 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,716 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00106-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,748 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00124 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,779 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00104 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,810 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00179 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,841 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00101 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,876 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00129 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,908 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00119 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,938 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00128-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:58,969 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00112 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,001 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00109-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,038 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00103 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,078 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00115 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,116 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00111 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,164 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00084 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,210 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00177 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,241 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00089 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,272 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00075 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,301 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00072 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,331 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00071 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,361 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00257 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,391 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00269 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,425 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00185 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,456 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00258-2 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,495 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00259-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,531 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00078 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,563 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00088 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,594 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00105 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,626 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00107 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,656 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00108 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,687 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00113 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,724 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00114 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,762 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00116 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,805 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00117 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,835 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00121 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,865 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00123 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,895 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00125 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,927 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00126 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,957 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00127 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 20:59:59,994 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00130 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:00,035 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00132 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:00,068 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00176 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:00,100 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00178 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:00,137 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00182 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:00,177 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00183 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:22,740 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:22,777 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:22,809 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:22,843 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:22,875 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:22,913 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:22,950 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:22,987 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,023 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,059 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,096 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,135 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00074 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,181 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00262-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,233 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00073 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,286 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00077 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,329 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00096 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,378 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00122 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,419 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00102 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,453 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00110 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,488 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00118 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,525 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00093 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,557 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00106-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,589 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00124 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,622 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00104 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,658 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00179 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,712 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00101 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,760 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00129 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,813 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00119 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,864 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00128-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,905 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00112 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,942 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00109-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:23,991 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00103 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,045 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00115 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,080 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00111 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,113 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00084 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,149 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00177 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,186 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00089 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,219 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00075 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,252 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00072 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,288 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00071 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,319 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00257 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,358 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00269 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,391 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00185 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,428 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00258-2 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,485 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00259-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,533 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00078 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,582 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00088 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,631 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00105 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,681 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00107 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,727 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00108 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,773 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00113 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,824 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00114 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,883 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00116 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,931 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00117 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:24,984 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00121 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:25,027 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00123 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:25,065 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00125 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:25,101 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00126 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:25,135 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00127 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:25,175 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00130 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:25,208 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00132 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:25,239 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00176 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:25,276 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00178 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:25,318 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00182 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:25,359 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00183 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,628 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,660 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,692 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,722 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,755 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,786 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,817 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,853 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,882 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,915 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,947 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:29,978 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00074 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,011 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00262-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,057 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00073 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,103 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00077 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,135 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00096 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,172 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00122 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,211 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00102 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,240 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00110 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,275 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00118 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,312 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00093 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,345 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00106-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,376 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00124 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,417 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00104 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,448 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00179 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,482 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00101 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,515 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00129 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,547 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00119 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,580 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00128-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,616 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00112 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,648 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00109-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,685 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00103 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,725 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00115 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,761 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00111 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,805 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00084 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,839 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00177 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,873 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00089 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,906 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00075 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,940 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00072 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:30,979 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00071 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,016 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00257 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,064 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00269 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,108 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00185 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,146 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00258-2 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,178 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00259-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,207 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00078 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,238 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00088 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,268 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00105 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,298 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00107 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,330 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00108 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,361 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00113 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,397 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00114 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,440 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00116 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,485 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00117 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,529 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00121 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,567 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00123 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,599 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00125 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,630 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00126 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,664 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00127 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,702 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00130 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,737 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00132 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,767 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00176 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,797 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00178 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,829 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00182 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:00:31,864 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00183 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:02,748 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:02,783 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:02,822 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:02,867 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:02,911 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:02,952 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:02,984 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,016 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,050 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,082 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,117 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,148 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00074 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,178 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00262-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,209 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00073 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,245 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00077 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,278 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00096 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,309 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00122 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,341 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00102 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,376 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00110 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,409 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00118 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,442 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00093 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,477 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00106-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,514 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00124 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,559 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00104 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,603 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00179 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,646 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00101 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,678 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00129 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,712 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00119 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,744 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00128-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,777 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00112 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,820 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00109-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,859 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00103 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,894 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00115 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,929 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00111 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:03,964 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00084 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,013 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00177 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,061 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00089 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,110 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00075 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,150 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00072 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,183 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00071 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,215 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00257 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,248 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00269 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,283 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00185 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,326 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00258-2 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,385 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00259-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,423 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00078 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,472 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00088 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,521 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00105 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,558 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00107 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,590 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00108 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,628 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00113 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,667 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00114 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,703 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00116 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,738 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00117 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,772 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00121 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,806 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00123 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,844 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00125 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,892 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00126 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,936 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00127 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:04,980 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00130 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:05,016 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00132 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:05,049 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00176 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:05,083 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00178 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:05,122 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00182 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:05,157 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00183 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:54,756 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:54,791 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:54,824 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:54,856 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:54,889 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:54,922 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:54,954 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:54,989 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,033 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,071 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,107 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,163 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00074 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,201 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00262-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,240 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00073 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,287 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00077 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,323 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00096 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,365 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00122 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,397 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00102 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,430 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00110 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,462 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00118 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,499 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00093 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,530 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00106-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,562 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00124 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,597 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00104 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,629 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00179 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,663 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00101 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,699 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00129 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,732 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00119 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,762 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00128-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,795 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00112 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,833 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00109-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,879 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00103 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,926 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00115 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:55,974 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00111 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,021 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00084 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,062 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00177 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,094 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00089 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,127 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00075 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,161 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00072 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,194 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00071 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,233 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00257 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,266 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00269 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,299 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00185 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,331 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00258-2 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,401 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00259-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,436 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00078 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,479 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00088 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,513 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00105 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,560 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00107 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,602 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00108 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,634 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00113 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,665 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00114 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,697 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00116 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,733 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00117 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,769 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00121 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,804 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00123 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,858 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00125 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,909 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00126 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,956 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00127 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:56,999 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00130 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:57,038 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00132 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:57,077 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00176 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:57,118 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00178 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:57,153 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00182 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:02:57,185 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00183 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,560 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,593 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,624 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,656 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,687 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,721 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,753 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,789 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,830 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,867 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,902 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,934 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00074 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:50,968 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00262-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,002 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00073 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,037 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00077 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,070 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00096 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,104 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00122 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,138 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00102 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,173 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00110 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,208 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00118 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,244 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00093 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,280 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00106-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,316 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00124 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,351 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00104 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,386 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00179 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,419 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00101 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,456 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00129 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,489 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00119 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,523 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00128-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,558 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00112 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,599 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00109-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,651 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00103 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,686 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00115 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,725 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00111 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,761 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00084 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,792 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00177 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,824 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00089 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,856 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00075 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,886 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00072 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,919 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00071 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,952 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00257 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:51,994 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00269 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,038 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00185 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,083 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00258-2 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,124 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00259-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,154 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00078 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,185 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00088 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,218 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00105 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,261 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00107 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,300 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00108 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,339 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00113 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,395 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00114 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,453 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00116 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,511 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00117 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,546 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00121 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,583 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00123 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,630 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00125 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,669 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00126 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,711 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00127 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,766 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00130 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,805 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00132 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,839 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00176 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,877 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00178 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,930 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00182 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:03:52,968 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00183 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,430 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,477 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,512 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,546 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,580 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,619 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,650 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,697 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,732 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,776 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,826 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,875 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00074 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,915 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00262-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,947 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00073 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:04,978 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00077 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,011 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00096 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,044 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00122 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,079 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00102 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,112 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00110 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,146 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00118 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,180 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00093 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,214 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00106-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,247 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00124 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,280 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00104 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,312 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00179 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,345 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00101 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,376 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00129 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,408 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00119 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,439 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00128-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,471 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00112 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,522 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00109-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,571 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00103 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,621 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00115 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,666 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00111 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,700 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00084 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,748 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00177 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,799 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00089 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,853 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00075 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,887 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00072 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,921 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00071 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,958 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00257 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:05,996 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00269 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,042 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00185 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,074 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00258-2 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,114 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00259-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,169 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00078 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,220 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00088 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,268 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00105 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,310 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00107 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,344 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00108 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,377 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00113 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,410 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00114 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,442 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00116 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,475 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00117 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,508 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00121 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,541 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00123 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,576 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00125 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,615 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00126 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,658 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00127 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,694 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00130 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,726 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00132 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,763 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00176 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,797 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00178 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,833 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00182 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:04:06,870 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00183 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:32,024 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:32,159 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:32,284 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:32,410 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:32,528 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:32,671 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:32,799 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:32,978 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:33,145 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:33,285 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:33,493 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:44,157 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:44,307 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:44,501 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:44,686 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:44,824 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:44,949 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:45,075 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:45,193 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:45,326 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:45,449 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:16:45,573 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:17:22,355 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:17:22,471 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:17:22,590 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:17:22,720 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:17:22,863 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:17:22,978 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:17:23,097 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:17:23,283 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:17:23,440 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:17:23,619 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:17:23,827 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:00,868 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:00,905 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:00,940 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:00,979 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,016 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,048 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,082 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,117 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,154 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,194 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,227 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,439 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00074 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,472 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00262-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,509 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00073 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,548 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00077 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,589 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00096 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,644 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00122 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,700 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00102 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,754 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00110 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,798 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00118 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,853 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00093 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,907 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00106-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:01,961 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00124 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,015 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00104 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,065 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00179 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,120 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00101 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,167 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00129 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,208 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00119 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,246 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00128-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,281 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00112 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,315 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00109-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,347 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00103 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,380 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00115 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,411 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00111 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,441 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00084 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,473 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00177 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,503 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00089 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,537 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00075 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,568 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00072 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,600 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00071 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,632 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00257 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,665 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00269 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,701 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00185 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,749 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00258-2 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,787 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00259-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,817 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00078 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,848 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00088 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,879 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00105 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,910 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00107 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,943 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00108 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:02,978 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00113 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,012 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00114 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,047 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00116 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,078 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00117 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,109 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00121 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,139 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00123 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,170 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00125 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,201 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00126 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,232 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00127 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,262 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00130 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,293 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00132 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,323 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00176 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,353 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00178 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,386 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00182 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:18:03,419 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00183 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:07,271 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00260 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:07,330 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00080 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:07,380 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00070-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:07,432 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00261 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:07,486 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00090-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:07,534 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00091 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:07,582 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00095 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:07,632 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00097 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:07,686 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00098 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:07,728 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00099 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:07,773 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00100-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,014 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00074 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,050 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00262-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,089 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00073 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,139 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00077 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,179 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00096 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,218 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00122 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,257 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00102 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,290 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00110 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,336 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00118 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,385 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00093 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,423 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00106-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,459 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00124 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,506 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00104 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,543 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00179 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,593 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00101 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,644 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00129 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,688 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00119 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,737 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00128-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,786 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00112 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,833 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00109-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,880 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00103 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,926 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00115 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:08,975 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00111 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,023 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00084 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,075 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00177 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,124 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00089 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,173 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00075 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,220 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00072 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,268 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00071 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,313 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00257 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,358 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00269 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,399 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00185 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,446 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00258-2 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,500 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00259-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,547 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00078 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,594 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00088 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,628 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00105 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,663 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00107 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,699 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00108 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,732 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00113 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,765 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00114 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,795 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00116 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,825 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00117 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,856 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00121 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,890 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00123 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,925 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00125 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,962 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00126 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:09,996 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00127 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:10,040 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00130 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:10,081 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00132 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:10,131 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00176 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:10,174 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00178 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:10,211 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00182 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:22:10,246 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00183 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-17 21:26:17,258 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00260: Factura de compra ACC-PINV-2024-00260 has already been fully paid.
+2024-12-17 21:26:17,651 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00080: Factura de compra ACC-PINV-2024-00080 has already been fully paid.
+2024-12-17 21:26:18,008 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00070-1: Factura de compra ACC-PINV-2024-00070-1 has already been fully paid.
+2024-12-17 21:26:18,444 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00261: Factura de compra ACC-PINV-2024-00261 has already been fully paid.
+2024-12-17 21:26:18,839 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00090-1: Factura de compra ACC-PINV-2024-00090-1 has already been fully paid.
+2024-12-17 21:26:19,182 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00091: Factura de compra ACC-PINV-2024-00091 has already been fully paid.
+2024-12-17 21:26:19,610 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00095: Factura de compra ACC-PINV-2024-00095 has already been fully paid.
+2024-12-17 21:26:19,989 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00097: Factura de compra ACC-PINV-2024-00097 has already been fully paid.
+2024-12-17 21:26:20,320 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00098: Factura de compra ACC-PINV-2024-00098 has already been fully paid.
+2024-12-17 21:26:20,697 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00099: Factura de compra ACC-PINV-2024-00099 has already been fully paid.
+2024-12-17 21:26:21,027 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00100-1: Factura de compra ACC-PINV-2024-00100-1 has already been fully paid.
+2024-12-17 21:31:05,215 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00100-1: Factura de compra ACC-PINV-2024-00100-1 has already been fully paid.
+2024-12-17 21:31:05,498 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00099: Factura de compra ACC-PINV-2024-00099 has already been fully paid.
+2024-12-17 21:31:05,738 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00098: Factura de compra ACC-PINV-2024-00098 has already been fully paid.
+2024-12-17 21:31:06,038 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00097: Factura de compra ACC-PINV-2024-00097 has already been fully paid.
+2024-12-17 21:31:06,267 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00095: Factura de compra ACC-PINV-2024-00095 has already been fully paid.
+2024-12-17 21:31:06,489 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00091: Factura de compra ACC-PINV-2024-00091 has already been fully paid.
+2024-12-17 21:31:06,728 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00090-1: Factura de compra ACC-PINV-2024-00090-1 has already been fully paid.
+2024-12-17 21:31:06,970 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00261: Factura de compra ACC-PINV-2024-00261 has already been fully paid.
+2024-12-17 21:31:07,204 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00070-1: Factura de compra ACC-PINV-2024-00070-1 has already been fully paid.
+2024-12-17 21:31:07,458 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00080: Factura de compra ACC-PINV-2024-00080 has already been fully paid.
+2024-12-17 21:31:07,705 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00260: Factura de compra ACC-PINV-2024-00260 has already been fully paid.
+2024-12-17 21:31:08,189 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00074: Factura de compra ACC-PINV-2024-00074 has already been fully paid.
+2024-12-17 21:31:08,491 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00262-1: Factura de compra ACC-PINV-2024-00262-1 has already been fully paid.
+2024-12-17 21:31:08,749 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00073: Factura de compra ACC-PINV-2024-00073 has already been fully paid.
+2024-12-17 21:31:09,000 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00077: Factura de compra ACC-PINV-2024-00077 has already been fully paid.
+2024-12-17 21:31:09,262 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00096: Factura de compra ACC-PINV-2024-00096 has already been fully paid.
+2024-12-17 21:31:09,555 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00122: Factura de compra ACC-PINV-2024-00122 has already been fully paid.
+2024-12-17 21:31:09,783 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00102: Factura de compra ACC-PINV-2024-00102 has already been fully paid.
+2024-12-17 21:31:10,039 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00110: Factura de compra ACC-PINV-2024-00110 has already been fully paid.
+2024-12-17 21:31:10,363 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00118: Factura de compra ACC-PINV-2024-00118 has already been fully paid.
+2024-12-17 21:31:10,612 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00093: Factura de compra ACC-PINV-2024-00093 has already been fully paid.
+2024-12-17 21:31:10,853 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00106-1: Factura de compra ACC-PINV-2024-00106-1 has already been fully paid.
+2024-12-17 21:31:11,096 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00124: Factura de compra ACC-PINV-2024-00124 has already been fully paid.
+2024-12-17 21:31:11,319 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00104: Factura de compra ACC-PINV-2024-00104 has already been fully paid.
+2024-12-17 21:31:11,553 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00179: Factura de compra ACC-PINV-2024-00179 has already been fully paid.
+2024-12-17 21:31:11,790 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00101: Factura de compra ACC-PINV-2024-00101 has already been fully paid.
+2024-12-17 21:31:12,021 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00129: Factura de compra ACC-PINV-2024-00129 has already been fully paid.
+2024-12-17 21:31:12,262 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00119: Factura de compra ACC-PINV-2024-00119 has already been fully paid.
+2024-12-17 21:31:12,494 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00128-1: Factura de compra ACC-PINV-2024-00128-1 has already been fully paid.
+2024-12-17 21:31:12,745 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00112: Factura de compra ACC-PINV-2024-00112 has already been fully paid.
+2024-12-17 21:31:12,973 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00109-1: Factura de compra ACC-PINV-2024-00109-1 has already been fully paid.
+2024-12-17 21:31:13,196 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00103: Factura de compra ACC-PINV-2024-00103 has already been fully paid.
+2024-12-17 21:31:13,424 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00115: Factura de compra ACC-PINV-2024-00115 has already been fully paid.
+2024-12-17 21:31:13,657 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00111: Factura de compra ACC-PINV-2024-00111 has already been fully paid.
+2024-12-17 21:31:13,904 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00084: Factura de compra ACC-PINV-2024-00084 has already been fully paid.
+2024-12-17 21:31:14,165 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00177: Factura de compra ACC-PINV-2024-00177 has already been fully paid.
+2024-12-17 21:31:14,419 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00089: Factura de compra ACC-PINV-2024-00089 has already been fully paid.
+2024-12-17 21:31:14,644 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00075: Factura de compra ACC-PINV-2024-00075 has already been fully paid.
+2024-12-17 21:31:14,892 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00072: Factura de compra ACC-PINV-2024-00072 has already been fully paid.
+2024-12-17 21:31:15,149 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00071: Factura de compra ACC-PINV-2024-00071 has already been fully paid.
+2024-12-17 21:31:15,406 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00257: Factura de compra ACC-PINV-2024-00257 has already been fully paid.
+2024-12-17 21:31:15,640 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00269: Factura de compra ACC-PINV-2024-00269 has already been fully paid.
+2024-12-17 21:31:15,868 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00185: Factura de compra ACC-PINV-2024-00185 has already been fully paid.
+2024-12-17 21:31:16,115 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00258-2: Factura de compra ACC-PINV-2024-00258-2 has already been fully paid.
+2024-12-17 21:31:16,360 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00259-1: Factura de compra ACC-PINV-2024-00259-1 has already been fully paid.
+2024-12-17 21:31:16,583 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00078: Factura de compra ACC-PINV-2024-00078 debe ser presentado
+2024-12-17 21:31:16,786 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00088: Factura de compra ACC-PINV-2024-00088 debe ser presentado
+2024-12-17 21:31:17,002 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00105: Factura de compra ACC-PINV-2024-00105 debe ser presentado
+2024-12-17 21:31:17,193 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00259-1: Factura de compra ACC-PINV-2024-00259-1 has already been fully paid.
+2024-12-17 21:31:17,315 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00107: Factura de compra ACC-PINV-2024-00107 debe ser presentado
+2024-12-17 21:31:17,522 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00258-2: Factura de compra ACC-PINV-2024-00258-2 has already been fully paid.
+2024-12-17 21:31:17,687 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00108: Factura de compra ACC-PINV-2024-00108 debe ser presentado
+2024-12-17 21:31:17,863 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00185: Factura de compra ACC-PINV-2024-00185 has already been fully paid.
+2024-12-17 21:31:17,987 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00113: Factura de compra ACC-PINV-2024-00113 debe ser presentado
+2024-12-17 21:31:18,187 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00269: Factura de compra ACC-PINV-2024-00269 has already been fully paid.
+2024-12-17 21:31:18,315 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00114: Factura de compra ACC-PINV-2024-00114 debe ser presentado
+2024-12-17 21:31:18,494 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00257: Factura de compra ACC-PINV-2024-00257 has already been fully paid.
+2024-12-17 21:31:18,629 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00116: Factura de compra ACC-PINV-2024-00116 debe ser presentado
+2024-12-17 21:31:18,777 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00071: Factura de compra ACC-PINV-2024-00071 has already been fully paid.
+2024-12-17 21:31:18,898 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00117: Factura de compra ACC-PINV-2024-00117 debe ser presentado
+2024-12-17 21:31:19,068 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00072: Factura de compra ACC-PINV-2024-00072 has already been fully paid.
+2024-12-17 21:31:19,190 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00121: Factura de compra ACC-PINV-2024-00121 debe ser presentado
+2024-12-17 21:31:19,334 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00075: Factura de compra ACC-PINV-2024-00075 has already been fully paid.
+2024-12-17 21:31:19,467 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00123: Factura de compra ACC-PINV-2024-00123 debe ser presentado
+2024-12-17 21:31:19,623 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00089: Factura de compra ACC-PINV-2024-00089 has already been fully paid.
+2024-12-17 21:31:19,744 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00125: Factura de compra ACC-PINV-2024-00125 debe ser presentado
+2024-12-17 21:31:19,906 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00177: Factura de compra ACC-PINV-2024-00177 has already been fully paid.
+2024-12-17 21:31:20,035 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00126: Factura de compra ACC-PINV-2024-00126 debe ser presentado
+2024-12-17 21:31:20,206 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00084: Factura de compra ACC-PINV-2024-00084 has already been fully paid.
+2024-12-17 21:31:20,338 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00127: Factura de compra ACC-PINV-2024-00127 debe ser presentado
+2024-12-17 21:31:20,518 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00111: Factura de compra ACC-PINV-2024-00111 has already been fully paid.
+2024-12-17 21:31:20,666 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00130: Factura de compra ACC-PINV-2024-00130 debe ser presentado
+2024-12-17 21:31:20,841 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00115: Factura de compra ACC-PINV-2024-00115 has already been fully paid.
+2024-12-17 21:31:20,962 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00132: Factura de compra ACC-PINV-2024-00132 debe ser presentado
+2024-12-17 21:31:21,129 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00103: Factura de compra ACC-PINV-2024-00103 has already been fully paid.
+2024-12-17 21:31:21,266 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00176: Factura de compra ACC-PINV-2024-00176 debe ser presentado
+2024-12-17 21:31:21,447 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00109-1: Factura de compra ACC-PINV-2024-00109-1 has already been fully paid.
+2024-12-17 21:31:21,593 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00178: Factura de compra ACC-PINV-2024-00178 debe ser presentado
+2024-12-17 21:31:21,775 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00112: Factura de compra ACC-PINV-2024-00112 has already been fully paid.
+2024-12-17 21:31:21,903 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00182: Factura de compra ACC-PINV-2024-00182 debe ser presentado
+2024-12-17 21:31:22,065 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00128-1: Factura de compra ACC-PINV-2024-00128-1 has already been fully paid.
+2024-12-17 21:31:22,193 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00183: Factura de compra ACC-PINV-2024-00183 debe ser presentado
+2024-12-17 21:31:22,368 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00119: Factura de compra ACC-PINV-2024-00119 has already been fully paid.
+2024-12-17 21:31:22,614 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00129: Factura de compra ACC-PINV-2024-00129 has already been fully paid.
+2024-12-17 21:31:22,841 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00101: Factura de compra ACC-PINV-2024-00101 has already been fully paid.
+2024-12-17 21:31:23,074 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00179: Factura de compra ACC-PINV-2024-00179 has already been fully paid.
+2024-12-17 21:31:23,308 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00104: Factura de compra ACC-PINV-2024-00104 has already been fully paid.
+2024-12-17 21:31:23,540 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00124: Factura de compra ACC-PINV-2024-00124 has already been fully paid.
+2024-12-17 21:31:23,794 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00106-1: Factura de compra ACC-PINV-2024-00106-1 has already been fully paid.
+2024-12-17 21:31:24,070 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00093: Factura de compra ACC-PINV-2024-00093 has already been fully paid.
+2024-12-17 21:31:24,339 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00118: Factura de compra ACC-PINV-2024-00118 has already been fully paid.
+2024-12-17 21:31:24,575 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00110: Factura de compra ACC-PINV-2024-00110 has already been fully paid.
+2024-12-17 21:31:24,798 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00102: Factura de compra ACC-PINV-2024-00102 has already been fully paid.
+2024-12-17 21:31:25,042 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00122: Factura de compra ACC-PINV-2024-00122 has already been fully paid.
+2024-12-17 21:31:25,299 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00096: Factura de compra ACC-PINV-2024-00096 has already been fully paid.
+2024-12-17 21:31:25,547 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00077: Factura de compra ACC-PINV-2024-00077 has already been fully paid.
+2024-12-17 21:31:25,766 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00073: Factura de compra ACC-PINV-2024-00073 has already been fully paid.
+2024-12-17 21:31:25,989 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00262-1: Factura de compra ACC-PINV-2024-00262-1 has already been fully paid.
+2024-12-17 21:31:26,260 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00074: Factura de compra ACC-PINV-2024-00074 has already been fully paid.
+2024-12-17 21:31:26,515 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00260: Factura de compra ACC-PINV-2024-00260 has already been fully paid.
+2024-12-17 21:31:26,777 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00080: Factura de compra ACC-PINV-2024-00080 has already been fully paid.
+2024-12-17 21:31:27,031 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00070-1: Factura de compra ACC-PINV-2024-00070-1 has already been fully paid.
+2024-12-17 21:31:27,312 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00261: Factura de compra ACC-PINV-2024-00261 has already been fully paid.
+2024-12-17 21:31:27,589 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00090-1: Factura de compra ACC-PINV-2024-00090-1 has already been fully paid.
+2024-12-17 21:31:27,821 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00091: Factura de compra ACC-PINV-2024-00091 has already been fully paid.
+2024-12-17 21:31:28,130 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00095: Factura de compra ACC-PINV-2024-00095 has already been fully paid.
+2024-12-17 21:31:28,429 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00097: Factura de compra ACC-PINV-2024-00097 has already been fully paid.
+2024-12-17 21:31:28,720 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00098: Factura de compra ACC-PINV-2024-00098 has already been fully paid.
+2024-12-17 21:31:28,998 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00099: Factura de compra ACC-PINV-2024-00099 has already been fully paid.
+2024-12-17 21:31:29,267 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00100-1: Factura de compra ACC-PINV-2024-00100-1 has already been fully paid.
+2024-12-17 21:31:29,676 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00078: Factura de compra ACC-PINV-2024-00078 debe ser presentado
+2024-12-17 21:31:29,875 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00088: Factura de compra ACC-PINV-2024-00088 debe ser presentado
+2024-12-17 21:31:30,100 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00105: Factura de compra ACC-PINV-2024-00105 debe ser presentado
+2024-12-17 21:31:30,304 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00107: Factura de compra ACC-PINV-2024-00107 debe ser presentado
+2024-12-17 21:31:30,540 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00108: Factura de compra ACC-PINV-2024-00108 debe ser presentado
+2024-12-17 21:31:30,817 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00113: Factura de compra ACC-PINV-2024-00113 debe ser presentado
+2024-12-17 21:31:31,097 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00114: Factura de compra ACC-PINV-2024-00114 debe ser presentado
+2024-12-17 21:31:31,327 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00116: Factura de compra ACC-PINV-2024-00116 debe ser presentado
+2024-12-17 21:31:31,523 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00117: Factura de compra ACC-PINV-2024-00117 debe ser presentado
+2024-12-17 21:31:31,650 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00108: Factura de compra ACC-PINV-2024-00108 debe ser presentado
+2024-12-17 21:31:31,775 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00121: Factura de compra ACC-PINV-2024-00121 debe ser presentado
+2024-12-17 21:31:31,925 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00107: Factura de compra ACC-PINV-2024-00107 debe ser presentado
+2024-12-17 21:31:32,058 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00123: Factura de compra ACC-PINV-2024-00123 debe ser presentado
+2024-12-17 21:31:32,195 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00105: Factura de compra ACC-PINV-2024-00105 debe ser presentado
+2024-12-17 21:31:32,359 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00125: Factura de compra ACC-PINV-2024-00125 debe ser presentado
+2024-12-17 21:31:32,492 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00088: Factura de compra ACC-PINV-2024-00088 debe ser presentado
+2024-12-17 21:31:32,627 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00126: Factura de compra ACC-PINV-2024-00126 debe ser presentado
+2024-12-17 21:31:32,794 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00078: Factura de compra ACC-PINV-2024-00078 debe ser presentado
+2024-12-17 21:31:32,958 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00127: Factura de compra ACC-PINV-2024-00127 debe ser presentado
+2024-12-17 21:31:33,161 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00100-1: Factura de compra ACC-PINV-2024-00100-1 has already been fully paid.
+2024-12-17 21:31:33,301 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00130: Factura de compra ACC-PINV-2024-00130 debe ser presentado
+2024-12-17 21:31:33,467 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00099: Factura de compra ACC-PINV-2024-00099 has already been fully paid.
+2024-12-17 21:31:33,616 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00132: Factura de compra ACC-PINV-2024-00132 debe ser presentado
+2024-12-17 21:31:33,783 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00098: Factura de compra ACC-PINV-2024-00098 has already been fully paid.
+2024-12-17 21:31:33,936 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00176: Factura de compra ACC-PINV-2024-00176 debe ser presentado
+2024-12-17 21:31:34,099 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00097: Factura de compra ACC-PINV-2024-00097 has already been fully paid.
+2024-12-17 21:31:34,234 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00178: Factura de compra ACC-PINV-2024-00178 debe ser presentado
+2024-12-17 21:31:34,404 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00095: Factura de compra ACC-PINV-2024-00095 has already been fully paid.
+2024-12-17 21:31:34,539 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00182: Factura de compra ACC-PINV-2024-00182 debe ser presentado
+2024-12-17 21:31:34,706 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00091: Factura de compra ACC-PINV-2024-00091 has already been fully paid.
+2024-12-17 21:31:34,851 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00183: Factura de compra ACC-PINV-2024-00183 debe ser presentado
+2024-12-17 21:31:34,994 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00090-1: Factura de compra ACC-PINV-2024-00090-1 has already been fully paid.
+2024-12-17 21:31:35,242 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00261: Factura de compra ACC-PINV-2024-00261 has already been fully paid.
+2024-12-17 21:31:35,491 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00070-1: Factura de compra ACC-PINV-2024-00070-1 has already been fully paid.
+2024-12-17 21:31:35,725 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00080: Factura de compra ACC-PINV-2024-00080 has already been fully paid.
+2024-12-17 21:31:35,971 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00260: Factura de compra ACC-PINV-2024-00260 has already been fully paid.
+2024-12-17 21:31:36,220 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00074: Factura de compra ACC-PINV-2024-00074 has already been fully paid.
+2024-12-17 21:31:36,476 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00262-1: Factura de compra ACC-PINV-2024-00262-1 has already been fully paid.
+2024-12-17 21:31:36,696 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00073: Factura de compra ACC-PINV-2024-00073 has already been fully paid.
+2024-12-17 21:31:36,928 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00077: Factura de compra ACC-PINV-2024-00077 has already been fully paid.
+2024-12-17 21:31:37,166 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00096: Factura de compra ACC-PINV-2024-00096 has already been fully paid.
+2024-12-17 21:31:37,396 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00122: Factura de compra ACC-PINV-2024-00122 has already been fully paid.
+2024-12-17 21:31:37,631 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00102: Factura de compra ACC-PINV-2024-00102 has already been fully paid.
+2024-12-17 21:31:37,864 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00110: Factura de compra ACC-PINV-2024-00110 has already been fully paid.
+2024-12-17 21:31:38,086 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00118: Factura de compra ACC-PINV-2024-00118 has already been fully paid.
+2024-12-17 21:31:38,334 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00093: Factura de compra ACC-PINV-2024-00093 has already been fully paid.
+2024-12-17 21:31:38,592 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00106-1: Factura de compra ACC-PINV-2024-00106-1 has already been fully paid.
+2024-12-17 21:31:38,812 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00124: Factura de compra ACC-PINV-2024-00124 has already been fully paid.
+2024-12-17 21:31:39,039 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00104: Factura de compra ACC-PINV-2024-00104 has already been fully paid.
+2024-12-17 21:31:39,282 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00179: Factura de compra ACC-PINV-2024-00179 has already been fully paid.
+2024-12-17 21:31:39,531 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00101: Factura de compra ACC-PINV-2024-00101 has already been fully paid.
+2024-12-17 21:31:39,801 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00129: Factura de compra ACC-PINV-2024-00129 has already been fully paid.
+2024-12-17 21:31:40,066 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00119: Factura de compra ACC-PINV-2024-00119 has already been fully paid.
+2024-12-17 21:31:40,299 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00183: Factura de compra ACC-PINV-2024-00183 debe ser presentado
+2024-12-17 21:31:40,535 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00128-1: Factura de compra ACC-PINV-2024-00128-1 has already been fully paid.
+2024-12-17 21:31:40,786 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00182: Factura de compra ACC-PINV-2024-00182 debe ser presentado
+2024-12-17 21:31:41,026 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00112: Factura de compra ACC-PINV-2024-00112 has already been fully paid.
+2024-12-17 21:31:41,236 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00178: Factura de compra ACC-PINV-2024-00178 debe ser presentado
+2024-12-17 21:31:41,492 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00109-1: Factura de compra ACC-PINV-2024-00109-1 has already been fully paid.
+2024-12-17 21:31:41,682 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00176: Factura de compra ACC-PINV-2024-00176 debe ser presentado
+2024-12-17 21:31:41,932 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00103: Factura de compra ACC-PINV-2024-00103 has already been fully paid.
+2024-12-17 21:31:42,160 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00132: Factura de compra ACC-PINV-2024-00132 debe ser presentado
+2024-12-17 21:31:42,423 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00115: Factura de compra ACC-PINV-2024-00115 has already been fully paid.
+2024-12-17 21:31:42,665 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00130: Factura de compra ACC-PINV-2024-00130 debe ser presentado
+2024-12-17 21:31:42,925 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00111: Factura de compra ACC-PINV-2024-00111 has already been fully paid.
+2024-12-17 21:31:43,128 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00127: Factura de compra ACC-PINV-2024-00127 debe ser presentado
+2024-12-17 21:31:43,357 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00084: Factura de compra ACC-PINV-2024-00084 has already been fully paid.
+2024-12-17 21:31:43,578 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00126: Factura de compra ACC-PINV-2024-00126 debe ser presentado
+2024-12-17 21:31:43,813 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00177: Factura de compra ACC-PINV-2024-00177 has already been fully paid.
+2024-12-17 21:31:44,011 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00125: Factura de compra ACC-PINV-2024-00125 debe ser presentado
+2024-12-17 21:31:44,237 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00089: Factura de compra ACC-PINV-2024-00089 has already been fully paid.
+2024-12-17 21:31:44,433 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00123: Factura de compra ACC-PINV-2024-00123 debe ser presentado
+2024-12-17 21:31:44,662 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00075: Factura de compra ACC-PINV-2024-00075 has already been fully paid.
+2024-12-17 21:31:44,857 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00121: Factura de compra ACC-PINV-2024-00121 debe ser presentado
+2024-12-17 21:31:45,083 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00072: Factura de compra ACC-PINV-2024-00072 has already been fully paid.
+2024-12-17 21:31:45,277 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00117: Factura de compra ACC-PINV-2024-00117 debe ser presentado
+2024-12-17 21:31:45,493 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00071: Factura de compra ACC-PINV-2024-00071 has already been fully paid.
+2024-12-17 21:31:45,702 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00116: Factura de compra ACC-PINV-2024-00116 debe ser presentado
+2024-12-17 21:31:45,946 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00257: Factura de compra ACC-PINV-2024-00257 has already been fully paid.
+2024-12-17 21:31:46,155 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00114: Factura de compra ACC-PINV-2024-00114 debe ser presentado
+2024-12-17 21:31:46,381 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00269: Factura de compra ACC-PINV-2024-00269 has already been fully paid.
+2024-12-17 21:31:46,588 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00113: Factura de compra ACC-PINV-2024-00113 debe ser presentado
+2024-12-17 21:31:46,825 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00185: Factura de compra ACC-PINV-2024-00185 has already been fully paid.
+2024-12-17 21:31:47,095 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00258-2: Factura de compra ACC-PINV-2024-00258-2 has already been fully paid.
+2024-12-17 21:31:47,350 - integracion.integracion.generate_c34_compra - ERROR - Error al crear Payment Entry para la factura ACC-PINV-2024-00259-1: Factura de compra ACC-PINV-2024-00259-1 has already been fully paid.
+2024-12-19 09:20:54,498 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00338-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-19 09:22:35,183 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-00338-1: ACC-PAY-2024-02541
+2024-12-19 09:22:40,825 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00341-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-19 09:22:45,313 - integracion.integracion.generate_c34_compra - INFO - La factura ACC-PINV-2024-00339-1 ya está completamente pagada. No se requiere un Payment Entry.
+2024-12-19 09:25:05,375 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-00339-1: ACC-PAY-2024-02542
+2024-12-19 09:25:05,775 - integracion.integracion.generate_c34_compra - INFO - Payment Entry creado para la factura ACC-PINV-2024-00341-1: ACC-PAY-2024-02543

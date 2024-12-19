@@ -116,6 +116,8 @@ def reconcile_vouchers_override(bank_transaction_name, vouchers, es_mismo_banco=
 
 	for remesa in remesas:
 		remesa_doc = frappe.get_doc("Remesa Registro", remesa.get("payment_name"))
+		remesa_doc.cargar_campos_factura_pago(bank_transaction_doc.date, bank_transaction_doc.bank_account)
+		frappe.db.commit()
 
 		# Campo total localizado
 		total_localizado = remesa_doc.custom_total_localizado
@@ -125,38 +127,38 @@ def reconcile_vouchers_override(bank_transaction_name, vouchers, es_mismo_banco=
 
 			# Cerciorar de que los Payment Entry sean válidos para restar del total localizado, esto para evitar que
 			# aparezca la remesa una vez conciliada.
-			payment_entries = frappe.db.get_all(
-				"Payment Entry Reference",
-				filters={"reference_doctype": "Purchase Invoice", "reference_name": factura.factura, "docstatus": 1},
-				fields=["parent", "total_amount"]
-			)
+			# payment_entries = frappe.db.get_all(
+			# 	"Payment Entry Reference",
+			# 	filters={"reference_doctype": "Purchase Invoice", "reference_name": factura.factura, "docstatus": 1},
+			# 	fields=["parent", "total_amount"]
+			# )
 
-			if len(payment_entries):
-				if len(payment_entries) > 2:
-					payment_entries = list(filter(lambda p: p.posting_date == remesa_doc.fecha, payment_entries))
+			pago_doc = frappe.get_doc("Payment Entry", factura.pago)
+
+			if pago_doc:
+				# if len(payment_entries) > 2:
+				# 	payment_entries = list(filter(lambda p: p.posting_date == remesa_doc.fecha, payment_entries))
 	
-				for p in payment_entries:
-					payment_entry_doc = frappe.get_doc("Payment Entry", p.parent)
-					payment_bank = frappe.get_value(
-						"Bank Account", payment_entry_doc.bank_account, "bank"
-					)
+				payment_bank = frappe.get_value(
+					"Bank Account", pago_doc.bank_account, "bank"
+				)
 
-					mew_pe_voucher = {
-						"payment_doctype": "Payment Entry",
-						"payment_name": p.parent,
-						"amount": p.total_amount
-					}
+				mew_pe_voucher = {
+					"payment_doctype": "Payment Entry",
+					"payment_name": pago_doc.name,
+					"amount": pago_doc.paid_amount
+				}
 
-					# Verificar que el mismo banco del filtro sea el del pago
-					if es_mismo_banco and transaction_bank == payment_bank:
-						# Agregar el pago como voucher y sumar el monto del Payment Entry al total localizado
-						vouchers.append(mew_pe_voucher)
-						total_localizado += p.total_amount
+				# Verificar que el mismo banco del filtro sea el del pago
+				if es_mismo_banco and transaction_bank == payment_bank:
+					# Agregar el pago como voucher y sumar el monto del Payment Entry al total localizado
+					vouchers.append(mew_pe_voucher)
+					total_localizado += pago_doc.paid_amount
 
-					if not es_mismo_banco:
-						# Agregar el pago como voucher y sumar el monto del Payment Entry al total localizado
-						vouchers.append(mew_pe_voucher)
-						total_localizado += p.total_amount
+				if not es_mismo_banco:
+					# Agregar el pago como voucher y sumar el monto del Payment Entry al total localizado
+					vouchers.append(mew_pe_voucher)
+					total_localizado += pago_doc.paid_amount
 			else:
 				# Si no se encuentran Payment Entry, agregar Purchase Invoice relacionada a la remesa como voucher
 				## Buscar banco desde factura de compra

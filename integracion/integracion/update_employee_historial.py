@@ -1,6 +1,7 @@
 import frappe
 from frappe.utils import today  # Importar today para resolver el primer error
 from frappe.model.workflow import apply_workflow  # Importar apply_workflow
+import json
 
 def update_employee_historial():
     # Obtener todos los empleados activos de la tabla Employee
@@ -136,3 +137,104 @@ def update_job_offer_states():
             frappe.log_error(f"El documento {doc.name} no tiene custom_fecha_fin asignado.")
 
     frappe.msgprint("Estados de las ofertas de trabajo actualizados según 'custom_fecha_fin'.")
+
+from datetime import date, datetime
+
+def date_handler(obj):
+    if isinstance(obj, (datetime, date)):
+        return obj.isoformat()
+    raise TypeError(f'Object of type {type(obj)} is not JSON serializable')
+
+def insert_historial_altas(doc, method=None):
+    try:
+        dni_nie = doc.custom_dninie_id or doc.name
+
+        # Obtener Job Offers
+        job_offers = frappe.get_all(
+            'Job Offer',
+            filters={
+                'workflow_state': ['in', ['Alta', 'Baja']],
+                'docstatus': 1,
+                'custom_dninie': dni_nie
+            },
+            fields=['name', 'custom_fecha_inicio', 'custom_solicitud_baja', 'designation', 'workflow_state'],
+            order_by='custom_fecha_inicio desc'
+        )
+
+        # En lugar de usar json.dumps para el log, usamos una representación más simple
+        frappe.log_error(f"Número de Job Offers encontradas: {len(job_offers)}")
+
+        # Insertar Job Offers
+        for job_offer in job_offers:
+            fecha = job_offer.custom_solicitud_baja if job_offer.workflow_state == 'Baja' else job_offer.custom_fecha_inicio
+            idx = frappe.db.sql("""
+                SELECT IFNULL(MAX(idx), 0) + 1 
+                FROM `tabEmpleado Historial Altas` 
+                WHERE parent = %s
+            """, doc.name)[0][0]
+
+            frappe.db.sql("""
+                INSERT INTO `tabEmpleado Historial Altas` 
+                (name, parent, parenttype, parentfield, documento, hoja_anexo, 
+                 accion, fecha, puesto, idx, owner, creation, modified, modified_by)
+                VALUES (%s, %s, 'Employee', 'custom_historial_altas', %s, %s, 
+                        %s, %s, %s, %s, %s, NOW(), NOW(), %s)
+            """, (
+                frappe.generate_hash(),
+                doc.name,
+                'Job Offer',
+                job_offer.name,
+                job_offer.workflow_state,
+                fecha,
+                job_offer.designation,
+                idx,
+                frappe.session.user,
+                frappe.session.user
+            ))
+
+        # Obtener Anexos
+        anexos = frappe.get_all(
+            'Modificaciones RRHH',
+            filters={
+                'workflow_state': 'Alta',
+                'docstatus': 1,
+                'custom_dninie': dni_nie
+            },
+            fields=['name', 'start_date', 'designation', 'workflow_state']
+        )
+
+        frappe.log_error(f"Número de Anexos encontrados: {len(anexos)}")
+
+        # Insertar Anexos
+        for anexo in anexos:
+            idx = frappe.db.sql("""
+                SELECT IFNULL(MAX(idx), 0) + 1 
+                FROM `tabEmpleado Historial Altas` 
+                WHERE parent = %s
+            """, doc.name)[0][0]
+
+            frappe.db.sql("""
+                INSERT INTO `tabEmpleado Historial Altas` 
+                (name, parent, parenttype, parentfield, documento, hoja_anexo, 
+                 accion, fecha, puesto, idx, owner, creation, modified, modified_by)
+                VALUES (%s, %s, 'Employee', 'custom_historial_altas', %s, %s, 
+                        %s, %s, %s, %s, %s, NOW(), NOW(), %s)
+            """, (
+                frappe.generate_hash(),
+                doc.name,
+                'Modificaciones RRHH',
+                anexo.name,
+                anexo.workflow_state,
+                anexo.start_date,
+                anexo.designation,
+                idx,
+                frappe.session.user,
+                frappe.session.user
+            ))
+
+        frappe.db.commit()
+        frappe.clear_cache(doctype="Employee", name=doc.name)
+        frappe.log_error("Proceso completado exitosamente")
+
+    except Exception as e:
+        frappe.log_error(f"Error al insertar historial de altas: {str(e)}")

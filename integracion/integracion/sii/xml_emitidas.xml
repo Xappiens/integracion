@@ -19,20 +19,20 @@
           <sii:IDEmisorFactura>
             <sii:NIF>B09318916</sii:NIF>
           </sii:IDEmisorFactura>
-          <sii:NumSerieFacturaEmisor>ATUSL/AR/2400360</sii:NumSerieFacturaEmisor>
-          <sii:FechaExpedicionFacturaEmisor>16-12-2024</sii:FechaExpedicionFacturaEmisor>
+          <sii:NumSerieFacturaEmisor>ATUSL/AR/2400387</sii:NumSerieFacturaEmisor>
+          <sii:FechaExpedicionFacturaEmisor>19-12-2024</sii:FechaExpedicionFacturaEmisor>
         </siiLR:IDFactura>
         <siiLR:FacturaExpedida>
           <sii:TipoFactura>F1</sii:TipoFactura>
           <sii:ClaveRegimenEspecialOTrascendencia>01</sii:ClaveRegimenEspecialOTrascendencia>
-          <sii:ImporteTotal>250.00</sii:ImporteTotal>
+          <sii:ImporteTotal>750.00</sii:ImporteTotal>
           <sii:DescripcionOperacion>Venta de Producto/Servicio</sii:DescripcionOperacion>
           <sii:Contraparte>
-            <sii:NombreRazon>OMAR FDIL</sii:NombreRazon>
+            <sii:NombreRazon>MOHAMMED MIRI</sii:NombreRazon>
             <sii:IDOtro>
               <sii:CodigoPais>MA</sii:CodigoPais>
               <sii:IDType>04</sii:IDType>
-              <sii:ID>Y8349402W</sii:ID>
+              <sii:ID>Z0950355T</sii:ID>
             </sii:IDOtro>
           </sii:Contraparte>
           <sii:TipoDesglose>
@@ -42,7 +42,7 @@
                   <sii:Exenta>
                     <sii:DetalleExenta>
                       <sii:CausaExencion>E1</sii:CausaExencion>
-                      <sii:BaseImponible>250.00</sii:BaseImponible>
+                      <sii:BaseImponible>750.00</sii:BaseImponible>
                     </sii:DetalleExenta>
                   </sii:Exenta>
                 </sii:Sujeta>

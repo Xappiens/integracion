@@ -265,6 +265,7 @@ def subir_nominas(company, xml_file):
                 "company": company,
                 "posting_date": posting_date,
                 "user_remark": concept,
+                "custom_nomina": 1,
                 "accounts": []
             })
 
