@@ -39,17 +39,18 @@ def get_supplier_iban(supplier_name, company):
     bank_accounts = frappe.get_all("Bank Account", filters={
         "party_type": "Supplier",
         "party": supplier_name
-    }, fields=["iban", "company"])
+    }, fields=["iban", "company", "name"])
 
     if not bank_accounts:
         # Si no se encuentra el IBAN en las cuentas bancarias del proveedor, buscar el default_bank_account
         default_bank_account = frappe.get_value("Supplier", supplier_name, "default_bank_account")
         if default_bank_account:
             # Obtener el IBAN de la cuenta bancaria predeterminada
-            iban = frappe.get_value("Bank Account", default_bank_account, "iban")
-            if iban:
+            bank_account_doc = frappe.get_value("Bank Account", default_bank_account, ["iban", "name"], as_dict=1)
+
+            if bank_account_doc:
                 # Devolver siempre un diccionario, incluso si solo tienes el IBAN
-                return {"iban": iban}
+                return {"iban": bank_account_doc.get("iban"), "name": bank_account_doc.get("name")}
 
         return None  # Devolver None si no se encuentra el IBAN en ninguna parte
 
@@ -500,6 +501,7 @@ def create_payment_entry_for_purchase_invoice(invoice, supplier_iban, company_ac
        company_bank_account = company_account or frappe.get_value("Company", invoice.company, "default_bank_account")
        bank_account_name = frappe.get_value("Bank Account", {"account": company_bank_account}, "name")
        bank_account = frappe.get_doc("Bank Account", bank_account_name)
+       default_cost_center = frappe.get_value("Company", invoice.company, "cost_center")
 
        # Validar que la cuenta bancaria de la empresa esté configurada
        if not company_bank_account:
@@ -534,7 +536,9 @@ def create_payment_entry_for_purchase_invoice(invoice, supplier_iban, company_ac
            "paid_to": credit_account,  # Cuenta bancaria de la empresa para pagos
            "paid_to_account_currency": frappe.get_value("Account", credit_account, "account_currency"),
            "reference_no": invoice.name,
-           "bank_account": bank_account,
+           "bank_account": bank_account.name,
+           "party_bank_account": supplier_bank,
+           "cost_center": default_cost_center,
            "reference_date": invoice.posting_date,
            "references": [
                {
@@ -551,6 +555,7 @@ def create_payment_entry_for_purchase_invoice(invoice, supplier_iban, company_ac
 
        # Guardar y enviar el Payment Entry
        payment_entry.insert(ignore_permissions=True)
+       payment_entry.submit()
 
        logger.info(f"Payment Entry creado para la factura {invoice.name}: {payment_entry.name}")
 

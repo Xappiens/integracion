@@ -4,6 +4,7 @@
 import frappe
 
 import json
+from datetime import datetime
 from frappe.model.document import Document
 from integracion.integracion.generate_c34_compra import get_supplier_iban, create_payment_entry_for_purchase_invoice
 
@@ -62,6 +63,8 @@ class RemesaRegistro(Document):
 
     @frappe.whitelist()
     def cargar_campos_factura_pago(self, date, bank_account=None):
+        if isinstance(date, str):
+            date = datetime.strptime(date, "%Y-%m-%d").date()
         # TODO Agregar lógica para remesas pagadas parcialmente
 
         # Buscar pagos que tengan la remesa(self) asignada
@@ -98,21 +101,36 @@ class RemesaRegistro(Document):
             payment_entry_doc = None
 
             if len(payment_names):
+                supplier_bank = get_supplier_iban(purchase_invoice_doc.supplier, purchase_invoice_doc.company)
+                supplier_iban = supplier_bank.get('iban') if supplier_bank else None
+                company = frappe.get_doc("Company", purchase_invoice_doc.company)
+                default_cost_center = company.cost_center
+
                 for payment_name in payment_names:
                     payment_entry = frappe.get_doc("Payment Entry", payment_name.get("parent"))
 
                     if payment_entry.docstatus == 1:
+
                         # Comprobar si la fecha del pago coincide con la fecha proporcionada
-                        if payment_entry.posting_date != date:
+                        if payment_entry.posting_date != date or payment_entry.bank_account != bank_account or not payment_entry.party_bank_account:
                             # Cancelar el pago existente
                             payment_entry.cancel()
-                            
+
                             # Crear nuevo pago basado en el anterior
                             new_payment_entry = frappe.copy_doc(payment_entry)
-                            new_payment_entry.docstatus = 0  # Borrador
+
+                            # Pasar a borrador y corregir
+                            new_payment_entry.docstatus = 0
                             new_payment_entry.amended_from = payment_entry.name
+
+                            # Cambiar posting date a la fecha de la herramienta
                             new_payment_entry.posting_date = date
+
+                            # Cambiar cuenta bancaria al banco de la herramienta
                             new_payment_entry.bank_account = bank_account
+                            new_payment_entry.party_bank_account = supplier_bank.get("name")
+                            new_payment_entry.cost_center = default_cost_center
+
                             if company_bank_account:
                                 new_payment_entry.paid_from = company_bank_account or ""
                                 new_payment_entry.paid_from_account_currency = frappe.get_value(
@@ -138,7 +156,8 @@ class RemesaRegistro(Document):
                             "Account", company_bank_account, "account_currency"
                         ) if company_bank_account else None
                         payment_entry_doc.bank_account = bank_account
-                        payment_entry_doc.posting_date = date
+                        payment_entry_doc.party_bank_account = supplier_bank.get("name")
+                        payment_entry_doc.cost_center = default_cost_center
                         payment_entry_doc.save()
                         payment_entry_doc.submit()
                         frappe.db.commit()
@@ -166,7 +185,7 @@ class RemesaRegistro(Document):
                     amended_pinv.due_date = date
                     if not amended_pinv.bill_date:
                         amended_pinv.bill_date = date
-                    
+
                     if not amended_pinv.bill_no:
                         amended_pinv.bill_no = amended_pinv.name
 
