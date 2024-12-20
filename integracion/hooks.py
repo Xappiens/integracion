@@ -46,6 +46,9 @@ doc_events = {
     },
     "Employee": {
         "after_insert": "integracion.integracion.update_employee_historial.insert_historial_altas"
+    },
+    "GL Entry": {
+        "before_insert": "integracion.integracion.renumerar_asientos.before_insert"
     }
 }
 
@@ -74,6 +77,7 @@ override_whitelisted_methods = {
     "erpnext.accounts.doctype.bank_transaction.bank_transaction.get_doctypes_for_bank_reconciliation": "integracion.integracion.custom_bank_transaction.custom_get_doctypes_for_bank_reconciliation",
     "erpnext.accounts.doctype.bank_reconciliation_tool.bank_reconciliation_tool.reconcile_vouchers": "integracion.integracion.custom_bank_transaction.reconcile_vouchers_override",
     "integracion.renumerar_asientos": "integracion.integracion.renumerar_asientos.renumerar_asientos",
+    "integracion.renumerar_asientos_gl": "integracion.integracion.renumerar_asientos.renumerar_asientos_gl",
 
     #"erpnext.accounts.doctype.bank_transaction.bank_transaction.reconcile_vouchers": "integracion.integracion.bank_tool_over.reconcile_vouchers"
 

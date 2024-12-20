@@ -472,7 +472,7 @@ def get_general_ledger_data(filters):
         query_filters["account"] = tuple(filters.get("account"))
     
     query = f"""
-        SELECT posting_date, account, voucher_no, party_type, party, debit, credit,
+        SELECT custom_numero, posting_date, account, voucher_no, party_type, party, debit, credit,
                (debit - credit) AS balance, against
         FROM `tabGL Entry`
         WHERE {" AND ".join(query_conditions)}
